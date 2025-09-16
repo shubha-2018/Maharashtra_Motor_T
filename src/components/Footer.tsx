@@ -1,0 +1,230 @@
+import React from 'react';
+import { 
+  MapPin, 
+  Phone, 
+  Mail, 
+  Globe, 
+  Eye, 
+  Users, 
+  Calendar,
+  ExternalLink,
+  Facebook,
+  Twitter,
+  Youtube,
+  Linkedin
+} from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
+
+const Footer: React.FC = () => {
+  const { t } = useLanguage();
+
+  const quickLinks = [
+    { key: 'nav.home', href: '#home' },
+    { key: 'nav.about', href: '#about' },
+    { key: 'nav.citizens', href: '#citizens' },
+    { key: 'nav.police', href: '#police' },
+    { key: 'nav.tenders', href: '#tenders' },
+    { key: 'nav.recruitment', href: '#recruitment' },
+    { key: 'nav.contact', href: '#contact' },
+    { key: 'nav.gallery', href: '#gallery' }
+  ];
+
+  const importantLinks = [
+    { key: 'dial.112', href: 'tel:112', external: true },
+    { key: 'citizen.portal', href: '#', external: true },
+    { key: 'e.office', href: '#', external: true },
+    { key: 'nic.email', href: '#', external: true },
+    { key: 'sss', href: '#', external: true },
+    { key: 'Maharashtra Police', href: 'https://mahapolice.gov.in', external: true },
+    { key: 'Right to Information', href: '#', external: true },
+    { key: 'Public Grievances', href: '#', external: true }
+  ];
+
+  const socialLinks = [
+    { icon: Facebook, href: '#', color: 'hover:text-blue-600' },
+    { icon: Twitter, href: '#', color: 'hover:text-blue-400' },
+    { icon: Youtube, href: '#', color: 'hover:text-red-600' },
+    { icon: Linkedin, href: '#', color: 'hover:text-blue-700' }
+  ];
+
+  const visitorStats = {
+    totalVisitors: '2,45,678',
+    todayVisitors: '1,234',
+    onlineUsers: '89',
+    lastUpdated: '15 Jan 2024, 02:30 PM'
+  };
+
+  return (
+    <footer className="bg-gradient-to-br from-primary to-primary-hover text-primary-foreground">
+      {/* Main Footer Content */}
+      <div className="container mx-auto px-4 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          
+          {/* Quick Links */}
+          <div className="space-y-4">
+            <h3 className="text-lg font-bold text-saffron mb-4 flex items-center gap-2">
+              <Globe className="w-5 h-5" />
+              {t('quick.links')}
+            </h3>
+            <ul className="space-y-2">
+              {quickLinks.map((link) => (
+                <li key={link.key}>
+                  <a
+                    href={link.href}
+                    className="text-primary-foreground/80 hover:text-saffron transition-colors duration-300 text-sm flex items-center gap-1 group"
+                  >
+                    <span className="w-1 h-1 bg-saffron rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                    {t(link.key)}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Important Links */}
+          <div className="space-y-4">
+            <h3 className="text-lg font-bold text-saffron mb-4 flex items-center gap-2">
+              <ExternalLink className="w-5 h-5" />
+              {t('important.links')}
+            </h3>
+            <ul className="space-y-2">
+              {importantLinks.map((link) => (
+                <li key={link.key}>
+                  <a
+                    href={link.href}
+                    className="text-primary-foreground/80 hover:text-saffron transition-colors duration-300 text-sm flex items-center gap-1 group"
+                    {...(link.external && { target: '_blank', rel: 'noopener noreferrer' })}
+                  >
+                    <span className="w-1 h-1 bg-saffron rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                    {t(link.key)}
+                    {link.external && <ExternalLink className="w-3 h-3 opacity-60" />}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Contact Information */}
+          <div className="space-y-4">
+            <h3 className="text-lg font-bold text-saffron mb-4 flex items-center gap-2">
+              <Phone className="w-5 h-5" />
+              {t('contact.info')}
+            </h3>
+            <div className="space-y-3">
+              <div className="flex items-start gap-3">
+                <MapPin className="w-4 h-4 text-saffron mt-1 flex-shrink-0" />
+                <div className="text-sm">
+                  <p className="text-primary-foreground font-medium mb-1">{t('address')}:</p>
+                  <p className="text-primary-foreground/80 leading-relaxed">
+                    Police Communication & IT Department,<br />
+                    Maharashtra State Police Headquarters,<br />
+                    Mumbai - 400001
+                  </p>
+                </div>
+              </div>
+              
+              <div className="flex items-center gap-3">
+                <Phone className="w-4 h-4 text-saffron" />
+                <div className="text-sm">
+                  <span className="text-primary-foreground font-medium">{t('phone')}: </span>
+                  <a href="tel:+912222621234" className="text-primary-foreground/80 hover:text-saffron transition-colors">
+                    +91-22-2262-1234
+                  </a>
+                </div>
+              </div>
+              
+              <div className="flex items-center gap-3">
+                <Mail className="w-4 h-4 text-saffron" />
+                <div className="text-sm">
+                  <span className="text-primary-foreground font-medium">{t('email')}: </span>
+                  <a href="mailto:pcit@mahapolice.gov.in" className="text-primary-foreground/80 hover:text-saffron transition-colors">
+                    pcit@mahapolice.gov.in
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Visitor Statistics & Social */}
+          <div className="space-y-6">
+            <div>
+              <h3 className="text-lg font-bold text-saffron mb-4 flex items-center gap-2">
+                <Eye className="w-5 h-5" />
+                {t('visitor.stats')}
+              </h3>
+              <div className="glass bg-white/10 rounded-lg p-4 space-y-2">
+                <div className="flex justify-between text-sm">
+                  <span className="text-primary-foreground/80">Total Visitors:</span>
+                  <span className="font-bold text-saffron">{visitorStats.totalVisitors}</span>
+                </div>
+                <div className="flex justify-between text-sm">
+                  <span className="text-primary-foreground/80">Today:</span>
+                  <span className="font-bold text-saffron">{visitorStats.todayVisitors}</span>
+                </div>
+                <div className="flex justify-between text-sm">
+                  <span className="text-primary-foreground/80">Online Now:</span>
+                  <span className="font-bold text-green-400">{visitorStats.onlineUsers}</span>
+                </div>
+                <div className="text-xs text-primary-foreground/60 pt-2 border-t border-white/20">
+                  Last Updated: {visitorStats.lastUpdated}
+                </div>
+              </div>
+            </div>
+
+            {/* Social Media Links */}
+            <div>
+              <h4 className="text-sm font-semibold text-saffron mb-3">Follow Us</h4>
+              <div className="flex gap-3">
+                {socialLinks.map((social, index) => (
+                  <a
+                    key={index}
+                    href={social.href}
+                    className={`p-2 bg-white/10 rounded-lg hover:bg-white/20 transition-all duration-300 ${social.color}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <social.icon className="w-4 h-4" />
+                  </a>
+                ))}
+              </div>
+            </div>
+
+            {/* QR Code Placeholder */}
+            <div className="glass bg-white/10 rounded-lg p-4 text-center">
+              <div className="w-16 h-16 bg-white/20 rounded-lg mx-auto mb-2 flex items-center justify-center">
+                <Globe className="w-8 h-8 text-saffron" />
+              </div>
+              <p className="text-xs text-primary-foreground/80">
+                Scan for Mobile App
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Bottom Copyright Bar */}
+      <div className="bg-primary-hover border-t border-primary-foreground/20">
+        <div className="container mx-auto px-4 py-4">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <div className="text-sm text-primary-foreground/80 text-center md:text-left">
+              {t('copyright')}
+            </div>
+            <div className="flex items-center gap-4 text-sm text-primary-foreground/80">
+              <span>|</span>
+              <a href="#" className="hover:text-saffron transition-colors">Privacy Policy</a>
+              <span>|</span>
+              <a href="#" className="hover:text-saffron transition-colors">Terms of Use</a>
+              <span>|</span>
+              <a href="#" className="hover:text-saffron transition-colors">Accessibility</a>
+            </div>
+            <div className="text-sm text-primary-foreground/60 text-center md:text-right">
+              {t('developed.by')}
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;

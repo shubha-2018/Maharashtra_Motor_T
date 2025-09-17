@@ -2,91 +2,98 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Star } from "lucide-react";
 import { useNavigate } from "react-router";
+import { useLanguage } from "@/contexts/LanguageContext"; // Assuming you have this hook
 
 export default function Ranks() {
-    const navigate = useNavigate();
-    const goBack = () => navigate("/");
+  const navigate = useNavigate();
+  const { t } = useLanguage();
+  const goBack = () => navigate("/");
+
   const ranksData = [
     {
-      rank: "Addl. DGP & Director Police Communication, Information Technology & Transportation, M.S. Pune",
-      description: "Leads the entire department, sets strategic direction, ensures coordination across all units, and oversees communication, IT, and transportation functions statewide."
+      rank: t("ranks.rank1.title"),
+      description: t("ranks.rank1.description")
     },
     {
-      rank: "Deputy Inspector General of Police Communication & Information Technology, M.S. Pune",
-      description: "Assists the Director in managing statewide operations, supervises technical teams, and ensures adherence to policies and standards."
+      rank: t("ranks.rank2.title"),
+      description: t("ranks.rank2.description")
     },
     {
-      rank: "Additional Commissioner of Police Communication & Information Technology, M.S. Mumbai",
-      description: "Leads Mumbai operations, manages critical IT infrastructure, ensures secure communications, and coordinates with local law enforcement units."
+      rank: t("ranks.rank3.title"),
+      description: t("ranks.rank3.description")
     },
     {
-      rank: "Supdt. Of Police Communication & Information Technology",
-      description: "Supervises field units, monitors wireless systems, coordinates departmental activities, and ensures smooth day-to-day operations."
+      rank: t("ranks.rank4.title"),
+      description: t("ranks.rank4.description")
     },
     {
-      rank: "Deputy Commissioner of Police Communication & Information Technology",
-      description: "Oversees technical teams, manages operations, and provides guidance for implementing IT and communication strategies."
+      rank: t("ranks.rank5.title"),
+      description: t("ranks.rank5.description")
     },
     {
-      rank: "Deputy Supdt. Of Police /Asst. Commissioner of Police",
-      description: "Handles daily technical operations, staff assignments, troubleshooting, and ensures compliance with departmental protocols."
+      rank: t("ranks.rank6.title"),
+      description: t("ranks.rank6.description")
     },
     {
-      rank: "Police Inspector (PI)",
-      description: "Supervises teams, monitors field communications, enforces regulations, and reports technical issues to senior officers."
+      rank: t("ranks.rank7.title"),
+      description: t("ranks.rank7.description")
     },
     {
-      rank: "Police Sub-Inspector (PSI)",
-      description: "Maintains wireless networks, supports investigations, and ensures effective communication within the unit."
+      rank: t("ranks.rank8.title"),
+      description: t("ranks.rank8.description")
     },
     {
-      rank: "ASI (Senior Technical Officer)",
-      description: "Leads technical projects, audits systems, trains junior staff, and ensures technical excellence across operations."
+      rank: t("ranks.rank9.title"),
+      description: t("ranks.rank9.description")
     },
     {
-      rank: "HC (Technical Officer)",
-      description: "Operates and maintains technical equipment, supports wireless and IT operations, and ensures continuous service."
+      rank: t("ranks.rank10.title"),
+      description: t("ranks.rank10.description")
     },
     {
-      rank: "ASI (Senior Technical Assistant)",
-      description: "Assists senior officers in technical tasks, system maintenance, and coordinates with field units."
+      rank: t("ranks.rank11.title"),
+      description: t("ranks.rank11.description")
     },
     {
-      rank: "HC (Technical Assistant Grade II)",
-      description: "Handles administrative support, technical documentation, and assists in communication tasks."
+      rank: t("ranks.rank12.title"),
+      description: t("ranks.rank12.description")
     },
     {
-      rank: "PN (Technical Assistant Grade I)",
-      description: "Performs day-to-day technical assistance, monitors equipment, and supports operations."
+      rank: t("ranks.rank13.title"),
+      description: t("ranks.rank13.description")
     },
     {
-      rank: "PC (Technical Assistant)",
-      description: "Supports operations under supervision, assists in communication tasks, and maintains records."
+      rank: t("ranks.rank14.title"),
+      description: t("ranks.rank14.description")
     },
     {
-      rank: "ASI (Driver)",
-      description: "Provides transportation for high-ranking officers and supports operational logistics."
+      rank: t("ranks.rank15.title"),
+      description: t("ranks.rank15.description")
     },
     {
-      rank: "HC (Driver)",
-      description: "Ensures reliable transport for staff and equipment, assists in logistical planning."
+      rank: t("ranks.rank16.title"),
+      description: t("ranks.rank16.description")
     },
     {
-      rank: "PN (Driver)",
-      description: "Supports vehicle operations and transportation coordination within the department."
+      rank: t("ranks.rank17.title"),
+      description: t("ranks.rank17.description")
     },
     {
-      rank: "PC (Driver)",
-      description: "Handles routine driving duties, transport coordination, and ensures timely mobility of personnel."
+      rank: t("ranks.rank18.title"),
+      description: t("ranks.rank18.description")
     }
   ];
 
+  const openPDF = () => {
+    window.open("https://mahpolwireless.stagingdsi.co.in/wp-content/uploads/2024/10/Ranks-in-PCIT.pdf", "_blank"); // Replace with your PDF URL
+  };
+
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 via-gray-100 to-gray-200 text-gray-900 px-6 py-12 sm:px-12 lg:px-24 relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-b from-gray-50 via-gray-100 to-gray-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 text-gray-900 dark:text-gray-100 px-6 py-12 sm:px-12 lg:px-24 relative overflow-hidden">
       {/* Background Glow */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute top-32 left-40 w-96 h-96 bg-violet-400/20 blur-3xl rounded-full"></div>
-        <div className="absolute bottom-32 right-40 w-[32rem] h-[32rem] bg-blue-400/20 blur-3xl rounded-full"></div>
+        <div className="absolute top-32 left-40 w-96 h-96 bg-violet-400/20 dark:bg-violet-600/20 blur-3xl rounded-full"></div>
+        <div className="absolute bottom-32 right-40 w-[32rem] h-[32rem] bg-blue-400/20 dark:bg-blue-600/20 blur-3xl rounded-full"></div>
       </div>
 
       <div className="max-w-6xl mx-auto space-y-12">
@@ -94,17 +101,17 @@ export default function Ranks() {
         <Button
           variant="ghost"
           onClick={goBack}
-          className="flex items-center text-gray-900 hover:bg-gray-200 transition-all duration-300 rounded-xl px-4 py-2 shadow-md hover:shadow-gray-300 mb-6"
+          className="flex items-center text-gray-900 dark:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-300 rounded-xl px-4 py-2 shadow-md hover:shadow-gray-300 dark:hover:shadow-gray-800 mb-6"
         >
-          <ArrowLeft className="w-4 h-4 mr-2" /> Back to Home
+          <ArrowLeft className="w-4 h-4 mr-2" /> {t("backToHome")}
         </Button>
 
         {/* Heading */}
-        <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight text-center bg-gradient-to-r from-violet-400 via-blue-400 to-teal-400 bg-clip-text text-transparent drop-shadow-lg">
-          Ranks
+        <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight text-center bg-gradient-to-r from-violet-400 via-blue-400 to-teal-400 dark:from-violet-500 dark:via-blue-500 dark:to-teal-500 bg-clip-text text-transparent drop-shadow-lg">
+          {t("ranks.title")}
         </h1>
-        <h2 className="text-lg md:text-xl font-medium text-gray-600 text-center mb-10">
-          List of Ranks and Designations in Police Communication and Information Technology Department
+        <h2 className="text-lg md:text-xl font-medium text-gray-600 dark:text-gray-400 text-center mb-10">
+          {t("ranks.subtitle")}
         </h2>
 
         {/* Glassmorphic Cards for each rank */}
@@ -112,17 +119,27 @@ export default function Ranks() {
           {ranksData.map((item, idx) => (
             <Card
               key={idx}
-              className="bg-white/30 border border-gray-200 backdrop-blur-md shadow-lg rounded-3xl hover:shadow-violet-400/20 transition-all duration-500"
+              className="bg-white/30 dark:bg-gray-800/30 border border-gray-200 dark:border-gray-700 backdrop-blur-md shadow-lg rounded-3xl hover:shadow-violet-400/20 dark:hover:shadow-violet-600/20 transition-all duration-500"
             >
               <CardContent className="p-8 space-y-3">
                 <div className="flex items-center gap-3">
-                  <Star className="w-6 h-6 text-violet-400 flex-shrink-0" />
-                  <h3 className="text-2xl font-bold text-violet-500">{item.rank}</h3>
+                  <Star className="w-6 h-6 text-violet-400 dark:text-violet-500 flex-shrink-0" />
+                  <h3 className="text-2xl font-bold text-violet-500 dark:text-violet-400">{item.rank}</h3>
                 </div>
-                <p className="text-gray-800 text-lg leading-relaxed">{item.description}</p>
+                <p className="text-gray-800 dark:text-gray-200 text-lg leading-relaxed">{item.description}</p>
               </CardContent>
             </Card>
           ))}
+        </div>
+
+        {/* See the Whole PDF Button */}
+        <div className="text-center mt-10">
+          <Button
+            onClick={openPDF}
+            className="bg-violet-500 dark:bg-violet-600 text-white hover:bg-violet-600 dark:hover:bg-violet-700 px-8 py-4 text-lg font-semibold rounded-full shadow-lg transition-all duration-300"
+          >
+            {t("ranks.seePDF")}
+          </Button>
         </div>
       </div>
     </div>

@@ -5,17 +5,17 @@ import { useNavigate } from "react-router";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 // Import all images as 1.jpg
-import imgAdmin from "@/assets/1.jpg";
-import imgTech from "@/assets/1.jpg";
-import imgDev from "@/assets/1.jpg";
-import imgVSat from "@/assets/1.jpg";
-import imgStore from "@/assets/1.jpg";
-import imgCommittee from "@/assets/1.jpg";
-import imgTest from "@/assets/1.jpg";
-import imgCentral from "@/assets/1.jpg";
-import imgCipher from "@/assets/1.jpg";
-import imgLicense from "@/assets/1.jpg";
-import imgTraffic from "@/assets/1.jpg";
+import imgAdmin from "@/assets/aa.jpg";
+import imgTech from "@/assets/bb.jpg";
+import imgDev from "@/assets/cc.jpg";
+import imgVSat from "@/assets/dd.jpg";
+import imgStore from "@/assets/ee.jpg";
+import imgCommittee from "@/assets/ff.jpg";
+import imgTest from "@/assets/gg.jpg";
+import imgCentral from "@/assets/hh.jpg";
+import imgCipher from "@/assets/ii.jpg";
+import imgLicense from "@/assets/kk.jpeg";
+import imgTraffic from "@/assets/ll.jpg";
 
 export default function OfficersHQ() {
   const { t } = useLanguage();

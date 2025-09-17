@@ -14,9 +14,9 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { cn } from "@/lib/utils";
-import IMG1 from "@/assets/hero/1.jpg";
+import IMG1 from "@/assets/hero/4.jpeg";
 import IMG2 from "@/assets/hero/2.jpg";
-import IMG3 from "@/assets/hero/3.jpg";
+import IMG3 from "@/assets/hero/5.jpg";
 import DIRECTOR_PHOTO from "@/assets/director.jpg";
 import { Link } from "react-router-dom";
 

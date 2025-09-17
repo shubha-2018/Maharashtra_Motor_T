@@ -38,7 +38,7 @@ export default function Hierarchy() {
         {/* Heading */}
         <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight text-center 
                        bg-gradient-to-r from-violet-600 via-blue-600 to-teal-600 
-                       bg-clip-text text-transparent drop-shadow-md">
+                       bg-clip-text text-transparent drop-shadow-md p-3">
           {t("h1.title")}
         </h1>
 

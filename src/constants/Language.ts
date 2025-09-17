@@ -45,7 +45,6 @@ export const EN = {
   "nav.gradationList": "Gradation List",
   "nav.strategySupport": "Strategy Support System",
   "nav.positiveStories": "Positive Stories",
-
   "nav.police_corner": "Police Corner",
   "nav.tenders": "Tender List",
   "nav.recruitments": "Recruitments",
@@ -264,9 +263,9 @@ export const EN = {
   "smart.features.item2": "Location tracking for faster response",
   "smart.features.item3": "Multi-language support available",
   "smart.features.item4": "Integration with emergency services",
-  
+
   //ABOUTDEPT
-   "hx_back": "Back to Home",
+  "hx_back": "Back to Home",
   "hx_photoAlt": "History of Police Wireless",
   "hx_title": "History of Police Wireless Communication Department",
   "hx_intro": "Established in 1946, the Department has evolved from WWII wireless sets to cutting-edge satellite and IP-based networks ensuring secure, real-time communication across Maharashtra.",
@@ -473,9 +472,114 @@ export const EN = {
   "public.grievances": "Public Grievances",
   "footer.privacyPolicy": "Privacy Policy",
   "footer.termsOfUse": "Terms of Use",
-  "footer.accessibility": "Accessibility"
+  "footer.accessibility": "Accessibility",
 
+  // Press Release Page
+  "back.home": "Back to Home",
+  "press.title": "Press Releases",
+  "press.subtitle": "Positive developments and ongoing projects in the Maharashtra Police Wireless Department",
+  "press.tech.title": "Technological Upgrades",
+  "press.tech.description": "Independence Day was celebrated with great enthusiasm in the Police Communication and Information Technology Department. Officers and staff participated in the flag hoisting, national anthem, and cultural programs, spreading the message of patriotism and unity.",
+  "press.ai.title": "AI-Powered Policing - MARVEL Project",
+  "press.ai.description": "Republic Day was celebrated with great enthusiasm in the Police Communication and Information Technology Department. Officers and staff participated in the flag hoisting, national anthem, and patriotic programs, highlighting the values of the Constitution, patriotism, and unity.",
+  "press.emergency.title": "Enhanced Emergency Response - Dial 112",
+  "press.emergency.description": "The 'Dial 112' emergency system integrates police (100), fire (101), and ambulance (108) services into a single number. Using advanced tracking and dispatch technology, response times are drastically reduced, saving lives and improving public safety.",
+  "press.cyber.title": "New Cyber Command Center",
+  "press.cyber.description": "In October 2024, a new Cyber Command and Control Centre was launched. Equipped with advanced forensic tools and AI-based threat detection, it allows the police to combat cybercrime efficiently and ensures digital safety for citizens and critical infrastructure.",
 
+  // RTI Page
+  "rti.title": "RTI (Right to Information)",
+  "rti.subtitle": "Information and procedures for citizens under the Right to Information Act",
+  "rti.pio.title": "Public Information Officer (PIO) Details",
+  "rti.pio.description": "Contact information for the designated PIOs and Appellate Authorities within the Police Communication & IT Department is provided here. Citizens can reach out directly for submitting RTI requests or seeking clarifications.",
+  "rti.procedure.title": "RTI Application Procedure",
+  "rti.procedure.description": "Step-by-step guide on filing an RTI application including the proper format, required details, and applicable fees. Ensure all fields are correctly filled for faster processing.",
+  "rti.portal.title": "Online RTI Portal Link",
+  "rti.portal.description": "Submit RTI applications electronically through the official portals. Maharashtra RTI Portal and Government of India RTI online portals are linked for citizen convenience.",
+  "rti.frequent.title": "Frequently Requested Information",
+  "rti.frequent.description": "Access commonly requested documents such as organizational structure, budget details, citizen charters, and departmental manuals. This improves transparency and eases information retrieval.",
+  "rti.manual.title": "RTI Act Manual",
+  "rti.manual.description": "Download or view the full RTI Act, 2005 and official guidelines for reference. Citizens are encouraged to familiarize themselves with their rights and responsibilities under the Act.",
+  "rti.appeal.title": "Appeal Process",
+  "rti.appeal.description": "If the applicant is unsatisfied with the response, follow the appeal procedure within the prescribed timelines. Details for submitting first and second appeals, along with contact information for appellate authorities, are provided.",
+
+  // Tenders Page
+  "tenders.title": "Tenders & Procurement",
+  "tenders.subtitle": "Official procurement notices and contract opportunities for the Maharashtra Police Wireless Department",
+  "tenders.active.title": "Active Tenders",
+  "tenders.archived.title": "Archived / Completed Tenders",
+  "tenders.procurement.title": "Tender-Related Information",
+  "tenders.ref": "Tender Ref",
+  "tenders.deadline": "Deadline",
+  "tenders.closedOn": "Closed On",
+  "tenders.viewDocument": "View Tender Document",
+
+  // Active Tenders
+  "tenders.active.radios.title": "Procurement of Digital Mobile Radios",
+  "tenders.active.radios.description": "Supply of high-performance digital mobile radios for state-wide police communication.",
+
+  // Archived Tenders
+  "tenders.archived.spares.title": "Wireless Equipment Spares",
+  "tenders.archived.computers.title": "Computers & Networking Equipment",
+
+  // Procurement Info
+  "tenders.procurement.general.title": "General Procurement Details",
+  "tenders.procurement.general.description": "All procurement processes are handled by the 'D' Branch, including procurement of spares and accessories via the GEM portal.",
+  "tenders.procurement.technical.title": "Technical Specifications",
+  "tenders.procurement.technical.description": "Specifications for equipment such as Digital Mobile Radios, Repeaters, Antennas, Computers, and Telephone Exchanges are prepared and evaluated by the R&D section.",
+  "tenders.procurement.auction.title": "Auction Notices",
+  "tenders.procurement.auction.description": "Information on auctions of condemned or unserviceable equipment (wireless sets, batteries) conducted by the Central Store.",
+
+   "recruit.title": "Recruitments",
+  "recruit.subtitle": "Information about current and upcoming job opportunities in the Maharashtra Police Wireless Department",
+  "recruit.notifications.title": "Recruitment Notifications",
+  "recruit.notifications.description": "Official advertisements for current and upcoming job openings in the department, including positions such as ASI, HC, PC, Technical Assistants, and Drivers. Stay updated to apply for suitable roles.",
+  "recruit.forms.title": "Application Forms",
+  "recruit.forms.description": "Links and downloadable forms for submitting applications for departmental vacancies. Online submission portals are also provided where applicable.",
+  "recruit.exams.title": "Exam Schedules",
+  "recruit.exams.description": "Dates and timetables for written tests, proficiency exams, and practical assessments for various recruitment drives.",
+  "recruit.results.title": "Results",
+  "recruit.results.description": "Merit lists and final selection results for completed recruitments, such as 'PP RESULT RM, ELE., WO – 2024'.",
+  "recruit.training.title": "Training Details",
+  "recruit.training.description": "Information on training programs for selected cadets, including basic training for DySP, PSI, ASI/RM, HC/Wireless Operators, HC/Electricians, and PC/Workshop Hand.",
+  "recruit.eligibility.title": "Eligibility Criteria",
+  "recruit.eligibility.description": "Educational qualifications, age limits, and physical requirements for various posts to ensure all applicants meet departmental standards.",
+  "recruit.proficiency.title": "Proficiency / Classification Exams",
+  "recruit.proficiency.description": "Notices for internal exams that assist in promotions, such as wireless operator exams and classification tests for departmental personnel.",
+   // Gallery Page
+  "gallery.title": "Photo Gallery",
+  "gallery.image1.caption": "Dr. APJ Abdul Kalam Innovation Center Inauguration",
+  "gallery.image2.caption": "Independence Day Celebrations",
+  "gallery.image3.caption": "Union Home Minister's Trophy Award Ceremony",
+  "gallery.image4.caption": "Dnyaneshwari – Senior Officer Mess (SOM)",
+
+    // Contact Page
+  "contact.title": "Contact Us",
+  "contact.subtitle": "Reach us via phone, email, or visit our office",
+  "contact.address.title": "Office Address",
+  "contact.address.line1": "Police Communication and Information Technology Department",
+  "contact.address.line2": "Maharashtra State Pune",
+  "contact.address.line3": "Dr. Homi Bhabha Road, Chavannagar",
+  "contact.address.line4": "Pune – 411008, Maharashtra, India",
+  "contact.phone.title": "Telephone",
+  "contact.phone.number": "020-25652505",
+  "contact.email.title": "Email",
+  "contact.email.address": "dir.polwireless.pune@mahapolice.gov.in",
+  "contact.map.title": "Find Us on Map",
+
+   // Government Publications Page
+  "pubs.title": "Government Publications & Notifications",
+  "pubs.subtitle": "Access official announcements, resolutions, circulars, and tenders issued by the Maharashtra Police Communication & IT Department",
+  "pubs.gazette.title": "Gazette Notifications",
+  "pubs.gazette.description": "Official announcements, appointments, and policy changes published in the Maharashtra Government Gazette. Citizens and employees can access notifications to stay informed about governmental and departmental developments.",
+  "pubs.orders.title": "Government Orders (GRs)",
+  "pubs.orders.description": "Copies of Government Resolutions relevant to the Police Communication & IT Department. These orders ensure transparency and provide official directives for operations, personnel management, and policy implementation.",
+  "pubs.circulars.title": "Circulars",
+  "pubs.circulars.description": "Official circulars issued by the Director General of Police (DGP) or Home Department, providing guidelines, instructions, and updates for departmental operations and staff.",
+  "pubs.notifications.title": "Notifications",
+  "pubs.notifications.description": "Public notices regarding administrative changes, rules, or regulations. These notifications ensure citizens and employees are aware of new protocols or modifications in policies.",
+  "pubs.tenders.title": "Tender Notices",
+  "pubs.tenders.description": "Official announcements of tenders related to departmental procurement and services. While some tenders are listed under a separate section, key notices are provided here for transparency and access.",
 };
 
 
@@ -596,9 +700,9 @@ export const MR = {
 
   "hero.communityPolicing.title": "समुदाय पोलीसिंग",
   "hero.communityPolicing.subtitle": "तंत्रज्ञानाद्वारे विश्वास निर्माण करणे",
-  
+
   //ABOUTDEPT
-   "hx_back": "मुख्यपृष्ठावर परत",
+  "hx_back": "मुख्यपृष्ठावर परत",
   "hx_photoAlt": "पोलीस वायरलेसचा इतिहास",
   "hx_title": "पोलीस वायरलेस संप्रेषण विभागाचा इतिहास",
   "hx_intro": "१९४६ मध्ये स्थापन झालेला हा विभाग, दुसऱ्या महायुद्धातील वायरलेस संचांपासून आधुनिक उपग्रह व आयपी आधारित नेटवर्कपर्यंत विकसित झाला आहे, ज्यामुळे महाराष्ट्रभर सुरक्षित व तत्काळ संप्रेषण शक्य झाले.",
@@ -618,6 +722,7 @@ export const MR = {
   "hx_page": "पान",
   "hx_of": "पैकी",
   "hx_summary": "एकूण सारांश:",
+
   
   //officerinhq
   "administrative.title": "प्रशासन शाखा",
@@ -757,6 +862,8 @@ export const MR = {
   "ranks_18_rank": "PC (ड्रायव्हर)",
   "ranks_18_description": "दैनंदिन ड्रायव्हिंग कर्तव्ये हाताळतो, वाहतूक समन्वय करतो आणि कर्मचाऱ्यांच्या वेळेवर हालचाली सुनिश्चित करतो.",
    
+
+
   //OFFICERSINNHQ
     "oh_back": "मुख्यपृष्ठावर परत",
   "oh_title": "मुख्यालयातील अधिकारी",
@@ -813,7 +920,7 @@ export const MR = {
   "oh_vsat_item4": "Polnet व CCTV उपकरणासाठी तांत्रिक तपशील तयार करणे",
 
   //DIRECTONFO
-   "a1.back": "मुख्य पृष्ठावर परत",
+  "a1.back": "मुख्य पृष्ठावर परत",
 
   "a2.desk": "संचालकांचे मनोगत",
   "a2.name": "श्री. दीपक शिवानंद पांडे",
@@ -844,9 +951,9 @@ export const MR = {
   "director.name": "श्री. दीपक शिवानंद पांडे (IPS)",
   "director.rank": "अतिरिक्त पोलीस महासंचालक व संचालक,",
   "director.designation": "पोलीस दळणवळण, माहिती तंत्रज्ञान आणि वाहतूक विभाग, महाराष्ट्र राज्य, पुणे.",
-  
+
   //FORMAERDIRECOTR
-   "fd.back": "मागे",
+  "fd.back": "मागे",
   "fd.title": "विभागाचे माजी संचालक",
 
   "fd.d1.name": "श्री. सुनील रमनंद आयपीएस",
@@ -896,8 +1003,8 @@ export const MR = {
   "fd.d12.name": "श्री. ई. ए. डॉडवेल आयपी",
   "fd.d12.designation": "एसपी एम. टी. आणि डब्ल्यू/एल",
   "fd.d12.tenure": "१९४६-१९४७",
-   
-  
+
+
 
   //HEIRRACHY
   "h1.back": "मागे",
@@ -963,7 +1070,7 @@ export const MR = {
   "gallery.videoAvailable": "व्हिडिओ गॅलरी उपलब्ध आहे",
   "gallery.viewAllPhotos": "सर्व फोटो पहा",
 
-  
+
   // Emergency Helplines 
   "emergency.message": "आपत्कालीन परिस्थितीत त्वरित मदतीसाठी या क्रमांकांवर कॉल करा",
 
@@ -1040,5 +1147,116 @@ export const MR = {
   "public.grievances": "सार्वजनिक तक्रारी",
   "footer.privacyPolicy": "गोपनीयता धोरण",
   "footer.termsOfUse": "वापरण्याचे नियम",
-  "footer.accessibility": "सुलभता"
+  "footer.accessibility": "सुलभता",
+
+  // Press Release Page
+  "back.home": "मुख्यपृष्ठावर परत",
+  "press.title": "प्रेस विज्ञप्ती",
+  "press.subtitle": "महाराष्ट्र पोलीस वायरलेस विभागातील सकारात्मक घडामोडी आणि चालू प्रकल्प",
+  "press.tech.title": "तांत्रिक उन्नयन",
+  "press.tech.description": "पोलीस दळणवळण व माहिती तंत्रज्ञान विभागामध्ये स्वातंत्र्य दिन उत्साहात साजरा करण्यात आला. विभागातील अधिकारी व कर्मचारी यांनी देशभक्तिपूर्ण वातावरणात ध्वजारोहण, राष्ट्रगीत आणि विविध सांस्कृतिक कार्यक्रमांमध्ये सहभाग घेतला. या उत्सवातून देशभक्ती, एकात्मता आणि तांत्रिक प्रगतीबद्दल जागरूकता निर्माण करण्यात आली.",
+  "press.ai.title": "कृत्रिम बुद्धिमत्ता आधारित पोलिसिंग - MARVEL प्रकल्प",
+  "press.ai.description": "पोलीस दळणवळण व माहिती तंत्रज्ञान विभागामध्ये प्रजासत्ताक दिन उत्साहात साजरा करण्यात आला. अधिकारी व कर्मचारी यांनी ध्वजारोहण, राष्ट्रगीत व देशभक्तिपर कार्यक्रमांमध्ये सहभाग घेतला. या निमित्ताने संविधान मूल्ये, देशभक्ती आणि एकात्मतेचा संदेश देण्यात आला.",
+  "press.emergency.title": "सुधारित आणीबाणी प्रतिसाद - डायल 112",
+  "press.emergency.description": "'डायल 112' आणीबाणी प्रणाली पोलीस (100), अग्निशामक (101) आणि एम्ब्युलन्स (108) सेवा एकाच क्रमांकावर एकत्रित करते. अॅडव्हान्स्ड ट्रॅकिंग आणि डिस्पॅच तंत्रज्ञानाचा वापर करून, प्रतिसाद वेळ मोठ्या प्रमाणात कमी होतो, जीवन वाचवते आणि सार्वजनिक सुरक्षा सुधारते.",
+  "press.cyber.title": "नवीन सायबर कमांड सेंटर",
+  "press.cyber.description": "ऑक्टोबर 2024 मध्ये, एक नवीन सायबर कमांड अँड कंट्रोल सेंटर सुरू करण्यात आला. अॅडव्हान्स्ड फॉरेन्सिक साधने आणि AI-आधारित धोका शोधासह सुसज्ज, ते पोलिसांना सायबर गुन्ह्यांविरुद्ध कार्यक्षमतेने लढा देण्यास आणि नागरिकांसाठी आणि गंभीर पायाभूत सुविधांसाठी डिजिटल सुरक्षा सुनिश्चित करण्यास सक्षम करते.",
+
+  // RTI Page
+  "rti.title": "माहितीचा अधिकार (आरटीआय)",
+  "rti.subtitle": "माहितीचा अधिकार कायद्याखाली नागरिकांसाठी माहिती आणि प्रक्रिया",
+  "rti.pio.title": "लोक माहिती अधिकारी (PIO) तपशील",
+  "rti.pio.description": "पोलीस संप्रेषण आणि आयटी विभागातील नियुक्त PIO आणि अपीलीय प्राधिकरणांची संपर्क माहिती येथे प्रदान केली आहे. नागरिक आरटीआय अर्ज सादर करण्यासाठी किंवा स्पष्टीकरण घेण्यासाठी थेट संपर्क करू शकतात.",
+  "rti.procedure.title": "आरटीआय अर्ज प्रक्रिया",
+  "rti.procedure.description": "आरटीआय अर्ज भरण्यासाठी चरण-दर-चरण मार्गदर्शक, योग्य स्वरूप, आवश्यक तपशील आणि लागू फी समाविष्ट आहे. वेगवान प्रक्रियेसाठी सर्व फील्ड योग्यरित्या भरल्याचे सुनिश्चित करा.",
+  "rti.portal.title": "ऑनलाइन आरटीआय पोर्टल लिंक",
+  "rti.portal.description": "अधिकृत पोर्टलद्वारे इलेक्ट्रॉनिकपणे आरटीआय अर्ज सबमिट करा. महाराष्ट्र आरटीआय पोर्टल आणि भारत सरकारच्या आरटीआय ऑनलाइन पोर्टलचा नागरिक सोयीसाठी दुवा दिला आहे.",
+  "rti.frequent.title": "वारंवार विचारली जाणारी माहिती",
+  "rti.frequent.description": "संघटनात्मक रचना, अंदाजपत्रक तपशील, नागरिक चार्टर आणि विभागीय मॅन्युअल सारख्या सामान्यपणे विचारल्या जाणाऱ्या दस्तऐवजांमध्ये प्रवेश. यामुळे पारदर्शकता सुधारते आणि माहिती पुनर्प्राप्ती सुलभ होते.",
+  "rti.manual.title": "आरटीआय कायदा मॅन्युअल",
+  "rti.manual.description": "संदर्भासाठी संपूर्ण आरटीआय कायदा, 2005 आणि अधिकृत मार्गदर्शक तत्त्वे डाउनलोड किंवा पहा. नागरिकांना कायद्याखालील त्यांचे हक्क आणि जबाबदाऱ्यांशी परिचित होण्यास प्रोत्साहित केले जाते.",
+  "rti.appeal.title": "अपील प्रक्रिया",
+  "rti.appeal.description": "अर्जदार प्रतिसादाने असमाधानी असल्यास, निर्धारित वेळेच्या आत अपील प्रक्रिया अनुसरण करा. पहिल्या आणि द्वितीय अपील सादर करण्याच्या तपशिलासह, अपीलीय प्राधिकरणांची संपर्क माहिती प्रदान केली आहे.",
+
+
+    // Tenders Page
+  "tenders.title": "टेंडर आणि खरेदी",
+  "tenders.subtitle": "महाराष्ट्र पोलीस वायरलेस विभागासाठी अधिकृत खरेदी सूचना आणि कराराच्या संधी",
+  "tenders.active.title": "सक्रिय टेंडर",
+  "tenders.archived.title": "संग्रहित / पूर्ण झालेले टेंडर",
+  "tenders.procurement.title": "टेंडर संबंधित माहिती",
+  "tenders.ref": "टेंडर संदर्भ",
+  "tenders.deadline": "अंतिम मुदत",
+  "tenders.closedOn": "बंद झाला",
+  "tenders.viewDocument": "टेंडर दस्तऐवज पहा",
+  
+  // Active Tenders
+  "tenders.active.radios.title": "डिजिटल मोबाईल रेडिओची खरेदी",
+  "tenders.active.radios.description": "राज्यव्यापी पोलीस संप्रेषणासाठी उच्च-कार्यक्षमतेच्या डिजिटल मोबाईल रेडिओची पुरवठा.",
+  
+  // Archived Tenders
+  "tenders.archived.spares.title": "वायरलेस उपकरणे स्पेअर भाग",
+  "tenders.archived.computers.title": "संगणक आणि नेटवर्किंग उपकरणे",
+
+  // Procurement Info
+  "tenders.procurement.general.title": "सामान्य खरेदी तपशील",
+  "tenders.procurement.general.description": "सर्व खरेदी प्रक्रिया 'डी' शाखेद्वारे हाताळल्या जातात, ज्यामध्ये GEM पोर्टलद्वारे स्पेअर भाग आणि अॅक्सेसरीजची खरेदी समाविष्ट आहे.",
+  "tenders.procurement.technical.title": "तांत्रिक वैशिष्ट्ये",
+  "tenders.procurement.technical.description": "डिजिटल मोबाईल रेडिओ, रिपीटर, अँटेना, संगणक आणि टेलिफोन एक्सचेंज सारख्या उपकरणांची वैशिष्ट्ये आरआण्डडी विभागाद्वारे तयार आणि मूल्यांकन केली जातात.",
+  "tenders.procurement.auction.title": "लिलाव सूचना",
+  "tenders.procurement.auction.description": "केंद्रीय स्टोअरद्वारे चालवल्या जाणाऱ्या निकामी किंवा सेवा अयोग्य उपकरणे (वायरलेस सेट, बॅटरी) यांच्या लिलावावरील माहिती.",
+
+   // Recruitments Page
+  "recruit.title": "भरती",
+  "recruit.subtitle": "महाराष्ट्र पोलीस वायरलेस विभागातील सध्याच्या आणि आगामी नोकरीच्या संधींबद्दल माहिती",
+  "recruit.notifications.title": "भरती सूचना",
+  "recruit.notifications.description": "विभागातील सध्याच्या आणि आगामी नोकरीच्या जागांसाठी अधिकृत जाहिराती, ज्यामध्ये ASI, HC, PC, तांत्रिक सहाय्यक आणि चालक यासारख्या पदांचा समावेश आहे. योग्य भूमिकांसाठी अर्ज करण्यासाठी अद्ययावत रहा.",
+  "recruit.forms.title": "अर्ज फॉर्म",
+  "recruit.forms.description": "विभागीय रिक्त जागांसाठी अर्ज सादर करण्यासाठी दुवे आणि डाउनलोड करण्यायोग्य फॉर्म. जेथे लागू असेल तेथे ऑनलाइन सबमिशन पोर्टल देखील प्रदान केले आहेत.",
+  "recruit.exams.title": "परीक्षा वेळापत्रक",
+  "recruit.exams.description": "विविध भरती मोहिमांसाठी लेखी परीक्षा, प्रावीण्य परीक्षा आणि व्यावहारिक मूल्यांकनांच्या तारखा आणि वेळापत्रक.",
+  "recruit.results.title": "निकाल",
+  "recruit.results.description": "पूर्ण झालेल्या भरतींसाठी योग्यता यादी आणि अंतिम निवड निकाल, जसे की 'PP RESULT RM, ELE., WO – 2024'.",
+  "recruit.training.title": "प्रशिक्षण तपशील",
+  "recruit.training.description": "निवड झालेल्या कॅडेट्ससाठी प्रशिक्षण कार्यक्रमांबद्दल माहिती, ज्यामध्ये DySP, PSI, ASI/RM, HC/वायरलेस ऑपरेटर, HC/इलेक्ट्रिशियन आणि PC/कार्यशाळा हँड यांच्या मूलभूत प्रशिक्षणाचा समावेश आहे.",
+  "recruit.eligibility.title": "पात्रता निकष",
+  "recruit.eligibility.description": "विविध पदांसाठी शैक्षणिक पात्रता, वयोमर्यादा आणि शारीरिक आवश्यकता जेणेकरून सर्व अर्जदार विभागीय मानकांपूर्ण करतील.",
+  "recruit.proficiency.title": "प्रावीण्य / वर्गीकरण परीक्षा",
+  "recruit.proficiency.description": "अंतर्गत परीक्षांसाठी सूचना ज्या पदोन्नतीत मदत करतात, जसे की वायरलेस ऑपरेटर परीक्षा आणि विभागीय कर्मचाऱ्यांसाठी वर्गीकरण चाचण्या.",
+  // Gallery Page
+  "gallery.title": "फोटो गॅलरी",
+  "gallery.image1.caption": "डॉ. एपीजे अब्दुल कलाम इनोवेशन सेंटर उद्घाटन",
+  "gallery.image2.caption": "स्वातंत्र्यदिन साजरे",
+  "gallery.image3.caption": "केंद्रीय गृहमंत्री ट्रॉफी पुरस्कार समारंभ",
+  "gallery.image4.caption": "ज्ञानेश्वरी - वरिष्ठ अधिकारी मेस (SOM)",
+
+
+
+   // Contact Page
+  "contact.title": "आमच्याशी संपर्क साधा",
+  "contact.subtitle": "फोन, ईमेल द्वारे किंवा आमच्या कार्यालयाला भेट देऊन आमच्याशी संपर्क साधा",
+  "contact.address.title": "कार्यालयाचा पत्ता",
+  "contact.address.line1": "पोलीस संप्रेषण आणि माहिती तंत्रज्ञान विभाग",
+  "contact.address.line2": "महाराष्ट्र राज्य पुणे",
+  "contact.address.line3": "डॉ. होमी भाभा रोड, चव्हाणनगर",
+  "contact.address.line4": "पुणे – ४११००८, महाराष्ट्र, भारत",
+  "contact.phone.title": "दूरध्वनी",
+  "contact.phone.number": "०२०-२५६५२५०५",
+  "contact.email.title": "ईमेल",
+  "contact.email.address": "dir.polwireless.pune@mahapolice.gov.in",
+  "contact.map.title": "नकाशावर आम्हाला शोधा",
+
+    // Government Publications Page
+  "pubs.title": "सरकारी प्रकाशने आणि अधिसूचना",
+  "pubs.subtitle": "महाराष्ट्र पोलीस संप्रेषण आणि आयटी विभागाद्वारे जारी केलेल्या अधिकृत घोषणा, ठराव, परिपत्रक आणि टेंडरमध्ये प्रवेश",
+  "pubs.gazette.title": "राजपत्र अधिसूचना",
+  "pubs.gazette.description": "महाराष्ट्र सरकारी राजपत्रात प्रकाशित झालेल्या अधिकृत घोषणा, नियुक्त्या आणि धोरणातील बदल. नागरिक आणि कर्मचारी सरकारी आणि विभागीय घडामोडींबद्दल माहिती ठेवण्यासाठी अधिसूचनांमध्ये प्रवेश घेऊ शकतात.",
+  "pubs.orders.title": "सरकारी आदेश (GRs)",
+  "pubs.orders.description": "पोलीस संप्रेषण आणि आयटी विभागाशी संबंधित सरकारी ठरावांची प्रती. हे आदेश पारदर्शकता सुनिश्चित करतात आणि कार्यसंचालन, कर्मचारी व्यवस्थापन आणि धोरण अंमलबजावणीसाठी अधिकृत निर्देश प्रदान करतात.",
+  "pubs.circulars.title": "परिपत्रक",
+  "pubs.circulars.description": "पोलीस महासंचालक (DGP) किंवा गृह विभागाद्वारे जारी केलेली अधिकृत परिपत्रके, जी विभागीय कार्यसंचालन आणि कर्मचाऱ्यांसाठी मार्गदर्शक तत्त्वे, सूचना आणि अद्यतने प्रदान करतात.",
+  "pubs.notifications.title": "अधिसूचना",
+  "pubs.notifications.description": "प्रशासकीय बदल, नियम किंवा नियमांसंबंधी सार्वजनिक सूचना. ह्या अधिसूचना नागरिक आणि कर्मचारी नवीन प्रोटोकॉल किंवा धोरणांमधील सुधारणांबद्दल जागरूक आहेत याची खात्री करतात.",
+  "pubs.tenders.title": "टेंडर सूचना",
+  "pubs.tenders.description": "विभागीय खरेदी आणि सेवांशी संबंधित टेंडरच्या अधिकृत घोषणा. काही टेंडर स्वतंत्र विभागात सूचीबद्ध केले असले तरी, पारदर्शकता आणि प्रवेशासाठी मुख्य सूचना येथे प्रदान केल्या आहेत.",
 };

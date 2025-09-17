@@ -65,12 +65,13 @@ const Navbar = () => {
       hasDropdown: true,
       url: "/opportunities",
       items: [
-        { name: t("nav.officersList"), url: "/police/gazette" },
+                { name: t("nav.gazette"), url: "/police/gazette" },
+        { name: t("nav.officersList"), url: "/police/officers" },
         { name: t("nav.promotionOrders"), url: "/police/officers" },
         { name: t("nav.transfers"), url: "/police/promotions" },
-        { name: t("nav.gradationList"), url: "/police/transfers" },
-        { name: t("nav.strategySupport"), url: "/police/gradation" },
-        { name: t("nav.positiveStories"), url: "/police/strategy" },
+        { name: t("nav.gradationList"), url: "/police/gradation" },
+        { name: t("nav.strategySupport"), url: "/police/strategy" },
+        { name: t("nav.positiveStories"), url: "/police/stories" },
       ],
     },
     {

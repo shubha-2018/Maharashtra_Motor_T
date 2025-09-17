@@ -237,12 +237,12 @@ const GovernmentUpdates: React.FC = () => {
                         {tender.tender_no}
                       </p>
                     </div>
-                    <div>
+                    {/* <div>
                       <span className="text-muted-foreground">Value:</span>
                       <p className="font-medium text-foreground">
                         {tender.value}
                       </p>
-                    </div>
+                    </div> */}
                   </div>
 
                   <div className="flex items-center justify-between">

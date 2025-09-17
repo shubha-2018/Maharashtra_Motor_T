@@ -56,13 +56,13 @@ const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="bg-gradient-to-br from-primary to-primary-hover text-primary-foreground">
+    <footer className="bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 text-gray-800 dark:text-gray-200">
       {/* Main Footer Content */}
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Quick Links */}
           <div className="space-y-4">
-            <h3 className="text-lg font-bold text-saffron mb-4 flex items-center gap-2">
+            <h3 className="text-lg font-bold text-saffron dark:text-yellow-400 mb-4 flex items-center gap-2">
               <Globe className="w-5 h-5" />
               {t("quick.links")}
             </h3>
@@ -71,9 +71,9 @@ const Footer: React.FC = () => {
                 <li key={link.key}>
                   <a
                     href={link.href}
-                    className="text-primary-foreground/80 hover:text-saffron transition-colors duration-300 text-sm flex items-center gap-1 group"
+                    className="text-gray-700 dark:text-gray-300 hover:text-saffron dark:hover:text-yellow-400 transition-colors duration-300 text-sm flex items-center gap-1 group"
                   >
-                    <span className="w-1 h-1 bg-saffron rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                    <span className="w-1 h-1 bg-saffron dark:bg-yellow-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
                     {t(link.key)}
                   </a>
                 </li>
@@ -83,7 +83,7 @@ const Footer: React.FC = () => {
 
           {/* Important Links */}
           <div className="space-y-4">
-            <h3 className="text-lg font-bold text-saffron mb-4 flex items-center gap-2">
+            <h3 className="text-lg font-bold text-saffron dark:text-yellow-400 mb-4 flex items-center gap-2">
               <ExternalLink className="w-5 h-5" />
               {t("important.links")}
             </h3>
@@ -92,13 +92,13 @@ const Footer: React.FC = () => {
                 <li key={link.key}>
                   <a
                     href={link.href}
-                    className="text-primary-foreground/80 hover:text-saffron transition-colors duration-300 text-sm flex items-center gap-1 group"
+                    className="text-gray-700 dark:text-gray-300 hover:text-saffron dark:hover:text-yellow-400 transition-colors duration-300 text-sm flex items-center gap-1 group"
                     {...(link.external && {
                       target: "_blank",
                       rel: "noopener noreferrer",
                     })}
                   >
-                    <span className="w-1 h-1 bg-saffron rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                    <span className="w-1 h-1 bg-saffron dark:bg-yellow-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
                     {t(link.key)}
                     {link.external && (
                       <ExternalLink className="w-3 h-3 opacity-60" />
@@ -111,19 +111,19 @@ const Footer: React.FC = () => {
 
           {/* Contact Information */}
           <div className="space-y-4">
-            <h3 className="text-lg font-bold text-saffron mb-4 flex items-center gap-2">
+            <h3 className="text-lg font-bold text-saffron dark:text-yellow-400 mb-4 flex items-center gap-2">
               <Phone className="w-5 h-5" />
               {t("contact.info")}
             </h3>
             <div className="space-y-3">
               <div className="flex items-start gap-3">
-                <MapPin className="w-4 h-4 text-saffron mt-1 flex-shrink-0" />
+                <MapPin className="w-4 h-4 text-saffron dark:text-yellow-400 mt-1 flex-shrink-0" />
                 <div className="text-sm">
-                  <p className="text-primary-foreground font-medium mb-1">
+                  <p className="text-gray-800 dark:text-gray-200 font-medium mb-1">
                     {t("address")}:
                   </p>
                   <p
-                    className="text-primary-foreground/80 leading-relaxed"
+                    className="text-gray-700 dark:text-gray-300 leading-relaxed"
                     dangerouslySetInnerHTML={{ __html: t("dept.address") }}
                   >
                     {/* address */}
@@ -132,14 +132,14 @@ const Footer: React.FC = () => {
               </div>
 
               <div className="flex items-center gap-3">
-                <Phone className="w-4 h-4 text-saffron" />
+                <Phone className="w-4 h-4 text-saffron dark:text-yellow-400" />
                 <div className="text-sm">
-                  <span className="text-primary-foreground font-medium">
+                  <span className="text-gray-800 dark:text-gray-200 font-medium">
                     {t("phone")}:{" "}
                   </span>
                   <a
                     href="tel:+912222621234"
-                    className="text-primary-foreground/80 hover:text-saffron transition-colors"
+                    className="text-gray-700 dark:text-gray-300 hover:text-saffron dark:hover:text-yellow-400 transition-colors"
                   >
                     +91-22-2262-1234
                   </a>
@@ -147,14 +147,14 @@ const Footer: React.FC = () => {
               </div>
 
               <div className="flex items-center gap-3">
-                <Mail className="w-4 h-4 text-saffron" />
+                <Mail className="w-4 h-4 text-saffron dark:text-yellow-400" />
                 <div className="text-sm">
-                  <span className="text-primary-foreground font-medium">
+                  <span className="text-gray-800 dark:text-gray-200 font-medium">
                     {t("email")}:{" "}
                   </span>
                   <a
                     href="mailto:pcit@mahapolice.gov.in"
-                    className="text-primary-foreground/80 hover:text-saffron transition-colors"
+                    className="text-gray-700 dark:text-gray-300 hover:text-saffron dark:hover:text-yellow-400 transition-colors"
                   >
                     pcit@mahapolice.gov.in
                   </a>
@@ -166,34 +166,34 @@ const Footer: React.FC = () => {
           {/* Visitor Statistics & Social */}
           <div className="space-y-6">
             <div>
-              <h3 className="text-lg font-bold text-saffron mb-4 flex items-center gap-2">
+              <h3 className="text-lg font-bold text-saffron dark:text-yellow-400 mb-4 flex items-center gap-2">
                 <Eye className="w-5 h-5" />
                 {t("visitor.stats")}
               </h3>
-              <div className="glass bg-white/10 rounded-lg p-4 space-y-2">
+              <div className="glass bg-white/10 dark:bg-gray-800/30 rounded-lg p-4 space-y-2">
                 <div className="flex justify-between text-sm">
-                  <span className="text-primary-foreground/80">
+                  <span className="text-gray-700 dark:text-gray-300">
                     Total Visitors:
                   </span>
-                  <span className="font-bold text-saffron">
+                  <span className="font-bold text-saffron dark:text-yellow-400">
                     {visitorStats.totalVisitors}
                   </span>
                 </div>
                 <div className="flex justify-between text-sm">
-                  <span className="text-primary-foreground/80">Today:</span>
-                  <span className="font-bold text-saffron">
+                  <span className="text-gray-700 dark:text-gray-300">Today:</span>
+                  <span className="font-bold text-saffron dark:text-yellow-400">
                     {visitorStats.todayVisitors}
                   </span>
                 </div>
                 <div className="flex justify-between text-sm">
-                  <span className="text-primary-foreground/80">
+                  <span className="text-gray-700 dark:text-gray-300">
                     Online Now:
                   </span>
-                  <span className="font-bold text-green-400">
+                  <span className="font-bold text-green-600 dark:text-green-400">
                     {visitorStats.onlineUsers}
                   </span>
                 </div>
-                <div className="text-xs text-primary-foreground/60 pt-2 border-t border-white/20">
+                <div className="text-xs text-gray-600 dark:text-gray-400 pt-2 border-t border-gray-300 dark:border-gray-600">
                   Last Updated: {visitorStats.lastUpdated}
                 </div>
               </div>
@@ -201,7 +201,7 @@ const Footer: React.FC = () => {
 
             {/* Social Media Links */}
             <div>
-              <h4 className="text-sm font-semibold text-saffron mb-3">
+              <h4 className="text-sm font-semibold text-saffron dark:text-yellow-400 mb-3">
                 Follow Us
               </h4>
               <div className="flex gap-3">
@@ -209,7 +209,7 @@ const Footer: React.FC = () => {
                   <a
                     key={index}
                     href={social.href}
-                    className={`p-2 bg-white/10 rounded-lg hover:bg-white/20 transition-all duration-300 ${social.color}`}
+                    className={`p-2 bg-white/10 dark:bg-gray-800/30 rounded-lg hover:bg-white/20 dark:hover:bg-gray-800/50 transition-all duration-300 ${social.color}`}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -223,27 +223,27 @@ const Footer: React.FC = () => {
       </div>
 
       {/* Bottom Copyright Bar */}
-      <div className="bg-primary-hover border-t border-primary-foreground/20">
+      <div className="bg-gray-100 dark:bg-gray-800 border-t border-gray-300 dark:border-gray-700">
         <div className="container mx-auto px-4 py-4">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <div className="text-sm text-primary-foreground/80 text-center md:text-left">
+            <div className="text-sm text-gray-600 dark:text-gray-400 text-center md:text-left">
               {t("copyright")}
             </div>
-            <div className="flex items-center gap-4 text-sm text-primary-foreground/80">
+            <div className="flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400">
               <span>|</span>
-              <a href="#" className="hover:text-saffron transition-colors">
+              <a href="#" className="hover:text-saffron dark:hover:text-yellow-400 transition-colors">
                 {t("footer.privacyPolicy")}
               </a>
               <span>|</span>
-              <a href="#" className="hover:text-saffron transition-colors">
+              <a href="#" className="hover:text-saffron dark:hover:text-yellow-400 transition-colors">
                  {t("footer.termsOfUse")}
               </a>
               <span>|</span>
-              <a href="#" className="hover:text-saffron transition-colors">
+              <a href="#" className="hover:text-saffron dark:hover:text-yellow-400 transition-colors">
                   {t("footer.accessibility")}
               </a>
             </div>
-            <div className="text-sm text-primary-foreground/60 text-center md:text-right">
+            <div className="text-sm text-gray-500 dark:text-gray-500 text-center md:text-right">
               {t("developed.by")}
             </div>
           </div>

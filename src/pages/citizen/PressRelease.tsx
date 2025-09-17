@@ -1,8 +1,8 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Newspaper } from "lucide-react";
-import techPhoto from "@/assets/1.jpg";
-import aiPhoto from "@/assets/1.jpg";
+import techPhoto from "@/assets/press/press1.png";
+import aiPhoto from "@/assets/press/press2.png";
 import emergencyPhoto from "@/assets/1.jpg";
 import cyberPhoto from "@/assets/1.jpg";
 import { useNavigate } from "react-router";

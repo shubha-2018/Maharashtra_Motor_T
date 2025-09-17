@@ -50,24 +50,6 @@ const Header: React.FC = () => {
     document.documentElement.classList.add(theme);
   }, [theme]);
 
-  const navigationItems = [
-    { key: "nav.home", href: "#home" },
-    {
-      key: "nav.about",
-      href: "#about",
-      submenu: [
-        { key: "Organization Structure", href: "#org" },
-        { key: "Vision & Mission", href: "#vision" },
-        { key: "History", href: "#history" },
-      ],
-    },
-    { key: "nav.citizens", href: "#citizens" },
-    { key: "nav.police", href: "#police" },
-    { key: "nav.tenders", href: "#tenders" },
-    { key: "nav.recruitment", href: "#recruitment" },
-    { key: "nav.contact", href: "#contact" },
-    { key: "nav.gallery", href: "#gallery" },
-  ];
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 0);

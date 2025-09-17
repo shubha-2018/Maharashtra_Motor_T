@@ -474,7 +474,7 @@ const PageAccessibilityChanger = () => {
   ];
 
   return (
-    <div className="fixed bottom-8 right-8 z-50" data-accessibility-panel>
+    <div className="fixed bottom-8 right-2 md:right-8 z-50" data-accessibility-panel>
       <div className="group" data-accessibility-panel>
         <button
           aria-label="Accessibility options"

@@ -17,6 +17,7 @@ import { cn } from "@/lib/utils";
 import IMG1 from "@/assets/hero/4.jpeg";
 import IMG2 from "@/assets/hero/2.jpg";
 import IMG3 from "@/assets/hero/5.jpg";
+import IMG4 from "@/assets/hero/Aaryabhatt-Garden-4.jpg";
 import DIRECTOR_PHOTO from "@/assets/director.jpg";
 import { Link } from "react-router-dom";
 
@@ -30,7 +31,7 @@ const HeroSection: React.FC = () => {
   const heroSlides = [
     {
       image: IMG1,
-      title: t("hero.modernTech.title"),
+      title: t("title"),
       subtitle: t("hero.modernTech.subtitle"),
     },
     {
@@ -42,6 +43,11 @@ const HeroSection: React.FC = () => {
       image: IMG3,
       title: t("hero.communityPolicing.title"),
       subtitle: t("hero.communityPolicing.subtitle"),
+    },
+   {
+      image: IMG4,
+      title: t("hero.modernTech.title"),
+      subtitle: t("hero.modernTech.subtitle"),
     },
   ];
 
@@ -62,7 +68,7 @@ const HeroSection: React.FC = () => {
   const emergencyContacts = [
     {
       title: t("emergency.police"),
-      number: "100",
+      number: "112",
       type: t("type.police"),
       icon: Shield,
     },
@@ -125,12 +131,14 @@ const HeroSection: React.FC = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-primary/80 via-primary/60 to-saffron/40" />
 
               {/* Slide Content */}
-              <div className="absolute inset-0 flex items-end md:mb-14 justify-center text-center">
+              <div className="absolute inset-0 flex items-end mb-20 md:mb-28 justify-center text-center">
                 <div className="container mx-auto px-4">
-                  <h2 className="text-4xl md:text-6xl font-bold text-white mb-4 fade-in">
-                    {slide.title}
+                  <h2 className="text-4xl md:text-5xl xl:text-6xl capitalize font-bold text-white mb-4 fade-in"
+                  
+                          dangerouslySetInnerHTML={{ __html: t(slide.title) }}>
+                    {/* {slide.title} */}
                   </h2>
-                  <p className="text-xl md:text-2xl text-white/90 slide-up">
+                  <p className="text-xl md:text-2xl  text-white/90 slide-up">
                     {slide.subtitle}
                   </p>
                 </div>
@@ -142,21 +150,21 @@ const HeroSection: React.FC = () => {
         {/* Slider Controls */}
         <button
           onClick={prevSlide}
-          className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-3 rounded-full backdrop-blur-sm transition-all"
+          className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-3 rounded-full backdrop-blur-sm transition-all z-20"
           aria-label="Previous slide"
         >
           <ChevronLeft className="w-6 h-6" />
         </button>
         <button
           onClick={nextSlide}
-          className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-3 rounded-full backdrop-blur-sm transition-all"
+          className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-3 rounded-full backdrop-blur-sm transition-all z-20"
           aria-label="Next slide"
         >
           <ChevronRight className="w-6 h-6" />
         </button>
 
         {/* Slider Indicators */}
-        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2">
+        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2 z-10">
           {heroSlides.map((_, index) => (
             <button
               key={index}
@@ -169,66 +177,66 @@ const HeroSection: React.FC = () => {
             />
           ))}
         </div>
-      </div>
 
-      {/* Emergency Contacts - Left Side */}
-      <div className="absolute left-4 top-1/2 -translate-y-1/2 hidden xl:block space-y-3">
-        {leftContacts.map((contact, index) => (
-          <Card
-            key={index}
-            className="glass-card w-64 hover:scale-105 transition-transform cursor-pointer"
-          >
-            <CardContent className="p-3">
-              <div className="flex items-center space-x-3">
-                <contact.icon className="w-6 h-6 text-saffron flex-shrink-0" />
-                <div className="flex-1 min-w-0">
-                  <h4 className="text-black dark:text-white font-semibold text-sm truncate">
-                    {contact.title}
-                  </h4>
-                  <p
-                    className="text-black/80 dark:text-white/80 text-xs cursor-pointer"
-                    onClick={() => handleCall(contact.number.replace(/\D/g, ""))}
-                  >
-                    {contact.number}
-                  </p>
-                  <span className="inline-block bg-saffron/20 text-saffron text-xs px-2 py-1 rounded-full mt-1">
-                    {contact.type}
-                  </span>
+        {/* Emergency Contacts - Left Side */}
+        <div className="absolute left-4 bottom-16 hidden xl:block space-y-3 max-h-[300px] overflow-hidden">
+          {leftContacts.map((contact, index) => (
+            <Card
+              key={index}
+              className="glass-card w-56 hover:scale-105 transition-transform cursor-pointer"
+            >
+              <CardContent className="p-3">
+                <div className="flex items-center space-x-3">
+                  <contact.icon className="w-5 h-5 text-saffron flex-shrink-0" />
+                  <div className="flex-1 min-w-0">
+                    <h4 className="text-black dark:text-white font-semibold text-xs truncate">
+                      {contact.title}
+                    </h4>
+                    <p
+                      className="text-black/80 dark:text-white/80 text-xs cursor-pointer hover:text-saffron transition-colors"
+                      onClick={() => handleCall(contact.number.replace(/\D/g, ""))}
+                    >
+                      {contact.number}
+                    </p>
+                    <span className="inline-block bg-saffron/20 text-saffron text-xs px-2 py-0.5 rounded-full mt-1">
+                      {contact.type}
+                    </span>
+                  </div>
                 </div>
-              </div>
-            </CardContent>
-          </Card>
-        ))}
-      </div>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
 
-      {/* Emergency Contacts - Right Side */}
-      <div className="absolute right-4 top-1/2 -translate-y-1/2 hidden xl:block space-y-3">
-        {rightContacts.map((contact, index) => (
-          <Card
-            key={`right-${index}`}
-            className="glass-card w-64 hover:scale-105 transition-transform cursor-pointer"
-          >
-            <CardContent className="p-3">
-              <div className="flex items-center space-x-3">
-                <contact.icon className="w-6 h-6 text-saffron flex-shrink-0" />
-                <div className="flex-1 min-w-0">
-                  <h4 className="text-black dark:text-white font-semibold text-sm truncate">
-                    {contact.title}
-                  </h4>
-                  <p 
-                    className="text-black/80 dark:text-white/80 text-xs cursor-pointer"
-                    onClick={() => handleCall(contact.number.replace(/\D/g, ""))}
-                  >
-                    {contact.number}
-                  </p>
-                  <span className="inline-block bg-saffron/20 text-saffron text-xs px-2 py-1 rounded-full mt-1">
-                    {contact.type}
-                  </span>
+        {/* Emergency Contacts - Right Side */}
+        <div className="absolute right-4 bottom-16 hidden xl:block space-y-3 max-h-[300px] overflow-hidden">
+          {rightContacts.map((contact, index) => (
+            <Card
+              key={`right-${index}`}
+              className="glass-card w-56 hover:scale-105 transition-transform cursor-pointer"
+            >
+              <CardContent className="p-3">
+                <div className="flex items-center space-x-3">
+                  <contact.icon className="w-5 h-5 text-saffron flex-shrink-0" />
+                  <div className="flex-1 min-w-0">
+                    <h4 className="text-black dark:text-white font-semibold text-xs truncate">
+                      {contact.title}
+                    </h4>
+                    <p 
+                      className="text-black/80 dark:text-white/80 text-xs cursor-pointer hover:text-saffron transition-colors"
+                      onClick={() => handleCall(contact.number.replace(/\D/g, ""))}
+                    >
+                      {contact.number}
+                    </p>
+                    <span className="inline-block bg-saffron/20 text-saffron text-xs px-2 py-0.5 rounded-full mt-1">
+                      {contact.type}
+                    </span>
+                  </div>
                 </div>
-              </div>
-            </CardContent>
-          </Card>
-        ))}
+              </CardContent>
+            </Card>
+          ))}
+        </div>
       </div>
 
       {/* Main Content */}
@@ -268,8 +276,7 @@ const HeroSection: React.FC = () => {
                   {t("director.designation")}
                 </p>
                 <Link to={"/about/directors-desk"}>
-                  {" "}
-                  <Button className="btn-police">{t("director.desk")}</Button>
+                  <Button className="btn-police dark:text-white">{t("director.desk")}</Button>
                 </Link>
               </CardContent>
             </div>
@@ -297,7 +304,7 @@ const HeroSection: React.FC = () => {
                 <Link to={"/about/directors-desk"}>
                   <Button
                     variant="outline"
-                    className="hover:bg-primary hover:text-primary-foreground"
+                    className="hover:bg-primary hover:text-primary-foreground dark:text-white"
                   >
                     {t("read.more")}
                   </Button>
@@ -324,7 +331,7 @@ const HeroSection: React.FC = () => {
                             {contact.title}
                           </h4>
                           <p 
-                            className="text-muted-foreground text-xs cursor-pointer"
+                            className="text-muted-foreground text-xs cursor-pointer hover:text-primary transition-colors"
                             onClick={() => handleCall(contact.number.replace(/\D/g, ""))}
                           >
                             {contact.number}

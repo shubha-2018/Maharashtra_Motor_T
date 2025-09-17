@@ -266,7 +266,7 @@ const GovernmentUpdates: React.FC = () => {
 
               <div className="text-center pt-4">
                 <Link to={"/citizen/tender"}>
-                  <Button className="btn-saffron">
+                  <Button className="btn-saffron dark:text-white">
                     {t("view.all")} {t("tenders.section")}
                   </Button>
                 </Link>

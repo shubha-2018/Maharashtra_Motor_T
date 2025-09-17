@@ -223,7 +223,7 @@ const EventsGallery: React.FC = () => {
 
                 <div className="text-center pt-4 border-t border-border">
                   <Link to={"/citizen/press-release"} >
-                  <Button className="btn-police w-full">
+                  <Button className="btn-police w-full dark:text-white">
                     <ArrowRight className="w-4 h-4 mr-2" />
                     {t("view.all.events")}
                   </Button>
@@ -247,7 +247,7 @@ const EventsGallery: React.FC = () => {
                   <Link to={"/gallery"} >
                   <Button
                     variant="outline"
-                    className="hover:bg-saffron hover:text-white hover:border-saffron"
+                    className="hover:bg-saffron hover:text-white hover:border-saffron "
                   >
                     <Eye className="w-4 h-4 mr-2" />
                     {t("view.gallery")}
@@ -305,7 +305,7 @@ const EventsGallery: React.FC = () => {
                     <span>{t("gallery.videoAvailable")}</span>
                   </div>
                      <Link to={"/gallery"} >
-                  <Button className="btn-saffron">
+                  <Button className="btn-saffron dark:text-white">
                     <Camera className="w-4 h-4 mr-2" />
                      {t("gallery.viewAllPhotos")}
                   </Button>

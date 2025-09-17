@@ -73,7 +73,7 @@ const SocialMediaFloatButton = () => {
   ];
 
   return (
-    <div className="fixed right-8 bottom-28 z-50 flex flex-col items-center space-y-3">
+    <div className="fixed right-2 sm:right-8 bottom-28 z-50 flex flex-col items-center space-y-3">
       {/* Social media icons */}
       {isExpanded &&
         socialMediaIcons.map((social, index) => (

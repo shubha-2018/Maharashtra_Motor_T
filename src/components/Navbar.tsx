@@ -10,7 +10,7 @@ import { ChevronDown, Menu, X } from "lucide-react";
 import AshokStambhLogo from "@/assets/ashok-stambh.png";
 import WirelessLogo from "@/assets/wireless.png";
 import PoliceLogo from "@/assets/police-logo.png";
-import { Link, useNavigate } from "react-router-dom"; // Import Link component
+import { Link, useNavigate } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const Navbar = () => {
@@ -91,7 +91,7 @@ const Navbar = () => {
     };
 
     const handleColorChangeOnScroll = () => {
-      if (window.scrollY > 50 && window.scrollY <900 ) {
+      if (window.scrollY > 50 && window.scrollY < 900) {
         setColorChange(true);
       } else {
         setColorChange(false);
@@ -99,15 +99,26 @@ const Navbar = () => {
     };
 
     window.addEventListener("scroll", handleScroll);
-
     window.addEventListener("scroll", handleColorChangeOnScroll);
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("scroll", handleColorChangeOnScroll);
     };
   }, []);
 
+  // Prevent body scroll when mobile menu is open
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
 
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [isMobileMenuOpen]);
 
   return (
     <nav
@@ -115,7 +126,7 @@ const Navbar = () => {
         scrolled ? "navbarbg" : "bg-navbar"
       } `}
     >
-      <div className=" mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-24">
           {/* Logo */}
           <div className="flex items-center">
@@ -131,17 +142,19 @@ const Navbar = () => {
               </Link>
               <Link to="/">
                 <div className="w-24 h-14 bg-brand-primary rounded-lg flex items-center justify-center">
-                  <img src={WirelessLogo} alt="logo" />
+                  <img
+                    src={WirelessLogo}
+                    alt="logo"
+                    className="rounded-full filter brightness-0  dark:filter dark:invert"
+                  />
                 </div>
               </Link>
               <Link to="/">
                 <span
                   dangerouslySetInnerHTML={{ __html: t("title") }}
-                  className={`hidden dark:text-white sm:block text-xl font-extrabold text-brand-primary capitalize ${
-                          colorChange
-                            ? "text-white"
-                            : "text-gray-800"
-                        }`}
+                  className={`hidden  dark:text-white sm:block xl:hidden 2xl:block xl:text-lg 2xl:text-lg font-extrabold text-brand-primary capitalize ${
+                    colorChange ? "text-white" : "text-gray-800"
+                  }`}
                 >
                   {/* title */}
                 </span>
@@ -150,7 +163,7 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden xl:flex items-center space-x-8">
             {navigationItems.map((item) => (
               <div key={item.name}>
                 {item.hasDropdown ? (
@@ -158,10 +171,8 @@ const Navbar = () => {
                     <DropdownMenuTrigger asChild>
                       <Button
                         variant="ghost"
-                        className={`text-navbar-foreground text-lg font-bold hover:text-navbar-foreground hover:bg-navbar-foreground/5  ${
-                          colorChange
-                            ? "text-white"
-                            : "text-gray-800"
+                        className={`dark:text-white text-sm xl:text-lg font-bold hover:text-navbar-foreground hover:bg-navbar-foreground/5 ${
+                          colorChange ? "text-white" : "text-gray-800"
                         }`}
                       >
                         {item.name}
@@ -190,11 +201,9 @@ const Navbar = () => {
                 ) : (
                   <Button
                     variant="ghost"
-                    className={`text-navbar-foreground text-lg hover:text-navbar-foreground hover:bg-navbar-foreground/5 font-bold ${
-                          colorChange
-                            ? "text-white"
-                            : "text-gray-800"
-                        }`}
+                    className={`text-navbar-foreground text-sm xl:text-lg dark:text-white hover:text-navbar-foreground hover:bg-navbar-foreground/5 font-bold ${
+                      colorChange ? "text-white" : "text-gray-800"
+                    }`}
                   >
                     <Link to={item.url}>{item.name}</Link>
                   </Button>
@@ -204,14 +213,14 @@ const Navbar = () => {
           </div>
 
           {/* Login Button */}
-          <div className="hidden md:flex">
+          <div className="hidden xl:flex">
             <div className="w-16 h-20 bg-brand-primary rounded-lg flex items-center justify-center">
               <img src={PoliceLogo} alt="logo" />
             </div>
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className="xl:hidden">
             <Button
               variant="ghost"
               size="icon"
@@ -219,9 +228,9 @@ const Navbar = () => {
               className="text-navbar-foreground"
             >
               {isMobileMenuOpen ? (
-                <X className="w-6 h-6" />
+                <X className="w-20 h-20 text-5xl" />
               ) : (
-                <Menu className="w-6 h-6" />
+                <Menu className="w-20 h-20  text-5xl" />
               )}
             </Button>
           </div>
@@ -229,39 +238,44 @@ const Navbar = () => {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden py-4 border-t border-navbar-border">
-            <div className="flex flex-col space-y-2">
-              {navigationItems.map((item) => (
-                <div key={item.name} className="py-2">
-                  <div className="flex items-center justify-between">
-                    <Link
-                      to={item.url}
-                      className="text-navbar-foreground font-bold "
+          <div className="xl:hidden w-full fixed top-28 md:top-32  left-0 bg-background z-40 overflow-y-auto">
+            <div className="py-4 px-4 border-t border-navbar-border h-[calc(100vh-6rem)]">
+              <div className="flex flex-col space-y-2">
+                {navigationItems.map((item) => (
+                  <div key={item.name} className="py-2">
+                    <div
+                      className="flex items-center justify-between"
                       onClick={() =>
                         !item.hasDropdown && setIsMobileMenuOpen(false)
                       }
                     >
-                      {item.name}
-                    </Link>
-                    {item.hasDropdown && (
-                      <ChevronDown className="w-4 h-4 text-navbar-muted" />
-                    )}
-                  </div>
-                  {item.hasDropdown &&
-                    item.items.map((subItem) => (
                       <Link
-                        key={subItem.name}
-                        to={subItem.url}
-                        className="pl-4 py-1 text-navbar-muted hover:text-navbar-foreground cursor-pointer block"
+                        to={item.url}
+                        className="text-navbar-foreground font-bold"
                         onClick={() => setIsMobileMenuOpen(false)}
                       >
-                        {subItem.name}
+                        {item.name}
                       </Link>
-                    ))}
+                      {item.hasDropdown && (
+                        <ChevronDown className="w-4 h-4 text-navbar-muted" />
+                      )}
+                    </div>
+                    {item.hasDropdown &&
+                      item.items.map((subItem) => (
+                        <Link
+                          key={subItem.name}
+                          to={subItem.url}
+                          className="pl-4 py-1 text-navbar-muted hover:text-navbar-foreground cursor-pointer block"
+                          onClick={() => setIsMobileMenuOpen(false)}
+                        >
+                          {subItem.name}
+                        </Link>
+                      ))}
+                  </div>
+                ))}
+                <div className="w-full bg-brand-primary rounded-lg flex items-center justify-center mt-4">
+                  <img src={PoliceLogo} className="w-14 h-14" alt="logo" />
                 </div>
-              ))}
-              <div className="w-14 h-14 bg-brand-primary rounded-lg flex items-center justify-center">
-                <img src={PoliceLogo} alt="logo" />
               </div>
             </div>
           </div>

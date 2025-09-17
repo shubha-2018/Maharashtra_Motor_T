@@ -5,17 +5,33 @@ import { useNavigate } from "react-router";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 // Import all images as 1.jpg
-import imgAdmin from "@/assets/aa.jpg";
-import imgTech from "@/assets/bb.jpg";
-import imgDev from "@/assets/cc.jpg";
-import imgVSat from "@/assets/dd.jpg";
-import imgStore from "@/assets/ee.jpg";
-import imgCommittee from "@/assets/ff.jpg";
-import imgTest from "@/assets/gg.jpg";
-import imgCentral from "@/assets/hh.jpg";
-import imgCipher from "@/assets/ii.jpg";
-import imgLicense from "@/assets/kk.jpeg";
-import imgTraffic from "@/assets/ll.jpg";
+import imgAdmin from "@/assets/11.jpg";
+import imgTech from "@/assets/11.jpg";
+import imgDev from  "@/assets/11.jpg";
+import imgVSat from  "@/assets/11.jpg";
+import imgStore from  "@/assets/11.jpg";
+import imgCommittee from  "@/assets/11.jpg";
+import imgTest from  "@/assets/11.jpg";
+import imgCentral from  "@/assets/11.jpg";
+import imgCipher from  "@/assets/11.jpg";
+import imgLicense from  "@/assets/11.jpg";
+import imgTraffic from  "@/assets/11.jpg";
+
+// Import subdepartment images
+import imgBranchA from  "@/assets/11.jpg";;
+import imgBranchB from  "@/assets/11.jpg";;
+import imgBranchE from  "@/assets/11.jpg";;
+import imgBranchD from  "@/assets/11.jpg";;
+import imgTechnical from  "@/assets/11.jpg";;
+import imgDevelopment from  "@/assets/11.jpg";
+import imgVSatSub from  "@/assets/11.jpg";
+import imgStoreSub from  "@/assets/11.jpg";
+import imgCommitteeSub from  "@/assets/11.jpg";
+import imgTestCell from  "@/assets/11.jpg";
+import imgCentralStore from  "@/assets/11.jpg";
+import imgCipherSub from "@/assets/11.jpg";
+import imgLicenseSub from  "@/assets/11.jpg";
+import imgTrafficSub from  "@/assets/11.jpg";
 
 export default function OfficersHQ() {
   const { t } = useLanguage();
@@ -50,6 +66,38 @@ export default function OfficersHQ() {
     </ul>
   );
 
+  // FAQ Item component for subdepartments
+  const FAQItem = ({ title, image, content, value }) => (
+    <AccordionItem value={value} className="border-b border-gray-200">
+      <AccordionTrigger className="text-left py-4 hover:no-underline">
+        <div className="flex items-center gap-4">
+          {image && (
+            <div className="w-16 h-16 rounded-md overflow-hidden flex-shrink-0">
+              <img src={image} alt={title} className="w-full h-full object-cover" />
+            </div>
+          )}
+          <h3 className="text-lg font-semibold text-gray-800">{t(title)}</h3>
+        </div>
+      </AccordionTrigger>
+      <AccordionContent className="pb-4 pt-2">
+        <div className="flex flex-col md:flex-row gap-6">
+          {image && (
+            <div className="md:w-1/3">
+              <img 
+                src={image} 
+                alt={title} 
+                className="w-full h-48 object-cover rounded-lg shadow-md"
+              />
+            </div>
+          )}
+          <div className={image ? "md:w-2/3" : "w-full"}>
+            {content}
+          </div>
+        </div>
+      </AccordionContent>
+    </AccordionItem>
+  );
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-white via-gray-50 to-gray-100 px-6 py-12 sm:px-12 lg:px-24 relative overflow-hidden">
       {/* Background Glow */}
@@ -80,51 +128,51 @@ export default function OfficersHQ() {
           incharge="officeSuperintendent"
           content={
             <Accordion type="single" collapsible className="w-full">
-              <AccordionItem value="a">
-                <AccordionTrigger>{t("branchA")}</AccordionTrigger>
-                <AccordionContent>
-                  {renderList([
-                    "rti",
-                    "yearlyAdminReport",
-                    "budgetInspection",
-                    "bmiQuarters",
-                    "billPaymentOrder",
-                  ])}
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="b">
-                <AccordionTrigger>{t("branchB")}</AccordionTrigger>
-                <AccordionContent>
-                  {renderList([
-                    "welfareIncomeTaxGST",
-                    "accountsPension",
-                  ])}
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="e">
-                <AccordionTrigger>{t("branchE")}</AccordionTrigger>
-                <AccordionContent>
-                  {renderList([
-                    "matCases",
-                    "enquiriesWireless",
-                    "pcPsiGradation",
-                    "promotionsTransfers",
-                    "serviceSheets",
-                    "vacancyStatements",
-                    "classificationExams",
-                    "recruitmentRR",
-                  ])}
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="d">
-                <AccordionTrigger>{t("branchD")}</AccordionTrigger>
-                <AccordionContent>
-                  {renderList([
-                    "procurementSpares",
-                    "tenderProcessWireless",
-                  ])}
-                </AccordionContent>
-              </AccordionItem>
+              <FAQItem
+                title="branchA"
+                image={imgBranchA}
+                value="a"
+                content={renderList([
+                  "rti",
+                  "yearlyAdminReport",
+                  "budgetInspection",
+                  "bmiQuarters",
+                  "billPaymentOrder",
+                ])}
+              />
+              <FAQItem
+                title="branchB"
+                image={imgBranchB}
+                value="b"
+                content={renderList([
+                  "welfareIncomeTaxGST",
+                  "accountsPension",
+                ])}
+              />
+              <FAQItem
+                title="branchE"
+                image={imgBranchE}
+                value="e"
+                content={renderList([
+                  "matCases",
+                  "enquiriesWireless",
+                  "pcPsiGradation",
+                  "promotionsTransfers",
+                  "serviceSheets",
+                  "vacancyStatements",
+                  "classificationExams",
+                  "recruitmentRR",
+                ])}
+              />
+              <FAQItem
+                title="branchD"
+                image={imgBranchD}
+                value="d"
+                content={renderList([
+                  "procurementSpares",
+                  "tenderProcessWireless",
+                ])}
+              />
             </Accordion>
           }
         />
@@ -134,16 +182,25 @@ export default function OfficersHQ() {
           title="technicalBranch"
           img={imgTech}
           incharge="dyspAdmin"
-          content={renderList([
-            "supervisesDailyWork",
-            "adminBranches",
-            "technicalBranches",
-            "bandobastBranch",
-            "planningBranch",
-            "homePI",
-            "welfareBranch",
-            "sssBranch",
-          ])}
+          content={
+            <Accordion type="single" collapsible className="w-full">
+              <FAQItem
+                title="technicalBranchDetails"
+                image={imgTechnical}
+                value="technical"
+                content={renderList([
+                  "supervisesDailyWork",
+                  "adminBranches",
+                  "technicalBranches",
+                  "bandobastBranch",
+                  "planningBranch",
+                  "homePI",
+                  "welfareBranch",
+                  "sssBranch",
+                ])}
+              />
+            </Accordion>
+          }
         />
 
         {/* 3. Development Section */}
@@ -151,14 +208,23 @@ export default function OfficersHQ() {
           title="developmentSection"
           img={imgDev}
           incharge=""
-          content={renderList([
-            "computerSection",
-            "radioCommunication",
-            "lineCommunication",
-            "electricalSection",
-            "installationBranch",
-            "storeSection",
-          ])}
+          content={
+            <Accordion type="single" collapsible className="w-full">
+              <FAQItem
+                title="developmentSectionDetails"
+                image={imgDevelopment}
+                value="development"
+                content={renderList([
+                  "computerSection",
+                  "radioCommunication",
+                  "lineCommunication",
+                  "electricalSection",
+                  "installationBranch",
+                  "storeSection",
+                ])}
+              />
+            </Accordion>
+          }
         />
 
         {/* 4. V-SAT Section */}
@@ -166,12 +232,21 @@ export default function OfficersHQ() {
           title="vsatSection"
           img={imgVSat}
           incharge="dysp"
-          content={renderList([
-            "monitorPolnetStations",
-            "guidancePolnetUnits",
-            "smoothPolnetOperation",
-            "specificationsPolnetCCTV",
-          ])}
+          content={
+            <Accordion type="single" collapsible className="w-full">
+              <FAQItem
+                title="vsatSectionDetails"
+                image={imgVSatSub}
+                value="vsat"
+                content={renderList([
+                  "monitorPolnetStations",
+                  "guidancePolnetUnits",
+                  "smoothPolnetOperation",
+                  "specificationsPolnetCCTV",
+                ])}
+              />
+            </Accordion>
+          }
         />
 
         {/* 5. Store Sections */}
@@ -179,11 +254,20 @@ export default function OfficersHQ() {
           title="storeSections"
           img={imgStore}
           incharge=""
-          content={renderList([
-            "storeSectionI",
-            "storeSectionII",
-            "storeSectionIII",
-          ])}
+          content={
+            <Accordion type="single" collapsible className="w-full">
+              <FAQItem
+                title="storeSectionsDetails"
+                image={imgStoreSub}
+                value="store"
+                content={renderList([
+                  "storeSectionI",
+                  "storeSectionII",
+                  "storeSectionIII",
+                ])}
+              />
+            </Accordion>
+          }
         />
 
         {/* 6. Committee Section */}
@@ -191,10 +275,19 @@ export default function OfficersHQ() {
           title="committeeSection"
           img={imgCommittee}
           incharge=""
-          content={renderList([
-            "equipmentChecks",
-            "testReceiptReports",
-          ])}
+          content={
+            <Accordion type="single" collapsible className="w-full">
+              <FAQItem
+                title="committeeSectionDetails"
+                image={imgCommitteeSub}
+                value="committee"
+                content={renderList([
+                  "equipmentChecks",
+                  "testReceiptReports",
+                ])}
+              />
+            </Accordion>
+          }
         />
 
         {/* 7. Test Cell */}
@@ -202,10 +295,19 @@ export default function OfficersHQ() {
           title="testCell"
           img={imgTest}
           incharge=""
-          content={renderList([
-            "testingWireless",
-            "maintenanceCentralStore",
-          ])}
+          content={
+            <Accordion type="single" collapsible className="w-full">
+              <FAQItem
+                title="testCellDetails"
+                image={imgTestCell}
+                value="testcell"
+                content={renderList([
+                  "testingWireless",
+                  "maintenanceCentralStore",
+                ])}
+              />
+            </Accordion>
+          }
         />
 
         {/* 8. Central Store Admin Section */}
@@ -213,11 +315,20 @@ export default function OfficersHQ() {
           title="centralStoreAdmin"
           img={imgCentral}
           incharge=""
-          content={renderList([
-            "inwardOutwardEntries",
-            "recordKeeping",
-            "assistStoreSections",
-          ])}
+          content={
+            <Accordion type="single" collapsible className="w-full">
+              <FAQItem
+                title="centralStoreAdminDetails"
+                image={imgCentralStore}
+                value="centralstore"
+                content={renderList([
+                  "inwardOutwardEntries",
+                  "recordKeeping",
+                  "assistStoreSections",
+                ])}
+              />
+            </Accordion>
+          }
         />
 
         {/* 9. Cipher Branch */}
@@ -225,15 +336,24 @@ export default function OfficersHQ() {
           title="cipherBranch"
           img={imgCipher}
           incharge="dyspCipher"
-          content={renderList([
-            "custodianCipher",
-            "courierArrangements",
-            "coordinationCryptoCenters",
-            "cipherCourses",
-            "maintenanceCipherDocs",
-            "loadingCipherPrograms",
-            "inspectionsCryptoCenters",
-          ])}
+          content={
+            <Accordion type="single" collapsible className="w-full">
+              <FAQItem
+                title="cipherBranchDetails"
+                image={imgCipherSub}
+                value="cipher"
+                content={renderList([
+                  "custodianCipher",
+                  "courierArrangements",
+                  "coordinationCryptoCenters",
+                  "cipherCourses",
+                  "maintenanceCipherDocs",
+                  "loadingCipherPrograms",
+                  "inspectionsCryptoCenters",
+                ])}
+              />
+            </Accordion>
+          }
         />
 
         {/* 10. License Branch */}
@@ -241,14 +361,23 @@ export default function OfficersHQ() {
           title="licenseBranch"
           img={imgLicense}
           incharge="dyspLicense"
-          content={renderList([
-            "applyRadioLicenses",
-            "paySpectrumCharges",
-            "applyFrequencies",
-            "distributeNetworkLetters",
-            "trafficReturns",
-            "prepareCallSigns",
-          ])}
+          content={
+            <Accordion type="single" collapsible className="w-full">
+              <FAQItem
+                title="licenseBranchDetails"
+                image={imgLicenseSub}
+                value="license"
+                content={renderList([
+                  "applyRadioLicenses",
+                  "paySpectrumCharges",
+                  "applyFrequencies",
+                  "distributeNetworkLetters",
+                  "trafficReturns",
+                  "prepareCallSigns",
+                ])}
+              />
+            </Accordion>
+          }
         />
 
         {/* 11. Traffic Branch */}
@@ -256,13 +385,22 @@ export default function OfficersHQ() {
           title="trafficBranch"
           img={imgTraffic}
           incharge="dyspTraffic"
-          content={renderList([
-            "inspectPolnetStations",
-            "prepareCallSigns",
-            "conductITExams",
-            "superviseTrafficCases",
-            "scrutinySecurityBreach",
-          ])}
+          content={
+            <Accordion type="single" collapsible className="w-full">
+              <FAQItem
+                title="trafficBranchDetails"
+                image={imgTrafficSub}
+                value="traffic"
+                content={renderList([
+                  "inspectPolnetStations",
+                  "prepareCallSigns",
+                  "conductITExams",
+                  "superviseTrafficCases",
+                  "scrutinySecurityBreach",
+                ])}
+              />
+            </Accordion>
+          }
         />
       </div>
     </div>

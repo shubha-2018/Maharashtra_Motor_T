@@ -45,7 +45,7 @@ export const EN = {
   "nav.hierarchy": "Hierarchy",
   "nav.aboutDepartment": "About Department",
   "nav.offices": "Offices in Headquarters",
-  "nav.ranks": "Ranks",
+  "nav.ranks": "Ranks Of Department",
   "nav.welfare": "Welfare Activities",
 
   "nav.citizens": "Citizen Corner",
@@ -101,7 +101,7 @@ export const EN = {
   "a1.back": "Back to Home",
 
   "a2.desk": "From Director’s Desk",
-  "a2.name": "Mr. Deepak Shivanand Pandey",
+  "a2.name": "Shri. Deepak Shivanand Pandey (IPS)",
   "a2.desg": "Additional Director General of Police & Director",
   "a2.dept": "Police Communication & IT Department",
   "a2.loc": "Maharashtra State, Pune",
@@ -151,7 +151,7 @@ export const EN = {
   "type.allInOne": "All-in-One",
 
   // Government Updates
-  "govt.updates": "Government Updates",
+  "govt.updates": "Latest Updates",
   "bulletins": "Bulletins / Orders / Instructions",
   "tenders.section": "Tenders",
   "view.all": "View All",
@@ -302,6 +302,78 @@ export const EN = {
   "hx_page": "Page",
   "hx_of": "of",
   "hx_summary": "SUMMARY TOTAL:",
+  "about.title": "About Police Communication, Information Technology & Transportation Department",
+  "about.description": `
+            <p>
+                The Police wireless communication Department was established during pre-independence period in the year 1946 in the state of Mumbai. Earlier the state police force did not have its own self-contained communication system and the police force had to depend entirely on the Central Department of Telecommunications system for communication.
+              </p>
+              <p>
+                Due to lack of equipment, the wireless communication of the Maharashtra State Police Department was started by bringing into use the old wireless sets used during the Second World War.
+              </p>
+              <p>
+                In the year 1946, a total of 13 districts were provided HF (high frequency) communication. An officer of the rank of Superintendent of Police was working as Head of Wireless Messaging Sub-Division.
+              </p>
+              <p>
+                In the year 1947, after independence, Mr. N. M. Kamte was appointed as the first Director General of Police of the Bombay State. After that Mr. S. M. Nabar was appointed as Superintendent of Police wireless according to his technical qualifications.
+              </p>
+              <p>
+                The Police wireless Department was then separated from the office of Director General of Police from the administrative point of view and started functioning independently in Pune.
+              </p>
+              <p>
+                In the initial period wireless messaging systems were set up using old wireless sets issued by the Director, Armed Forces. The system was operated by trained soldiers of the police force, trained at the Army and Air Force Wireless Communication Training Center in Pune.
+              </p>
+              <p>
+                As the utility of wireless messaging in the day-to-day functioning of the police force became visible, wireless stations were set up at the district-wise taluka level as well as at other strategic locations. Mobile Stations were also constructed for the location of some urban district headquarters, for which the received wireless materials were reused by appropriate modification from the point of view of necessity.
+              </p>
+              <p>
+                After the implementation of HF telegraphy system at the district level, VHF telegraphy communication was started within the city of Mumbai. Old wireless sets were put into use by making usable modifications. On a temporary basis, a Police Control Room (Police Control Room) was set up in the Mumbai City Police Commissionerate and the control room was linked to 40 patrolling teams operating round the clock in the city.
+              </p>
+              <p>
+                In the year 1984 VHF mode communication facility was made available at local level within the district, communication link of the police stations in the district with the district police headquarters was established. Simultaneously, teleprinter communication was started between Zonal Police Headquarters and State Police Headquarters by leasing teleprinter lines from the Central Telecommunication Department.
+              </p>
+              <p>
+                For the exchange of written messages, the available reliable Morse system was used which was tedious and slow communication. In the year 1988, a communication system was set up between the District Police Headquarters and the State Police Headquarters, Mumbai, using a microprocessor-based system called ACS (Auto Communication System) for the exchange of written messages. Through it the exchange of information started at a very fast pace.
+              </p>
+              <p>
+                With a view to increase the scope of wireless communication, inter-district communication links were established by constructing wireless message rebroadcast centres at high places within the district. A Trunk Auto Repeater Station Link (TARS) was established to establish the link between the District Police Headquarters and the State Police Headquarters, Mumbai.
+              </p>
+              <p>
+                At the district level within the state, at the regional police headquarters as well as at the state police headquarters, due to the limitations in the functioning of the exchanges, which are functioning through manual operation, the modern C-dot system automatic telephone exchanges were built in the year 1990, thus there was a drastic change in the efficiency of communication through the exchange.
+              </p>
+              <p>
+                In the year 1995, the communication of UHF system was started under the jurisdiction of Pune city, Nagpur city and Thane city, so in terms of wireless communication, the quality and clarity of communication improved by overcoming various obstacles like tall buildings within the city.
+              </p>
+              <p>
+                A state-of-the-art radio trunking system was provided in the jurisdiction of Mumbai City Police Commissionerate in the year 1997. In this scheme, multiple radio channels are efficiently provided to the widely available wireless sets in the network. Available channels are distributed sequentially according to demand. This ensures that the channel is available without any delay in communication. Thus the trunking system used in Mumbai is the first system in the country for police department.
+              </p>
+              <p>
+                In the year 1998, V-SAT communication facility (V-SAT : Very Small Aperture Terminal) was made available to the police force through INSAT-3B satellite using SCPC DAMA ( Single Carrier Per Channel – Demand Assign Multiple Access) technology system. Through that VSAT system voice-communication and exchange of written messages started. NMS (Network Management System) located in Pune is an integral part of this system and a total of 52 stations were working in the state from 1998 to 2021.
+              </p>
+              <p>
+                Now since from 1921, Polnet 2.0 is being used. Polnet 2.0 a nationwide satellite based messaging network to modernize the country's police telecommunications. Polnet 2.0 is an advanced IP (Internet Protocol) base communication system implemented and governed by the Ministry of Home Affairs, Government of India, New Delhi. The basic purpose of the network is to provide nationwide voice, data and video conference communication and to provide connectivity to the National Crime Records Bureau computers. Currently there are 64 Polnet 2.0 stations in the state of Maharashtra.
+              </p>
+              <p>
+                Earlier VHF Radio Network has been set up for wireless communication for all districts of the state. Said V.H.F. Radio network provides wireless communication between police control rooms, police stations and police vehicles. This VHF Radio Network is now shifted on from Analog to Digital Mode since from Year 2012.
+              </p>
+              <p>
+                Presently for wireless communication the police department is using VHF-DMR ( Digital Mobile Radio ) Tier-II technology in all districts and commissionrates, except Pune, Thane and Nagpur commissionarates. The Pune, Thane and Nagpur commissionarates are using UHF-DMR Tier-II technology and in Mumbai the advance and latest trunking system ( APCO P25) is used which is the first system in the country for police department.
+              </p>
+              <p>
+                This department from December 1946 to 17-11-2020 was named as " Maharashtra State Police Wireless" department.
+              </p>
+              <p>
+                Later on Vide Govt. Resolution dtd. 18-11-2020 Transportation department was added to this department renamed as "MAHARASHTRA STATE POLICE COMMUNICATION & TRANSPORTATION".
+              </p>
+              <p>
+                And Now again Vide Govt. Resolution dtd. 28-03-2022 Information technology was added and this department is now finally renamed as "POLICE COMMUNICATION ,INFORMATION TECHNOLOGY & TRANSPORTATION , MAHARASHTRA STATE, PUNE"
+              </p>
+              <p>
+                This department is headed by an officer of the rank of Addl. Director General Of Police and Director Police Communication , Information Technology & Transportation , Maharashtra State Pune.
+              </p>
+              <p>
+                This department also has its own training centre situated in its Pune headquarters which is declared as the Apex Training Centre of Maharashtra Police, vide Govt. of Maharashtra Home dept. GR. Dated 16-01-2023.
+              </p>
+  `,
   //OFFICERINHQ
 
 
@@ -432,14 +504,14 @@ export const EN = {
   email: "Email",
   copyright:
     "© 2025 Police Communication & IT Department, Maharashtra State. All rights reserved.",
-  "developed.by": "Designed & Developed by Dreamcare Solutions",
+  "developed.by": "Owned by Police Communication & IT Department",
   "dept.address": "Police Communication & IT Department,<br />Maharashtra State Police Headquarters,<br />Mumbai - 400001"
   ,
 
   //rank
 
   "backToHome": "Back to Home",
-  "ranks.title": "Ranks",
+  "ranks.title": "Ranks Of Department",
   "ranks.subtitle": "List of Ranks and Designations in Police Communication and Information Technology Department",
   "ranks.seePDF": "See the Whole PDF",
   "ranks.rank1.title": "Addl. DGP & Director Police Communication, Information Technology & Transportation, M.S. Pune",
@@ -832,7 +904,7 @@ export const MR = {
   "title": "पोलीस दळणवळण आणि माहिती <br/> तंत्रज्ञान विभाग, पुणे",
   //rank
   "backToHome": "मुख्यपृष्ठावर परत जा",
-  "ranks.title": "रँक",
+  "ranks.title": "विभागातील पदानुक्रम",
   "ranks.subtitle": "पोलीस संप्रेषण आणि माहिती तंत्रज्ञान विभागातील रँक आणि पदनामांची यादी",
   "ranks.seePDF": "संपूर्ण PDF पहा",
   "ranks.rank1.title": "अतिरिक्त DGP आणि संचालक पोलीस संप्रेषण, माहिती तंत्रज्ञान आणि वाहतूक, महाराष्ट्र राज्य, पुणे",
@@ -950,7 +1022,7 @@ export const MR = {
   "emp_20_name": "श्री. सुनील मोरेश्वर पोते",
   "emp_20_designation": "PSI(PCIT)",
 
-  
+
   //promotion
   "f3k9": "HWO TO PWSIT पदोन्नती - 2023-2617",
   "p7q2": "PC(WH) पदोन्नती (अंशता बदल)-2023-2626",
@@ -993,12 +1065,12 @@ export const MR = {
   // Navigation
   "nav.home": "मुख्यपृष्ठ",
   "nav.about": "आमच्याबद्दल",
-  "nav.directorDesk": "संचालकांच्या डेस्क वरून",
-  "nav.formerDirectors": "माजी संचालक",
-  "nav.hierarchy": "पदसोपान",
+  "nav.directorDesk": "संचालकांच्या लेखणीतून",
+  "nav.formerDirectors": "विभागाचे पूर्व संचालक",
+  "nav.hierarchy": "संघटनात्मक संरचना",
   "nav.aboutDepartment": "विभागाबद्दल",
   "nav.offices": "मुख्यालयातील कार्यालये",
-  "nav.ranks": "पदनामे",
+  "nav.ranks": "विभागातील पदानुक्रम",
   "nav.welfare": "कल्याणकारी उपक्रम",
 
   "nav.citizens": "नागरिकांकरिता",
@@ -1106,6 +1178,55 @@ export const MR = {
   "hx_page": "पान",
   "hx_of": "पैकी",
   "hx_summary": "एकूण सारांश:",
+  "about.title": "पोलिस दळणवळण, माहिती तंत्रज्ञान  व परिवहन विभागाबद्दल",
+    "about.description": `
+              <p>पोलीस बिनतारी संदेश विभागाची स्थापना स्वातंत्र्यपूर्व कालावधीमध्ये सन १९४६ साली तत्कालीन मुंबई राज्यात करण्यात आली. तत्पूर्वी राज्य पोलीस दलाकरीता स्वयंपूर्ण अशी स्वतःची दळणवळण व्यवस्था नव्हती आणि सर्वार्थाने पोलीस दलाला दळणवळण संपर्काकरिता केंद्रीय दूरसंचार विभागाच्या यंत्रणेवर अवलंबून रहावे लागत असे.</p>
+              
+              <p>साधनसामुग्रीच्या कमतरतेमुळे दुसर्‍या महायुद्धामध्ये वापरात आलेले जुने बिनतारी संच उपयोगामध्ये आणून महाराष्ट्र राज्य पोलीस विभागाच्या बिनतारी दळवळणाची सुरुवात करण्यात आली.</p>
+              
+              <p>सन १९४६ मध्ये या योजनेद्वार उच्च कंपन (एच. एफ.) पद्धतीचे बिनतारी दळणवळण एकूण १३ जिल्हायाकीरता पुरविण्यात आले होते. त्या वेळी पोलीस अधीक्षक दर्जाचे अधिकारी हे बिनतारी संदेश उपविभाग प्रमुख म्हणून कार्यरत होते.</p>
+              
+              <p>सन १९४७ मध्ये स्वातंत्र्य प्राप्तीनंतर तत्कालीन मुंबई राज्याचे पहिले पोलीस महासंचालक म्हणून श्री एन.एम.कामटे यांची नियुक्ती करण्यात आली. तदनंतर श्री एस.एम.नाबर यांची तांत्रिक पात्रतेनुसार पोलीस अधिक्षक बिनतारी संदेश या पदावर नियुक्ती करण्यात आली.</p>
+              
+              <p>त्यानंतर बिनतारी संदेश विभाग हा प्रशासकीय दृष्टिकोनातून पोलिस महासंचालक कार्यालयापासून वेगळा करण्यात आला आणि पुण्यात स्वतंत्रपणे काम करू लागला.</p>
+              
+              <p>सुरवातीच्या कालावधीमध्ये बिनतारी संदेश यंत्रणेची उभारणी ही संचालक, आम्डॅ फोर्सेस यांनी निष्कासित केलेले बिनतारी संच वापरून करण्यात येत होती. सदर यंत्रणेचे परिचलन पोलीस दलातील सुशिक्षीत शिपायांमार्फत, पुणे स्थित आर्मी व एअरफोर्सचे बिनतारी दळणवळण प्रशिक्षण केंद्र येथे प्रशिक्षण देऊन करण्यात येत असे.</p>
+              
+              <p>पोलीस दलाचे दैनंदिन कार्यपद्धतीमध्ये बिनतारी संदेश दळणवळणाची उपयुक्तता दृष्य स्वरूपामध्ये दिसून आल्याने, जिल्हानिहाय तालुकास्तरावर तसेच अन्य मोक्याच्या ठिकाणी बिनतारी स्थानकांची उभारणी करण्यात आली. काही शहरी जिल्हा मुख्यालय ठिकाणांकरीता चलत स्थानकांचीही उभारणी करण्यात आली करिता प्राप्त बिनतारी सामुग्रीमध्ये आवश्यक दृष्टीकोनातून सुयोग्य बदल करून पुनर्वापर करण्यात आला.</p>
+              
+              <p>एच.एफ. टेलीग्राफी पद्धतीचे दळणवळण जिल्हास्तरावर कार्यान्वित झालेनंतर मुंबई शहराअंतर्गत अती उच्च कंपन (व्ही.एच.एफ.) पद्धतीचे दळणवळणास सुरुवात करण्यात आली. जुन्या बिनतारी संचांमध्ये वापरायोग्य फेर बदल करून ते उपयोगात आणण्यात आले. तात्पुरत्या स्वरुपात, मुंबई शहर पोलीस आयुक्तालयामध्ये पोलीस नियंत्रण कक्ष (पोलीस कंट्रोल रूम) स्थापित करण्यात आला व सदर नियंत्रणकक्षाचा संपर्क शहरांतर्गत अहोरात्र कार्यरत ४० गस्त पथकांशी प्रस्थापित करण्यात आला.</p>
+              
+              <p>सन १९८४ मध्ये व्ही.एच.एफ.पद्धतीच्या दळणवळणाची सुविधा जिल्हा अंतर्गत स्थानिक पातळीवर उपलब्ध करून देऊन, जिल्ह्यातील पोलीस स्थानकांचा दळणवळण संपर्क जिल्हा पोलीस मुख्यालयाशी प्रस्थापित करण्यात आला. त्याचबरोबर केंद्रित दूरसंचार विभागाकडून टेलिप्रिंटर लाईन्स भाडेतत्वावर घेऊन परिक्षेत्रीय पोलीस मुख्यालये आणि राज्य पोलीस मुख्यालयदरम्यान टेलिप्रिंटर दळणवळण सुरु करण्यात आले.</p>
+              
+              <p>लिखित संदेश देवाणघेवाण करिता, उपलब्ध विश्वसनीय अशा मोर्स पद्धतीचे दळणवळण याचा वापर केला जात असे जो कंटाळवाणा आणि संथ संवाद होता. सन १९८८ मध्ये अ॓.सी.एस.(Auto communication System) ही मायक्रोप्रोसेसर युक्त प्रणाली वापरून लिखित संदेशांची देवाणघेवाण जिल्हा पोलीस मुख्यालये व राज्य पोलीस मुख्यालय, मुंबई यांचे दरम्यान दळणवळण यंत्रणा उभारण्यात आली. त्याद्वरे माहितीची देवाणघेवाण अतिशय जलद गतीने होऊ लागली.</p>
+              
+              <p>बिनतारी दळणवळणाची व्याप्ती व कार्यक्षेत्र यामध्ये वाढ करण्याचे दृष्टीकोनातून जिल्हा अंतर्गत उच्च ठिकणी बिनतारी संदेश पुनःप्रक्षेपण केंद्रची उभारणी करून आंतर जिल्हा दळणवळण संपर्क प्रस्थापित करण्यात आले आहे. जिल्हा पोलीस मुख्यालयांचा संपर्क राज्य पोलीस मुख्यालय मुंबई येथे प्रस्थापित करणेकामी टार्स लिंकची (Trunk Auto Repeater Station Link )उभारणी करण्यात आली.</p>
+              
+              <p>राज्यांतर्गत जिल्हा स्तरावर, परिक्षेत्रीय पोलीस मुख्यालय ठिकाणी व राज्य पोलीस मुख्यालय येथे मॅन्युअल ऑपरेशनद्वार कार्यान्वित असणार्‍या एक्सचेजमुळे कार्यपद्धतीवर मर्यादा येत असल्याने आधुनिक सी-डॉट पद्धतीच्या स्वयंचलित टेलीफोन एक्स्चेंज ची उभारणी सन १९९० मध्ये करण्यात आली त्यामुळे  एक्स्चेंजद्वारे दळणवळणाचे कार्यक्षमतेमध्ये अमुलाग्र बदल झाला.</p>
+              
+              <p>सन १९९५ मध्ये पुणे शहर, नागपूर शहर व ठाणे शहर कार्यक्षेत्रातर्गत यु.एच.एफ.प्रणालीचे दळणवळण सुरु करण्यात आले त्यामुळे बिनतारी दळणवळणाच्या दृष्टीने शहरांतर्गत उंच इमारती सारख्या विविध अड्थळयावर मात करून संभाषणाचा दर्जा व स्पष्टता यामध्ये सुधारणा झाली.</p>
+              
+              <p>मुंबई शहर पोलीस आयुक्तलय कार्यक्षेत्रात सन १९९७ मध्ये अत्याधुनिक अशा रेडिओ ट्रंकिंग प्रणाली असलेली  दळणवळण सुविधा पुरविण्यात आली. या योजनमध्ये अनेक रेडिओ चॅनल्स हे नेटवर्क मधील असंख्य बिनतारी संचांना कार्यक्षमतेने उपलब्ध करून दिले जातात. त्यामुळे विभागासाठी एकत्रित बिनतारी नेटवर्क प्रणाली उपलब्ध होऊ शकते. उपलब्ध चॅनल मागणीप्रमाणे अनुक्रमे वितरीत करण्यात येतो. त्यामुळे पारंपरिक पद्धतीमधील रिकामा चॅनल उपलब्ध असतानाही बिनतारी दळणवळण करता न येणे ही त्रुटी राहत नाही. यामुळे संभाषनासाठी विलंब न होता खात्रीशीरपण॓ चॅनल उपलब्ध होतो. संपूर्ण देशात महाराष्ट्र पोलीस विभागाने सर्वप्रथम सदर रेडिओ ट्रंकिंग यंत्रणा उपयोगात आणली आहे.</p>
+              
+              <p>सन १९९८ मध्ये SCPC DAMA तंत्रज्ञानयुक्त प्रणालीचा वापर करून INSAT3B या उपग्रहाद्वारे दळणवळण सुविधा (V-SAT : Very Small Aperture Terminal) पोलीस दलाकरिता उपलब्ध करून देण्यात आली होती. त्याद्वारे संभाषण व लिखित संदेशाची देवाणघेवाण होऊ लागली. पुणे स्थित भूकेंद्र येथील एन.एम.एस.(Network Management System) हा या यंत्रणेचा अविभाज्य घटक असून राज्यांतर्गत एकूण ५२ स्थानके सन १९९८ ते २०२१ दरम्यान कार्यरत होती.</p>
+              
+              <p>सध्या सन २०२१ पासून Polnet 2.0 हे देशाच्या पोलीस दूरसंचाराच्या आधुनिकीकरणासाठी एक राष्ट्रव्यापी उपग्रह आधारित संदेशवहन नेटवर्क कार्यरत आहे. Polnet 2.0 ही एक प्रगत आयपी (इंटरनेट प्रोटोकॉल) बेस कम्युनिकेशन प्रणाली आहे जी २०२१ पासून गृह मंत्रालय, भारत सरकार, नवी दिल्ली द्वारे लागू आणि शासित आहे. नेटवर्कचा मूळ उद्देश देशव्यापी व्हॉइस, डेटा आणि विडियो कॉन्फरन्सिंग कम्युनिकेशन प्रदान करणे आणि राष्ट्रीय गुन्हे रेकॉर्ड ब्युरो संगणकांना कनेक्टिव्हिटी प्रदान करणे हा आहे. सद्यस्थितीत महाराष्ट्र राज्यात ६४ Polnet 2.0 स्थानके आहेत.</p>
+              
+              <p>राज्यातील सर्व जिल्ह्यांसाठी वायरलेस कम्युनिकेशनसाठी पूर्वी VHF रेडिथो नेटवर्कची स्थापना करण्यात आली आहे. V.H.F. रेडिओ नेटवर्क पोलिस नियंत्रण कक्ष, पोलिस स्टेशन आणि पोलिस वाहनांमध्ये वायरलेस कम्युनिकेशन प्रदान करते. हे VHF रेडिओ नेटवर्क आता २०१२ पासून अॅनालॉग मोडवरून डिजिटल मोडवर स्थलांतरित करण्यात आले आहे.</p>
+              
+              <p>सध्या बिनतारी दलणवळणासाठी पोलिस विभाग पुणे, ठाणे आणि नागपूर कमिशनरेट्स वगळता सर्व जिल्ह्यांमध्ये आणि कमिशनरेट्समध्ये VHF-DMR (डिजिटल मोबाइल रेडिओ) टियर-II तंत्रज्ञान वापरत आहे. पुणे, ठाणे आणि नागपूर कमिशनरेट्स UHF-DMR टियर-II तंत्रज्ञान वापरत आहेत आणि मुंबईत प्रगत आणि नवीनतम ट्रंकिंग सिस्टम (APCO P25) वापरली जाते जी पोलिस विभागासाठी देशातील पहिली प्रणाली आहे.</p>
+              
+              <p>डिसेंबर १९४६ ते १७-११-२०२० पर्यंत या विभागाला "महाराष्ट्र राज्य पोलीस बिनतारी" विभाग असे नाव देण्यात आले.</p>
+              
+              <p>नंतर महाराष्ट्र शासनाच्या १८-११-२०२० च्या शासन निर्णयानुसार, या विभागात परिवहन विभाग जोडण्यात आला आणि त्याचे नाव "महाराष्ट्र राज्य पोलीस दळणवळण आणि परीवहन" विभाग असे ठेवण्यात आले.</p>
+              
+              <p>आणि आता पुन्हा एकदा २८-०३-२०२२ च्या शासन निर्णयानुसार या विभागात माहिती तंत्रज्ञानाचा समावेश करण्यात आला आणि या विभागाचे नाव आता "पोलीस दळणवळण, माहिती तंत्रज्ञान आणि परीवहन, महाराष्ट्र राज्य, पुणे" असे ठेवण्यात आले आहे.</p>
+              
+              <p>याविभागाचे प्रमुख अपर पोलीस महासंचालक व संचालक पोलीस दळणवळण, माहिती तंत्रज्ञान आणि परीवहन विभाग, महाराष्ट्र राज्य पुणे या दर्जाचे अधिकारी आहेत.</p>
+              
+              <p>पोलीस दळणवळण, माहिती तंत्रज्ञान आणि परीवहन, महाराष्ट्र राज्य, पुणे या विभागाचे पुणे मुख्यालयात स्वतःचे प्रशिक्षण केंद्र आहे जे महाराष्ट्र शासन गृह विभागाच्या दिनांक १६-०१-२०२३ च्या शासन निर्णयानुसार महाराष्ट्र पोलिस दलाचे शिखर प्रशिक्षण केंद्र म्हणून घोषित करण्यात आलेले केले आहे.</p>
+  `,
+
 
 
   //officerinhq
@@ -1306,8 +1427,8 @@ export const MR = {
   //DIRECTONFO
   "a1.back": "मुख्य पृष्ठावर परत",
 
-  "a2.desk": "संचालकांचे मनोगत",
-  "a2.name": "श्री. दीपक शिवानंद पांडे",
+  "a2.desk": "संचालकांच्या लेखणीतून",
+  "a2.name": "श्री. दीपक शिवानंद पाण्डेय् (भा.पो.से.)",
   "a2.desg": "पोलीस महासंचालक (अतिरिक्त) व संचालक",
   "a2.dept": "पोलीस संचार व माहिती तंत्रज्ञान विभाग",
   "a2.loc": "महाराष्ट्र राज्य, पुणे",
@@ -1332,7 +1453,7 @@ export const MR = {
   "b1.conc": "प्रभावी वायरलेस संचार हे सार्वजनिक सुरक्षितता व कार्यकुशल पोलीसिंगचे कणा आहे.",
 
   // Director Info
-  "director.name": "श्री. दीपक शिवानंद पांडे (IPS)",
+  "director.name": "श्री. दीपक शिवानंद पाण्डेय् (भा.पो.से)",
   "director.rank": "अतिरिक्त पोलीस महासंचालक व संचालक,",
   "director.designation": "पोलीस दळणवळण, माहिती तंत्रज्ञान आणि वाहतूक विभाग, महाराष्ट्र राज्य, पुणे.",
 
@@ -1392,7 +1513,7 @@ export const MR = {
 
   //HEIRRACHY
   "h1.back": "मागे",
-  "h1.title": "आरेखन",
+  "h1.title": "संघटनात्मक संरचना",
   "h1.alt": "पदसोपान चार्ट",
 
 
@@ -1415,7 +1536,7 @@ export const MR = {
   "type.allInOne": "सर्व-इन-वन",
 
   // Government Updates
-  "govt.updates": "शासन अद्यतने",
+  "govt.updates": "अद्ययावत माहिती",
   bulletins: "परिपत्रके / आदेश / सूचना",
   "tenders.section": "टेन्डर्स",
   "view.all": "सर्व पहा",
@@ -1533,7 +1654,7 @@ export const MR = {
   email1: "ईमेल",
   copyright:
     "© 2025 पोलीस दळणवळण व माहिती तंत्रज्ञान विभाग, महाराष्ट्र राज्य. सर्व हक्क राखीव.",
-  "developed.by": "डिझाइन व विकसित: ड्रीमकेअर सोल्यूशन्स",
+  "developed.by": "मालकी हक्क पोलीस दळणवळण व माहिती तंत्रज्ञान विभाग, महाराष्ट्र राज्य. सर्व हक्क राखीव.",
   "dept.address": "पोलीस दळणवळण व आय.टी. विभाग,<br />महाराष्ट्र राज्य पोलीस मुख्यालय,<br />मुंबई - ४००००१",
 
 

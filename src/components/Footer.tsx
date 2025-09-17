@@ -30,8 +30,16 @@ const Footer: React.FC = () => {
 
   const importantLinks = [
     { key: "dial.112", href: "tel:112", external: true },
-    { key: "e.office", href: "https://eoffice.mahapolice.gov.in/", external: true },
-    { key: "nic.email", href: "https://accounts.mgovcloud.in/signin?servicename=VirtualOffice&serviceurl=https%3A%2F%2Fmail.mgovcloud.in%2F", external: true },
+    {
+      key: "e.office",
+      href: "https://eoffice.mahapolice.gov.in/",
+      external: true,
+    },
+    {
+      key: "nic.email",
+      href: "https://accounts.mgovcloud.in/signin?servicename=VirtualOffice&serviceurl=https%3A%2F%2Fmail.mgovcloud.in%2F",
+      external: true,
+    },
     {
       key: "maha.police",
       href: "https://mahapolice.gov.in",
@@ -41,9 +49,21 @@ const Footer: React.FC = () => {
   ];
 
   const socialLinks = [
-    { icon: Facebook, href: "https://www.facebook.com/profile.php?id=61577135066429", color: "hover:text-blue-600" },
-    { icon: Twitter, href: "https://x.com/MH_POLICE_PCIT", color: "hover:text-blue-400" },
-    { icon: Linkedin, href: "https://www.instagram.com/mh_police_pcit/", color: "hover:text-blue-700" },
+    {
+      icon: Facebook,
+      href: "https://www.facebook.com/profile.php?id=61577135066429",
+      color: "hover:text-blue-600",
+    },
+    {
+      icon: Twitter,
+      href: "https://x.com/MH_POLICE_PCIT",
+      color: "hover:text-blue-400",
+    },
+    {
+      icon: Linkedin,
+      href: "https://www.instagram.com/mh_police_pcit/",
+      color: "hover:text-blue-700",
+    },
   ];
 
   const visitorStats = {
@@ -176,9 +196,11 @@ const Footer: React.FC = () => {
                   </span>
                 </div>
                 <div className="flex justify-between text-sm">
-                  <span className="text-gray-700 dark:text-gray-300">Today:</span>
+                  <span className="text-gray-700 dark:text-gray-300">
+                    Last Uploaded:
+                  </span>
                   <span className="font-bold text-saffron dark:text-yellow-400">
-                    {visitorStats.todayVisitors}
+                {new Date().toLocaleDateString()}
                   </span>
                 </div>
               </div>
@@ -216,16 +238,25 @@ const Footer: React.FC = () => {
             </div>
             <div className="flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400">
               <span>|</span>
-              <Link to="/privacy-policy" className="hover:text-saffron dark:hover:text-yellow-400 transition-colors">
+              <Link
+                to="/privacy-policy"
+                className="hover:text-saffron dark:hover:text-yellow-400 transition-colors"
+              >
                 {t("footer.privacyPolicy")}
               </Link>
               <span>|</span>
-              <Link to="/terms-of-use" className="hover:text-saffron dark:hover:text-yellow-400 transition-colors">
-                 {t("footer.termsOfUse")}
+              <Link
+                to="/terms-of-use"
+                className="hover:text-saffron dark:hover:text-yellow-400 transition-colors"
+              >
+                {t("footer.termsOfUse")}
               </Link>
               <span>|</span>
-              <Link to="/accessibility" className="hover:text-saffron dark:hover:text-yellow-400 transition-colors">
-                  {t("footer.accessibility")}
+              <Link
+                to="/accessibility"
+                className="hover:text-saffron dark:hover:text-yellow-400 transition-colors"
+              >
+                {t("footer.accessibility")}
               </Link>
             </div>
             <div className="text-sm text-gray-500 dark:text-gray-500 text-center md:text-right">

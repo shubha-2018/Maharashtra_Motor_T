@@ -30,7 +30,7 @@ export default function DirectorsDesk() {
           onClick={onBack}
           className="flex items-center text-gray-700 dark:text-gray-200 
                      hover:bg-gray-200 dark:hover:bg-gray-700 
-                     transition-all duration-300 rounded-xl px-4 py-2 shadow-md hover:shadow-lg"
+                     transition-all duration-300  rounded-xl px-4 py-2 shadow-md hover:shadow-lg"
         >
           <ArrowLeft className="w-4 h-4 mr-2" /> {t("a1.back")}
         </Button>
@@ -45,7 +45,7 @@ export default function DirectorsDesk() {
             <img
               src={directorPhoto}
               alt={t("a2.name")}
-              className="relative w-40 h-40 md:w-48 md:h-48 rounded-full object-cover 
+              className="relative w-40 h-40 p-3 md:w-48 md:h-48 rounded-full object-cover 
                          border-4 border-gray-200 dark:border-gray-700 shadow-xl 
                          transition-all duration-500 group-hover:border-gray-400 group-hover:shadow-2xl"
             />
@@ -55,11 +55,11 @@ export default function DirectorsDesk() {
           <div className="space-y-4">
             <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight 
                            bg-gradient-to-r from-purple-600 via-blue-600 to-teal-600 
-                           bg-clip-text text-transparent">
+                           bg-clip-text text-transparent p-3">
               {t("a2.desk")}
             </h1>
             <h2 className="text-2xl md:text-3xl font-semibold text-gray-800 dark:text-gray-100">
-              {t("a2.name")} <span className="text-purple-600">(IPS)</span>
+              {t("a2.name")} <span className="text-purple-600"></span>
             </h2>
             <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-lg">
               {t("a2.desg")} <br />

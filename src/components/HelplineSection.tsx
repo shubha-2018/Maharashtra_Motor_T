@@ -1,5 +1,5 @@
 import React from "react";
-import { Phone, Heart, Shield, AlertCircle } from "lucide-react";
+import { Phone, Ambulance, Shield, AlertCircle } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { cn } from "@/lib/utils";
@@ -20,7 +20,7 @@ const HelplineSection: React.FC = () => {
       description: "Police Emergency & General Help",
     },
     {
-      icon: Heart,
+      icon: Ambulance,
       title: t("medical.108"),
       metro: "108",
       rest: "108",

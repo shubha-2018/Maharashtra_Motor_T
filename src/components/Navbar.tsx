@@ -16,6 +16,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const navigate = useNavigate();
   const [colorChange, setColorChange] = useState(false);
 
@@ -37,7 +38,7 @@ const Navbar = () => {
         { name: t("nav.formerDirectors"), url: "/about/former-directors" },
         { name: t("nav.hierarchy"), url: "/about/hierarchy" },
         { name: t("nav.aboutDepartment"), url: "/about/department" },
-        { name: t("nav.offices"), url: "/about/offices" },
+        // { name: t("nav.offices"), url: "/about/offices" },
         { name: t("nav.ranks"), url: "/about/ranks" },
         { name: t("nav.welfare"), url: "/about/welfare" },
       ],
@@ -108,17 +109,25 @@ const Navbar = () => {
   }, []);
 
   // Prevent body scroll when mobile menu is open
-  useEffect(() => {
-    if (isMobileMenuOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "unset";
-    }
+useEffect(() => {
+  if (isMobileMenuOpen) {
+    // Lock scroll only on mobile menu
+    document.body.style.overflow = "hidden";
+  } else {
+    // Restore scroll normally
+    document.body.style.overflow = "";
+  }
+}, [isMobileMenuOpen]);
 
-    return () => {
-      document.body.style.overflow = "unset";
-    };
-  }, [isMobileMenuOpen]);
+  const toggleDropdown = (itemName: string) => {
+    setOpenDropdown(openDropdown === itemName ? null : itemName);
+  };
+
+  const handleMobileNavigation = (url: string) => {
+    navigate(url);
+    setIsMobileMenuOpen(false);
+    setOpenDropdown(null);
+  };
 
   return (
     <nav
@@ -167,7 +176,7 @@ const Navbar = () => {
             {navigationItems.map((item) => (
               <div key={item.name}>
                 {item.hasDropdown ? (
-                  <DropdownMenu>
+                  <DropdownMenu modal={false}>
                     <DropdownMenuTrigger asChild>
                       <Button
                         variant="ghost"
@@ -181,7 +190,7 @@ const Navbar = () => {
                     </DropdownMenuTrigger>
                     <DropdownMenuContent
                       align="start"
-                      className="bg-popover border border-border shadow-lg z-50 min-w-[180px]"
+                      className="bg-popover border border-border shadow-lg z-[60] min-w-[180px]"
                     >
                       {item.items.map((subItem) => (
                         <DropdownMenuItem
@@ -224,13 +233,16 @@ const Navbar = () => {
             <Button
               variant="ghost"
               size="icon"
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              onClick={() => {
+                setIsMobileMenuOpen(!isMobileMenuOpen);
+                setOpenDropdown(null); // Close any open dropdown when toggling menu
+              }}
               className="text-navbar-foreground"
             >
               {isMobileMenuOpen ? (
-                <X className="w-20 h-20 text-5xl" />
+                <X className="w-6 h-6" />
               ) : (
-                <Menu className="w-20 h-20  text-5xl" />
+                <Menu className="w-6 h-6" />
               )}
             </Button>
           </div>
@@ -238,42 +250,49 @@ const Navbar = () => {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="xl:hidden w-full fixed left-0 bg-background z-40 overflow-y-auto">
-            <div className="py-4 px-4 border-t border-navbar-border h-[calc(100vh-6rem)]">
+          <div className="xl:hidden absolute left-0 right-0 top-full bg-background border-t border-navbar-border shadow-lg z-[55] max-h-[calc(100vh-4rem)] overflow-y-auto">
+            <div className="py-4 px-4">
               <div className="flex flex-col space-y-2">
                 {navigationItems.map((item) => (
                   <div key={item.name} className="py-2">
-                    <div
-                      className="flex items-center justify-between"
-                      onClick={() =>
-                        !item.hasDropdown && setIsMobileMenuOpen(false)
-                      }
-                    >
-                      <Link
-                        to={item.url}
-                        className="text-navbar-foreground font-bold"
-                        onClick={() => setIsMobileMenuOpen(false)}
-                      >
-                        {item.name}
-                      </Link>
-                      {item.hasDropdown && (
-                        <ChevronDown className="w-4 h-4 text-navbar-muted" />
+                    <div className="flex items-center justify-between">
+                      {item.hasDropdown ? (
+                        <button
+                          onClick={() => toggleDropdown(item.name)}
+                          className="flex items-center justify-between w-full text-left text-navbar-foreground font-bold hover:text-navbar-foreground/80 transition-colors"
+                        >
+                          <span>{item.name}</span>
+                          <ChevronDown 
+                            className={`w-4 h-4 text-navbar-muted transition-transform duration-200 ${
+                              openDropdown === item.name ? 'rotate-180' : ''
+                            }`} 
+                          />
+                        </button>
+                      ) : (
+                        <button
+                          onClick={() => handleMobileNavigation(item.url)}
+                          className="text-navbar-foreground font-bold hover:text-navbar-foreground/80 transition-colors"
+                        >
+                          {item.name}
+                        </button>
                       )}
                     </div>
-                    {item.hasDropdown &&
-                      item.items.map((subItem) => (
-                        <Link
-                          key={subItem.name}
-                          to={subItem.url}
-                          className="pl-4 py-1 text-navbar-muted hover:text-navbar-foreground cursor-pointer block"
-                          onClick={() => setIsMobileMenuOpen(false)}
-                        >
-                          {subItem.name}
-                        </Link>
-                      ))}
+                    {item.hasDropdown && openDropdown === item.name && (
+                      <div className="mt-2 pl-4 space-y-1 animate-in slide-in-from-top-2 duration-200">
+                        {item.items.map((subItem) => (
+                          <button
+                            key={subItem.name}
+                            onClick={() => handleMobileNavigation(subItem.url)}
+                            className="block w-full text-left py-2 text-navbar-muted hover:text-navbar-foreground transition-colors"
+                          >
+                            {subItem.name}
+                          </button>
+                        ))}
+                      </div>
+                    )}
                   </div>
                 ))}
-                <div className="w-full bg-brand-primary rounded-lg flex items-center justify-center mt-4">
+                <div className="w-full bg-brand-primary rounded-lg flex items-center justify-center mt-4 p-2">
                   <img src={PoliceLogo} className="w-14 h-14" alt="logo" />
                 </div>
               </div>

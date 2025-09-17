@@ -107,7 +107,7 @@ export default function Ranks() {
         </Button>
 
         {/* Heading */}
-        <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight text-center bg-gradient-to-r from-violet-400 via-blue-400 to-teal-400 dark:from-violet-500 dark:via-blue-500 dark:to-teal-500 bg-clip-text text-transparent drop-shadow-lg">
+        <h1 className="text-5xl md:text-6xl p-3 font-extrabold tracking-tight text-center bg-gradient-to-r from-violet-400 via-blue-400 to-teal-400 dark:from-violet-500 dark:via-blue-500 dark:to-teal-500 bg-clip-text text-transparent drop-shadow-lg">
           {t("ranks.title")}
         </h1>
         <h2 className="text-lg md:text-xl font-medium text-gray-600 dark:text-gray-400 text-center mb-10">

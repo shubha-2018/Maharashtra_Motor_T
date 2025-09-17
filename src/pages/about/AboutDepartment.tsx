@@ -17,12 +17,35 @@ import { useLanguage } from "@/contexts/LanguageContext";
 
 // Table data (designations stay static, but counts can be translated if needed)
 const staffData = [
-  { sr: 1, designation: "Addl. DGP & Director Police Communication, IT & Transport, M.S. Pune", posts: 1 },
-  { sr: 2, designation: "Deputy Inspector General of Police Communication & IT, M.S. Pune", posts: 1 },
-  { sr: 3, designation: "Additional Commissioner of Police Communication & IT, M.S. Mumbai", posts: 1 },
+  {
+    sr: 1,
+    designation:
+      "Addl. DGP & Director Police Communication, IT & Transport, M.S. Pune",
+    posts: 1,
+  },
+  {
+    sr: 2,
+    designation:
+      "Deputy Inspector General of Police Communication & IT, M.S. Pune",
+    posts: 1,
+  },
+  {
+    sr: 3,
+    designation:
+      "Additional Commissioner of Police Communication & IT, M.S. Mumbai",
+    posts: 1,
+  },
   { sr: 4, designation: "Supdt. Of Police Communication & IT", posts: 5 },
-  { sr: 5, designation: "Deputy Commissioner of Police Communication & IT", posts: 2 },
-  { sr: 6, designation: "Deputy Supdt. Of Police / Asst. Commissioner of Police", posts: 37 },
+  {
+    sr: 5,
+    designation: "Deputy Commissioner of Police Communication & IT",
+    posts: 2,
+  },
+  {
+    sr: 6,
+    designation: "Deputy Supdt. Of Police / Asst. Commissioner of Police",
+    posts: 37,
+  },
   { sr: 7, designation: "Police Inspector (PI)", posts: 179 },
   { sr: 8, designation: "Police Sub – Inspector (PSI)", posts: 426 },
   { sr: 9, designation: "ASI (Senior Technical Officer)", posts: 874 },
@@ -37,6 +60,12 @@ const staffData = [
   { sr: 18, designation: "PC (Driver)", posts: 18 },
 ];
 
+// Timeline data
+const timelineData = [
+  { year: "1946", title: "hx_1946_title", description: "hx_1946_desc" },
+  { year: "1947", title: "hx_1947_title", description: "hx_1947_desc" },
+];
+
 // Component
 export default function History() {
   const navigate = useNavigate();
@@ -48,7 +77,10 @@ export default function History() {
   const [page, setPage] = useState(1);
   const rowsPerPage = 5;
   const totalPages = Math.ceil(staffData.length / rowsPerPage);
-  const currentData = staffData.slice((page - 1) * rowsPerPage, page * rowsPerPage);
+  const currentData = staffData.slice(
+    (page - 1) * rowsPerPage,
+    page * rowsPerPage
+  );
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-900 dark:via-gray-950 dark:to-black text-gray-900 dark:text-gray-100 px-6 py-12 sm:px-12 lg:px-24">
@@ -87,23 +119,36 @@ export default function History() {
           </div>
         </div>
 
+        {/* About Section */}
+        <Card className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 shadow-md rounded-2xl">
+          <CardContent className="p-6 space-y-4">
+            <h2 className="text-2xl font-bold text-blue-600 dark:text-blue-400">
+              {t("about.title")}
+            </h2>
+            <div
+              className="text-gray-700 dark:text-gray-300 space-y-4"
+              dangerouslySetInnerHTML={{ __html: t("about.description") }}
+            ></div>
+          </CardContent>
+        </Card>
+
         {/* Timeline Section */}
         <div className="relative border-l-2 border-gray-300 dark:border-gray-700 pl-8 space-y-10">
-          <Card className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 shadow-md rounded-2xl">
-            <CardContent className="p-6 space-y-4">
-              <h2 className="text-2xl font-bold text-blue-600 dark:text-blue-400">{t("hx_1946_title")}</h2>
-              <p className="text-gray-700 dark:text-gray-300">{t("hx_1946_desc")}</p>
-            </CardContent>
-          </Card>
-
-          <Card className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 shadow-md rounded-2xl">
-            <CardContent className="p-6 space-y-4">
-              <h2 className="text-2xl font-bold text-blue-600 dark:text-blue-400">{t("hx_1947_title")}</h2>
-              <p className="text-gray-700 dark:text-gray-300">{t("hx_1947_desc")}</p>
-            </CardContent>
-          </Card>
-
-          {/* ... Repeat this pattern for 1984, 1988, 1990, 1995, 1997, 1998, 2019, 2021 */}
+          {timelineData.map((item, index) => (
+            <Card
+              key={index}
+              className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 shadow-md rounded-2xl"
+            >
+              <CardContent className="p-6 space-y-4">
+                <h2 className="text-2xl font-bold text-blue-600 dark:text-blue-400">
+                  {t(item.title)}
+                </h2>
+                <p className="text-gray-700 dark:text-gray-300">
+                  {t(item.description)}
+                </p>
+              </CardContent>
+            </Card>
+          ))}
         </div>
 
         {/* Table Section */}

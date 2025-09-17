@@ -115,7 +115,7 @@ const HeroSection: React.FC = () => {
   return (
     <section className="relative min-h-[80vh] bg-gradient-to-br from-background to-secondary/30">
       {/* Hero Slider */}
-      <div className="relative h-[80vh] overflow-hidden">
+      <div className="relative h-[30vh] md:h-[80vh] overflow-hidden">
         {heroSlides.map((slide, index) => (
           <div
             key={index}
@@ -131,14 +131,14 @@ const HeroSection: React.FC = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-primary/80 via-primary/60 to-saffron/40" />
 
               {/* Slide Content */}
-              <div className="absolute inset-0 flex items-end mb-20 md:mb-28 justify-center text-center">
-                <div className="container mx-auto px-4">
-                  <h2 className="text-4xl md:text-5xl xl:text-6xl capitalize font-bold text-white mb-4 fade-in"
+              <div className="absolute inset-0 flex items-end mb-[5rem] md:mb-28 justify-center text-center">
+                <div className="container mx-auto px-4 flex-col gap-y-5 justify-center">
+                  <h2 className="text-2xl md:text-5xl xl:text-6xl capitalize font-bold text-white mb-4 fade-in"
                   
                           dangerouslySetInnerHTML={{ __html: t(slide.title) }}>
                     {/* {slide.title} */}
                   </h2>
-                  <p className="text-xl md:text-2xl  text-white/90 slide-up">
+                  <p className=" hidden text-lg sm:text-xl md:text-2xl  text-white/90 slide-up">
                     {slide.subtitle}
                   </p>
                 </div>

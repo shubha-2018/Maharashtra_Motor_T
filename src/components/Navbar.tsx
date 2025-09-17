@@ -127,12 +127,12 @@ const Navbar = () => {
       } `}
     >
       <div className="mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-24">
+        <div className="flex justify-between items-center h-16 md:h-24">
           {/* Logo */}
           <div className="flex items-center">
             <div className="flex items-center space-x-2">
               <Link to="/">
-                <div className="w-14 h-14 bg-brand-primary rounded-full flex items-center justify-center">
+                <div className="w-10 h-10 md:w-14 md:h-14 bg-brand-primary rounded-full flex items-center justify-center">
                   <img
                     src={AshokStambhLogo}
                     className="rounded-full"
@@ -238,7 +238,7 @@ const Navbar = () => {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="xl:hidden w-full fixed top-28 md:top-32  left-0 bg-background z-40 overflow-y-auto">
+          <div className="xl:hidden w-full fixed left-0 bg-background z-40 overflow-y-auto">
             <div className="py-4 px-4 border-t border-navbar-border h-[calc(100vh-6rem)]">
               <div className="flex flex-col space-y-2">
                 {navigationItems.map((item) => (

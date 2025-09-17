@@ -7,10 +7,11 @@ import EventsGallery from "@/components/EventsGallery";
 import HelplineSection from "@/components/HelplineSection";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+import SocialMediaFloatButton from "@/components/SocialMediaFloatButton";
 
 const Index = () => {
   return (
-      <div className="min-h-screen bg-background">
+      <div className="min-h-screen bg-background font-sans">
         {/* <Header />
         <Navbar/> */}
         <main>
@@ -18,6 +19,7 @@ const Index = () => {
           <GovernmentUpdates />
           <EventsGallery />
           <HelplineSection />
+          <SocialMediaFloatButton />
         </main>
       </div>
   );

@@ -123,7 +123,7 @@ const GovernmentUpdates: React.FC = () => {
     <section className="py-16 bg-gradient-to-br from-secondary/30 to-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gradient mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-gradient mb-4 p-3">
             {t("govt.updates")}
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-primary to-saffron mx-auto rounded-full"></div>

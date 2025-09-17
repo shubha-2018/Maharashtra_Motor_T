@@ -97,18 +97,18 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`w-full border-b border-navbar-border rounded-b-lg sticky top-0 z-50 transition-colors duration-300 ${
+      className={`w-full border-b selection:file:items-center border-navbar-border rounded-b-lg sticky top-0 z-50 transition-colors duration-300 ${
         scrolled ? "navbarbg" : "bg-navbar"
       }`}
     >
       <div className=" mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-28">
+        <div className="flex justify-between items-center h-24">
           {/* Logo */}
           <div className="flex items-center">
             <div className="flex items-center space-x-2">
               <Link to="/">
-                <div className="w-14 h-14 bg-brand-primary rounded-lg flex items-center justify-center">
-                  <img src={AshokStambhLogo} alt="logo" />
+                <div className="w-14 h-14 bg-brand-primary rounded-full flex items-center justify-center">
+                  <img src={AshokStambhLogo} className="rounded-full" alt="logo" />
                 </div>
               </Link>
               <Link to="/">
@@ -119,7 +119,7 @@ const Navbar = () => {
               <Link to="/">
                 <span
                   dangerouslySetInnerHTML={{ __html: t("title") }}
-                  className="hidden dark:text-white sm:block text-xl font-bold text-brand-primary capitalize"
+                  className="hidden dark:text-white sm:block text-xl font-extrabold text-brand-primary capitalize"
                 >
                   {/* title */}
                 </span>
@@ -136,7 +136,7 @@ const Navbar = () => {
                     <DropdownMenuTrigger asChild>
                       <Button
                         variant="ghost"
-                        className="text-navbar-foreground font-bold hover:text-navbar-foreground hover:bg-navbar-foreground/5"
+                        className="text-navbar-foreground text-lg font-bold hover:text-navbar-foreground hover:bg-navbar-foreground/5"
                       >
                         {item.name}
                         <ChevronDown className="w-4 h-4 ml-1" />
@@ -164,7 +164,7 @@ const Navbar = () => {
                 ) : (
                   <Button
                     variant="ghost"
-                    className="text-navbar-foreground  hover:text-navbar-foreground hover:bg-navbar-foreground/5 font-bold "
+                    className="text-navbar-foreground text-lg hover:text-navbar-foreground hover:bg-navbar-foreground/5 font-bold "
                   >
                     <Link to={item.url}>{item.name}</Link>
                   </Button>
@@ -175,7 +175,7 @@ const Navbar = () => {
 
           {/* Login Button */}
           <div className="hidden md:flex">
-            <div className="w-20 h-20 bg-brand-primary rounded-lg flex items-center justify-center">
+            <div className="w-16 h-20 bg-brand-primary rounded-lg flex items-center justify-center">
               <img src={PoliceLogo} alt="logo" />
             </div>
           </div>

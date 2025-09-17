@@ -102,6 +102,10 @@ const HeroSection: React.FC = () => {
     window.location.href = `tel:${number}`;
   };
 
+  // Split emergency contacts into two equal groups
+  const leftContacts = emergencyContacts.slice(0, 3); // First 3 contacts
+  const rightContacts = emergencyContacts.slice(3); // Last 3 contacts
+
   return (
     <section className="relative min-h-[80vh] bg-gradient-to-br from-background to-secondary/30">
       {/* Hero Slider */}
@@ -169,7 +173,7 @@ const HeroSection: React.FC = () => {
 
       {/* Emergency Contacts - Left Side */}
       <div className="absolute left-4 top-1/2 -translate-y-1/2 hidden xl:block space-y-3">
-        {emergencyContacts.slice(0, 4).map((contact, index) => (
+        {leftContacts.map((contact, index) => (
           <Card
             key={index}
             className="glass-card w-64 hover:scale-105 transition-transform cursor-pointer"
@@ -182,10 +186,8 @@ const HeroSection: React.FC = () => {
                     {contact.title}
                   </h4>
                   <p
-                    className="text-black/80 dark:text-white/80 text-xs"
-                    onClick={() =>
-                      handleCall(contact.number.replace(/\D/g, ""))
-                    }
+                    className="text-black/80 dark:text-white/80 text-xs cursor-pointer"
+                    onClick={() => handleCall(contact.number.replace(/\D/g, ""))}
                   >
                     {contact.number}
                   </p>
@@ -201,7 +203,7 @@ const HeroSection: React.FC = () => {
 
       {/* Emergency Contacts - Right Side */}
       <div className="absolute right-4 top-1/2 -translate-y-1/2 hidden xl:block space-y-3">
-        {emergencyContacts.slice(3).map((contact, index) => (
+        {rightContacts.map((contact, index) => (
           <Card
             key={`right-${index}`}
             className="glass-card w-64 hover:scale-105 transition-transform cursor-pointer"
@@ -213,7 +215,10 @@ const HeroSection: React.FC = () => {
                   <h4 className="text-black dark:text-white font-semibold text-sm truncate">
                     {contact.title}
                   </h4>
-                  <p className="text-black/80 dark:text-white/80 text-xs">
+                  <p 
+                    className="text-black/80 dark:text-white/80 text-xs cursor-pointer"
+                    onClick={() => handleCall(contact.number.replace(/\D/g, ""))}
+                  >
                     {contact.number}
                   </p>
                   <span className="inline-block bg-saffron/20 text-saffron text-xs px-2 py-1 rounded-full mt-1">
@@ -273,7 +278,7 @@ const HeroSection: React.FC = () => {
           {/* Welcome Message */}
           <div className="space-y-6 slide-up">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gradient mb-4 p-8">
+              <h2 className="text-3xl md:text-4xl font-sans font-extrabold text-gradient mb-4 p-3">
                 {t("welcome.title")}
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
@@ -283,7 +288,7 @@ const HeroSection: React.FC = () => {
 
             <Card className="glass-card border-l-4 border-l-saffron">
               <CardContent className="p-6">
-                <h3 className="text-xl font-semibold text-foreground mb-3">
+                <h3 className="text-muted-foreground mb-4 leading-relaxed text-justify">
                   {t("director.desk")}
                 </h3>
                 <p className="text-muted-foreground mb-4">
@@ -318,7 +323,10 @@ const HeroSection: React.FC = () => {
                           <h4 className="font-semibold text-sm text-foreground truncate">
                             {contact.title}
                           </h4>
-                          <p className="text-muted-foreground text-xs">
+                          <p 
+                            className="text-muted-foreground text-xs cursor-pointer"
+                            onClick={() => handleCall(contact.number.replace(/\D/g, ""))}
+                          >
                             {contact.number}
                           </p>
                           <span className="inline-block bg-primary/10 text-primary text-xs px-2 py-1 rounded-full mt-1">

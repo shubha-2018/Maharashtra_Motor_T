@@ -41,10 +41,9 @@ const Footer: React.FC = () => {
   ];
 
   const socialLinks = [
-    { icon: Facebook, href: "#", color: "hover:text-blue-600" },
-    { icon: Twitter, href: "#", color: "hover:text-blue-400" },
-    { icon: Youtube, href: "#", color: "hover:text-red-600" },
-    { icon: Linkedin, href: "#", color: "hover:text-blue-700" },
+    { icon: Facebook, href: "https://www.facebook.com/profile.php?id=61577135066429", color: "hover:text-blue-600" },
+    { icon: Twitter, href: "https://x.com/MH_POLICE_PCIT", color: "hover:text-blue-400" },
+    { icon: Linkedin, href: "https://www.instagram.com/mh_police_pcit/", color: "hover:text-blue-700" },
   ];
 
   const visitorStats = {

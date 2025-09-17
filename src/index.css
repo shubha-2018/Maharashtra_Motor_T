@@ -1,10 +1,25 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+Devanagari:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  body {
+    --font-marathi: "Mukta", "Noto Sans Devanagari", "sans-serif";
+    --font-english: "Inter", "Arial", sans-serif;
+  }
+
+  html,
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    font-kerning: normal;
+    font-variant-ligatures: common-ligatures;
+  }
+}
 /* Maharashtra Police IT Department Design System */
 
 @layer base {
@@ -12,55 +27,71 @@
     /* Core Colors - Police Blue & Saffron Theme */
     --background: 0 0% 100%;
     --foreground: 220 15% 20%;
-    
+
     --card: 0 0% 100%;
     --card-foreground: 220 15% 20%;
-    
+
     --popover: 0 0% 100%;
     --popover-foreground: 220 15% 20%;
-    
+
     /* Police Blue Primary */
     --primary: 220 100% 25%;
     --primary-foreground: 0 0% 100%;
     --primary-hover: 220 100% 20%;
-    
+
     /* Saffron Accent */
     --saffron: 30 100% 50%;
     --saffron-light: 30 100% 85%;
     --saffron-dark: 30 100% 40%;
-    
+
     /* Government Green */
     --govt-green: 140 60% 30%;
     --govt-green-light: 140 40% 85%;
-    
+
     /* Secondary Colors */
     --secondary: 220 15% 96%;
     --secondary-foreground: 220 15% 20%;
-    
+
     --muted: 220 10% 95%;
     --muted-foreground: 220 10% 45%;
-    
+
     --accent: 220 15% 96%;
     --accent-foreground: 220 15% 20%;
-    
+
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
-    
+
     --border: 220 13% 91%;
     --input: 220 13% 91%;
     --ring: 220 100% 25%;
-    
+
     /* Glass Effects */
     --glass-bg: 255 255 255 / 0.1;
     --glass-border: 255 255 255 / 0.2;
     --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    
+
     /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(220 100% 25%) 0%, hsl(220 100% 35%) 100%);
-    --gradient-saffron: linear-gradient(135deg, hsl(30 100% 50%) 0%, hsl(30 100% 60%) 100%);
-    --gradient-hero: linear-gradient(135deg, hsl(220 100% 25% / 0.9) 0%, hsl(30 100% 50% / 0.8) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(0 0% 100% / 0.1) 0%, hsl(0 0% 100% / 0.05) 100%);
-    
+    --gradient-primary: linear-gradient(
+      135deg,
+      hsl(220 100% 25%) 0%,
+      hsl(220 100% 35%) 100%
+    );
+    --gradient-saffron: linear-gradient(
+      135deg,
+      hsl(30 100% 50%) 0%,
+      hsl(30 100% 60%) 100%
+    );
+    --gradient-hero: linear-gradient(
+      135deg,
+      hsl(220 100% 25% / 0.9) 0%,
+      hsl(30 100% 50% / 0.8) 100%
+    );
+    --gradient-card: linear-gradient(
+      145deg,
+      hsl(0 0% 100% / 0.1) 0%,
+      hsl(0 0% 100% / 0.05) 100%
+    );
+
     /* Shadows */
     --shadow-sm: 0 1px 2px 0 hsl(220 13% 91% / 0.5);
     --shadow-md: 0 4px 6px -1px hsl(220 13% 91% / 0.5);
@@ -68,16 +99,16 @@
     --shadow-xl: 0 20px 25px -5px hsl(220 13% 91% / 0.5);
     --shadow-glow: 0 0 20px hsl(220 100% 25% / 0.3);
     --shadow-saffron-glow: 0 0 20px hsl(30 100% 50% / 0.4);
-    
+
     /* Typography */
-    --font-english: 'Inter', sans-serif;
-    --font-marathi: 'Noto Sans Devanagari', sans-serif;
-    
+    --font-english: "Inter", sans-serif;
+    --font-marathi: "Noto Sans Devanagari", sans-serif;
+
     /* Animations */
     --transition-fast: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-slow: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    
+
     --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
@@ -101,54 +132,70 @@
     /* Dark Mode Colors */
     --background: 220 25% 8%;
     --foreground: 0 0% 95%;
-    
+
     --card: 220 20% 12%;
     --card-foreground: 0 0% 95%;
-    
+
     --popover: 220 20% 12%;
     --popover-foreground: 0 0% 95%;
-    
+
     /* Police Blue Primary (lighter in dark) */
     --primary: 220 100% 60%;
     --primary-foreground: 220 25% 8%;
     --primary-hover: 220 100% 65%;
-    
+
     /* Saffron Accent (darker in dark mode) */
     --saffron: 30 90% 45%;
     --saffron-light: 30 60% 20%;
     --saffron-dark: 30 90% 35%;
-    
+
     /* Government Green */
     --govt-green: 140 50% 40%;
     --govt-green-light: 140 30% 15%;
-    
+
     --secondary: 220 15% 15%;
     --secondary-foreground: 0 0% 95%;
-    
+
     --muted: 220 10% 18%;
     --muted-foreground: 220 5% 65%;
-    
+
     --accent: 220 15% 15%;
     --accent-foreground: 0 0% 95%;
-    
+
     --destructive: 0 75% 55%;
     --destructive-foreground: 0 0% 95%;
-    
+
     --border: 220 15% 20%;
     --input: 220 15% 20%;
     --ring: 220 100% 60%;
-    
+
     /* Glass Effects for Dark Mode */
     --glass-bg: 0 0 0 / 0.2;
     --glass-border: 255 255 255 / 0.1;
     --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
-    
+
     /* Dark Mode Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(220 100% 35%) 0%, hsl(220 100% 45%) 100%);
-    --gradient-saffron: linear-gradient(135deg, hsl(30 90% 35%) 0%, hsl(30 90% 45%) 100%);
-    --gradient-hero: linear-gradient(135deg, hsl(220 100% 15% / 0.9) 0%, hsl(30 90% 25% / 0.8) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(0 0% 0% / 0.2) 0%, hsl(0 0% 0% / 0.1) 100%);
-    
+    --gradient-primary: linear-gradient(
+      135deg,
+      hsl(220 100% 35%) 0%,
+      hsl(220 100% 45%) 100%
+    );
+    --gradient-saffron: linear-gradient(
+      135deg,
+      hsl(30 90% 35%) 0%,
+      hsl(30 90% 45%) 100%
+    );
+    --gradient-hero: linear-gradient(
+      135deg,
+      hsl(220 100% 15% / 0.9) 0%,
+      hsl(30 90% 25% / 0.8) 100%
+    );
+    --gradient-card: linear-gradient(
+      145deg,
+      hsl(0 0% 0% / 0.2) 0%,
+      hsl(0 0% 0% / 0.1) 100%
+    );
+
     /* Dark Mode Shadows */
     --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.3);
     --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.3);
@@ -168,16 +215,17 @@
     @apply bg-background text-foreground font-sans antialiased;
     font-family: var(--font-english);
   }
-  
-  [lang="mr"], [lang="mr"] * {
+
+  [lang="mr"],
+  [lang="mr"] * {
     font-family: var(--font-marathi);
   }
-  
+
   /* Smooth scrolling */
   html {
     scroll-behavior: smooth;
   }
-  
+
   /* Focus styles for accessibility */
   .focus-visible:focus {
     @apply outline-none ring-2 ring-ring ring-offset-2;
@@ -192,55 +240,55 @@
     -webkit-backdrop-filter: blur(12px);
     border: 1px solid rgba(var(--glass-border));
   }
-  
+
   .glass-card {
     @apply glass rounded-xl shadow-lg;
     box-shadow: var(--glass-shadow);
   }
-  
+
   /* Button variants for government theme */
   .btn-police {
     @apply bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 font-medium;
     background: var(--gradient-primary);
     box-shadow: var(--shadow-glow);
   }
-  
+
   .btn-police:hover {
     transform: translateY(-2px);
     box-shadow: var(--shadow-glow), var(--shadow-lg);
   }
-  
+
   .btn-saffron {
     @apply text-white transition-all duration-300 font-medium;
     background: var(--gradient-saffron);
     box-shadow: var(--shadow-saffron-glow);
   }
-  
+
   .btn-saffron:hover {
     transform: translateY(-2px);
     box-shadow: var(--shadow-saffron-glow), var(--shadow-lg);
   }
-  
+
   /* Navigation styles */
   .nav-link {
     @apply relative px-4 py-2 text-foreground/80 hover:text-foreground transition-all duration-300;
   }
-  
+
   .nav-link::after {
-    content: '';
+    content: "";
     @apply absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300;
   }
-  
+
   .nav-link:hover::after,
   .nav-link.active::after {
     @apply w-full;
   }
-  
+
   /* Card hover effects */
   .card-hover {
     @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
   }
-  
+
   /* Gradient text */
   .text-gradient {
     background: var(--gradient-primary);
@@ -248,69 +296,77 @@
     background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-  
+
   .text-saffron-gradient {
     background: var(--gradient-saffron);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-  
+
   /* Emergency animations */
   .pulse-emergency {
     animation: pulse-emergency 2s infinite;
   }
-  
+
   @keyframes pulse-emergency {
-    0%, 100% { 
+    0%,
+    100% {
       box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.7);
     }
-    50% { 
+    50% {
       box-shadow: 0 0 0 10px rgba(220, 38, 38, 0);
     }
   }
-  
+
   /* Loading animations */
   .fade-in {
     animation: fadeIn 0.6s ease-out;
   }
-  
+
   .slide-up {
     animation: slideUp 0.8s ease-out;
   }
-  
+
   @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
-  
+
   @keyframes slideUp {
-    from { 
+    from {
       opacity: 0;
       transform: translateY(30px);
     }
-    to { 
+    to {
       opacity: 1;
       transform: translateY(0);
     }
   }
-  
+
   /* Ticker animation for news */
   .ticker {
     animation: ticker 30s linear infinite;
   }
-  
+
   @keyframes ticker {
-    0% { transform: translateX(100%); }
-    100% { transform: translateX(-100%); }
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
   }
 }
 
-
-.navbarbg{
+.navbarbg {
   /* From https://css.glass */
-background: rgba(255, 255, 255, 0.18);
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(8.5px);
--webkit-backdrop-filter: blur(8.5px);
+  background: rgba(255, 255, 255, 0.18);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.5px);
+  -webkit-backdrop-filter: blur(8.5px);
 }

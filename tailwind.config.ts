@@ -72,7 +72,8 @@ export default {
       fontFamily: {
         english: ["var(--font-english)", "sans-serif"],
         marathi: ["var(--font-marathi)", "sans-serif"],
-        sans: ["var(--font-english)", "sans-serif"],
+        // make marathi first for default font-sans
+        sans: ["var(--font-marathi)", "var(--font-english)", "sans-serif"],
       },
       transitionDuration: {
         fast: "200ms",
@@ -114,20 +115,20 @@ export default {
           to: { opacity: "1" },
         },
         slideUp: {
-          from: { 
+          from: {
             opacity: "0",
             transform: "translateY(30px)",
           },
-          to: { 
+          to: {
             opacity: "1",
             transform: "translateY(0)",
           },
         },
         "pulse-emergency": {
-          "0%, 100%": { 
+          "0%, 100%": {
             boxShadow: "0 0 0 0 rgba(220, 38, 38, 0.7)",
           },
-          "50%": { 
+          "50%": {
             boxShadow: "0 0 0 10px rgba(220, 38, 38, 0)",
           },
         },

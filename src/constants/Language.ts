@@ -570,6 +570,49 @@ export const EN = {
   "gallery.image3.caption": "Ashok Jog Lecture Hall Inauguration",
   "gallery.image4.caption": "DGP Inauguration",
 
+  //trasfer
+   "x9r7": "ASI(HWO) ANSHATA BADAL GT 2023-2528",
+    "q3m2": "HC (WO) ANSHATA BADAL GT 2023-2524",
+    "z5f8": "ASI (RM) ANSHATA BADAL GT 2023-2525",
+    "u7n4": "Back to Home",
+    "j2y6": "Transfers Orders",
+    "p8a1": "Official notifications and updates regarding transfers",
+    "r6w5": "{{count}} entries per page",
+    "m1s9": "Search...",
+    "y4g2": "Title",
+    "k9v3": "View",
+    "h2d7": "Download",
+    "b3p8": "Page",
+    "f5z1": "of",
+    "n6x4": "Prev",
+    "c7r2": "Next",
+
+
+    //STATERGY
+     "p1o2": "Back to Home",
+    "l3s7": "Light Mode",
+    "v8n9": "Dark Mode",
+    "b7z4": "Strategy Support System (SSS)",
+    "y5h8": "Digital tools and systems for internal operational support",
+    "k2d9": "SSS Branch Functions",
+    "z7a1": "Conducting trials for new communication technologies.",
+    "m4f2": "Development and improvisation in the field of Communication and IT.",
+    "q9e3": "Studying various technologies as per the needs of all Police Units in the State.",
+    "x6r4": "Research & Development (R&D) Initiatives",
+    "u2n5": "Data Communication System: Development of systems using Existing VHF Radio Network for computer-based message transmission/reception.",
+    "h7b8": "Advanced Technical Specifications: Preparation and evaluation of specs for equipment like Digital Mobile Radio Sets, Handheld Transceivers, Repeaters, Antennas, Microwave Links, Computers, Network Switches, Telephone Exchanges, etc.",
+    "w3t6": "Testing & Evaluation: Field trials and technical evaluations of new equipment post-tender processes.",
+    "c5p7": "Dr. APJ Abdul Kalam Innovation Centre",
+    "a1l9": "Focus on innovation in policing technologies (e.g., AI, IoT, 4G LTE, Software Defined Radios).",
+    "o8v2": "Hands-on training and development for advanced policing tools.",
+    "d3m8": "Sir J C Bose E-Learning Centre",
+    "n5j4": "Digital classroom with Learning Management System (LMS) for secure, remote training.",
+    "r2k6": "Features: Two-way video interactions, encrypted session recordings, remote access for trainees, online assessments.",
+    "f4q1": "Implementation of Modern Systems",
+    "s8y2": "e-Office: Digital office management system for efficient workflow.",
+    "e7h5": "NIC Email: Secure official email communication service.",
+    "g6c3": "Cipher Systems: Maintenance and loading of cipher programmes for secure communication across Crypto Centers in Maharashtra.",
+    "t6m3": "The SSS ensures innovation, operational efficiency, and secure communication, empowering Maharashtra Police with cutting-edge technology and advanced training solutions.",
     // Contact Page
   "contact.title": "Contact Us",
   "contact.subtitle": "Reach us via phone, email, or visit our office",
@@ -583,6 +626,8 @@ export const EN = {
   "contact.email.title": "Email",
   "contact.email.address": "dir.polwireless.pune@mahapolice.gov.in",
   "contact.map.title": "Find Us on Map",
+
+ 
   
   //listofofficer
   "back_to_home": "Back to Home",
@@ -638,8 +683,29 @@ export const EN = {
     "emp_19_name": "SHRI. VIKRAM VITHALRAO TAMBARE",
     "emp_19_designation": "PSI(PCIT)",
     "emp_20_name": "SHRI. SUNIL MORESHWAR POTE",
-    "emp_20_designation": "PSI(PCIT)",
+    "emp_20_designation": "PSI(PCIT)", 
 
+//GRADUATION
+"u2f4": "Back",
+  "g6h9": "Gradation List",
+  "a8k2": "Latest gradation list entries are shown below",
+  "r9d5": "Showing {{count}} entries per page",
+  "s3l7": "Search...",
+  "b7x1": "Title",
+  "m4v2": "Size",
+  "k8p6": "Download",
+  "d5q9": "Download",
+  "c1n8": "Page",
+  "z7e4": "of",
+  "p2m3": "Previous",
+  "w4t6": "Next",
+
+  "x1a9": "ASI vijtantri gradation list",
+  "y7b3": "ASI bhandarpal gradation list",
+  "z4c6": "A.S.I. (H.W.O.) – 01/01/2021",
+  "q2d8": "A.S.I. (H.W.O.) – 01/01/2022",
+  "p5e1": "Gradation List PWSI Electrician",
+     
    // Government Publications Page
   "pubs.title": "Government Publications & Notifications",
   "pubs.subtitle": "Access official announcements, resolutions, circulars, and tenders issued by the Maharashtra Police Communication & IT Department",
@@ -676,7 +742,25 @@ export const EN = {
     "privacy.changes.description": "We may update this privacy policy periodically to reflect changes in our practices or legal requirements. The updated policy will be posted on our website with the effective date. We encourage you to review this policy regularly.",
     "privacy.contact.title": "Contact Information",
     "privacy.contact.description": "For any questions or concerns regarding this privacy policy or our data practices, please contact our Data Protection Officer at: Police Communication and IT Department, Pune. Email: dpo-pcit@mahapolice.gov.in | Phone: +91-20-2612-XXXX",
+    
 
+     //promotion
+  "f3k9": "HWO TO PWSIT PRAMOTION - 2023-2617",
+    "p7q2": "PC(WH)PRAMOTION (ANSHTA BADAL)-2023-2626",
+    "l8z4": "PC(WH)PRAMOTION (ANSHATA BADAL)-2023-2603",
+    "q1w2": "Back to Home",
+    "m9z8": "Promotion Orders",
+    "v4b7": "Official notifications and updates regarding promotions",
+    "h5k3": "{{count}} entries per page",
+    "r2p6": "Search...",
+    "t8n1": "Title",
+    "k4f5": "View",
+    "z3v9": "Download",
+    "d7x2": "Page",
+    "y8c3": "of",
+    "u5w1": "Prev",
+    "b6t4": "Next",
+ 
 
     // Terms of Use Page
     "terms.title": "Terms of Use",
@@ -784,6 +868,27 @@ export const MR = {
   "ranks.rank18.title": "PC (चालक)",
   "ranks.rank18.description": "नियमित चालकीची कर्तव्ये हाताळते, वाहतूक समन्वय आणि कर्मचाऱ्यांची वेळेवर गतिशीलता सुनिश्चित करते.",
 
+
+  //graduation
+  "u2f4": "मागे",
+  "g6h9": "ज्येष्ठता सूची",
+  "a8k2": "नवीन ज्येष्ठता सूची खाली दर्शवली आहे",
+  "r9d5": "प्रत्येक पृष्ठावर {{count}} नोंदी दाखवत आहोत",
+  "s3l7": "शोधा...",
+  "b7x1": "शीर्षक",
+  "m4v2": "आकार",
+  "k8p6": "डाउनलोड",
+  "d5q9": "डाउनलोड",
+  "c1n8": "पृष्ठ",
+  "z7e4": "पैकी",
+  "p2m3": "मागील",
+  "w4t6": "पुढील",
+
+  "x1a9": "ए.एस.आय. विजतंत्री ज्येष्ठता सूची",
+  "y7b3": "ए.एस.आय. भांडारपाल ज्येष्ठता सूची",
+  "z4c6": "ए.एस.आय. (एच.डब्ल्यू.ओ.) – ०१/०१/२०२१",
+  "q2d8": "ए.एस.आय. (एच.डब्ल्यू.ओ.) – ०१/०१/२०२२",
+  "p5e1": "ज्येष्ठता सूची पी.डब्ल्यू.एस.आय. इलेक्ट्रिशियन",
   //listofofficer
   "back_to_home": "मुख्यपृष्ठावर परत",
     "export_csv": "CSV निर्यात करा",
@@ -839,6 +944,39 @@ export const MR = {
     "emp_19_designation": "PSI(PCIT)",
     "emp_20_name": "श्री. सुनील मोरेश्वर पोते",
     "emp_20_designation": "PSI(PCIT)",
+//promotion
+     "f3k9": "HWO TO PWSIT पदोन्नती - 2023-2617",
+    "p7q2": "PC(WH) पदोन्नती (अंशता बदल)-2023-2626",
+    "l8z4": "PC(WH) पदोन्नती (अंशता बदल)-2023-2603",
+    "q1w2": "मुख्यपृष्ठावर परत",
+    "m9z8": "पदोन्नती आदेश",
+    "v4b7": "पदोन्नती संदर्भातील अधिकृत सूचना आणि अद्यतने",
+    "h5k3": "{{count}} नोंदी प्रति पृष्ठ",
+    "r2p6": "शोधा...",
+    "t8n1": "शीर्षक",
+    "k4f5": "पाहा",
+    "z3v9": "डाउनलोड",
+    "d7x2": "पृष्ठ",
+    "y8c3": "चा/ची",
+    "u5w1": "मागील",
+    "b6t4": "पुढील",
+
+    //trasfer
+    "x9r7": "ASI(HWO) अंशता बदल GT 2023-2528",
+    "q3m2": "HC (WO) अंशता बदल GT 2023-2524",
+    "z5f8": "ASI (RM) अंशता बदल GT 2023-2525",
+    "u7n4": "मुख्यपृष्ठावर परत",
+    "j2y6": "बदली आदेश",
+    "p8a1": "बदली संदर्भातील अधिकृत सूचना आणि अद्यतने",
+    "r6w5": "{{count}} नोंदी प्रति पृष्ठ",
+    "m1s9": "शोधा...",
+    "y4g2": "शीर्षक",
+    "k9v3": "पाहा",
+    "h2d7": "डाउनलोड",
+    "b3p8": "पृष्ठ",
+    "f5z1": "चा/ची",
+    "n6x4": "मागील",
+    "c7r2": "पुढील",
 
   // Department Info
   "dept.name.marathi": "पोलीस दळणवळण व माहिती तंत्रज्ञान विभाग",
@@ -903,6 +1041,32 @@ export const MR = {
   "welfare.item8.title": "सौर विद्युतीकरण प्रकल्प",
   "welfare.item9.title": "पावसाचे पाणी संग्रहण",
   "welfare.item10.title": "महाराष्ट्र पोलीस वायरलेस कल्याण संकुल आणि परिषद केंद्र",
+
+  //STARTGEY
+  "p1o2": "मुख्यपृष्ठावर परत",
+    "l3s7": "प्रकाश मोड",
+    "v8n9": "गडद मोड",
+    "b7z4": "रणनीती सहाय्य प्रणाली (SSS)",
+    "y5h8": "आंतरिक कार्यात्मक सहाय्यासाठी डिजिटल साधने आणि प्रणाली",
+    "k2d9": "SSS शाखेच्या कार्ये",
+    "z7a1": "नवीन संवाद तंत्रज्ञानाची चाचणी करणे.",
+    "m4f2": "संचार आणि IT क्षेत्रातील विकास आणि सुधारणा.",
+    "q9e3": "राज्यातील सर्व पोलिस युनिटच्या गरजेनुसार विविध तंत्रज्ञानाचा अभ्यास.",
+    "x6r4": "संशोधन व विकास (R&D) उपक्रम",
+    "u2n5": "डेटा कम्युनिकेशन सिस्टीम: विद्यमान VHF रेडिओ नेटवर्कचा वापर करून संगणक आधारित संदेश प्रसारण/स्वीकृतीसाठी प्रणाली विकसित करणे.",
+    "h7b8": "उन्नत तांत्रिक तपशील: डिजिटल मोबाईल रेडिओ सेट्स, हँडहेल्ड ट्रान्ससीव्हर्स, रिपिटर्स, अँटेना, मायक्रोवेव्ह लिंक, संगणक, नेटवर्क स्विचेस, टेलिफोन एक्स्चेंजेस इत्यादी उपकरणांसाठी तपशील तयार करणे आणि मूल्यमापन करणे.",
+    "w3t6": "चाचणी व मूल्यमापन: निविदा प्रक्रियेनंतर नवीन उपकरणांचे क्षेत्रीय चाचण्या व तांत्रिक मूल्यमापन.",
+    "c5p7": "डॉ. एपीजे अब्दुल कलाम इनोव्हेशन सेंटर",
+    "a1l9": "पोलिसिंग तंत्रज्ञानातील नवकल्पना (AI, IoT, 4G LTE, सॉफ्टवेअर डिफाइंड रेडिओज) यांवर लक्ष केंद्रित करणे.",
+    "o8v2": "प्रगत पोलिसिंग साधनांसाठी प्रत्यक्ष प्रशिक्षण व विकास.",
+    "d3m8": "सर जे. सी. बोस ई-लर्निंग सेंटर",
+    "n5j4": "सुरक्षित, दूरस्थ प्रशिक्षणासाठी लर्निंग मॅनेजमेंट सिस्टीम (LMS) सह डिजिटल वर्गखोली.",
+    "r2k6": "वैशिष्ट्ये: दोन मार्ग व्हिडिओ संवाद, एनक्रिप्टेड सेशन रेकॉर्डिंग्ज, प्रशिक्षणार्थ्यांसाठी दूरस्थ प्रवेश, ऑनलाइन मूल्यमापन.",
+    "f4q1": "आधुनिक प्रणालींची अंमलबजावणी",
+    "s8y2": "ई-ऑफिस: कार्यक्षम कार्यप्रवाहासाठी डिजिटल कार्यालय व्यवस्थापन प्रणाली.",
+    "e7h5": "NIC ईमेल: सुरक्षित अधिकृत ईमेल संवाद सेवा.",
+    "g6c3": "सायफर सिस्टीम्स: महाराष्ट्रातील क्रिप्टो केंद्रांमध्ये सुरक्षित संवादासाठी सायफर प्रोग्राम्सचे देखभाल व लोडिंग.",
+    "t6m3": "SSS नवकल्पना, कार्यक्षमता आणि सुरक्षित संवाद सुनिश्चित करते, महाराष्ट्र पोलिसांना अत्याधुनिक तंत्रज्ञान आणि प्रगत प्रशिक्षण उपायांनी सक्षम करते.",
 
   // Hero slider images
   "hero.modernTech.title": "आधुनिक पोलीस तंत्रज्ञान",
@@ -1264,7 +1428,22 @@ export const MR = {
 
   "tender.status.open": "सुरू आहे",
   "tender.status.closingSoon": "लवकरच बंद होणार",
-
+  //promotion
+   "a1": "Back to Home",
+    "a2": "Promotion Orders",
+    "a3": "Official notifications and updates regarding promotions",
+    "a4": "{{count}} entries per page",
+    "a5": "Search...",
+    "a6": "Title",
+    "a7": "View",
+    "a8": "Download",
+    "a9": "Page",
+    "a10": "of",
+    "a11": "Prev",
+    "a12": "Next",
+    "b1": "HWO TO PWSIT PRAMOTION - 2023-2617",
+    "b2": "PC(WH)PRAMOTION (ANSHTA BADAL)-2023-2626",
+    "b3": "PC(WH)PRAMOTION (ANSHATA BADAL)-2023-2603",
 
   // Events
   "latest.events": "ताज्या घटना",
@@ -1517,7 +1696,9 @@ export const MR = {
     "terms.contact.title": "संपर्क माहिती",
     "terms.contact.description": "वापराच्या या अटींबद्दल कोणत्याही प्रश्नांसाठी, कृपया पोलीस संप्रेषण आणि आयटी विभागाशी pcit@mahapolice.gov.in येथे किंवा +91-22-2262-1234 या क्रमांकावर संपर्क साधा.",
 
-     
+       
+ 
+
     // Accessibility Page
     "accessibility.title": "प्रवेशयोग्यता विधान",
     "accessibility.subtitle": "सर्व नागरिकांसाठी डिजिटल सेवांची समान प्रवेशयोग्यता सुनिश्चित करणे",

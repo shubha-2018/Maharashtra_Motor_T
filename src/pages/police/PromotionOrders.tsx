@@ -1,88 +1,134 @@
-// PromotionOrders.jsx
-import { Card, CardContent } from "@/components/ui/card";
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, FileText } from "lucide-react";
+import { Card } from "@/components/ui/card";
+import { ArrowLeft, FileText, Download } from "lucide-react";
 import { useNavigate } from "react-router";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function PromotionOrders() {
-        const navigate = useNavigate();
-      const goBack = () => navigate("/");
-  const promotionItems = [
-    {
-      title: "Promotion Orders",
-      description:
-        "Official documents and circulars announcing promotions of personnel across all ranks, from Police Constable (PC) to senior officers. These orders ensure transparency and maintain morale among the department's personnel.",
-    },
-    {
-      title: "Departmental Promotion Committee (DPC) Results",
-      description:
-        "Notifications and outcomes from Departmental Promotion Committee meetings, detailing which officers have been approved for promotion, along with the effective dates and ranks.",
-    },
-    {
-      title: "Seniority-Based Promotions",
-      description:
-        "Promotions executed based on official gradation lists, vacancy positions, and merit. These orders ensure fair advancement within the department and adherence to organizational protocols.",
-    },
-    {
-      title: "Classification & Proficiency Exam Results",
-      description:
-        "Promotion orders linked to the successful completion of exams, such as wireless operator exams or technical proficiency assessments. Officers demonstrating competence are recognized and promoted accordingly.",
-    },
-  ];
+  const navigate = useNavigate();
+  const goBack = () => navigate("/");
+  const { t } = useLanguage();
+
+ const promotionOrders = [
+  { title: t("f3k9"), size: "996.97 KB", link: "https://mahpolwireless.stagingdsi.co.in/UploadedFiles/PromotionOrders/145.pdf" },
+  { title: t("p7q2"), size: "408.09 KB", link: "file:///C:/Users/saura/Downloads/139.pdf" },
+  { title: t("l8z4"), size: "965.81 KB", link: "file:///C:/Users/saura/Downloads/136.pdf" },
+];
+
+  const [searchTerm, setSearchTerm] = useState("");
+  const [currentPage, setCurrentPage] = useState(1);
+  const entriesPerPage = 20;
+
+  const filteredOrders = promotionOrders.filter((order) =>
+    order.title.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+  const totalPages = Math.ceil(filteredOrders.length / entriesPerPage);
+  const startIndex = (currentPage - 1) * entriesPerPage;
+  const paginatedOrders = filteredOrders.slice(
+    startIndex,
+    startIndex + entriesPerPage
+  );
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 via-gray-100 to-gray-200 text-gray-900 px-6 py-12 sm:px-12 lg:px-24 relative overflow-hidden">
-      {/* Background Glow */}
+    <div className="min-h-screen bg-gradient-to-b from-gray-50 via-gray-100 to-gray-200 dark:from-gray-900 dark:via-gray-950 dark:to-black text-gray-900 dark:text-gray-100 px-6 py-12 sm:px-12 lg:px-24 relative overflow-hidden transition-colors duration-500">
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-32 left-40 w-96 h-96 bg-purple-400/20 blur-3xl rounded-full"></div>
         <div className="absolute bottom-32 right-40 w-[32rem] h-[32rem] bg-blue-400/20 blur-3xl rounded-full"></div>
       </div>
 
-      <div className="max-w-6xl mx-auto space-y-12">
-        {/* Back to Home Button */}
+      <div className="max-w-6xl mx-auto space-y-10">
         <Button
           variant="ghost"
           onClick={goBack}
-          className="flex items-center text-gray-900 hover:bg-gray-200 transition-all duration-300 rounded-xl px-4 py-2 shadow-md hover:shadow-gray-300 mb-6"
+          className="flex items-center text-gray-900 dark:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-800 transition-all duration-300 rounded-xl px-4 py-2 shadow-md hover:shadow-gray-300 dark:hover:shadow-gray-900 mb-6"
         >
-          <ArrowLeft className="w-4 h-4 mr-2" /> Back to Home
+          <ArrowLeft className="w-4 h-4 mr-2" /> {t("q1w2")}
         </Button>
 
-        {/* Heading */}
         <div className="text-center space-y-4">
           <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight bg-gradient-to-r from-purple-400 via-blue-400 to-teal-400 bg-clip-text text-transparent drop-shadow-lg">
-            Promotion Orders
+            {t("m9z8")}
           </h1>
-          <h2 className="text-lg md:text-xl font-medium text-gray-600">
-            Official notifications and updates regarding promotions of officers and staff
+          <h2 className="text-lg md:text-xl font-medium text-gray-600 dark:text-gray-300">
+            {t("v4b7")}
           </h2>
         </div>
 
-        {/* Promotion Cards */}
-        <div className="space-y-8">
-          {promotionItems.map((item, idx) => (
-            <Card
-              key={idx}
-              className="bg-white/30 border border-gray-200 backdrop-blur-md shadow-lg rounded-3xl hover:shadow-purple-400/20 transition-all duration-500"
-            >
-              <CardContent className="p-8 space-y-4">
-                <div className="flex items-center gap-3">
-                  <FileText className="w-6 h-6 text-purple-400 flex-shrink-0" />
-                  <h3 className="text-2xl md:text-3xl font-bold text-purple-500 bg-gradient-to-r from-purple-400 to-teal-400 bg-clip-text text-transparent">
-                    {item.title}
-                  </h3>
-                </div>
-                <p className="text-gray-800 text-lg leading-relaxed">{item.description}</p>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
+        <Card className="p-6 rounded-3xl shadow-lg bg-white/70 dark:bg-gray-900/70 backdrop-blur-lg border border-gray-200 dark:border-gray-800">
+          <div className="flex justify-between items-center mb-4">
+            <span className="font-medium text-gray-700 dark:text-gray-300">
+              {t("h5k3", { count: entriesPerPage })}
+            </span>
+            <input
+              type="text"
+              placeholder={t("r2p6")}
+              className="px-4 py-2 border rounded-lg w-60 shadow-sm focus:ring focus:ring-purple-300 bg-white dark:bg-gray-800 dark:text-gray-100 dark:border-gray-700"
+              value={searchTerm}
+              onChange={(e) => {
+                setSearchTerm(e.target.value);
+                setCurrentPage(1);
+              }}
+            />
+          </div>
 
-        {/* Highlight / Summary */}
-        <Card className="bg-gradient-to-r from-purple-400/20 via-blue-400/20 to-teal-400/20 p-6 rounded-3xl border border-white/20 shadow-inner text-center">
-          <p className="text-xl md:text-2xl font-bold text-gray-900">
-            These promotion orders reflect the department’s commitment to <span className="text-purple-500">merit-based growth</span>, <span className="text-blue-500">fair procedures</span>, and <span className="text-teal-500">organizational excellence</span>.
-          </p>
+          <div className="overflow-x-auto">
+            <table className="w-full text-left border-collapse">
+              <thead>
+                <tr className="bg-gradient-to-r from-purple-200 via-blue-200 to-teal-200 dark:from-purple-900 dark:via-blue-900 dark:to-teal-900 text-gray-900 dark:text-gray-100">
+                  <th className="py-3 px-4 font-semibold">{t("t8n1")}</th>
+                  <th className="py-3 px-4 font-semibold">{t("k4f5")}</th>
+                  <th className="py-3 px-4 font-semibold">{t("z3v9")}</th>
+                </tr>
+              </thead>
+              <tbody>
+                {paginatedOrders.map((order, idx) => (
+                  <tr
+                    key={idx}
+                    className="border-b border-gray-200 dark:border-gray-800 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+                  >
+                    <td className="py-3 px-4 flex items-center gap-2">
+                      <FileText className="w-5 h-5 text-purple-500" />
+                      {order.title}
+                    </td>
+                    <td className="py-3 px-4 text-blue-600 dark:text-blue-400 cursor-pointer hover:underline">
+                      ({order.size})
+                    </td>
+                    <td className="py-3 px-4">
+  <a href={order.link} download>
+    <Button
+      size="sm"
+      variant="outline"
+      className="flex items-center gap-2 dark:border-gray-700 dark:hover:bg-gray-700"
+    >
+      <Download className="w-4 h-4" /> {t("download")}
+    </Button>
+  </a>
+</td>
+
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          <div className="flex justify-between items-center mt-6">
+            <span className="text-gray-600 dark:text-gray-400">
+              {t("d7x2")} {currentPage} {t("y8c3")} {totalPages}
+            </span>
+            <div className="space-x-2">
+              <Button
+                size="sm"
+                variant="outline"
+                disabled={currentPage === 1}
+                onClick={() => setCurrentPage((p) => p - 1)}
+                className="dark:border-gray-700 dark:hover:bg-gray-700"
+              >
+                {t("u5w1")}
+              </Button>
+             
+            </div>
+          </div>
         </Card>
       </div>
     </div>

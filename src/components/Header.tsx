@@ -69,21 +69,18 @@ const Header: React.FC = () => {
           <div className="flex justify-between items-center text-sm">
             {/* Left - Government Links (hidden on mobile) */}
             <div className="hidden md:flex space-x-4">
-              <a href="#" className="nav-link text-xs hover:text-primary">
+              <a href="tel:112" className="nav-link text-xs hover:text-primary">
                 <Phone className="w-3 h-3 inline mr-1" />
                 {t("dial.112")}
               </a>
-              <a href="#" className="nav-link text-xs">
-                {t("citizen.portal")}
+              <a href="/accessibility" className="nav-link text-xs">
+                {t("footer.accessibility")}
               </a>
-              <a href="#" className="nav-link text-xs">
+              <a href="https://eoffice.mahapolice.gov.in/" className="nav-link text-xs">
                 {t("e.office")}
               </a>
-              <a href="#" className="nav-link text-xs">
+              <a href="https://accounts.mgovcloud.in/signin?servicename=VirtualOffice&serviceurl=https%3A%2F%2Fmail.mgovcloud.in%2F" className="nav-link text-xs">
                 {t("nic.email")}
-              </a>
-              <a href="#" className="nav-link text-xs">
-                {t("sss")}
               </a>
             </div>
 

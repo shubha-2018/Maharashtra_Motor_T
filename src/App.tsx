@@ -16,7 +16,6 @@ import NotFound from "./pages/NotFound";
 import DirectorsDesk from "./pages/about/DirectorsDesk";
 import FormerDirectors from "./pages/about/FormerDirectors";
 
-
 import Hierarchy from "./pages/about/Hierarchy";
 import AboutDepartment from "./pages/about/AboutDepartment";
 import OfficesHeadquarters from "./pages/about/OfficesHeadquarters";
@@ -37,6 +36,9 @@ import Tender from "./pages/citizen/Tender";
 import Contact from "./pages/Contact";
 import Recruitments from "./pages/citizen/Recruitments";
 import PhotoGallery from "./pages/PhotoGallery";
+import PrivacyPolicy from "./pages/general/PrivacyPolicy";
+import TermsOfUse from "./pages/general/ terms-of-use";
+import AccessibilityPage from "./pages/general/AccessibilityPage";
 
 const queryClient = new QueryClient();
 
@@ -67,6 +69,10 @@ const AppRoutes = () => (
 
       <Route path="/contact" element={<Contact />} />
       <Route path="/gallery" element={<PhotoGallery />} />
+
+      <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+      <Route path="/terms-of-use" element={<TermsOfUse />} />
+         <Route path="/accessibility" element={<AccessibilityPage />} />
       <Route path="*" element={<NotFound />} />
     </Route>
   </Routes>

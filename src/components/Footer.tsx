@@ -14,6 +14,7 @@ import {
   Linkedin,
 } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { Link } from "react-router-dom";
 
 const Footer: React.FC = () => {
   const { t } = useLanguage();
@@ -29,10 +30,8 @@ const Footer: React.FC = () => {
 
   const importantLinks = [
     { key: "dial.112", href: "tel:112", external: true },
-    { key: "citizen.portal", href: "#", external: true },
     { key: "e.office", href: "https://eoffice.mahapolice.gov.in/", external: true },
     { key: "nic.email", href: "https://accounts.mgovcloud.in/signin?servicename=VirtualOffice&serviceurl=https%3A%2F%2Fmail.mgovcloud.in%2F", external: true },
-    { key: "sss", href: "#", external: true },
     {
       key: "maha.police",
       href: "https://mahapolice.gov.in",
@@ -231,17 +230,17 @@ const Footer: React.FC = () => {
             </div>
             <div className="flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400">
               <span>|</span>
-              <a href="#" className="hover:text-saffron dark:hover:text-yellow-400 transition-colors">
+              <Link to="/privacy-policy" className="hover:text-saffron dark:hover:text-yellow-400 transition-colors">
                 {t("footer.privacyPolicy")}
-              </a>
+              </Link>
               <span>|</span>
-              <a href="#" className="hover:text-saffron dark:hover:text-yellow-400 transition-colors">
+              <Link to="/terms-of-use" className="hover:text-saffron dark:hover:text-yellow-400 transition-colors">
                  {t("footer.termsOfUse")}
-              </a>
+              </Link>
               <span>|</span>
-              <a href="#" className="hover:text-saffron dark:hover:text-yellow-400 transition-colors">
+              <Link to="/accessibility" className="hover:text-saffron dark:hover:text-yellow-400 transition-colors">
                   {t("footer.accessibility")}
-              </a>
+              </Link>
             </div>
             <div className="text-sm text-gray-500 dark:text-gray-500 text-center md:text-right">
               {t("developed.by")}

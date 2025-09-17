@@ -70,7 +70,7 @@ const Navbar = () => {
         { name: t("nav.promotionOrders"), url: "/police/officers" },
         { name: t("nav.transfers"), url: "/police/promotions" },
         { name: t("nav.gradationList"), url: "/police/gradation" },
-        { name: t("nav.strategySupport"), url: "/police/strategy" },
+        { name: t("nav.strategySupport"), url: "https://117.222.38.165/SSS" },
         { name: t("nav.positiveStories"), url: "/police/stories" },
       ],
     },
@@ -143,7 +143,7 @@ const Navbar = () => {
                     <DropdownMenuTrigger asChild>
                       <Button
                         variant="ghost"
-                        className="text-navbar-foreground hover:text-navbar-foreground hover:bg-navbar-foreground/5 font-medium"
+                        className="text-navbar-foreground font-bold hover:text-navbar-foreground hover:bg-navbar-foreground/5"
                       >
                         {item.name}
                         <ChevronDown className="w-4 h-4 ml-1" />
@@ -171,7 +171,7 @@ const Navbar = () => {
                 ) : (
                   <Button
                     variant="ghost"
-                    className="text-navbar-foreground hover:text-navbar-foreground hover:bg-navbar-foreground/5 font-medium"
+                    className="text-navbar-foreground  hover:text-navbar-foreground hover:bg-navbar-foreground/5 font-bold "
                   >
                     <Link to={item.url}>{item.name}</Link>
                   </Button>
@@ -213,7 +213,7 @@ const Navbar = () => {
                   <div className="flex items-center justify-between">
                     <Link
                       to={item.url}
-                      className="text-navbar-foreground font-medium"
+                      className="text-navbar-foreground font-bold "
                       onClick={() =>
                         !item.hasDropdown && setIsMobileMenuOpen(false)
                       }

@@ -6,10 +6,10 @@ import { useNavigate } from "react-router";
 import { useLanguage } from "@/contexts/LanguageContext"; // Import the language hook
 
 // Import 4 images
-import img1 from "@/assets/1.jpg";
-import img2 from "@/assets/1.jpg";
-import img3 from "@/assets/1.jpg";
-import img4 from "@/assets/1.jpg";
+import img1 from "@/assets/gallery/Dr-APJ-Abdul-Kalam-Innovation-Centre-HM-Inaugration-1.jpg";
+import img2 from "@/assets/gallery/Republic-Day-4.jpg";
+import img3 from "@/assets/gallery/Ashok-Jog-Lecture-Hall-Inauguration-2.jpeg";
+import img4 from "@/assets/gallery/DGP-Inaugration-1.jpg";
 
 export default function PhotoGallery() {
   const navigate = useNavigate();

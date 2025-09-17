@@ -19,27 +19,26 @@ const Footer: React.FC = () => {
   const { t } = useLanguage();
 
   const quickLinks = [
-    { key: "nav.home", href: "#home" },
-    { key: "nav.about", href: "#about" },
-    { key: "nav.citizens", href: "#citizens" },
-    { key: "nav.tenders", href: "#tenders" },
-    { key: "nav.contact", href: "#contact" },
-    { key: "nav.gallery", href: "#gallery" },
+    { key: "nav.home", href: "/" },
+    { key: "nav.about", href: "/about/directors-desk" },
+    { key: "nav.citizens", href: "/citizen/press-release" },
+    { key: "nav.tenders", href: "/citizen/recruitments" },
+    { key: "nav.contact", href: "/contact" },
+    { key: "nav.gallery", href: "/gallery" },
   ];
 
   const importantLinks = [
     { key: "dial.112", href: "tel:112", external: true },
     { key: "citizen.portal", href: "#", external: true },
-    { key: "e.office", href: "#", external: true },
-    { key: "nic.email", href: "#", external: true },
+    { key: "e.office", href: "https://eoffice.mahapolice.gov.in/", external: true },
+    { key: "nic.email", href: "https://accounts.mgovcloud.in/signin?servicename=VirtualOffice&serviceurl=https%3A%2F%2Fmail.mgovcloud.in%2F", external: true },
     { key: "sss", href: "#", external: true },
     {
       key: "maha.police",
       href: "https://mahapolice.gov.in",
       external: true,
     },
-    { key: "rti", href: "#", external: true },
-    { key: "public.grievances", href: "#", external: true },
+    { key: "rti", href: "/citizen/rti", external: true },
   ];
 
   const socialLinks = [

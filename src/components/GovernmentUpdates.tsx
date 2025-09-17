@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { Link } from "react-router-dom";
 
 const GovernmentUpdates: React.FC = () => {
   const { t } = useLanguage();
@@ -23,6 +24,7 @@ const GovernmentUpdates: React.FC = () => {
       icon: Megaphone,
       color: "border-l-blue-500",
       badge: t("badge.new"),
+      link: "https://mahpolwireless.stagingdsi.co.in/wp-content/uploads/2024/04/PP-RESULT-RM-ELE.-WO-2024.pdf",
     },
     {
       id: 2,
@@ -32,6 +34,7 @@ const GovernmentUpdates: React.FC = () => {
       icon: FileText,
       color: "border-l-green-500",
       badge: t("badge.important"),
+      link: "https://mahpolwireless.stagingdsi.co.in/wp-content/uploads/2024/04/PP-RESULT-RM-ELE.-WO-2024.pdf",
     },
     {
       id: 3,
@@ -41,6 +44,7 @@ const GovernmentUpdates: React.FC = () => {
       icon: FileText,
       color: "border-l-orange-500",
       badge: t("badge.update"),
+      link: "https://mahpolwireless.stagingdsi.co.in/wp-content/uploads/2024/04/PP-RESULT-RM-ELE.-WO-2024.pdf",
     },
     {
       id: 4,
@@ -50,36 +54,39 @@ const GovernmentUpdates: React.FC = () => {
       icon: Megaphone,
       color: "border-l-purple-500",
       badge: t("badge.report"),
+      link: "https://mahpolwireless.stagingdsi.co.in/wp-content/uploads/2024/04/PP-RESULT-RM-ELE.-WO-2024.pdf",
     },
   ];
 
-
-const tenders = [
-  {
-    id: 1,
-    title: t("tender.communicationEquipment"),
-    lastDate: "2024-02-15",
-    tender_no: "PCIT/2024/001",
-    value: "₹ 2.5 Crores",
-    status: t("tender.status.open"),
-  },
-  {
-    id: 2,
-    title: t("tender.mobileApp"),
-    lastDate: "2024-02-20",
-    tender_no: "PCIT/2024/002",
-    value: "₹ 1.8 Crores",
-    status: t("tender.status.open"),
-  },
-  {
-    id: 3,
-    title: t("tender.serverMaintenance"),
-    lastDate: "2024-01-30",
-    tender_no: "PCIT/2024/003",
-    value: "₹ 85 Lakhs",
-    status: t("tender.status.closingSoon"),
-  },
-];
+  const tenders = [
+    {
+      id: 1,
+      title: t("tender.communicationEquipment"),
+      lastDate: "2024-02-15",
+      tender_no: "PCIT/2024/001",
+      value: "₹ 2.5 Crores",
+      status: t("tender.status.open"),
+      link: "https://mahpolwireless.stagingdsi.co.in/wp-content/uploads/2025/01/TenderNoticeSolapur.pdf",
+    },
+    {
+      id: 2,
+      title: t("tender.mobileApp"),
+      lastDate: "2024-02-20",
+      tender_no: "PCIT/2024/002",
+      value: "₹ 1.8 Crores",
+      status: t("tender.status.open"),
+      link: "https://mahpolwireless.stagingdsi.co.in/wp-content/uploads/2025/01/TenderNoticeSolapur.pdf",
+    },
+    {
+      id: 3,
+      title: t("tender.serverMaintenance"),
+      lastDate: "2024-01-30",
+      tender_no: "PCIT/2024/003",
+      value: "₹ 85 Lakhs",
+      status: t("tender.status.closingSoon"),
+      link: "https://mahpolwireless.stagingdsi.co.in/wp-content/uploads/2025/01/TenderNoticeSolapur.pdf",
+    },
+  ];
 
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
@@ -162,29 +169,33 @@ const tenders = [
                   </p> */}
 
                   <div className="flex items-center justify-between">
-                    <Button
-                      variant="ghost"
-                      size="sm"
-                      className="text-primary hover:text-primary-hover"
-                    >
-                      <ExternalLink className="w-3 h-3 mr-1" />
-                      {t("read.more")}
-                    </Button>
-                    <Button
-                      variant="ghost"
-                      size="sm"
-                      className="text-muted-foreground hover:text-foreground"
-                    >
-                      <Download className="w-3 h-3 mr-1" />
-                      PDF
-                    </Button>
+                    <Link to={item.link} target="_blank">
+                      <Button
+                        variant="ghost"
+                        size="sm"
+                        className="text-primary hover:text-primary-hover"
+                      >
+                        <ExternalLink className="w-3 h-3 mr-1" />
+                        {t("read.more")}
+                      </Button>
+                    </Link>
+                    <Link to={item.link} target="_blank">
+                      <Button
+                        variant="ghost"
+                        size="sm"
+                        className="text-muted-foreground hover:text-foreground"
+                      >
+                        <Download className="w-3 h-3 mr-1" />
+                        PDF
+                      </Button>
+                    </Link>
                   </div>
                 </div>
               ))}
 
-              <div className="text-center pt-4">
+              {/* <div className="text-center pt-4">
                 <Button className="btn-police">{t("view.all")}</Button>
-              </div>
+              </div> */}
             </CardContent>
           </Card>
 
@@ -239,22 +250,26 @@ const tenders = [
                       <Calendar className="w-3 h-3" />
                       Last Date: {formatDate(tender.lastDate)}
                     </div>
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      className="hover:bg-saffron hover:text-white hover:border-saffron"
-                    >
-                      <Download className="w-3 h-3 mr-1" />
-                      Download
-                    </Button>
+                    <Link to={tender.link} target="_blank">
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        className="hover:bg-saffron hover:text-white hover:border-saffron"
+                      >
+                        <Download className="w-3 h-3 mr-1" />
+                        Download
+                      </Button>
+                    </Link>
                   </div>
                 </div>
               ))}
 
               <div className="text-center pt-4">
-                <Button className="btn-saffron">
-                  {t("view.all")} {t("tenders.section")}
-                </Button>
+                <Link to={"/citizen/tender"}>
+                  <Button className="btn-saffron">
+                    {t("view.all")} {t("tenders.section")}
+                  </Button>
+                </Link>
               </div>
             </CardContent>
           </Card>

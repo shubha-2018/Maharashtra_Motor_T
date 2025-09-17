@@ -18,6 +18,7 @@ import IMG1 from "@/assets/hero/1.jpg";
 import IMG2 from "@/assets/hero/2.jpg";
 import IMG3 from "@/assets/hero/3.jpg";
 import DIRECTOR_PHOTO from "@/assets/director.jpg";
+import { Link } from "react-router-dom";
 
 const maharashtraEmblem = "https://via.placeholder.com/128x128?text=MH+Emblem";
 
@@ -261,8 +262,10 @@ const HeroSection: React.FC = () => {
                 <p className="text-muted-foreground text-sm mb-4">
                   {t("director.designation")}
                 </p>
-
-                <Button className="btn-police">{t("director.desk")}</Button>
+                <Link to={"/about/directors-desk"}>
+                  {" "}
+                  <Button className="btn-police">{t("director.desk")}</Button>
+                </Link>
               </CardContent>
             </div>
           </Card>
@@ -270,7 +273,7 @@ const HeroSection: React.FC = () => {
           {/* Welcome Message */}
           <div className="space-y-6 slide-up">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gradient mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-gradient mb-4 p-8">
                 {t("welcome.title")}
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
@@ -286,12 +289,14 @@ const HeroSection: React.FC = () => {
                 <p className="text-muted-foreground mb-4">
                   {t("director.caption")}
                 </p>
-                <Button
-                  variant="outline"
-                  className="hover:bg-primary hover:text-primary-foreground"
-                >
-                  {t("read.more")}
-                </Button>
+                <Link to={"/about/directors-desk"}>
+                  <Button
+                    variant="outline"
+                    className="hover:bg-primary hover:text-primary-foreground"
+                  >
+                    {t("read.more")}
+                  </Button>
+                </Link>
               </CardContent>
             </Card>
 

@@ -49,7 +49,7 @@ export default function TermsOfUse() {
 
     return (
         <div className="min-h-screen bg-gradient-to-b from-gray-50 via-gray-100 to-gray-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-950 text-gray-900 dark:text-gray-100 px-6 py-12 sm:px-12 lg:px-24 relative overflow-hidden">
-            {/* Background Glow */}
+
             <div className="absolute inset-0 -z-10">
                 <div className="absolute top-32 left-40 w-96 h-96 bg-blue-400/20 blur-3xl rounded-full animate-pulse-slow dark:bg-blue-600/20"></div>
                 <div className="absolute bottom-32 right-40 w-[32rem] h-[32rem] bg-indigo-400/20 blur-3xl rounded-full animate-pulse-slow dark:bg-indigo-600/20"></div>

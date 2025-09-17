@@ -42,7 +42,7 @@ const Navbar = () => {
       ],
     },
     {
-      name: t("nav.resources"),
+      name: t("nav.citizens"),
       hasDropdown: true,
       url: "/resources",
       items: [
@@ -112,18 +112,24 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex items-center">
             <div className="flex items-center space-x-2">
-              <div className="w-14 h-14 bg-brand-primary rounded-lg flex items-center justify-center">
-                <img src={AshokStambhLogo} alt="logo" />
-              </div>
-              <div className="w-24 h-14 bg-brand-primary rounded-lg flex items-center justify-center">
-                <img src={WirelessLogo} alt="logo" />
-              </div>
-              <span
-                dangerouslySetInnerHTML={{ __html: t("title") }}
-                className="hidden dark:text-white sm:block text-xl font-bold text-brand-primary capitalize"
-              >
-                {/* title */}
-              </span>
+              <Link to="/">
+                <div className="w-14 h-14 bg-brand-primary rounded-lg flex items-center justify-center">
+                  <img src={AshokStambhLogo} alt="logo" />
+                </div>
+              </Link>
+              <Link to="/">
+                <div className="w-24 h-14 bg-brand-primary rounded-lg flex items-center justify-center">
+                  <img src={WirelessLogo} alt="logo" />
+                </div>
+              </Link>
+              <Link to="/">
+                <span
+                  dangerouslySetInnerHTML={{ __html: t("title") }}
+                  className="hidden dark:text-white sm:block text-xl font-bold text-brand-primary capitalize"
+                >
+                  {/* title */}
+                </span>
+              </Link>
             </div>
           </div>
 

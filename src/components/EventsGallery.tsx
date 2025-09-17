@@ -19,6 +19,7 @@ import GIMG_3 from "@/assets/gallery/img3.jpeg";
 import GIMG_4 from "@/assets/hero/1.jpg";
 import GIMG_5 from "@/assets/hero/2.jpg";
 import GIMG_6 from "@/assets/hero/3.jpg";
+import { Link } from "react-router-dom";
 
 const EventsGallery: React.FC = () => {
   const { t } = useLanguage();
@@ -28,43 +29,41 @@ const EventsGallery: React.FC = () => {
     {
       id: 1,
       title: t("event.pcit.upgrades"),
-      date: "2024-02-15",
+      date: "2025-08-15",
       location: t("event.location.headquarters"),
       type: "modernization",
       icon: "⚡",
-      participants: 0,
-      status: "ongoing",
+      link: "/citizen/press-release",
     },
     {
       id: 2,
       title: t("event.marvel.aiProject"),
-      date: "2024-03-10",
-      location: t("event.location.statewide"),
+      date: "2025-01-26",
+      location: t("event.location.headquarters"),
       type: "project",
       icon: "🤖",
-      participants: 0,
-      status: "approved",
+            link: "/citizen/press-release",
     },
-    {
-      id: 3,
-      title: t("event.dial112"),
-      date: "2024-05-01",
-      location: t("event.location.maharashtra"),
-      type: "system",
-      icon: "🚨",
-      participants: 0,
-      status: "operational",
-    },
-    {
-      id: 4,
-      title: t("event.cyber.centerLaunch"),
-      date: "2024-10-15",
-      location: t("event.location.mumbai"),
-      type: "center",
-      icon: "💻",
-      participants: 0,
-      status: "launched",
-    },
+    // {
+    //   id: 3,
+    //   title: t("event.dial112"),
+    //   date: "2024-05-01",
+    //   location: t("event.location.maharashtra"),
+    //   type: "system",
+    //   icon: "🚨",
+    //   participants: 0,
+    //   status: "operational",
+    // },
+    // {
+    //   id: 4,
+    //   title: t("event.cyber.centerLaunch"),
+    //   date: "2024-10-15",
+    //   location: t("event.location.mumbai"),
+    //   type: "center",
+    //   icon: "💻",
+    //   participants: 0,
+    //   status: "launched",
+    // },
   ];
 
   // Placeholder gallery images - in real app, these would come from a backend
@@ -182,6 +181,7 @@ const EventsGallery: React.FC = () => {
 
                 <div className="space-y-4">
                   {events.map((event, index) => (
+                            <Link to={event.link} >
                     <div
                       key={event.id}
                       className="relative pl-8 pb-6 border-l-2 border-border last:border-l-0 last:pb-0 fade-in"
@@ -195,13 +195,7 @@ const EventsGallery: React.FC = () => {
                           <span className="text-lg">
                             {getEventIcon(event.type)}
                           </span>
-                          <Badge
-                            className={`text-xs ${getStatusColor(
-                              event.status
-                            )}`}
-                          >
-                            {event.status}
-                          </Badge>
+                          
                         </div>
 
                         <h4 className="font-semibold text-foreground leading-tight">
@@ -220,21 +214,20 @@ const EventsGallery: React.FC = () => {
                             <MapPin className="w-3 h-3" />
                             {event.location}
                           </div>
-                          <div className="flex items-center gap-1">
-                            <Users className="w-3 h-3" />
-                            {event.participants} participants
-                          </div>
                         </div>
                       </div>
                     </div>
+                    </Link>
                   ))}
                 </div>
 
                 <div className="text-center pt-4 border-t border-border">
+                  <Link to={"/citizen/press-release"} >
                   <Button className="btn-police w-full">
                     <ArrowRight className="w-4 h-4 mr-2" />
                     {t("view.all.events")}
                   </Button>
+                  </Link>
                 </div>
               </CardContent>
             </Card>
@@ -251,6 +244,7 @@ const EventsGallery: React.FC = () => {
                       {t("photo.gallery")}
                     </h3>
                   </div>
+                  <Link to={"/gallery"} >
                   <Button
                     variant="outline"
                     className="hover:bg-saffron hover:text-white hover:border-saffron"
@@ -258,6 +252,7 @@ const EventsGallery: React.FC = () => {
                     <Eye className="w-4 h-4 mr-2" />
                     {t("view.gallery")}
                   </Button>
+                  </Link>
                 </div>
 
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
@@ -309,10 +304,12 @@ const EventsGallery: React.FC = () => {
                     <Video className="w-4 h-4" />
                     <span>{t("gallery.videoAvailable")}</span>
                   </div>
+                     <Link to={"/gallery"} >
                   <Button className="btn-saffron">
                     <Camera className="w-4 h-4 mr-2" />
                      {t("gallery.viewAllPhotos")}
                   </Button>
+                  </Link>
                 </div>
               </CardContent>
             </Card>

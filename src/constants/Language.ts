@@ -33,7 +33,7 @@ export const EN = {
   "nav.ranks": "Ranks",
   "nav.welfare": "Welfare Activities",
 
-  "nav.resources": "Citizen Corner",
+  "nav.citizens": "Citizen Corner",
   "nav.citizenCorner": "Citizen Corner",
   "nav.policeCorner": "Police Corner",
   "nav.pressRelease": "Press Release",
@@ -140,10 +140,10 @@ export const EN = {
   "tenders.section": "Tenders",
   "view.all": "View All",
 
-  "bulletin.cybercrimePortal": "New Cybercrime Reporting Portal Launch",
-  "bulletin.digitalEvidence": "Updated Guidelines for Digital Evidence Collection",
-  "bulletin.emergencyProtocol": "Emergency Communication Protocol Enhancement",
-  "bulletin.auditResults": "Annual IT Infrastructure Audit Results",
+  "bulletin.cybercrimePortal": "PP RESULT RM, ELE., WO – 2024",
+  "bulletin.digitalEvidence": "AANDYANKIT KASHAT UPSHTIT RAHANEBABAT",
+  "bulletin.emergencyProtocol": "KARYMUKT KARNEBABAT",
+  "bulletin.auditResults": "SHUDHIPATAK GT – (PC-ASI)-2024",
 
   "badge.new": "New",
   "badge.important": "Important",
@@ -215,14 +215,14 @@ export const EN = {
   "photo.gallery": "Photo Gallery",
   "view.all.events": "View All Events",
   "view.gallery": "View Gallery",
-  "event.pcit.upgrades": "Technological Upgrades in PCIT Wing",
-  "event.marvel.aiProject": "MARVEL AI-Powered Policing Project",
+  "event.pcit.upgrades": "Independence Celebration in PCIT",
+  "event.marvel.aiProject": "Republic Day Celebration in PCIT",
   "event.dial112": "Dial 112 Integrated Emergency Response",
   "event.cyber.centerLaunch": "Cyber Command & Control Centre Launch",
 
-  "event.location.headquarters": "Maharashtra Police Headquarters",
+  "event.location.headquarters": "Headquarters",
   "event.location.statewide": "Statewide",
-  "event.location.maharashtra": "Maharashtra",
+  "event.location.maharashtra": "Headquarters",
   "event.location.mumbai": "Mumbai",
   "gallery.videoAvailable": "Video Gallery Available",
   "gallery.viewAllPhotos": "View All Photos",
@@ -364,6 +364,26 @@ export const EN = {
   "traffic.item4": "Supervision of traffic cases from Central Check Office, Pune",
   "traffic.item5": "Scrutiny of security breach cases on VHF channel",
 
+
+
+  // goverment links
+  "acb_maharashtra": "Anti-Corruption Bureau, Maharashtra State",
+  "acb_full_name": "Visit Anti-Corruption Bureau Maharashtra website",
+  "mpa_nashik": "Maharashtra Police Academy",
+  "mpa_full_name": "Visit Maharashtra Police Academy website",
+  "aaple_sarkar": "Aaple Sarkar - Maharashtra Government Portal",
+  "aaple_sarkar_desc": "Visit Aaple Sarkar Maharashtra Government Services Portal",
+  "maharashtra_police": "Maharashtra Police",
+  "maharashtra_police_desc": "Visit Maharashtra Police official website",
+  "startup_india": "Startup India Initiative",
+  "startup_india_desc": "Visit Startup India government initiative website",
+  "digital_india": "Digital India Initiative",
+  "digital_india_desc": "Visit Digital India government initiative website",
+  "government_partners": "Government Partners and Related Websites",
+  "carousel_instructions": "Use arrow keys to navigate through government partner website links",
+
+
+
   // Footer
   "quick.links": "Quick Links",
   "important.links": "Important Links",
@@ -390,8 +410,7 @@ export const EN = {
   "footer.termsOfUse": "Terms of Use",
   "footer.accessibility": "Accessibility"
 
-  
-  
+
 };
 
 
@@ -430,8 +449,7 @@ export const MR = {
   "nav.ranks": "पदनामे",
   "nav.welfare": "कल्याणकारी उपक्रम",
 
-  "nav.resources": "नागरिकांकरिता",
-  "nav.citizenCorner": "नागरिकांचे कोपरे",
+  "nav.citizens": "नागरिकांकरिता",
   "nav.policeCorner": "पोलीस कोपरे",
   "nav.pressRelease": "प्रेस प्रकाशन",
   "nav.rti": "माहिती अधिकार (RTI)",
@@ -657,10 +675,10 @@ export const MR = {
   bulletins: "परिपत्रके / आदेश / सूचना",
   "tenders.section": "टेन्डर्स",
   "view.all": "सर्व पहा",
-  "bulletin.cybercrimePortal": "नवीन सायबर क्राइम रिपोर्टिंग पोर्टल लॉन्च",
-  "bulletin.digitalEvidence": "डिजिटल पुरावे गोळा करण्यासाठी अद्यतनित मार्गदर्शक तत्त्वे",
-  "bulletin.emergencyProtocol": "आणीबाणी दळणवळण प्रोटोकॉल सुधारणा",
-  "bulletin.auditResults": "वार्षिक आयटी इन्फ्रास्ट्रक्चर ऑडिट परिणाम",
+  "bulletin.cybercrimePortal": "PP RESULT RM, ELE., WO – 2024",
+  "bulletin.digitalEvidence": "AANDYANKIT KASHAT UPSHTIT RAHANEBABAT",
+  "bulletin.emergencyProtocol": "KARYMUKT KARNEBABAT",
+  "bulletin.auditResults": "SHUDHIPATAK GT – (PC-ASI)-2024",
 
   "badge.new": "नवीन",
   "badge.important": "महत्वाचे",
@@ -668,7 +686,7 @@ export const MR = {
   "badge.report": "अहवाल",
   // tenders
   "tender.communicationEquipment": "दळणवळण उपकरणांचा पुरवठा आणि स्थापना",
-  "tender.mobileApp": "नागरिक सेवांसाठी मोबाइल अॅप्लिकेशन विकास",
+  "tender.mobileApp": "नागरिक सेवांसाठी मोबाइल विकास",
   "tender.serverMaintenance": "सर्व्हर इन्फ्रास्ट्रक्चरची वार्षिक देखभाल",
 
   "tender.status.open": "सुरू आहे",
@@ -680,14 +698,14 @@ export const MR = {
   "photo.gallery": "फोटो गॅलरी",
   "view.all.events": "सर्व घटना पहा",
   "view.gallery": "गॅलरी पहा",
-  "event.pcit.upgrades": "पीसीआयटी विंगमधील तांत्रिक सुधारणा",
-  "event.marvel.aiProject": "मार्व्हल कृत्रिम बुद्धिमत्ता आधारित पोलीस प्रकल्प",
+  "event.pcit.upgrades": "पीसीआयटीमध्ये स्वातंत्र्य दिनाचे उत्सव",
+  "event.marvel.aiProject": "पीसीआयटीमध्ये प्रजासत्ताक दिनाचे उत्सव",
   "event.dial112": "डायल ११२ एकत्रित आपत्कालीन प्रतिसाद",
   "event.cyber.centerLaunch": "सायबर कमांड आणि नियंत्रण केंद्र उद्घाटन",
 
-  "event.location.headquarters": "महाराष्ट्र पोलीस मुख्यालय",
+  "event.location.headquarters": "मुख्यालय",
   "event.location.statewide": "संपूर्ण राज्यात",
-  "event.location.maharashtra": "महाराष्ट्र",
+  "event.location.maharashtra": "मुख्यालय",
   "event.location.mumbai": "मुंबई",
   "gallery.videoAvailable": "व्हिडिओ गॅलरी उपलब्ध आहे",
   "gallery.viewAllPhotos": "सर्व फोटो पहा",
@@ -728,7 +746,23 @@ export const MR = {
   "smart.features.item4": "आपत्कालीन सेवा एकत्रीकरण",
 
 
+  // goverment links
 
+
+  "acb_maharashtra": "भ्रष्टाचार विरोधी विभाग, महाराष्ट्र राज्य",
+  "acb_full_name": "भ्रष्टाचार विरोधी विभाग महाराष्ट्राची वेबसाइट पहा",
+  "mpa_nashik": "महाराष्ट्र पोलीस अकादमी",
+  "mpa_full_name": "महाराष्ट्र पोलीस अकादमीची वेबसाइट पहा",
+  "aaple_sarkar": "आपले सरकार - महाराष्ट्र शासन पोर्टल",
+  "aaple_sarkar_desc": "आपले सरकार महाराष्ट्र शासन सेवा पोर्टल पहा",
+  "maharashtra_police": "महाराष्ट्र पोलीस",
+  "maharashtra_police_desc": "महाराष्ट्र पोलीस अधिकृत वेबसाइट पहा",
+  "startup_india": "स्टार्टअप इंडिया उपक्रम",
+  "startup_india_desc": "स्टार्टअप इंडिया सरकारी उपक्रमाची वेबसाइट पहा",
+  "digital_india": "डिजिटल इंडिया उपक्रम",
+  "digital_india_desc": "डिजिटल इंडिया सरकारी उपक्रमाची वेबसाइट पहा",
+  "government_partners": "सरकारी भागीदार आणि संबंधित वेबसाइट्स",
+  "carousel_instructions": "सरकारी भागीदारांच्या वेबसाइट लिंकवर नेव्हिगेट करण्यासाठी अ‍ॅरो की वापरा",
 
   // Footer
   "quick.links": "त्वरित दुवे",

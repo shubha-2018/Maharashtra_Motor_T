@@ -142,16 +142,6 @@ const Header: React.FC = () => {
               {/* Theme Controls */}
               <div className="flex items-center space-x-1">
                 <button
-                  onClick={() => toggleTheme("high-contrast")}
-                  className={cn(
-                    "p-1 rounded hover:bg-primary/10 transition-colors",
-                    theme === "high-contrast" && "bg-primary/20"
-                  )}
-                  title={t("high.contrast")}
-                >
-                  <Contrast className="w-3 h-3" />
-                </button>
-                <button
                   onClick={() => toggleTheme("light")}
                   className={cn(
                     "p-1 rounded hover:bg-primary/10 transition-colors",

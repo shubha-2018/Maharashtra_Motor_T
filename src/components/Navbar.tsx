@@ -46,18 +46,12 @@ const Navbar = () => {
       hasDropdown: true,
       url: "/resources",
       items: [
-        // { name: t("nav.citizenCorner"), url: "/citizen-corner" },
-        // { name: t("nav.policeCorner"), url: "/police-corner" },
+
         { name: t("nav.pressRelease"), url: "/citizen/press-release" },
         { name: t("nav.rti"), url: "/citizen/rti" },
         { name: t("nav.tenders"), url: "/citizen/tender" },
         { name: t("nav.recruitments"), url: "/citizen/recruitments" },
-        // { name: t("nav.officersList"), url: "/officers-list" },
-        // { name: t("nav.promotionOrders"), url: "/promotion-orders" },
-        // { name: t("nav.transfers"), url: "/transfers" },
-        // { name: t("nav.gradationList"), url: "/gradation-list" },
-        // { name: t("nav.strategySupport"), url: "/strategy-support" },
-        // { name: t("nav.positiveStories"), url: "/positive-stories" },
+
       ],
     },
     {

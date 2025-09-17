@@ -67,10 +67,9 @@ const Navbar = () => {
       items: [
                 { name: t("nav.gazette"), url: "/police/gazette" },
         { name: t("nav.officersList"), url: "/police/officers" },
-        { name: t("nav.promotionOrders"), url: "/police/officers" },
-        { name: t("nav.transfers"), url: "/police/promotions" },
+        { name: t("nav.promotionOrders"), url: "/police/promotions" },
+        { name: t("nav.transfers"), url: "/police/transfers" },
         { name: t("nav.gradationList"), url: "/police/gradation" },
-        { name: t("nav.strategySupport"), url: "https://117.222.38.165/SSS" },
         { name: t("nav.positiveStories"), url: "/police/stories" },
       ],
     },

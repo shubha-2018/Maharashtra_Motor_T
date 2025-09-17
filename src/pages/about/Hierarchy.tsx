@@ -5,7 +5,7 @@ import { useNavigate } from "react-router";
 
 export default function Hierarchy() {
     const navigate = useNavigate();
-    const onBack = () => navigate(-1);
+    const onBack = () => navigate("/");
   const hierarchyData = [
     { sr: 1, designation: "Addl. DGP & Director Police Communication, Information Technology & Transportation, M.S. Pune", posts: 1, role: "Oversees the entire department, sets strategic direction, and ensures coordination across Maharashtra State Police IT and communication functions." },
     { sr: 2, designation: "Deputy Inspector General of Police Communication & Information Technology, M.S. Pune", posts: 1, role: "Assists the Director in managing statewide communication and IT initiatives, supervising technical and administrative operations." },

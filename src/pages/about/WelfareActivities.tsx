@@ -5,7 +5,7 @@ import { useNavigate } from "react-router";
 
 export default function WelfareActivities() {
     const navigate = useNavigate();
-    const onBack = () => navigate(-1);
+    const onBack = () => navigate("/");
   const welfarePrograms = [
     {
       title: "Blood Donation Camps",

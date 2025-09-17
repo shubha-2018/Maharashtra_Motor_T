@@ -6,7 +6,7 @@ import { useNavigate } from "react-router";
 
 export default function History() {
     const navigate = useNavigate();
-    const onBack = () => navigate(-1);
+    const onBack = () => navigate("/");
   
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100 text-gray-900 px-6 py-12 sm:px-12 lg:px-24">

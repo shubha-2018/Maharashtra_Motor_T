@@ -7,7 +7,7 @@ import { useNavigate } from "react-router";
 
 export default function TransferOrders() {
         const navigate = useNavigate();
-      const goBack = () => navigate(-1);
+      const goBack = () => navigate("/");
   const transferItems = [
     {
       title: "Transfer Orders",

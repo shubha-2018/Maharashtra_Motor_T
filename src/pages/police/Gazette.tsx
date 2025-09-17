@@ -6,7 +6,7 @@ import { useNavigate } from "react-router";
 
 export default function GovernmentPublications() {
         const navigate = useNavigate();
-      const goBack = () => navigate(-1);
+      const goBack = () => navigate("/");
   const publications = [
     {
       icon: <FileText className="w-6 h-6 text-blue-400" />,

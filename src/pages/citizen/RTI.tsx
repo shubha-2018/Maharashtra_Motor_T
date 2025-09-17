@@ -5,7 +5,7 @@ import { useNavigate } from "react-router";
 
 export default function RTIPage() {
     const navigate = useNavigate();
-    const onBack = () => navigate(-1);
+    const onBack = () => navigate("/");
   const rtiSections = [
     {
       icon: <Info className="w-6 h-6 text-teal-400" />,

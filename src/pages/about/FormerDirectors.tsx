@@ -5,7 +5,7 @@ import { useNavigate } from "react-router";
 
 export default function FormerDirectors() {
    const navigate = useNavigate();
-      const onBack = () => navigate(-1);
+      const onBack = () => navigate("/");
   const achievementsKamte = [
     "Appointed first Special Inspector General of Police, Bombay State in 1947",
     "Oversaw transition of police operations after independence",

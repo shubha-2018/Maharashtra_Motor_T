@@ -10,7 +10,7 @@ import { useNavigate } from "react-router";
 
 export default function PressRelease() {
       const navigate = useNavigate();
-    const goBack = () => navigate(-1);
+    const goBack = () => navigate("/");
   const newsItems = [
     {
       title: "Technological Upgrades",

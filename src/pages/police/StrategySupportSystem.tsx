@@ -7,7 +7,7 @@ import { useNavigate } from "react-router";
 
 export default function StrategySupportSystem() {
         const navigate = useNavigate();
-    const goBack = () => navigate(-1);
+    const goBack = () => navigate("/");
   const sssItems = [
     {
       title: "SSS Branch Functions",

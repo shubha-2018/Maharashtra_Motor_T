@@ -30,6 +30,11 @@ import Transfers from "./pages/police/Transfers";
 import GradationList from "./pages/police/GradationList";
 import StrategySupportSystem from "./pages/police/StrategySupportSystem";
 import PositiveStories from "./pages/police/PositiveStories";
+import Tender from "./pages/citizen/Tender";
+
+import Contact from "./pages/Contact";
+import Recruitments from "./pages/citizen/Recruitments";
+import PhotoGallery from "./pages/PhotoGallery";
 
 const queryClient = new QueryClient();
 
@@ -46,6 +51,8 @@ const AppRoutes = () => (
       <Route path="about/welfare" element={<WelfareActivities />} />
       <Route path="/citizen/press-release" element={<PressRelease />} />
       <Route path="/citizen/rti" element={<RTI />} />
+            <Route path="/citizen/tender" element={<Tender />} />
+      <Route path="/citizen/recruitments" element={<Recruitments />} />
       <Route path="/police/gazette" element={<Gazette />} />
 
       <Route path="/police/gazette" element={<Gazette />} />
@@ -55,6 +62,10 @@ const AppRoutes = () => (
       <Route path="/police/gradation" element={<GradationList />} />
       <Route path="/police/strategy" element={<StrategySupportSystem />} />
       <Route path="/police/stories" element={<PositiveStories />} />
+
+
+      <Route path="/contact" element={<Contact />} />
+      <Route path="/gallery" element={<PhotoGallery />} />
       <Route path="*" element={<NotFound />} />
     </Route>
   </Routes>

@@ -6,7 +6,7 @@ import { useNavigate } from "react-router";
 
 export default function ListOfOfficers() {
         const navigate = useNavigate();
-      const goBack = () => navigate(-1);
+      const goBack = () => navigate("/");
   const officerData = [
     { sr: 1, designation: "Addl. DGP & Director Police Communication, Information Technology & Transportation, M.S. Pune", posts: 1 },
     { sr: 2, designation: "Deputy Inspector General of Police Communication & Information Technology, M.S. Pune", posts: 1 },

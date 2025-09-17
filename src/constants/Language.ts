@@ -81,6 +81,34 @@ export const EN = {
   "hero.communityPolicing.title": "Community Policing",
   "hero.communityPolicing.subtitle": "Building Trust Through Technology",
 
+  //DIRECTONFO
+  "a1.back": "Back to Home",
+
+  "a2.desk": "From Director’s Desk",
+  "a2.name": "Mr. Deepak Shivanand Pandey",
+  "a2.desg": "Additional Director General of Police & Director",
+  "a2.dept": "Police Communication & IT Department",
+  "a2.loc": "Maharashtra State, Pune",
+
+  "b1.intro": "The Police Wireless Department prior to Police Communication and Information Technology Department typically handles communication systems used by law enforcement authority that is Maharashtra State Police. This includes managing radio frequencies, dispatching officers, and ensuring secure and efficient communication between police units in the field.",
+  "b1.hl": "Uninterrupted 24×7 communication",
+  "b1.intro2": "system is provided by our Department.",
+  "b1.role": "The Police Communication and Information Technology Department plays a vital role in policing by ensuring effective communication and coordination among officers with key functions such as:",
+
+  "c1.f1.t": "Real-time Communication",
+  "c1.f1.d": "facilitates immediate contact between officers and dispatch.",
+  "c1.f2.t": "Situational Awareness",
+  "c1.f2.d": "provides updates on ongoing situations for better decisions.",
+  "c1.f3.t": "Emergency Response",
+  "c1.f3.d": "enables faster deployment during emergencies.",
+  "c1.f4.t": "Data Transmission",
+  "c1.f4.d": "supports secure sharing of critical intelligence.",
+  "c1.f5.t": "Safety and Security",
+  "c1.f5.d": "protects sensitive information and officer safety.",
+
+  "b1.crisis": "The Koyna earthquake (1967) and Killari earthquake (1993) caused significant devastation in Maharashtra. The Mumbai floods (2005) and 26/11 terrorist attack highlighted the importance of communication. During such crises, when private networks collapsed, wireless systems kept police connected, enabling life-saving coordination.",
+  "b1.conc": "Effective wireless communication is the backbone of public safety and operational excellence in policing.",
+
 
   // Director Info
   "director.name": "Shri. Deepak Shivanand Pandey (IPS)",
@@ -130,6 +158,58 @@ export const EN = {
   "tender.status.open": "Open",
   "tender.status.closingSoon": "Closing Soon",
 
+  //FORMERDIRECOTR
+  "fd.back": "Back",
+  "fd.title": "Former Directors of Department",
+
+  "fd.d1.name": "Shri. Sunil Ramanand IPS",
+  "fd.d1.designation": "Addl. D.G.P.",
+  "fd.d1.tenure": "2021-2024",
+
+  "fd.d2.name": "Shri. Retesh Kumaarr IPS",
+  "fd.d2.designation": "Addl. D.G.P.",
+  "fd.d2.tenure": "2016-2021",
+
+  "fd.d3.name": "Shri. Jagannath IPS",
+  "fd.d3.designation": "Addl. D.G.P.",
+  "fd.d3.tenure": "2014-2016",
+
+  "fd.d4.name": "Shri. Suresh Kakkar IPS",
+  "fd.d4.designation": "Addl. D.G.P.",
+  "fd.d4.tenure": "2012-2014",
+
+  "fd.d5.name": "Shri. P.P.P. Sharma IPS",
+  "fd.d5.designation": "Addl. D.G.P.",
+  "fd.d5.tenure": "2008-2011",
+
+  "fd.d6.name": "Shri. B.T. Nghinglova IPS",
+  "fd.d6.designation": "Addl. D.G.P.",
+  "fd.d6.tenure": "2007-2008",
+
+  "fd.d7.name": "Shri. P.T. Lohar IPS",
+  "fd.d7.designation": "Addl. D.G.P.",
+  "fd.d7.tenure": "2004-2007",
+
+  "fd.d8.name": "Shri. P. K. Joshi IPS",
+  "fd.d8.designation": "SPL I.G.P. 2000-2003 | Addl. D.G.P. 2003-2004",
+  "fd.d8.tenure": "2000-2004",
+
+  "fd.d9.name": "Shri. A. D. Jog SPS",
+  "fd.d9.designation": "D.I.G. 1979-1987 | SPL I.G. 1989-1999",
+  "fd.d9.tenure": "1979-1999",
+
+  "fd.d10.name": "Shri. S. M. Nabar",
+  "fd.d10.designation": "SP 1948-1968 | D.I.G.P. 1968-1978",
+  "fd.d10.tenure": "1948-1978",
+
+  "fd.d11.name": "Shri. L. A. Paddon Row IP",
+  "fd.d11.designation": "SP M. T. & W/L",
+  "fd.d11.tenure": "1947-1948",
+
+  "fd.d12.name": "Shri. E. A. Dodwell IP",
+  "fd.d12.designation": "SP M. T. & W/L",
+  "fd.d12.tenure": "1946-1947",
+
   // Events
   "latest.events": "Latest Events",
   "photo.gallery": "Photo Gallery",
@@ -146,6 +226,11 @@ export const EN = {
   "event.location.mumbai": "Mumbai",
   "gallery.videoAvailable": "Video Gallery Available",
   "gallery.viewAllPhotos": "View All Photos",
+
+  //HEIRARCHY
+  "h1.back": "Back",
+  "h1.title": "Hierarchy",
+  "h1.alt": "Hierarchy Chart",
 
   // Emergency Helplines 
   "emergency.message": "In case of emergency, dial these numbers for immediate assistance",
@@ -179,6 +264,105 @@ export const EN = {
   "smart.features.item2": "Location tracking for faster response",
   "smart.features.item3": "Multi-language support available",
   "smart.features.item4": "Integration with emergency services",
+  
+  //ABOUTDEPT
+   "hx_back": "Back to Home",
+  "hx_photoAlt": "History of Police Wireless",
+  "hx_title": "History of Police Wireless Communication Department",
+  "hx_intro": "Established in 1946, the Department has evolved from WWII wireless sets to cutting-edge satellite and IP-based networks ensuring secure, real-time communication across Maharashtra.",
+
+  "hx_1946_title": "1946 – Foundation",
+  "hx_1946_desc": "Department established in Mumbai during pre-independence. Wireless started with WWII sets; 13 districts linked to Pune HQ.",
+
+  "hx_1947_title": "1947 – First Leadership",
+  "hx_1947_desc": "After independence, Mr. N.M. Kamte became the first Special IGP. Wireless Dept. separated administratively, led by Mr. S.M. Nabar.",
+
+  "hx_tableTitle": "Sanctioned Posts",
+  "hx_table_sr": "SR NO",
+  "hx_table_desig": "DESIGNATION",
+  "hx_table_posts": "SANCTION POSTS",
+  "hx_prev": "Previous",
+  "hx_next": "Next",
+  "hx_page": "Page",
+  "hx_of": "of",
+  "hx_summary": "SUMMARY TOTAL:",
+  //OFFICERINHQ
+  "administrative.title": "Administrative Office",
+  "administrative.ministerial": "Ministerial Branch",
+  "administrative.technical": "Technical Branch",
+  "administrative.incharge": "In charge :- Office Superintendent (OS)",
+
+  "branchA.title": "“A” Branch",
+  "branchA.item1": "RTI",
+  "branchA.item2": "Yearly Administrative Report",
+  "branchA.item3": "Budget, Annual Inspection",
+  "branchA.item4": "BMI etc Govt. Quarters distribution/ maintenance /repairs",
+  "branchA.item5": "NE line/Medical/ TA/  MSEB/ MKAY / Telephone / MT / Fuel/ etc Bills payment order",
+
+  "branchB.title": "“B” Branch",
+  "branchB.item1": "Welfare",
+  "branchB.item2": "Income Tax",
+  "branchB.item3": "GST",
+
+  "establishment.title": "Establishment",
+  "establishment.item1": "Confidential Reports (CRs)",
+  "establishment.item2": "Departmental Enquiries (DEs)",
+  "establishment.item3": "Promotions",
+  "establishment.item4": "Transfers",
+  "establishment.item5": "Recruitment of Class 3 & 4 staff",
+
+  "accounts.title": "Accounts Branch",
+  "accounts.item1": "Pay bills of police officers and staff",
+  "accounts.item2": "Maintenance of service books",
+  "accounts.item3": "Preparation of pension cases",
+  "accounts.item4": "Preparation of budget proposals",
+  "accounts.item5": "Audit compliance",
+
+  "class4.title": "Class IV Section",
+  "class4.item1": "Maintenance of attendance records",
+  "class4.item2": "Allocation of duties",
+  "class4.item3": "Sanitation and cleanliness of premises",
+  "class4.item4": "Maintenance of office vehicles",
+
+  "technical.title": "Technical Branch",
+  "technical.incharge": "In charge :- Police Radio Officer (PRO)",
+
+  "wireless.title": "Wireless Section",
+  "wireless.item1": "Maintenance and operation of wireless sets",
+  "wireless.item2": "Frequency allocation",
+  "wireless.item3": "Monitoring of radio traffic",
+  "wireless.item4": "Repairs of wireless equipment",
+  "wireless.item5": "Installation of new equipment",
+
+  "computer.title": "Computer Section",
+  "computer.item1": "Maintenance of computer hardware",
+  "computer.item2": "Software development",
+  "computer.item3": "Database management",
+  "computer.item4": "Network security",
+  "computer.item5": "User training and support",
+
+  "cipher.title": "Cipher Section",
+  "cipher.item1": "Handling of coded messages",
+  "cipher.item2": "Development of encryption techniques",
+  "cipher.item3": "Training in cipher operations",
+
+  "training.title": "Training Section",
+  "training.item1": "Conduct training for technical staff",
+  "training.item2": "Workshops on latest communication technology",
+  "training.item3": "Collaboration with training institutes",
+
+  "stores.title": "Stores Section",
+  "stores.item1": "Procurement of wireless equipment",
+  "stores.item2": "Stock management",
+  "stores.item3": "Disposal of old/unserviceable items",
+
+  "traffic.title": "Traffic Branch",
+  "traffic.incharge": "DYSP (Traffic)",
+  "traffic.item1": "Conduct inspections of 64 Polnet stations, 46 HF stations, 64 TAPs",
+  "traffic.item2": "Preparation of call signs for VVIPs, ministers, officers",
+  "traffic.item3": "Conduct & supervise IT proficiency exams (written/practical)",
+  "traffic.item4": "Supervision of traffic cases from Central Check Office, Pune",
+  "traffic.item5": "Scrutiny of security breach cases on VHF channel",
 
 
 
@@ -318,11 +502,166 @@ export const MR = {
 
   "hero.communityPolicing.title": "समुदाय पोलीसिंग",
   "hero.communityPolicing.subtitle": "तंत्रज्ञानाद्वारे विश्वास निर्माण करणे",
+  
+  //ABOUTDEPT
+   "hx_back": "मुख्यपृष्ठावर परत",
+  "hx_photoAlt": "पोलीस वायरलेसचा इतिहास",
+  "hx_title": "पोलीस वायरलेस संप्रेषण विभागाचा इतिहास",
+  "hx_intro": "१९४६ मध्ये स्थापन झालेला हा विभाग, दुसऱ्या महायुद्धातील वायरलेस संचांपासून आधुनिक उपग्रह व आयपी आधारित नेटवर्कपर्यंत विकसित झाला आहे, ज्यामुळे महाराष्ट्रभर सुरक्षित व तत्काळ संप्रेषण शक्य झाले.",
+
+  "hx_1946_title": "१९४६ – स्थापना",
+  "hx_1946_desc": "पूर्व-स्वातंत्र्य काळात मुंबई येथे विभागाची स्थापना झाली. वायरलेसची सुरुवात दुसऱ्या महायुद्धातील संचांपासून झाली; १३ जिल्हे पुणे मुख्यालयाशी जोडले गेले.",
+
+  "hx_1947_title": "१९४७ – पहिले नेतृत्व",
+  "hx_1947_desc": "स्वातंत्र्यानंतर श्री. एन. एम. कामटे हे पहिले विशेष आयजीपी झाले. वायरलेस विभागाचे स्वतंत्र प्रशासन झाले आणि नेतृत्व श्री. एस. एम. नाबर यांनी केले.",
+
+  "hx_tableTitle": "मंजूर पदे",
+  "hx_table_sr": "क्रमांक",
+  "hx_table_desig": "पदनाम",
+  "hx_table_posts": "मंजूर पदसंख्या",
+  "hx_prev": "मागील",
+  "hx_next": "पुढील",
+  "hx_page": "पान",
+  "hx_of": "पैकी",
+  "hx_summary": "एकूण सारांश:",
+   
+  //OFFICERSINNHQ
+  "oh_back": "मुख्यपृष्ठावर परत",
+  "oh_title": "मुख्यालयातील अधिकारी",
+
+  "oh_admin_title": "प्रशासनिक कार्यालय",
+  "oh_admin_incharge": "ऑफिस अधीक्षक (OS)",
+  "oh_admin_A": "RTI, वार्षिक प्रशासन अहवाल, बजेट, वार्षिक तपासणी, BMI, सरकारी निवास वितरण / देखभाल / दुरुस्ती, बिल भरण्याचे आदेश: NE लाईन / वैद्यकीय / TA / MSEB / MKAY / दूरध्वनी / MT / इंधन, इत्यादी",
+  "oh_admin_B": "कल्याण, आयकर, GST बिल, लेखापरीक्षा: निवृत्ती / GPF / वैद्यकीय / स्थानांतरण TA / HBA / बक्षीस / ODC / ऑनलाईन पेमेंटस पुणे खजिनीसह",
+  "oh_admin_E": "MAT प्रकरणे, वायरलेस अधिकाऱ्यांचे / कर्मचाऱ्यांचे चौकशी, PC ते PSI ग्रेडेशन यादी, बढती व स्थानांतरण, सेवा पत्रांची तयारी, रिक्त जागांची माहिती अद्ययावत ठेवणे, वर्गीकरण / कौशल्य परीक्षांचे वेळापत्रक, भरती / RR प्रक्रिया हाताळणे व फॉलो-अप",
+  "oh_admin_D": "GEM (NIC पोर्टल) मार्फत स्पेअर्स/अॅक्सेसरीज खरेदी, DGP MS मुंबईद्वारे वायरलेस उपकरण खरेदीसाठी टेंडर प्रक्रिया",
+
+  "oh_tech_title": "तांत्रिक शाखा",
+  "oh_tech_incharge": "DYSP (Admin)",
+  "oh_tech_content": "प्रशासनिक व तांत्रिक शाखांचा दैनंदिन कामकाजाचे निरीक्षण करणे, प्रशासनिक शाखा: A, B, D, E, लेखापरीक्षा, तांत्रिक शाखा: बंदोबस्त, नियोजन, परवाना, कल्याण, गृह PI, SSS, बंदोबस्त शाखा: मनुष्यबळ व उपकरणे पुरवठा करणे, नोंदी ठेवणे, तपासणी वेळापत्रके राखणे, नियोजन शाखा: प्रस्ताव तयार करणे, बैठकांचे आयोजन करणे, Pol-4 व DGP मुंबई सह समन्वय, गृह PI: MT विभाग, MAT प्रकरणे, RTI काम हाताळणे, कल्याण शाखा: ज्ञानेश्वरी वरिष्ठ अधिकाऱ्यांचे मेस, संचार हॉटेल इत्यादीवर देखरेख, SSS शाखा: पोलिस संचारासाठी चाचणी, विकास व सुधारणा",
+
+  "oh_dev_title": "विकास विभाग",
+  "oh_dev_content": "कंप्युटर विभाग: तांत्रिक तपशील, NIC ईमेल, CIPHER देखभाल, व्हिडिओ कॉन्फरन्स, e-Office अंमलबजावणी, रेडिओ संचार विभाग: वायरलेस सेटची दुरुस्ती, नाकारणे, चाचणी, रिपीटर्स, लाइन संचार विभाग: दूरध्वनी एक्स्चेंज, IP/Digital युनिट्स, केबल देखभाल, नवीन खरेदीचे मूल्यमापन, इलेक्ट्रिकल विभाग: चार्जर, इन्व्हर्टर, UPS, DG सेट्स, सौर चार्जर, बॅटरी देखभाल व मूल्यमापन, इंस्टॉलेशन शाखा: DG सेट्स, स्ट्रीटलाईट्स, एअर कंडिशनर्स देखभाल, स्थानिक खरेदी, पाणी व वीज बिल, स्टोअर विभाग: स्टोअर साहित्य हाताळणी, नोंदी ठेवणे, चाचणी अहवाल व नमुना नोंदी",
+
+  "oh_vsat_title": "V-SAT विभाग",
+  "oh_vsat_incharge": "DYSP",
+  "oh_vsat_content": "महाराष्ट्रातील सर्व Polnet स्टेशनचा दैनिक स्थितीचे निरीक्षण, Polnet युनिटसाठी तांत्रिक मार्गदर्शन (DCPW, नवी दिल्ली सह समन्वय), Polnet HQ पुणे स्टेशनचे सुरळीत संचालन सुनिश्चित करणे, Polnet व CCTV उपकरणासाठी तांत्रिक तपशील तयार करणे",
+
+  "oh_store_title": "स्टोअर विभाग",
+  "oh_store_content": "स्टोअर विभाग I (SM I): खरेदी केलेल्या वायरलेस उपकरणांचे वितरण, बंदोबस्तासाठी तैनाती, वॉरंटी अंतर्गत दोषपूर्ण उपकरण पाठवणे, राखीव स्टॉक व BER ठेवणे, लिलाव प्रक्रियेचे हाताळणी, स्टोअर विभाग II (SM II): वायरलेस स्पेअर्सचे वितरण, डिजिटल वायरलेस उपकरणासाठी सॉफ्टवेअर/केबल तैनाती, न वापरण्यायोग्य साहित्य नष्ट करणे, लेजर राखणे, स्टोअर विभाग III (SM III): केबल, अँटेना, एक्स्चेंज कार्ड्स, मॅन्युअल्सचे वितरण, अॅनालॉग वायरलेस उपकरणासाठी सॉफ्टवेअर/केबल तैनात करणे, न वापरण्यायोग्य उपकरण व मasts नष्ट करणे, लेजर राखणे",
+
+  "oh_committee_title": "समिती विभाग",
+  "oh_committee_content": "उपकरण/अॅक्सेसरीज नमुना तपासणी करणे, चाचणी / रिसीप्ट अहवाल गोळा करणे",
+
+  "oh_test_title": "चाचणी विभाग",
+  "oh_test_content": "बंदोबस्त युनिटसाठी वायरलेस उपकरण चाचणी करणे, सेंट्रल स्टोअर सिस्टम्सची देखभाल",
+
+  "oh_central_title": "सेंट्रल स्टोअर प्रशासन विभाग",
+  "oh_central_content": "इनवॉर्ड/आउटवॉर्ड पत्रव्यवहार नोंदी, नोंदी ठेवणे व पत्र वितरण, स्टोअर विभागांना कामात सहाय्य करणे",
+
+  "oh_cipher_title": "सिफर शाखा",
+  "oh_cipher_incharge": "DYSP (Cipher)",
+  "oh_cipher_content": "महाराष्ट्र राज्यासाठी सिफर दस्तऐवज / साहित्य राखणे, DCPW नवी दिल्लीसह कुरिअर व्यवस्था (त्रैमासिक), महाराष्ट्र, गोवा, दमन येथील क्रिप्टो सेंटर्स सह समन्वय, पुण्यात बेसिक सिफर कोर्स चालवणे, सिफर दस्तऐवज, कोर्स व संगणक दुरुस्तीची देखभाल, क्रिप्टो सेंटर्समध्ये सिफर प्रोग्रॅम लोड करणे, महाराष्ट्रभर क्रिप्टो सेंटर्सचे तपासणी",
+
+  "oh_license_title": "परवाना शाखा",
+  "oh_license_incharge": "DYSP (License)",
+  "oh_license_content": "रेडिओ परवानेसाठी अर्ज करणे, भारत सरकारकडे स्पेक्ट्रम शुल्क भरणे, नवीन फ्रीक्वेन्सीजसाठी अर्ज करणे (HF/VHF/UHF), संविधान नेटवर्क पत्रे वितरण करणे, मासिक, सहा महिन्याचे, वार्षिक ट्रॅफिक रिपोर्ट सादर करणे, मंत्र्यांसाठी कॉल साइन तयार करणे, VVIPs, VIPs, वरिष्ठ अधिकारी",
+
+  "oh_traffic_title": "ट्रॅफिक शाखा",
+  "oh_traffic_incharge": "DYSP (Traffic)",
+  "oh_traffic_content": "64 Polnet स्टेशन, 46 HF स्टेशन, 64 TAPs चे निरीक्षण करणे, VVIPs, मंत्री, अधिकारी यांचे कॉल साइन तयार करणे, IT प्रवीणता परीक्षा (लेखी/प्रायोगिक) आयोजित व देखरेख करणे, सेंट्रल चेक ऑफिस, पुणे येथून ट्रॅफिक प्रकरणांचे निरीक्षण, VHF चॅनलवरील सुरक्षा उल्लंघन प्रकरणांचे परीक्षण",
+
+  //DIRECTONFO
+   "a1.back": "मुख्य पृष्ठावर परत",
+
+  "a2.desk": "संचालकांचे मनोगत",
+  "a2.name": "श्री. दीपक शिवानंद पांडे",
+  "a2.desg": "पोलीस महासंचालक (अतिरिक्त) व संचालक",
+  "a2.dept": "पोलीस संचार व माहिती तंत्रज्ञान विभाग",
+  "a2.loc": "महाराष्ट्र राज्य, पुणे",
+
+  "b1.intro": "पोलीस वायरलेस विभाग (आताचा पोलीस संचार व माहिती तंत्रज्ञान विभाग) हा महाराष्ट्र राज्य पोलीस दलाच्या संचार व्यवस्थेची जबाबदारी सांभाळतो. यात रेडिओ फ्रिक्वेन्सीचे व्यवस्थापन, अधिकारी तैनात करणे व क्षेत्रातील युनिट्समध्ये सुरक्षित आणि कार्यक्षम संचार सुनिश्चित करणे यांचा समावेश होतो.",
+  "b1.hl": " अखंडित 24×7 संचार ",
+  "b1.intro2": "प्रणाली आमच्या विभागामार्फत पुरवली जाते.",
+  "b1.role": "पोलीस संचार व माहिती तंत्रज्ञान विभाग पोलीसिंगमध्ये प्रभावी संचार आणि समन्वय साधण्यात महत्त्वाची भूमिका बजावतो. या विभागाची प्रमुख कार्ये खालीलप्रमाणे आहेत:",
+
+  "c1.f1.t": "रिअल-टाइम संचार",
+  "c1.f1.d": "अधिकारी आणि नियंत्रण कक्ष यांच्यात त्वरित संपर्क साधतो.",
+  "c1.f2.t": "स्थितिजन्य जागरूकता",
+  "c1.f2.d": "सद्यस्थितीबाबत अद्ययावत माहिती पुरवतो ज्यामुळे निर्णय अधिक चांगले होतात.",
+  "c1.f3.t": "आपत्कालीन प्रतिसाद",
+  "c1.f3.d": "आपत्कालीन परिस्थितीत तातडीने तैनाती सक्षम करतो.",
+  "c1.f4.t": "डेटा प्रसारण",
+  "c1.f4.d": "महत्त्वाची माहिती सुरक्षितपणे शेअर करण्यास मदत करतो.",
+  "c1.f5.t": "सुरक्षा व संरक्षकता",
+  "c1.f5.d": "संवेदनशील माहिती व अधिकारी यांची सुरक्षा सुनिश्चित करतो.",
+
+  "b1.crisis": "कोयना भूकंप (1967) आणि किल्लारी भूकंप (1993) यांनी महाराष्ट्रात मोठी हानी केली. मुंबई पूर (2005) आणि 26/11 दहशतवादी हल्ल्याने संचाराचे महत्त्व अधोरेखित केले. अशा आपत्तीच्या काळात खाजगी नेटवर्क ठप्प झाले असताना वायरलेस प्रणालीमुळे पोलिस सतत जोडले गेले आणि जीव वाचविण्यासाठी समन्वय साधला गेला.",
+  "b1.conc": "प्रभावी वायरलेस संचार हे सार्वजनिक सुरक्षितता व कार्यकुशल पोलीसिंगचे कणा आहे.",
 
   // Director Info
   "director.name": "श्री. दीपक शिवानंद पांडे (IPS)",
   "director.rank": "अतिरिक्त पोलीस महासंचालक व संचालक,",
   "director.designation": "पोलीस दळणवळण, माहिती तंत्रज्ञान आणि वाहतूक विभाग, महाराष्ट्र राज्य, पुणे.",
+  
+  //FORMAERDIRECOTR
+   "fd.back": "मागे",
+  "fd.title": "विभागाचे माजी संचालक",
+
+  "fd.d1.name": "श्री. सुनील रमनंद आयपीएस",
+  "fd.d1.designation": "अतिरिक्त महानिरीक्षक",
+  "fd.d1.tenure": "२०२१-२०२४",
+
+  "fd.d2.name": "श्री. रितेश कुमार आयपीएस",
+  "fd.d2.designation": "अतिरिक्त महानिरीक्षक",
+  "fd.d2.tenure": "२०१६-२०२१",
+
+  "fd.d3.name": "श्री. जगन्नाथ आयपीएस",
+  "fd.d3.designation": "अतिरिक्त महानिरीक्षक",
+  "fd.d3.tenure": "२०१४-२०१६",
+
+  "fd.d4.name": "श्री. सुरेश कक्कड आयपीएस",
+  "fd.d4.designation": "अतिरिक्त महानिरीक्षक",
+  "fd.d4.tenure": "२०१२-२०१४",
+
+  "fd.d5.name": "श्री. पी. पी. पी. शर्मा आयपीएस",
+  "fd.d5.designation": "अतिरिक्त महानिरीक्षक",
+  "fd.d5.tenure": "२००८-२०११",
+
+  "fd.d6.name": "श्री. बी. टी. नघिंगलोवा आयपीएस",
+  "fd.d6.designation": "अतिरिक्त महानिरीक्षक",
+  "fd.d6.tenure": "२००७-२००८",
+
+  "fd.d7.name": "श्री. पी. टी. लोहार आयपीएस",
+  "fd.d7.designation": "अतिरिक्त महानिरीक्षक",
+  "fd.d7.tenure": "२००४-२००७",
+
+  "fd.d8.name": "श्री. पी. के. जोशी आयपीएस",
+  "fd.d8.designation": "विशेष पोलीस महानिरीक्षक २०००-२००३ | अतिरिक्त महानिरीक्षक २००३-२००४",
+  "fd.d8.tenure": "२०००-२००४",
+
+  "fd.d9.name": "श्री. ए. डी. जोग एसपीएस",
+  "fd.d9.designation": "उपमहानिरीक्षक १९७९-१९८७ | विशेष पोलीस महानिरीक्षक १९८९-१९९९",
+  "fd.d9.tenure": "१९७९-१९९९",
+
+  "fd.d10.name": "श्री. एस. एम. नाबर",
+  "fd.d10.designation": "पोलीस अधीक्षक १९४८-१९६८ | उपमहानिरीक्षक १९६८-१९७८",
+  "fd.d10.tenure": "१९४८-१९७८",
+
+  "fd.d11.name": "श्री. एल. ए. पॅडन रो आयपी",
+  "fd.d11.designation": "एसपी एम. टी. आणि डब्ल्यू/एल",
+  "fd.d11.tenure": "१९४७-१९४८",
+
+  "fd.d12.name": "श्री. ई. ए. डॉडवेल आयपी",
+  "fd.d12.designation": "एसपी एम. टी. आणि डब्ल्यू/एल",
+  "fd.d12.tenure": "१९४६-१९४७",
+   
+  
+
+  //HEIRRACHY
+  "h1.back": "मागे",
+  "h1.title": "आरेखन",
+  "h1.alt": "पदसोपान चार्ट",
 
 
   // Emergency Contacts
@@ -383,6 +722,7 @@ export const MR = {
   "gallery.videoAvailable": "व्हिडिओ गॅलरी उपलब्ध आहे",
   "gallery.viewAllPhotos": "सर्व फोटो पहा",
 
+  
   // Emergency Helplines 
   "emergency.message": "आपत्कालीन परिस्थितीत त्वरित मदतीसाठी या क्रमांकांवर कॉल करा",
 

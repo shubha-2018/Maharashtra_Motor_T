@@ -501,6 +501,20 @@ export const EN = {
   "contact.email.title": "Email",
   "contact.email.address": "dir.polwireless.pune@mahapolice.gov.in",
   "contact.map.title": "Find Us on Map",
+
+   // Government Publications Page
+  "pubs.title": "Government Publications & Notifications",
+  "pubs.subtitle": "Access official announcements, resolutions, circulars, and tenders issued by the Maharashtra Police Communication & IT Department",
+  "pubs.gazette.title": "Gazette Notifications",
+  "pubs.gazette.description": "Official announcements, appointments, and policy changes published in the Maharashtra Government Gazette. Citizens and employees can access notifications to stay informed about governmental and departmental developments.",
+  "pubs.orders.title": "Government Orders (GRs)",
+  "pubs.orders.description": "Copies of Government Resolutions relevant to the Police Communication & IT Department. These orders ensure transparency and provide official directives for operations, personnel management, and policy implementation.",
+  "pubs.circulars.title": "Circulars",
+  "pubs.circulars.description": "Official circulars issued by the Director General of Police (DGP) or Home Department, providing guidelines, instructions, and updates for departmental operations and staff.",
+  "pubs.notifications.title": "Notifications",
+  "pubs.notifications.description": "Public notices regarding administrative changes, rules, or regulations. These notifications ensure citizens and employees are aware of new protocols or modifications in policies.",
+  "pubs.tenders.title": "Tender Notices",
+  "pubs.tenders.description": "Official announcements of tenders related to departmental procurement and services. While some tenders are listed under a separate section, key notices are provided here for transparency and access.",
 };
 
 
@@ -975,4 +989,18 @@ export const MR = {
   "contact.email.title": "ईमेल",
   "contact.email.address": "dir.polwireless.pune@mahapolice.gov.in",
   "contact.map.title": "नकाशावर आम्हाला शोधा",
+
+    // Government Publications Page
+  "pubs.title": "सरकारी प्रकाशने आणि अधिसूचना",
+  "pubs.subtitle": "महाराष्ट्र पोलीस संप्रेषण आणि आयटी विभागाद्वारे जारी केलेल्या अधिकृत घोषणा, ठराव, परिपत्रक आणि टेंडरमध्ये प्रवेश",
+  "pubs.gazette.title": "राजपत्र अधिसूचना",
+  "pubs.gazette.description": "महाराष्ट्र सरकारी राजपत्रात प्रकाशित झालेल्या अधिकृत घोषणा, नियुक्त्या आणि धोरणातील बदल. नागरिक आणि कर्मचारी सरकारी आणि विभागीय घडामोडींबद्दल माहिती ठेवण्यासाठी अधिसूचनांमध्ये प्रवेश घेऊ शकतात.",
+  "pubs.orders.title": "सरकारी आदेश (GRs)",
+  "pubs.orders.description": "पोलीस संप्रेषण आणि आयटी विभागाशी संबंधित सरकारी ठरावांची प्रती. हे आदेश पारदर्शकता सुनिश्चित करतात आणि कार्यसंचालन, कर्मचारी व्यवस्थापन आणि धोरण अंमलबजावणीसाठी अधिकृत निर्देश प्रदान करतात.",
+  "pubs.circulars.title": "परिपत्रक",
+  "pubs.circulars.description": "पोलीस महासंचालक (DGP) किंवा गृह विभागाद्वारे जारी केलेली अधिकृत परिपत्रके, जी विभागीय कार्यसंचालन आणि कर्मचाऱ्यांसाठी मार्गदर्शक तत्त्वे, सूचना आणि अद्यतने प्रदान करतात.",
+  "pubs.notifications.title": "अधिसूचना",
+  "pubs.notifications.description": "प्रशासकीय बदल, नियम किंवा नियमांसंबंधी सार्वजनिक सूचना. ह्या अधिसूचना नागरिक आणि कर्मचारी नवीन प्रोटोकॉल किंवा धोरणांमधील सुधारणांबद्दल जागरूक आहेत याची खात्री करतात.",
+  "pubs.tenders.title": "टेंडर सूचना",
+  "pubs.tenders.description": "विभागीय खरेदी आणि सेवांशी संबंधित टेंडरच्या अधिकृत घोषणा. काही टेंडर स्वतंत्र विभागात सूचीबद्ध केले असले तरी, पारदर्शकता आणि प्रवेशासाठी मुख्य सूचना येथे प्रदान केल्या आहेत.",
 };

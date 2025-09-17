@@ -6,11 +6,13 @@ import GovernmentUpdates from "@/components/GovernmentUpdates";
 import EventsGallery from "@/components/EventsGallery";
 import HelplineSection from "@/components/HelplineSection";
 import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
 
 const Index = () => {
   return (
-    <LanguageProvider>
       <div className="min-h-screen bg-background">
+        {/* <Header />
+        <Navbar/> */}
         <main>
           <HeroSection />
           <GovernmentUpdates />
@@ -18,7 +20,6 @@ const Index = () => {
           <HelplineSection />
         </main>
       </div>
-    </LanguageProvider>
   );
 };
 

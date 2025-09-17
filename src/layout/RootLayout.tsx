@@ -4,14 +4,10 @@ import Navbar from "@/components/Navbar";
 import React, { ReactNode } from "react";
 import { Outlet } from "react-router";
 
-interface RootLayoutProps {
-  children?: ReactNode;
-}
 
 function RootLayout() {
   return (
     <div>
-      {/* Pass goBack to Navbar if needed */}
       <Header />
       <Navbar />
       <Outlet />

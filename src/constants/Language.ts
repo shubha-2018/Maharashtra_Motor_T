@@ -108,7 +108,7 @@ export const EN = {
 
   // Government Updates
   "govt.updates": "Government Updates",
-  bulletins: "Bulletins / Orders / Instructions",
+  "bulletins": "Bulletins / Orders / Instructions",
   "tenders.section": "Tenders",
   "view.all": "View All",
 
@@ -205,6 +205,8 @@ export const EN = {
   "footer.privacyPolicy": "Privacy Policy",
   "footer.termsOfUse": "Terms of Use",
   "footer.accessibility": "Accessibility"
+
+  
 };
 
 

@@ -65,7 +65,7 @@ export default function GradationList() {
         <Card className="p-6 rounded-3xl shadow-lg bg-white/70 dark:bg-gray-900/70 backdrop-blur-lg border border-gray-200 dark:border-gray-800">
           <div className="flex justify-between items-center mb-4">
             <span className="font-medium text-gray-700 dark:text-gray-300">
-              {t("r9d5", { count: entriesPerPage })}
+              {t("r9d5")}
             </span>
             <input
               type="text"

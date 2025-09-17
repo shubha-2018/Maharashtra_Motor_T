@@ -12,7 +12,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { cn } from "@/lib/utils";
-import { useThemeStore } from "@/store/themeStore"; // Import the store
+import { useThemeStore } from "@/store/themeStore";
 
 const Header: React.FC = () => {
   const { language, setLanguage, t } = useLanguage();
@@ -50,7 +50,6 @@ const Header: React.FC = () => {
     document.documentElement.classList.add(theme);
   }, [theme]);
 
-
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 0);
     window.addEventListener("scroll", handleScroll);
@@ -66,17 +65,17 @@ const Header: React.FC = () => {
       {/* Utility Bar */}
       <div className="bg-secondary/50 border-b border-border">
         <div className="container mx-auto px-4 py-1">
-          <div className="flex justify-between items-center text-sm">
+          <div className="flex  justify-end md:justify-between items-center text-sm md:text-sm">
             {/* Left - Government Links (hidden on mobile) */}
             <div className="hidden md:flex space-x-4">
-              <a href="tel:112" className="nav-link text-xs hover:text-primary">
+              <a href="tel:112" className="nav-link text-xs hover:text-primary md:text-sm">
                 <Phone className="w-3 h-3 inline mr-1" />
                 {t("dial.112")}
               </a>
-              <a href="/accessibility" className="nav-link text-xs">
+              <a href="/accessibility" className="nav-link text-xs md:text-sm">
                 {t("footer.accessibility")}
               </a>
-              <a href="https://eoffice.mahapolice.gov.in/" className="nav-link text-xs">
+              <a href="https://eoffice.mahapolice.gov.in/" className="nav-link text-xs md:text-sm">
                 {t("e.office")}
               </a>
               <a href="https://accounts.mgovcloud.in/signin?servicename=VirtualOffice&serviceurl=https%3A%2F%2Fmail.mgovcloud.in%2F" className="nav-link text-xs">
@@ -85,14 +84,14 @@ const Header: React.FC = () => {
             </div>
 
             {/* Center - Accessibility (always visible) */}
-            <div className="flex items-center space-x-2">
+            <div className="flex items-center justify-end md:justify-between space-x-2">
               {/* Font Size Controls */}
               <div className="hidden sm:flex items-center space-x-1">
-                <span className="text-xs">{t("font.size")}:</span>
+                <span className="text-xs md:text-sm">{t("font.size")}:</span>
                 <button
                   onClick={() => handleFontSize("small")}
                   className={cn(
-                    "px-1 text-xs hover:text-primary",
+                    "px-1 text-xs md:text-sm hover:text-primary",
                     fontSize === "small" && "text-primary font-bold"
                   )}
                 >
@@ -101,7 +100,7 @@ const Header: React.FC = () => {
                 <button
                   onClick={() => handleFontSize("normal")}
                   className={cn(
-                    "px-1 text-xs hover:text-primary",
+                    "px-1 text-xs md:text-sm hover:text-primary",
                     fontSize === "normal" && "text-primary font-bold"
                   )}
                 >
@@ -110,7 +109,7 @@ const Header: React.FC = () => {
                 <button
                   onClick={() => handleFontSize("large")}
                   className={cn(
-                    "px-1 text-xs hover:text-primary",
+                    "px-1 text-xs md:text-sm hover:text-primary",
                     fontSize === "large" && "text-primary font-bold"
                   )}
                 >
@@ -118,7 +117,7 @@ const Header: React.FC = () => {
                 </button>
               </div>
 
-              {/* Theme Controls */}
+              {/* Theme Controls - Always visible on mobile */}
               <div className="flex items-center space-x-1">
                 <button
                   onClick={() => toggleTheme("light")}
@@ -142,23 +141,23 @@ const Header: React.FC = () => {
                 </button>
               </div>
 
-              {/* Language Switcher */}
-              <div className="hidden sm:flex items-center space-x-2">
+              {/* Language Switcher - Always visible on mobile */}
+              <div className="flex items-center space-x-2">
                 <Globe className="w-3 h-3" />
                 <button
                   onClick={() => setLanguage("mr")}
                   className={cn(
-                    "text-xs hover:text-primary transition-colors",
+                    "text-xs md:text-sm hover:text-primary transition-colors",
                     language === "mr" && "text-primary font-bold"
                   )}
                 >
                   {t("marathi")}
                 </button>
-                <span className="text-xs">|</span>
+                <span className="text-xs md:text-sm">|</span>
                 <button
                   onClick={() => setLanguage("en")}
                   className={cn(
-                    "text-xs hover:text-primary transition-colors",
+                    "text-xs md:text-sm hover:text-primary transition-colors",
                     language === "en" && "text-primary font-bold"
                   )}
                 >
@@ -168,16 +167,11 @@ const Header: React.FC = () => {
             </div>
 
             {/* Mobile Menu Button */}
-            <div className="sm:hidden">
-              <button onClick={toggleMobileMenu} className="p-2">
-                {isMobileMenuOpen ? (
-                  <X className="w-5 h-5" />
-                ) : (
-                  <Menu className="w-5 h-5" />
-                )}
-              </button>
-            </div>
+           
           </div>
+
+          {/* Mobile Menu Dropdown - Only shows government links now */}
+         
         </div>
       </div>
     </header>

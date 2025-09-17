@@ -29,7 +29,6 @@ import ListOfOfficers from "./pages/police/ListOfOfficers";
 import PromotionOrders from "./pages/police/PromotionOrders";
 import Transfers from "./pages/police/Transfers";
 import GradationList from "./pages/police/GradationList";
-import StrategySupportSystem from "./pages/police/StrategySupportSystem";
 import PositiveStories from "./pages/police/PositiveStories";
 import Tender from "./pages/citizen/Tender";
 
@@ -60,11 +59,13 @@ const AppRoutes = () => (
       <Route path="/police/gazette" element={<Gazette />} />
 
       <Route path="/police/gazette" element={<Gazette />} />
-      <Route path="/police/officers" element={<ListOfOfficers goBack={undefined} />} />
+      <Route
+        path="/police/officers"
+        element={<ListOfOfficers goBack={undefined} />}
+      />
       <Route path="/police/promotions" element={<PromotionOrders />} />
       <Route path="/police/transfers" element={<Transfers />} />
       <Route path="/police/gradation" element={<GradationList />} />
-      <Route path="/police/strategy" element={<StrategySupportSystem />} />
       <Route path="/police/stories" element={<PositiveStories />} />
 
       <Route path="/contact" element={<Contact />} />
@@ -72,7 +73,7 @@ const AppRoutes = () => (
 
       <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       <Route path="/terms-of-use" element={<TermsOfUse />} />
-         <Route path="/accessibility" element={<AccessibilityPage />} />
+      <Route path="/accessibility" element={<AccessibilityPage />} />
       <Route path="*" element={<NotFound />} />
     </Route>
   </Routes>

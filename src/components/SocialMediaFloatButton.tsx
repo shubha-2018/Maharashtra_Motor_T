@@ -1,11 +1,33 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const SocialMediaFloatButton = () => {
   const [isExpanded, setIsExpanded] = useState(false);
+  const [colorChange, setColorChange] = useState(false);
 
   const toggleExpand = () => {
     setIsExpanded(!isExpanded);
   };
+
+  // 👇 Detect scroll
+  useEffect(() => {
+    const handleColorChangeOnScroll = () => {
+      if (window.scrollY > 50) {
+        setTimeout(() => {
+              setColorChange(true);
+        }, 500);
+    
+      } else {
+              setTimeout(() => {
+              setColorChange(false);
+        }, 500);
+      }
+    };
+
+    window.addEventListener("scroll", handleColorChangeOnScroll);
+    return () => {
+      window.removeEventListener("scroll", handleColorChangeOnScroll);
+    };
+  }, []);
 
   const socialMediaIcons = [
     {
@@ -51,7 +73,7 @@ const SocialMediaFloatButton = () => {
   ];
 
   return (
-    <div className="fixed right-5 bottom-28 z-50 flex flex-col items-center space-y-3">
+    <div className="fixed right-8 bottom-28 z-50 flex flex-col items-center space-y-3">
       {/* Social media icons */}
       {isExpanded &&
         socialMediaIcons.map((social, index) => (
@@ -69,7 +91,9 @@ const SocialMediaFloatButton = () => {
       {/* Main button */}
       <button
         onClick={toggleExpand}
-        className="bg-primary text-white rounded-full p-6 shadow-lg hover:bg-primary-dark transition-all duration-300 transform hover:scale-105"
+        className={`bg-primary text-white ease-in-out delay-150 rounded-full p-5 shadow-lg hover:bg-primary-dark transition-all duration-300 transform hover:scale-105 ${
+          colorChange ? "hidden" : ""
+        }`}
         aria-expanded={isExpanded}
         aria-label="Social media links"
       >

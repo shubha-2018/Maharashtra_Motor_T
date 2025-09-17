@@ -17,6 +17,7 @@ const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const navigate = useNavigate();
+  const [colorChange, setColorChange] = useState(false);
 
   const { t } = useLanguage();
 
@@ -46,12 +47,10 @@ const Navbar = () => {
       hasDropdown: true,
       url: "/resources",
       items: [
-
         { name: t("nav.pressRelease"), url: "/citizen/press-release" },
         { name: t("nav.rti"), url: "/citizen/rti" },
         { name: t("nav.tenders"), url: "/citizen/tender" },
         { name: t("nav.recruitments"), url: "/citizen/recruitments" },
-
       ],
     },
     {
@@ -59,7 +58,7 @@ const Navbar = () => {
       hasDropdown: true,
       url: "/opportunities",
       items: [
-                { name: t("nav.gazette"), url: "/police/gazette" },
+        { name: t("nav.gazette"), url: "/police/gazette" },
         { name: t("nav.officersList"), url: "/police/officers" },
         { name: t("nav.promotionOrders"), url: "/police/promotions" },
         { name: t("nav.transfers"), url: "/police/transfers" },
@@ -84,22 +83,37 @@ const Navbar = () => {
   // 👇 Detect scroll
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
+      if (window.scrollY > 10) {
         setScrolled(true);
       } else {
         setScrolled(false);
       }
     };
 
+    const handleColorChangeOnScroll = () => {
+      if (window.scrollY > 50 && window.scrollY <900 ) {
+        setColorChange(true);
+      } else {
+        setColorChange(false);
+      }
+    };
+
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+
+    window.addEventListener("scroll", handleColorChangeOnScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("scroll", handleColorChangeOnScroll);
+    };
   }, []);
+
+
 
   return (
     <nav
       className={`w-full border-b selection:file:items-center border-navbar-border rounded-b-lg sticky top-0 z-50 transition-colors duration-300 ${
         scrolled ? "navbarbg" : "bg-navbar"
-      }`}
+      } `}
     >
       <div className=" mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-24">
@@ -108,7 +122,11 @@ const Navbar = () => {
             <div className="flex items-center space-x-2">
               <Link to="/">
                 <div className="w-14 h-14 bg-brand-primary rounded-full flex items-center justify-center">
-                  <img src={AshokStambhLogo} className="rounded-full" alt="logo" />
+                  <img
+                    src={AshokStambhLogo}
+                    className="rounded-full"
+                    alt="logo"
+                  />
                 </div>
               </Link>
               <Link to="/">
@@ -119,7 +137,11 @@ const Navbar = () => {
               <Link to="/">
                 <span
                   dangerouslySetInnerHTML={{ __html: t("title") }}
-                  className="hidden dark:text-white sm:block text-xl font-extrabold text-brand-primary capitalize"
+                  className={`hidden dark:text-white sm:block text-xl font-extrabold text-brand-primary capitalize ${
+                          colorChange
+                            ? "text-white"
+                            : "text-gray-800"
+                        }`}
                 >
                   {/* title */}
                 </span>
@@ -136,7 +158,11 @@ const Navbar = () => {
                     <DropdownMenuTrigger asChild>
                       <Button
                         variant="ghost"
-                        className="text-navbar-foreground text-lg font-bold hover:text-navbar-foreground hover:bg-navbar-foreground/5"
+                        className={`text-navbar-foreground text-lg font-bold hover:text-navbar-foreground hover:bg-navbar-foreground/5  ${
+                          colorChange
+                            ? "text-white"
+                            : "text-gray-800"
+                        }`}
                       >
                         {item.name}
                         <ChevronDown className="w-4 h-4 ml-1" />
@@ -164,7 +190,11 @@ const Navbar = () => {
                 ) : (
                   <Button
                     variant="ghost"
-                    className="text-navbar-foreground text-lg hover:text-navbar-foreground hover:bg-navbar-foreground/5 font-bold "
+                    className={`text-navbar-foreground text-lg hover:text-navbar-foreground hover:bg-navbar-foreground/5 font-bold ${
+                          colorChange
+                            ? "text-white"
+                            : "text-gray-800"
+                        }`}
                   >
                     <Link to={item.url}>{item.name}</Link>
                   </Button>

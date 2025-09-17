@@ -49,8 +49,6 @@ const Footer: React.FC = () => {
   const visitorStats = {
     totalVisitors: "2,45,678",
     todayVisitors: "1,234",
-    onlineUsers: "89",
-    lastUpdated: "15 Jan 2024, 02:30 PM",
   };
 
   return (
@@ -168,7 +166,7 @@ const Footer: React.FC = () => {
                 <Eye className="w-5 h-5" />
                 {t("visitor.stats")}
               </h3>
-              <div className="glass bg-white/10 dark:bg-gray-800/30 rounded-lg p-4 space-y-2">
+              <div className="glass bg-white/10 dark:bg-gray-800/30 rounded-lg p-4 space-y-3">
                 <div className="flex justify-between text-sm">
                   <span className="text-gray-700 dark:text-gray-300">
                     Total Visitors:
@@ -182,17 +180,6 @@ const Footer: React.FC = () => {
                   <span className="font-bold text-saffron dark:text-yellow-400">
                     {visitorStats.todayVisitors}
                   </span>
-                </div>
-                <div className="flex justify-between text-sm">
-                  <span className="text-gray-700 dark:text-gray-300">
-                    Online Now:
-                  </span>
-                  <span className="font-bold text-green-600 dark:text-green-400">
-                    {visitorStats.onlineUsers}
-                  </span>
-                </div>
-                <div className="text-xs text-gray-600 dark:text-gray-400 pt-2 border-t border-gray-300 dark:border-gray-600">
-                  Last Updated: {visitorStats.lastUpdated}
                 </div>
               </div>
             </div>

@@ -3,8 +3,9 @@ import GovermentLinks from "@/components/GovermentLinks";
 import Header from "@/components/Header";
 import Navbar from "@/components/Navbar";
 import ScrollToTop from "@/components/ScrollToTop";
-import React, { ReactNode } from "react";
+import SocialMediaFloatButton from "@/components/SocialMediaFloatButton";
 import { Outlet } from "react-router";
+import PageAccessibilityChanger from "@/components/PageAccessibilityChanger";
 
 function RootLayout() {
   return (
@@ -15,6 +16,8 @@ function RootLayout() {
       <Outlet />
       <GovermentLinks />
       <Footer />
+      <SocialMediaFloatButton />
+      <PageAccessibilityChanger />
     </div>
   );
 }

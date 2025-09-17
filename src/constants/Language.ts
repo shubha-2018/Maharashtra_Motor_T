@@ -224,8 +224,20 @@ export const EN = {
   "public.grievances": "Public Grievances",
   "footer.privacyPolicy": "Privacy Policy",
   "footer.termsOfUse": "Terms of Use",
-  "footer.accessibility": "Accessibility"
+  "footer.accessibility": "Accessibility",
 
+  // Press Release Page
+  "back.home": "Back to Home",
+  "press.title": "Press Releases",
+  "press.subtitle": "Positive developments and ongoing projects in the Maharashtra Police Wireless Department",
+  "press.tech.title": "Technological Upgrades",
+  "press.tech.description": "Independence Day was celebrated with great enthusiasm in the Police Communication and Information Technology Department. Officers and staff participated in the flag hoisting, national anthem, and cultural programs, spreading the message of patriotism and unity.",
+  "press.ai.title": "AI-Powered Policing - MARVEL Project",
+  "press.ai.description": "Republic Day was celebrated with great enthusiasm in the Police Communication and Information Technology Department. Officers and staff participated in the flag hoisting, national anthem, and patriotic programs, highlighting the values of the Constitution, patriotism, and unity.",
+  "press.emergency.title": "Enhanced Emergency Response - Dial 112",
+  "press.emergency.description": "The 'Dial 112' emergency system integrates police (100), fire (101), and ambulance (108) services into a single number. Using advanced tracking and dispatch technology, response times are drastically reduced, saving lives and improving public safety.",
+  "press.cyber.title": "New Cyber Command Center",
+  "press.cyber.description": "In October 2024, a new Cyber Command and Control Centre was launched. Equipped with advanced forensic tools and AI-based threat detection, it allows the police to combat cybercrime efficiently and ensures digital safety for citizens and critical infrastructure.",
 
 };
 
@@ -447,5 +459,18 @@ export const MR = {
   "public.grievances": "सार्वजनिक तक्रारी",
   "footer.privacyPolicy": "गोपनीयता धोरण",
   "footer.termsOfUse": "वापरण्याचे नियम",
-  "footer.accessibility": "सुलभता"
+  "footer.accessibility": "सुलभता",
+
+   // Press Release Page
+  "back.home": "मुख्यपृष्ठावर परत",
+  "press.title": "प्रेस विज्ञप्ती",
+  "press.subtitle": "महाराष्ट्र पोलीस वायरलेस विभागातील सकारात्मक घडामोडी आणि चालू प्रकल्प",
+  "press.tech.title": "तांत्रिक उन्नयन",
+  "press.tech.description": "पोलीस दळणवळण व माहिती तंत्रज्ञान विभागामध्ये स्वातंत्र्य दिन उत्साहात साजरा करण्यात आला. विभागातील अधिकारी व कर्मचारी यांनी देशभक्तिपूर्ण वातावरणात ध्वजारोहण, राष्ट्रगीत आणि विविध सांस्कृतिक कार्यक्रमांमध्ये सहभाग घेतला. या उत्सवातून देशभक्ती, एकात्मता आणि तांत्रिक प्रगतीबद्दल जागरूकता निर्माण करण्यात आली.",
+  "press.ai.title": "कृत्रिम बुद्धिमत्ता आधारित पोलिसिंग - MARVEL प्रकल्प",
+  "press.ai.description": "पोलीस दळणवळण व माहिती तंत्रज्ञान विभागामध्ये प्रजासत्ताक दिन उत्साहात साजरा करण्यात आला. अधिकारी व कर्मचारी यांनी ध्वजारोहण, राष्ट्रगीत व देशभक्तिपर कार्यक्रमांमध्ये सहभाग घेतला. या निमित्ताने संविधान मूल्ये, देशभक्ती आणि एकात्मतेचा संदेश देण्यात आला.",
+  "press.emergency.title": "सुधारित आणीबाणी प्रतिसाद - डायल 112",
+  "press.emergency.description": "'डायल 112' आणीबाणी प्रणाली पोलीस (100), अग्निशामक (101) आणि एम्ब्युलन्स (108) सेवा एकाच क्रमांकावर एकत्रित करते. अॅडव्हान्स्ड ट्रॅकिंग आणि डिस्पॅच तंत्रज्ञानाचा वापर करून, प्रतिसाद वेळ मोठ्या प्रमाणात कमी होतो, जीवन वाचवते आणि सार्वजनिक सुरक्षा सुधारते.",
+  "press.cyber.title": "नवीन सायबर कमांड सेंटर",
+  "press.cyber.description": "ऑक्टोबर 2024 मध्ये, एक नवीन सायबर कमांड अँड कंट्रोल सेंटर सुरू करण्यात आला. अॅडव्हान्स्ड फॉरेन्सिक साधने आणि AI-आधारित धोका शोधासह सुसज्ज, ते पोलिसांना सायबर गुन्ह्यांविरुद्ध कार्यक्षमतेने लढा देण्यास आणि नागरिकांसाठी आणि गंभीर पायाभूत सुविधांसाठी डिजिटल सुरक्षा सुनिश्चित करण्यास सक्षम करते.",
 };

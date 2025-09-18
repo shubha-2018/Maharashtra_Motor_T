@@ -142,27 +142,7 @@ export default function Tenders() {
         ))}
       </div>
 
-      {/* Procurement Info */}
-      <h3 className="text-3xl font-bold text-blue-500 mb-6 dark:text-blue-400">
-        {t("tenders.procurement.title")}
-      </h3>
-      <div className="space-y-6">
-        {procurementInfo.map((item, idx) => (
-          <Card
-            key={idx}
-            className="bg-white/30 border border-gray-200 backdrop-blur-md shadow-lg rounded-3xl hover:shadow-green-400/20 transition-all duration-500 dark:bg-gray-800/30 dark:border-gray-700 dark:hover:shadow-green-600/20"
-          >
-            <CardContent className="p-8 space-y-4">
-              <h4 className="text-2xl font-bold text-green-500 dark:text-green-400">
-                {t(item.titleKey)}
-              </h4>
-              <p className="text-gray-800 text-lg leading-relaxed dark:text-gray-200">
-                {t(item.descriptionKey)}
-              </p>
-            </CardContent>
-          </Card>
-        ))}
-      </div>
+  
     </div>
   );
 }

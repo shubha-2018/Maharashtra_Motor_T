@@ -14,6 +14,7 @@ import {
 } from "@/components/ui/table";
 import { useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import ABOUT_IMG from "@/assets/about.jpg";
 
 // Table data (designations stay static, but counts can be translated if needed)
 const staffData = [
@@ -101,7 +102,7 @@ export default function History() {
             <div className="relative group">
               <div className="absolute -inset-1 rounded-2xl bg-gradient-to-r from-blue-500/20 to-purple-500/10 blur-lg opacity-75 group-hover:opacity-100 transition duration-700"></div>
               <img
-                src={historyPhoto}
+                src={ABOUT_IMG}
                 alt={t("hx_photoAlt")}
                 className="relative w-64 h-40 md:w-80 md:h-52 rounded-2xl object-cover border-4 border-gray-200 dark:border-gray-700 shadow-xl transition-all duration-500 group-hover:border-gray-400 group-hover:shadow-2xl"
               />
@@ -192,11 +193,6 @@ export default function History() {
             >
               {t("hx_next")}
             </Button>
-          </div>
-
-          {/* Summary */}
-          <div className="pt-4 text-right font-bold text-gray-800 dark:text-gray-200">
-            {t("hx_summary")} 3869
           </div>
         </div>
       </div>

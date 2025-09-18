@@ -92,11 +92,15 @@ const Navbar = () => {
     };
 
     const handleColorChangeOnScroll = () => {
-      if (window.scrollY > 50 && window.scrollY < 900) {
-        setColorChange(true);
-      } else {
-        setColorChange(false);
-      }
+      
+        if (window.scrollY > 50 && window.scrollY < 900) {
+          if (window.location.pathname == "/") {
+          setColorChange(true);
+               }
+        } else {
+          setColorChange(false);
+        }
+ 
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -109,15 +113,15 @@ const Navbar = () => {
   }, []);
 
   // Prevent body scroll when mobile menu is open
-useEffect(() => {
-  if (isMobileMenuOpen) {
-    // Lock scroll only on mobile menu
-    document.body.style.overflow = "hidden";
-  } else {
-    // Restore scroll normally
-    document.body.style.overflow = "";
-  }
-}, [isMobileMenuOpen]);
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      // Lock scroll only on mobile menu
+      document.body.style.overflow = "hidden";
+    } else {
+      // Restore scroll normally
+      document.body.style.overflow = "";
+    }
+  }, [isMobileMenuOpen]);
 
   const toggleDropdown = (itemName: string) => {
     setOpenDropdown(openDropdown === itemName ? null : itemName);
@@ -262,10 +266,10 @@ useEffect(() => {
                           className="flex items-center justify-between w-full text-left text-navbar-foreground font-bold hover:text-navbar-foreground/80 transition-colors"
                         >
                           <span>{item.name}</span>
-                          <ChevronDown 
+                          <ChevronDown
                             className={`w-4 h-4 text-navbar-muted transition-transform duration-200 ${
-                              openDropdown === item.name ? 'rotate-180' : ''
-                            }`} 
+                              openDropdown === item.name ? "rotate-180" : ""
+                            }`}
                           />
                         </button>
                       ) : (

@@ -47,7 +47,7 @@ export default function PromotionOrders() {
         </Button>
 
         <div className="text-center space-y-4">
-          <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight bg-gradient-to-r from-purple-400 via-blue-400 to-teal-400 bg-clip-text text-transparent drop-shadow-lg">
+          <h1 className="text-5xl md:text-6xl p-3 font-extrabold tracking-tight bg-gradient-to-r from-purple-400 via-blue-400 to-teal-400 bg-clip-text text-transparent drop-shadow-lg">
             {t("m9z8")}
           </h1>
           <h2 className="text-lg md:text-xl font-medium text-gray-600 dark:text-gray-300">
@@ -57,9 +57,7 @@ export default function PromotionOrders() {
 
         <Card className="p-6 rounded-3xl shadow-lg bg-white/70 dark:bg-gray-900/70 backdrop-blur-lg border border-gray-200 dark:border-gray-800">
           <div className="flex justify-between items-center mb-4">
-            <span className="font-medium text-gray-700 dark:text-gray-300">
-              {t("h5k3")}
-            </span>
+
             <input
               type="text"
               placeholder={t("r2p6")}

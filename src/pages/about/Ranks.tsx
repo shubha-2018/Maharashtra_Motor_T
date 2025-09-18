@@ -5,6 +5,16 @@ import { useNavigate } from "react-router";
 import { useLanguage } from "@/contexts/LanguageContext"; // Assuming you have this hook
 
 export default function Ranks() {
+
+  const openPDF = () => {
+    // Assuming your PDF is located in the public/assets folder
+    const pdfUrl = '/pdfs/Ranks-in-PCIT.pdf';
+    
+    // Open the PDF in a new tab
+    window.open(pdfUrl, '_blank');
+  };
+
+
   const navigate = useNavigate();
   const { t } = useLanguage();
   const goBack = () => navigate("/");
@@ -83,10 +93,6 @@ export default function Ranks() {
       description: t("ranks.rank18.description")
     }
   ];
-
-  const openPDF = () => {
-    window.open("https://mahpolwireless.stagingdsi.co.in/wp-content/uploads/2024/10/Ranks-in-PCIT.pdf", "_blank"); // Replace with your PDF URL
-  };
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 via-gray-100 to-gray-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 text-gray-900 dark:text-gray-100 px-6 py-12 sm:px-12 lg:px-24 relative overflow-hidden">

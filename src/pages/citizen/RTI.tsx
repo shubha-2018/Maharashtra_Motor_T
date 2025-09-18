@@ -61,7 +61,7 @@ export default function RTIPage() {
                 </Button>
 
                 {/* Heading */}
-                <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight text-center bg-gradient-to-r from-teal-400 via-blue-400 to-violet-400 bg-clip-text text-transparent drop-shadow-lg dark:from-teal-500 dark:via-blue-500 dark:to-violet-500">
+                <h1 className="text-5xl p-3 md:text-6xl font-extrabold tracking-tight text-center bg-gradient-to-r from-teal-400 via-blue-400 to-violet-400 bg-clip-text text-transparent drop-shadow-lg dark:from-teal-500 dark:via-blue-500 dark:to-violet-500">
                     {t("rti.title")}
                 </h1>
                 <h2 className="text-lg md:text-xl font-medium text-gray-600 text-center mb-12 dark:text-gray-300">

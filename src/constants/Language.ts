@@ -43,7 +43,7 @@ export const EN = {
   "nav.about": "About",
   "nav.directorDesk": "From Director’s Desk",
   "nav.formerDirectors": "Former Directors",
-  "nav.hierarchy": "Hierarchy",
+  "nav.hierarchy": "Hierarchy of Department",
   "nav.aboutDepartment": "About Department",
   "nav.offices": "Offices in Headquarters",
   "nav.ranks": "Ranks Of Department",
@@ -55,7 +55,7 @@ export const EN = {
   "nav.pressRelease": "Press Release",
   "nav.rti": "RTI",
   "nav.gazette": "Gazette",
-  "nav.officersList": "List of Officers",
+  "nav.officersList": "List of Officers and Employees",
   "nav.promotionOrders": "Promotion Orders",
   "nav.transfers": "Transfers",
   "nav.gradationList": "Gradation List",
@@ -82,9 +82,7 @@ export const EN = {
   "welcome.message":
     "Committed to leveraging cutting-edge technology for enhanced public safety and efficient police operations across Maharashtra State.",
   "director.desk": "From Director's Desk",
-  "director.caption": `"Our commitment to modernizing police infrastructure through
-                  cutting-edge communication and information technology
-                  continues to strengthen Maharashtra's security framework..."`,
+  "director.caption": `"The Police Wireless Department prior to Police Communication and Information Technology Department typically handles communication systems used by law enforcement authority that is Maharashtra State Police..."`,
   "read.more": "Read More",
 
   // Hero slider images
@@ -107,7 +105,13 @@ export const EN = {
   "a2.dept": "Police Communication & IT Department",
   "a2.loc": "Maharashtra State, Pune",
 
-  "b1.intro": "The Police Wireless Department prior to Police Communication and Information Technology Department typically handles communication systems used by law enforcement authority that is Maharashtra State Police. This includes managing radio frequencies, dispatching officers, and ensuring secure and efficient communication between police units in the field.",
+  "b1.intro": `
+  <p>The Police Wireless Department prior to Police Communication and Information Technology Department typically handles communication systems used by law enforcement authority that is Maharashtra State Police. This includes managing radio frequencies, dispatching officers, and ensuring secure and efficient communication between police units in the field. Uninterrupted 24×7 communication system is provided by our Department.</p>
+<br/>
+  <p>The Police Communication and Information Technology Department plays a vital role in policing by ensuring effective communication and coordination among officers with key functions such as real-time Communication which facilitates immediate contact between officers in the field and dispatch, crucial for timely responses to incidents; Situational Awareness which provides officers with updates on ongoing situations, enhancing their ability to make informed decisions; Emergency Response which enables quick coordination during emergencies, allowing for faster deployment of resources; Data Transmission which supports the transfer of critical information, such as criminal records and intelligence, enhancing investigative efforts; Safety and Security which maintains secure communication channels to protect sensitive information and officer safety.</p>
+  <br/>
+  <p>The Koyna earthquake on December 10, 1967 with a magnitude of 6.3 and the Killari earthquake on September 30, 1993 with a magnitude of 6.04 occurred in Maharashtra state, India. It caused significant damage and resulted in over 200 deaths, largely due to the collapse of buildings and infrastructure. The floods that followed on July 26, 2005, in Mumbai, were devastating. Heavy rainfall led to widespread flooding, impacting transportation, displacing thousands, and causing numerous fatalities. The city faced significant challenges in emergency response and infrastructure resilience during this disaster. 26/11 terrorist attack, riots and blasts were happened in Maharashtra state. Wireless communication has played a crucial role in disaster management and response during such crucial events when private network like mass communication, mobile network failed. Hence effective wireless communication is essential for maintaining public safety and operational efficiency in policing.</p>
+  `,
   "b1.hl": "Uninterrupted 24×7 communication",
   "b1.intro2": "system is provided by our Department.",
   "b1.role": "The Police Communication and Information Technology Department plays a vital role in policing by ensuring effective communication and coordination among officers with key functions such as:",
@@ -246,7 +250,7 @@ export const EN = {
 
   //HEIRARCHY
   "h1.back": "Back",
-  "h1.title": "Hierarchy",
+  "h1.title": "Hierarchy of Department",
   "h1.alt": "Hierarchy Chart",
 
   // Emergency Helplines 
@@ -294,7 +298,7 @@ export const EN = {
   "hx_1947_title": "1947 – First Leadership",
   "hx_1947_desc": "After independence, Mr. N.M. Kamte became the first Special IGP. Wireless Dept. separated administratively, led by Mr. S.M. Nabar.",
 
-  "hx_tableTitle": "Sanctioned Posts",
+  "hx_tableTitle": "Maharashtra State Police Communication and Information Technology Strength Chart",
   "hx_table_sr": "SR NO",
   "hx_table_desig": "DESIGNATION",
   "hx_table_posts": "SANCTION POSTS",
@@ -650,7 +654,7 @@ export const EN = {
   "u7n4": "Back to Home",
   "j2y6": "Transfers Orders",
   "p8a1": "Official notifications and updates regarding transfers",
-  "r6w5": "{{count}} entries per page",
+  "r6w5": "5 entries per page",
   "m1s9": "Search...",
   "y4g2": "Title",
   "k9v3": "View",
@@ -705,7 +709,7 @@ export const EN = {
   //listofofficer
   "back_to_home": "Back to Home",
   "export_csv": "Export CSV",
-  "list_of_officers": "List of Officers",
+  "list_of_officers": "List of Officers and Employees",
   "seniority_ranking_description": "Seniority-wise ranking of officers and staff in the Maharashtra Police Communication & IT Department",
   "sr_no": "SR NO",
   "full_name": "Full Name",
@@ -764,7 +768,7 @@ export const EN = {
   "u2f4": "Back",
   "g6h9": "Gradation List",
   "a8k2": "Latest gradation list entries are shown below",
-  "r9d5": "Showing {{count}} entries per page",
+  "r9d5": "Showing 5 entries per page",
   "s3l7": "Search...",
   "b7x1": "Title",
   "m4v2": "Size",
@@ -828,7 +832,7 @@ export const EN = {
   "q1w2": "Back to Home",
   "m9z8": "Promotion Orders",
   "v4b7": "Official notifications and updates regarding promotions",
-  "h5k3": "{{count}} entries per page",
+  "h5k3": "5 entries per page",
   "r2p6": "Search...",
   "t8n1": "Title",
   "k4f5": "View",
@@ -881,7 +885,19 @@ export const EN = {
   "accessibility.contact.description": "If you encounter any accessibility barriers or have suggestions for improvement, please contact our accessibility team:",
   "accessibility.contact.email": "Email",
   "accessibility.contact.phone": "Phone",
-
+ // Positive Stories Page
+  "back": "Back to Home",
+  "positive.stories.title": "Positive Stories",
+  "positive.stories.subtitle": "Notable achievements and commendable work by the department and its personnel",
+  "stories.award.title": "Award-Winning Training Centre",
+  "stories.award.description": "The Maharashtra State Police Communication and Information Technology Training Centre, Pune, has been recognized for excellence. It won the Union Home Minister's Best Training Institutions Zonal Level First Prize and Trophy in 2018-2019, and the National Level Union Home Minister's Trophy for Best Police Training Institutions in 2020-21, including a cash reward of ₹20,00,000.",
+  "stories.event.title": "Event Participation",
+  "stories.event.description": "The department actively participates in and organizes key national events, promoting public engagement and awareness. Notable events include:\n- Independence Day Celebrations\n- National Yoga Day\n- Inauguration of the Dr. APJ Abdul Kalam Innovation Centre by the Home Minister\n- Inauguration of the Ashok Jog Lecture Hall\n- Republic Day Celebrations",
+  "stories.innovation.title": "Innovation and Development",
+  "stories.innovation.description": "The Dr. APJ Abdul Kalam Innovation Centre and the Research & Development (R&D) section have pioneered cutting-edge communication systems and technologies to enhance policing efficiency, ensuring the department remains at the forefront of modern law enforcement.",
+  "stories.welfare.title": "Welfare Initiatives",
+  "stories.welfare.description": "The department emphasizes the well-being of its personnel and community. Key welfare activities include:\n- Blood donation camps\n- Medical camps for employees and their families\n- Community and health awareness lectures",
+  "positive.stories.highlight": "These positive initiatives reflect the department's commitment to innovation, community engagement, and excellence in policing."
 };
 
 
@@ -907,17 +923,17 @@ export const MR = {
   //rank
   "backToHome": "मुख्यपृष्ठावर परत जा",
   "ranks.title": "विभागातील पदानुक्रम",
-  "ranks.subtitle": "पोलीस संप्रेषण आणि माहिती तंत्रज्ञान विभागातील रँक आणि पदनामांची यादी",
+  "ranks.subtitle": "पोलीस दळणवळण व माहिती तंत्रज्ञान विभागातील रँक आणि पदनामांची यादी",
   "ranks.seePDF": "संपूर्ण PDF पहा",
-  "ranks.rank1.title": "अतिरिक्त DGP आणि संचालक पोलीस संप्रेषण, माहिती तंत्रज्ञान आणि वाहतूक, महाराष्ट्र राज्य, पुणे",
+  "ranks.rank1.title": "अपर पोलीस महासंचालक पोलीस दळणवळण व माहिती तंत्रज्ञान विभाग, महाराष्ट्र राज्य, पुणे",
   "ranks.rank1.description": "संपूर्ण विभागाचे नेतृत्व करतो, धोरणात्मक दिशा निश्चित करतो, सर्व युनिटमध्ये समन्वय सुनिश्चित करतो आणि राज्यव्यापी संप्रेषण, आयटी आणि वाहतूक कार्ये देखरेख करतो.",
-  "ranks.rank2.title": "उप पोलीस महानिरीक्षक संप्रेषण आणि माहिती तंत्रज्ञान, महाराष्ट्र राज्य, पुणे",
+  "ranks.rank2.title": "उप पोलीस महानिरीक्षक पोलीस दळणवळण व माहिती तंत्रज्ञान विभाग, महाराष्ट्र राज्य, पुणे",
   "ranks.rank2.description": "राज्यव्यापी कार्यप्रदर्शन व्यवस्थापित करण्यासाठी संचालकांची मदत करतो, तांत्रिक संघांचे पर्यवेक्षण करतो आणि धोरणे आणि मानकांचे पालन सुनिश्चित करतो.",
-  "ranks.rank3.title": "अतिरिक्त पोलीस आयुक्त संप्रेषण आणि माहिती तंत्रज्ञान, महाराष्ट्र राज्य, मुंबई",
+  "ranks.rank3.title": "अतिरिक्त पोलीस आयुक्त पोलीस दळणवळण व माहिती तंत्रज्ञान विभाग, महाराष्ट्र राज्य, मुंबई",
   "ranks.rank3.description": "मुंबई ऑपरेशन्सचे नेतृत्व करतो, गंभीर आयटी इन्फ्रास्ट्रक्चरचे व्यवस्थापन करतो, सुरक्षित संप्रेषण सुनिश्चित करतो आणि स्थानिक कायदा अंमलबजावणी युनिट्ससह समन्वय साधतो.",
-  "ranks.rank4.title": "पोलीस अधीक्षक संप्रेषण आणि माहिती तंत्रज्ञान",
+  "ranks.rank4.title": "पोलीस अधीक्षक पोलीस दळणवळण व माहिती तंत्रज्ञान विभाग",
   "ranks.rank4.description": "फील्ड युनिट्सचे पर्यवेक्षण करतो, वायरलेस सिस्टीम मॉनिटर करतो, विभागीय क्रियाकलापांचे समन्वयन करतो आणि दैनंदिन कार्यसंचालन सुरळीतपणे सुनिश्चित करतो.",
-  "ranks.rank5.title": "उप पोलीस आयुक्त संप्रेषण आणि माहिती तंत्रज्ञान",
+  "ranks.rank5.title": "उप पोलीस आयुक्त पोलीस दळणवळण व माहिती तंत्रज्ञान विभाग",
   "ranks.rank5.description": "तांत्रिक संघांचे पर्यवेक्षण करतो, ऑपरेशन्सचे व्यवस्थापन करतो आणि आयटी आणि संप्रेषण धोरणांच्या अंमलबजावणीसाठी मार्गदर्शन प्रदान करतो.",
   "ranks.rank6.title": "उप पोलीस अधीक्षक /सहाय्यक पोलीस आयुक्त",
   "ranks.rank6.description": "दैनंदिन तांत्रिक कार्यसंचालन, कर्मचाऱ्यांची नियुक्ती, समस्या निवारण हाताळतो आणि विभागीय प्रोटोकॉलचे पालन सुनिश्चित करतो.",
@@ -949,9 +965,9 @@ export const MR = {
 
   //graduation
   "u2f4": "मागे",
-  "g6h9": "ज्येष्ठता सूची",
-  "a8k2": "नवीन ज्येष्ठता सूची खाली दर्शवली आहे",
-  "r9d5": "प्रत्येक पृष्ठावर {{count}} नोंदी दाखवत आहोत",
+  "g6h9": "सेवाज्येष्ठता सूची",
+  "a8k2": "नवीन सेवाज्येष्ठता सूची खाली दर्शवली आहे",
+  "r9d5": "प्रत्येक पृष्ठावर 5 नोंदी दाखवत आहोत",
   "s3l7": "शोधा...",
   "b7x1": "शीर्षक",
   "m4v2": "आकार",
@@ -962,16 +978,16 @@ export const MR = {
   "p2m3": "मागील",
   "w4t6": "पुढील",
 
-  "x1a9": "ए.एस.आय. विजतंत्री ज्येष्ठता सूची",
-  "y7b3": "ए.एस.आय. भांडारपाल ज्येष्ठता सूची",
+  "x1a9": "ए.एस.आय. विजतंत्री सेवाज्येष्ठता सूची",
+  "y7b3": "ए.एस.आय. भांडारपाल सेवाज्येष्ठता सूची",
   "z4c6": "ए.एस.आय. (एच.डब्ल्यू.ओ.) – ०१/०१/२०२१",
   "q2d8": "ए.एस.आय. (एच.डब्ल्यू.ओ.) – ०१/०१/२०२२",
-  "p5e1": "ज्येष्ठता सूची पी.डब्ल्यू.एस.आय. इलेक्ट्रिशियन",
+  "p5e1": "सेवाज्येष्ठता सूची पी.डब्ल्यू.एस.आय. इलेक्ट्रिशियन",
   //listofofficer
   "back_to_home": "मुख्यपृष्ठावर परत",
 
   "export_csv": "CSV निर्यात करा",
-  "list_of_officers": "अधिकाऱ्यांची यादी",
+  "list_of_officers": "अधिकारी व अंमलदार यादी",
   "seniority_ranking_description": "महाराष्ट्र पोलीस कम्युनिकेशन आणि आयटी विभागातील वरिष्ठतेनुसार अधिकारी आणि कर्मचारी क्रमवारी",
   "sr_no": "अनुक्रमांक",
   "full_name": "पूर्ण नाव",
@@ -1032,7 +1048,7 @@ export const MR = {
   "q1w2": "मुख्यपृष्ठावर परत",
   "m9z8": "पदोन्नती आदेश",
   "v4b7": "पदोन्नती संदर्भातील अधिकृत सूचना आणि अद्यतने",
-  "h5k3": "{{count}} नोंदी प्रति पृष्ठ",
+  "h5k3": "5 नोंदी प्रति पृष्ठ",
   "r2p6": "शोधा...",
   "t8n1": "शीर्षक",
   "k4f5": "पाहा",
@@ -1049,7 +1065,7 @@ export const MR = {
   "u7n4": "मुख्यपृष्ठावर परत",
   "j2y6": "बदली आदेश",
   "p8a1": "बदली संदर्भातील अधिकृत सूचना आणि अद्यतने",
-  "r6w5": "{{count}} नोंदी प्रति पृष्ठ",
+  "r6w5": "5 नोंदी प्रति पृष्ठ",
   "m1s9": "शोधा...",
   "y4g2": "शीर्षक",
   "k9v3": "पाहा",
@@ -1079,15 +1095,15 @@ export const MR = {
   "nav.policeCorner": "पोलीस कोपरे",
   "nav.pressRelease": "प्रेस प्रकाशन",
   "nav.rti": "माहिती अधिकार (RTI)",
-  "nav.gazette": "राजपत्र",
-  "nav.officersList": "अधिकाऱ्यांची यादी",
+  "nav.gazette": "प्रसिद्धीपत्रक",
+  "nav.officersList": "अधिकारी व अंमलदार यादी",
   "nav.promotionOrders": "बढती आदेश",
-  "nav.transfers": "बदली",
+  "nav.transfers": "बदली आदेश",
   "nav.gradationList": "क्रमवारी यादी",
   "nav.strategySupport": "धोरण समर्थन प्रणाली",
   "nav.positiveStories": "सकारात्मक कथा",
 
-  "nav.police_corner": "पोलीस विभाग",
+  "nav.police_corner": "पोलीस कॉर्नर",
   "nav.tenders": "निविदा यादी",
   "nav.recruitments": "भरती",
 
@@ -1104,7 +1120,7 @@ export const MR = {
   "welcome.title": "पोलीस दळणवळण व माहिती तंत्रज्ञान विभागात आपले स्वागत आहे",
   "welcome.message": "संपूर्ण महाराष्ट्रात सार्वजनिक सुरक्षितता वाढवण्यासाठी आणि पोलीस कामकाज अधिक कार्यक्षम करण्यासाठी अत्याधुनिक तंत्रज्ञानाचा वापर करण्यास आम्ही वचनबद्ध आहोत.",
   "director.desk": "संचालकांच्या डेस्क वरून",
-  "director.caption": "“आधुनिक दळणवळण आणि माहिती तंत्रज्ञानाद्वारे पोलीस पायाभूत सुविधा आधुनिक करण्याची आमची वचनबद्धता महाराष्ट्राच्या सुरक्षा चौकटीला अधिक बळकटी देत आहे...”",
+  "director.caption": "“पोलीस दळणवळण व माहिती तंत्रज्ञान विभाग पूर्वीचे पोलीस बिनतारी संदेश विभाग महाराष्ट्र राज्यातील कायदा व सुव्यवस्थाच्या अंमलबजावणीकरिता कार्यरत असलेले अंतर्गत स्वयंपूर्ण दळणवळण हाताळते...”",
   "read.more": "अधिक वाचा",
 
   //welfarre
@@ -1161,9 +1177,9 @@ export const MR = {
 
   //ABOUTDEPT
   "hx_back": "मुख्यपृष्ठावर परत",
-  "hx_photoAlt": "पोलीस वायरलेसचा इतिहास",
-  "hx_title": "पोलीस वायरलेस संप्रेषण विभागाचा इतिहास",
-  "hx_intro": "१९४६ मध्ये स्थापन झालेला हा विभाग, दुसऱ्या महायुद्धातील वायरलेस संचांपासून आधुनिक उपग्रह व आयपी आधारित नेटवर्कपर्यंत विकसित झाला आहे, ज्यामुळे महाराष्ट्रभर सुरक्षित व तत्काळ संप्रेषण शक्य झाले.",
+  "hx_photoAlt": "पोलीस दळणवळण व माहिती तंत्रज्ञान विभाग",
+  "hx_title": "पोलीस दळणवळण व माहिती तंत्रज्ञान विभाग",
+  "hx_intro": "१९४६ मध्ये स्थापन झालेला हा विभाग, दुसऱ्या महायुद्धातील वायरलेस संचांपासून आधुनिक उपग्रह व आयपी आधारित नेटवर्कपर्यंत विकसित झाला आहे, ज्यामुळे महाराष्ट्र भर सुरक्षित व तत्काळ संप्रेषण शक्य झाले.",
 
   "hx_1946_title": "१९४६ – स्थापना",
   "hx_1946_desc": "पूर्व-स्वातंत्र्य काळात मुंबई येथे विभागाची स्थापना झाली. वायरलेसची सुरुवात दुसऱ्या महायुद्धातील संचांपासून झाली; १३ जिल्हे पुणे मुख्यालयाशी जोडले गेले.",
@@ -1171,7 +1187,7 @@ export const MR = {
   "hx_1947_title": "१९४७ – पहिले नेतृत्व",
   "hx_1947_desc": "स्वातंत्र्यानंतर श्री. एन. एम. कामटे हे पहिले विशेष आयजीपी झाले. वायरलेस विभागाचे स्वतंत्र प्रशासन झाले आणि नेतृत्व श्री. एस. एम. नाबर यांनी केले.",
 
-  "hx_tableTitle": "मंजूर पदे",
+  "hx_tableTitle": "पोलीस दळणवळण व माहिती तंत्रज्ञान विभागातील मनुष्यबळ तक्ता",
   "hx_table_sr": "क्रमांक",
   "hx_table_desig": "पदनाम",
   "hx_table_posts": "मंजूर पदसंख्या",
@@ -1253,7 +1269,7 @@ export const MR = {
   "establishment.item1": "गोपनीय अहवाल (CRs)",
   "establishment.item2": "विभागीय चौकशा (DEs)",
   "establishment.item3": "बढती",
-  "establishment.item4": "बदली",
+  "establishment.item4": "बदली आदेश",
   "establishment.item5": "इयत्ता ३ व ४ कर्मचाऱ्यांची भरती",
 
   "accounts.title": "हिशोब शाखा",
@@ -1312,22 +1328,22 @@ export const MR = {
   //rank
   "ranks_back": "मुख्यपृष्ठावर परत",
   "ranks_title": "पदनाम",
-  "ranks_subtitle": "पोलीस संप्रेषण आणि माहिती तंत्रज्ञान विभागातील पदनाम व अधिकारांची यादी",
+  "ranks_subtitle": "पोलीस पोलीस दळणवळण व माहिती तंत्रज्ञान विभाग विभागातील पदनाम व अधिकारांची यादी",
   "ranks_pdfButton": "संपूर्ण PDF पहा",
 
-  "ranks_1_rank": "अ‍ॅडिशनल डीजीपी व संचालक पोलीस संप्रेषण, माहिती तंत्रज्ञान व वाहतूक, एम.एस. पुणे",
+  "ranks_1_rank": "अ‍ॅडिशनल डीजीपी व संचालक पोलीस दळणवळण, माहिती तंत्रज्ञान व परिवहन, एम.एस. पुणे",
   "ranks_1_description": "संपूर्ण विभागाचे नेतृत्व करतो, धोरणात्मक दिशा निश्चित करतो, सर्व युनिट्समध्ये समन्वय सुनिश्चित करतो आणि संप्रेषण, आयटी व वाहतूक कार्ये राज्यव्यापी पाहतो.",
 
-  "ranks_2_rank": "उप-आयुक्त पोलीस संप्रेषण व माहिती तंत्रज्ञान, एम.एस. पुणे",
+  "ranks_2_rank": "उप-आयुक्त पोलीस दळणवळण, माहिती तंत्रज्ञान, एम.एस. पुणे",
   "ranks_2_description": "संचालकांना राज्यव्यापी कार्ये व्यवस्थापित करण्यात मदत करतो, तांत्रिक टीम्सचे निरीक्षण करतो व धोरण व मानकांचे पालन सुनिश्चित करतो.",
 
-  "ranks_3_rank": "अ‍ॅडिशनल कमिशनर पोलीस संप्रेषण व माहिती तंत्रज्ञान, एम.एस. मुंबई",
+  "ranks_3_rank": "अ‍ॅडिशनल कमिशनर पोलीस  पोलीस दळणवळण, माहिती तंत्रज्ञान, एम.एस. मुंबई",
   "ranks_3_description": "मुंबई कार्ये नेतृत्व करतो, महत्वाच्या आयटी प्रणालीचे व्यवस्थापन करतो, सुरक्षित संप्रेषण सुनिश्चित करतो व स्थानिक पोलिस युनिट्ससह समन्वय साधतो.",
 
-  "ranks_4_rank": "सुप्रिंटेंडंट ऑफ पोलीस संप्रेषण व माहिती तंत्रज्ञान",
+  "ranks_4_rank": "सुप्रिंटेंडंट ऑफ पोलीस  पोलीस दळणवळण, माहिती तंत्रज्ञान",
   "ranks_4_description": "फील्ड युनिट्सवर देखरेख करतो, वायरलेस प्रणालींचे निरीक्षण करतो, विभागीय क्रियाकलाप समन्वयित करतो आणि दैनंदिन कार्य सुरळीत पार पाडतो.",
 
-  "ranks_5_rank": "उप आयुक्त पोलीस संप्रेषण व माहिती तंत्रज्ञान",
+  "ranks_5_rank": "उप आयुक्त पोलीस दळणवळण, माहिती तंत्रज्ञान",
   "ranks_5_description": "तांत्रिक टीम्सवर देखरेख करतो, कार्ये व्यवस्थापित करतो आणि आयटी व संप्रेषण धोरण अंमलात आणण्यास मार्गदर्शन करतो.",
 
   "ranks_6_rank": "उप सुपरिंटेंडंट ऑफ पोलीस / सहाय्यक आयुक्त पोलीस",
@@ -1431,11 +1447,17 @@ export const MR = {
 
   "a2.desk": "संचालकांच्या लेखणीतून",
   "a2.name": "श्री. दीपक शिवानंद पाण्डेय् (भा.पो.से.)",
-  "a2.desg": "पोलीस महासंचालक (अतिरिक्त) व संचालक",
+  "a2.desg": "अपर पोलीस महासंचालक व संचालक,",
   "a2.dept": "पोलीस दळणवळण, माहिती तंत्रज्ञान व परिवहन",
   "a2.loc": "महाराष्ट्र राज्य, पुणे",
 
-  "b1.intro": "पोलीस वायरलेस विभाग (आताचा पोलीस दळणवळण व माहिती तंत्रज्ञान विभाग) हा महाराष्ट्र राज्य पोलीस दलाच्या संचार व्यवस्थेची जबाबदारी सांभाळतो. यात रेडिओ फ्रिक्वेन्सीचे व्यवस्थापन, अधिकारी तैनात करणे व क्षेत्रातील युनिट्समध्ये सुरक्षित आणि कार्यक्षम संचार सुनिश्चित करणे यांचा समावेश होतो.",
+  "b1.intro": `
+  <p>पोलीस दळणवळण व माहिती तंत्रज्ञान विभाग, पूर्वीचे पोलीस बिनतारी संदेश विभाग, महाराष्ट्र राज्यातील कायदा व सुव्यवस्थाच्या अंमलबजावणीकरिता कार्यरत असलेले अंतर्गत स्वयंपूर्ण दळणवळण हाताळते. यामध्ये आधुनिक तंत्रज्ञानाचा वापर करून संदेश वहन करणे, पोलीस नियंत्रण कक्षातून जिल्हा व आयुक्तालयातील पोलीस गस्तीमार्फत नियंत्रण ठेवणे आणि पोलीस कार्यक्षेत्रातील घटकांदरम्यान सुरक्षित आणि कार्यक्षम संदेशाचे वहन करणे यांचा समावेश आहे. सदर यंत्रणा २४ X ७ अखंडित कार्यरत ठेवली जाते.</p>
+<br/>
+<p>पोलीस दळणवळण व माहिती तंत्रज्ञान विभाग राज्यातील पोलीसांना कायदा व सुव्यवस्था राखणेकामी प्रभावी संवाद आणि समन्वय सुनिश्चित करून रीअल-टाइम कम्युनिकेशन ज्यात कार्यक्षेत्रातील पोलीस अधिकाऱ्यांमध्ये तात्काळ संपर्क साधणे आणि मदत आवश्यक असलेल्या घटनांना वेळेवर प्रतिसाद देणे सहज शक्य होते; परिस्थितीविषयक जागरूकता राखणेकरिता पोलीस अधिका-यांना घडामोडीची अद्यायावत माहिती प्रदान करून त्यांची निर्णय घेण्याची क्षमता वाढवण्यास मदत होते; आपत्कालीन परिस्थितीत जलद समन्वय प्रतिसाद सक्षम करून संसाधनांच्या जलद उपयोजना केली जाते; डेटा ट्रान्समिशनमध्ये गोपनीय माहितीची सुरक्षित देवाणघेवाण करून कायदा व सुव्यवस्था राखली जाते परिणामी माहितीच्या आधारे पुढील तपासास मदत होते; सुरक्षितता आणि सुरक्षा दृष्टीकोनातून संवेदनशील माहितीकरिता दळणवळण वाहिनी उपलब्ध करून दिली जाते.</p>
+<br/>
+<p>10 डिसेंबर 1967 रोजी महाराष्ट्रात 6.3 रिश्टर स्केलचा कोयना भूकंप व 30 सेप्टेंबर 1993 रोजी 6.04 रिश्टर स्केलचा किल्लारी भूकंप झाला होता. इमारती आणि पायाभूत सुविधांच्या पडझडीमुळे लक्षणीय आर्थिक नुकसान आणि जीवितहानी झाली होती. तसेच 26 जुलै 2005 रोजी मुंबईत आलेला पूर विनाशकारी होता. मुसळधार पावसामुळे मोठ्या प्रमाणावर पूर आला, वाहतुकीवर परिणाम झाला, हजारो लोक विस्थापित झाले आणि असंख्य मृत्यू झाले. या आपत्तीदरम्यान शहराला आपत्कालीन प्रतिसाद आणि पायाभूत सुविधांना आव्हानांचा सामना करावा लागला. त्याचप्रमाणे मुंबईतील 26/11 चा दहशतवादी हल्ला, दंगली आणि बॉम्बस्फोट असे प्रसंग उद्भवले होते. अशा प्रसंगी प्रसार माध्यमे, मोबाईल नेटवर्क यांसारखे खाजगी नेटवर्क अयशस्वी झाल्याने राज्याने खूप अडचणींचा सामना केला होता, दरम्यान या महत्त्वपूर्ण घटनांमध्ये आपत्ती व्यवस्थापन आणि प्रतिसादामध्ये महाराष्ट्र राज्य पोलीसांचा बिनतारी संदेश विभाग यांनी महत्त्वपूर्ण भूमिका बजावलेली आहे.</p>
+  `,
   "b1.hl": " अखंडित 24×7 संचार ",
   "b1.intro2": "प्रणाली आमच्या विभागामार्फत पुरवली जाते.",
   "b1.role": "पोलीस दळणवळण व माहिती तंत्रज्ञान विभाग पोलीसिंगमध्ये प्रभावी संचार आणि समन्वय साधण्यात महत्त्वाची भूमिका बजावतो. या विभागाची प्रमुख कार्ये खालीलप्रमाणे आहेत:",
@@ -1456,46 +1478,46 @@ export const MR = {
 
   // Director Info
   "director.name": "श्री. दीपक शिवानंद पाण्डेय् (भा.पो.से)",
-  "director.rank": "अतिरिक्त पोलीस महासंचालक व संचालक,",
-  "director.designation": "अपर पोलीस महासंचालक व संचालक, पोलीस दळणवळण, <br/> माहिती तंत्रज्ञान व परिवहन, महाराष्ट्र राज्य, पुणे.",
+  "director.rank": "अपर पोलीस महासंचालक व संचालक",
+  "director.designation": "पोलीस दळणवळण, माहिती तंत्रज्ञान व परिवहन, महाराष्ट्र राज्य, पुणे.",
 
   //FORMAERDIRECOTR
   "fd.back": "मागे",
   "fd.title": "विभागाचे माजी संचालक",
 
-  "fd.d1.name": "श्री. सुनील रमनंद आयपीएस",
+  "fd.d1.name": "श्री. सुनील रमनंद (आयपीएस)",
   "fd.d1.designation": "अतिरिक्त महानिरीक्षक",
   "fd.d1.tenure": "२०२१-२०२४",
 
-  "fd.d2.name": "श्री. रितेश कुमार आयपीएस",
+  "fd.d2.name": "श्री. रितेश कुमार (आयपीएस)",
   "fd.d2.designation": "अतिरिक्त महानिरीक्षक",
   "fd.d2.tenure": "२०१६-२०२१",
 
-  "fd.d3.name": "श्री. जगन्नाथ आयपीएस",
+  "fd.d3.name": "श्री. जगन्नाथ (आयपीएस)",
   "fd.d3.designation": "अतिरिक्त महानिरीक्षक",
   "fd.d3.tenure": "२०१४-२०१६",
 
-  "fd.d4.name": "श्री. सुरेश कक्कड आयपीएस",
+  "fd.d4.name": "श्री. सुरेश कक्कड (आयपीएस)",
   "fd.d4.designation": "अतिरिक्त महानिरीक्षक",
   "fd.d4.tenure": "२०१२-२०१४",
 
-  "fd.d5.name": "श्री. पी. पी. पी. शर्मा आयपीएस",
+  "fd.d5.name": "श्री. पी. पी. पी. शर्मा (आयपीएस)",
   "fd.d5.designation": "अतिरिक्त महानिरीक्षक",
   "fd.d5.tenure": "२००८-२०११",
 
-  "fd.d6.name": "श्री. बी. टी. नघिंगलोवा आयपीएस",
+  "fd.d6.name": "श्री. बी. टी. नघिंगलोवा (आयपीएस)",
   "fd.d6.designation": "अतिरिक्त महानिरीक्षक",
   "fd.d6.tenure": "२००७-२००८",
 
-  "fd.d7.name": "श्री. पी. टी. लोहार आयपीएस",
+  "fd.d7.name": "श्री. पी. टी. लोहार (आयपीएस)",
   "fd.d7.designation": "अतिरिक्त महानिरीक्षक",
   "fd.d7.tenure": "२००४-२००७",
 
-  "fd.d8.name": "श्री. पी. के. जोशी आयपीएस",
+  "fd.d8.name": "श्री. पी. के. जोशी (आयपीएस)",
   "fd.d8.designation": "विशेष पोलीस महानिरीक्षक २०००-२००३ | अतिरिक्त महानिरीक्षक २००३-२००४",
   "fd.d8.tenure": "२०००-२००४",
 
-  "fd.d9.name": "श्री. ए. डी. जोग एसपीएस",
+  "fd.d9.name": "श्री. ए. डी. जोग (एसपीएस)",
   "fd.d9.designation": "उपमहानिरीक्षक १९७९-१९८७ | विशेष पोलीस महानिरीक्षक १९८९-१९९९",
   "fd.d9.tenure": "१९७९-१९९९",
 
@@ -1503,11 +1525,11 @@ export const MR = {
   "fd.d10.designation": "पोलीस अधीक्षक १९४८-१९६८ | उपमहानिरीक्षक १९६८-१९७८",
   "fd.d10.tenure": "१९४८-१९७८",
 
-  "fd.d11.name": "श्री. एल. ए. पॅडन रो आयपी",
+  "fd.d11.name": "श्री. एल. ए. पॅडन रो (आयपी)",
   "fd.d11.designation": "एसपी एम. टी. आणि डब्ल्यू/एल",
   "fd.d11.tenure": "१९४७-१९४८",
 
-  "fd.d12.name": "श्री. ई. ए. डॉडवेल आयपी",
+  "fd.d12.name": "श्री. ई. ए. डॉडवेल (आयपी)",
   "fd.d12.designation": "एसपी एम. टी. आणि डब्ल्यू/एल",
   "fd.d12.tenure": "१९४६-१९४७",
 
@@ -1562,7 +1584,7 @@ export const MR = {
   "a1": "Back to Home",
   "a2": "Promotion Orders",
   "a3": "Official notifications and updates regarding promotions",
-  "a4": "{{count}} entries per page",
+  "a4": "5 entries per page",
   "a5": "Search...",
   "a6": "Title",
   "a7": "View",
@@ -1656,7 +1678,7 @@ export const MR = {
   email1: "ईमेल",
   copyright:
     "© 2025 पोलीस दळणवळण व माहिती तंत्रज्ञान विभाग, महाराष्ट्र राज्य. सर्व हक्क राखीव.",
-  "developed.by": "मालकी हक्क पोलीस दळणवळण व माहिती तंत्रज्ञान विभाग, महाराष्ट्र राज्य. सर्व हक्क राखीव.",
+  "developed.by": "मालकी हक्क पोलीस दळणवळण व माहिती तंत्रज्ञान विभाग, महाराष्ट्र राज्य.",
   "dept.address": "पोलीस दळणवळण व आय.टी. विभाग,<br />महाराष्ट्र राज्य पोलीस मुख्यालय,<br />मुंबई - ४००००१",
 
 
@@ -1673,7 +1695,7 @@ export const MR = {
 
   // Press Release Page
   "back.home": "मुख्यपृष्ठावर परत",
-  "press.title": "प्रेस विज्ञप्ती",
+  "press.title": "प्रेस प्रकाशन",
   "press.subtitle": "महाराष्ट्र पोलीस वायरलेस विभागातील सकारात्मक घडामोडी आणि चालू प्रकल्प",
   "press.tech.title": "तांत्रिक उन्नयन",
   "press.tech.description": "पोलीस दळणवळण व माहिती तंत्रज्ञान विभागामध्ये स्वातंत्र्य दिन उत्साहात साजरा करण्यात आला. विभागातील अधिकारी व कर्मचारी यांनी देशभक्तिपूर्ण वातावरणात ध्वजारोहण, राष्ट्रगीत आणि विविध सांस्कृतिक कार्यक्रमांमध्ये सहभाग घेतला. या उत्सवातून देशभक्ती, एकात्मता आणि तांत्रिक प्रगतीबद्दल जागरूकता निर्माण करण्यात आली.",
@@ -1688,7 +1710,7 @@ export const MR = {
   "rti.title": "माहितीचा अधिकार (आरटीआय)",
   "rti.subtitle": "माहितीचा अधिकार कायद्याखाली नागरिकांसाठी माहिती आणि प्रक्रिया",
   "rti.pio.title": "लोक माहिती अधिकारी (PIO) तपशील",
-  "rti.pio.description": "पोलीस संप्रेषण आणि आयटी विभागातील नियुक्त PIO आणि अपीलीय प्राधिकरणांची संपर्क माहिती येथे प्रदान केली आहे. नागरिक आरटीआय अर्ज सादर करण्यासाठी किंवा स्पष्टीकरण घेण्यासाठी थेट संपर्क करू शकतात.",
+  "rti.pio.description": "पोलीस दळणवळण व माहिती तंत्रज्ञान विभागातील नियुक्त PIO आणि अपीलीय प्राधिकरणांची संपर्क माहिती येथे प्रदान केली आहे. नागरिक आरटीआय अर्ज सादर करण्यासाठी किंवा स्पष्टीकरण घेण्यासाठी थेट संपर्क करू शकतात.",
   "rti.procedure.title": "आरटीआय अर्ज प्रक्रिया",
   "rti.procedure.description": "आरटीआय अर्ज भरण्यासाठी चरण-दर-चरण मार्गदर्शक, योग्य स्वरूप, आवश्यक तपशील आणि लागू फी समाविष्ट आहे. वेगवान प्रक्रियेसाठी सर्व फील्ड योग्यरित्या भरल्याचे सुनिश्चित करा.",
   "rti.portal.title": "ऑनलाइन आरटीआय पोर्टल लिंक",
@@ -1758,7 +1780,7 @@ export const MR = {
   "contact.title": "आमच्याशी संपर्क साधा",
   "contact.subtitle": "फोन, ईमेल द्वारे किंवा आमच्या कार्यालयाला भेट देऊन आमच्याशी संपर्क साधा",
   "contact.address.title": "कार्यालयाचा पत्ता",
-  "contact.address.line1": "पोलीस संप्रेषण आणि माहिती तंत्रज्ञान विभाग",
+  "contact.address.line1": "पोलीस पोलीस दळणवळण व माहिती तंत्रज्ञान विभाग विभाग",
   "contact.address.line2": "महाराष्ट्र राज्य पुणे",
   "contact.address.line3": "डॉ. होमी भाभा रोड, चव्हाणनगर",
   "contact.address.line4": "पुणे – ४११००८, महाराष्ट्र, भारत",
@@ -1769,12 +1791,12 @@ export const MR = {
   "contact.map.title": "नकाशावर आम्हाला शोधा",
 
   // Government Publications Page
-  "pubs.title": "सरकारी प्रकाशने आणि अधिसूचना",
-  "pubs.subtitle": "महाराष्ट्र पोलीस संप्रेषण आणि आयटी विभागाद्वारे जारी केलेल्या अधिकृत घोषणा, ठराव, परिपत्रक आणि टेंडरमध्ये प्रवेश",
+  "pubs.title": "प्रसिद्धीपत्रक",
+  "pubs.subtitle": "महाराष्ट्र पोलीस पोलीस दळणवळण व माहिती तंत्रज्ञान विभागाद्वारे जारी केलेल्या अधिकृत घोषणा, ठराव, परिपत्रक आणि टेंडरमध्ये प्रवेश",
   "pubs.gazette.title": "राजपत्र अधिसूचना",
   "pubs.gazette.description": "महाराष्ट्र सरकारी राजपत्रात प्रकाशित झालेल्या अधिकृत घोषणा, नियुक्त्या आणि धोरणातील बदल. नागरिक आणि कर्मचारी सरकारी आणि विभागीय घडामोडींबद्दल माहिती ठेवण्यासाठी अधिसूचनांमध्ये प्रवेश घेऊ शकतात.",
   "pubs.orders.title": "सरकारी आदेश (GRs)",
-  "pubs.orders.description": "पोलीस संप्रेषण आणि आयटी विभागाशी संबंधित सरकारी ठरावांची प्रती. हे आदेश पारदर्शकता सुनिश्चित करतात आणि कार्यसंचालन, कर्मचारी व्यवस्थापन आणि धोरण अंमलबजावणीसाठी अधिकृत निर्देश प्रदान करतात.",
+  "pubs.orders.description": "पोलीस पोलीस दळणवळण व माहिती तंत्रज्ञान विभागाशी संबंधित सरकारी ठरावांची प्रती. हे आदेश पारदर्शकता सुनिश्चित करतात आणि कार्यसंचालन, कर्मचारी व्यवस्थापन आणि धोरण अंमलबजावणीसाठी अधिकृत निर्देश प्रदान करतात.",
   "pubs.circulars.title": "परिपत्रक",
   "pubs.circulars.description": "पोलीस महासंचालक (DGP) किंवा गृह विभागाद्वारे जारी केलेली अधिकृत परिपत्रके, जी विभागीय कार्यसंचालन आणि कर्मचाऱ्यांसाठी मार्गदर्शक तत्त्वे, सूचना आणि अद्यतने प्रदान करतात.",
   "pubs.notifications.title": "अधिसूचना",
@@ -1785,9 +1807,9 @@ export const MR = {
   // Privacy Policy Page
   "privacy.title": "गोपनीयता धोरण",
   "privacy.subtitle": "तुमची वैयक्तिक माहिती संरक्षण आणि डेटा सुरक्षा सुनिश्चित करणे",
-  "privacy.departmentInfo": "पोलीस दळणवळण व माहिती तंत्रज्ञान विभाग, पुणे | अतिरिक्त पोलीस महासंचालक आणि संचालक, पोलीस संप्रेषण, माहिती तंत्रज्ञान आणि परिवहन विभाग, महाराष्ट्र राज्य, पुणे",
+  "privacy.departmentInfo": "पोलीस दळणवळण व माहिती तंत्रज्ञान विभाग, पुणे | अतिरिक्त पोलीस महासंचालक आणि संचालक, पोलीस पोलीस दळणवळण, माहिती तंत्रज्ञान आणि परिवहन विभाग, महाराष्ट्र राज्य, पुणे",
   "privacy.introduction.title": "परिचय",
-  "privacy.introduction.description": "पोलीस संप्रेषण आणि माहिती तंत्रज्ञान विभाग सर्व वापरकर्त्यांच्या वैयक्तिक माहितीची गोपनीयता आणि सुरक्षा संरक्षणासाठी वचनबद्ध आहे. हे गोपनीयता धोरण आमच्या सेवा आणि डिजिटल प्लॅटफॉर्मशी संवाद साधताना आम्ही तुमचा डेटा कसा संकलित, वापर आणि संरक्षित करतो याची रूपरेषा दर्शवते.",
+  "privacy.introduction.description": "पोलीस पोलीस दळणवळण व माहिती तंत्रज्ञान विभाग विभाग सर्व वापरकर्त्यांच्या वैयक्तिक माहितीची गोपनीयता आणि सुरक्षा संरक्षणासाठी वचनबद्ध आहे. हे गोपनीयता धोरण आमच्या सेवा आणि डिजिटल प्लॅटफॉर्मशी संवाद साधताना आम्ही तुमचा डेटा कसा संकलित, वापर आणि संरक्षित करतो याची रूपरेषा दर्शवते.",
   "privacy.dataCollection.title": "आम्ही कोणती माहिती संकलित करतो",
   "privacy.dataCollection.description": "आम्ही आवश्यक वैयक्तिक माहिती संकलित करतो ज्यामध्ये नाव, संपर्क तपशील, ओळख दस्तऐवज आणि सेवा-संबंधित डेटा समाविष्ट आहे. ही माहिती अधिकृत फॉर्म, डिजिटल प्लॅटफॉर्म आणि सेवा वितरणादरम्यान कार्यक्षम संप्रेषण आणि सेवा पुरवठा सुनिश्चित करण्यासाठी संकलित केली जाते.",
   "privacy.dataUsage.title": "आम्ही तुमची माहिती कशी वापरतो",
@@ -1808,8 +1830,8 @@ export const MR = {
 
   // Terms of Use Page
   "terms.title": "वापराच्या अटी",
-  "terms.subtitle": "महाराष्ट्र पोलीस संप्रेषण आणि आयटी विभाग वेबसाइट वापरण्यासाठी अधिकृत अटी आणि नियम",
-  "terms.deptInfo": "पोलीस संप्रेषण आणि माहिती तंत्रज्ञान विभाग, पुणे. अतिरिक्त पोलीस महासंचालक आणि संचालक, पोलीस संप्रेषण, माहिती तंत्रज्ञान आणि परिवहन विभाग, महाराष्ट्र राज्य, पुणे.",
+  "terms.subtitle": "महाराष्ट्र पोलीस पोलीस दळणवळण व माहिती तंत्रज्ञान विभाग, पुणे वेबसाइट वापरण्यासाठी अधिकृत अटी आणि नियम",
+  "terms.deptInfo": "महाराष्ट्र पोलीस पोलीस दळणवळण व माहिती तंत्रज्ञान विभाग, पुणे. अतिरिक्त पोलीस महासंचालक आणि संचालक, पोलीस संप्रेषण, माहिती तंत्रज्ञान आणि परिवहन विभाग, महाराष्ट्र राज्य, पुणे.",
   "terms.acceptance.title": "अटींची स्वीकृती",
   "terms.acceptance.description": "हे वेबसाइट access करून आणि वापरून, तुम्ही या वापराच्या अटी स्वीकारता आणि त्यांना बांधील राहण्यास सहमती दर्शवता. जर तुम्ही या अटींशी सहमत नसाल, तर कृपया आमचे वेबसाइट वापरणे टाळा. ह्या अटी सर्व भेट देणाऱ्यांना, वापरकर्त्यांना आणि इतरांना लागू होतात जे सेवा access करतात किंवा वापरतात.",
   "terms.usage.title": "परवानगीयुक्त वापर",
@@ -1832,8 +1854,8 @@ export const MR = {
   // Accessibility Page
   "accessibility.title": "प्रवेशयोग्यता विधान",
   "accessibility.subtitle": "सर्व नागरिकांसाठी डिजिटल सेवांची समान प्रवेशयोग्यता सुनिश्चित करणे",
-  "accessibility.deptInfo.title": "पोलीस संप्रेषण आणि माहिती तंत्रज्ञान विभाग",
-  "accessibility.deptInfo.description": "अतिरिक्त पोलीस महासंचालक आणि संचालक, पोलीस संप्रेषण, माहिती तंत्रज्ञान आणि परिवहन विभाग, महाराष्ट्र राज्य, पुणे अपंग व्यक्तींसाठी डिजिटल प्रवेशयोग्यता सुनिश्चित करण्यासाठी वचनबद्ध आहे. आम्ही सर्वांसाठी वापरकर्ता अनुभव सतत सुधारत आहोत आणि संबंधित प्रवेशयोग्यता मानकांना लागू करत आहोत.",
+  "accessibility.deptInfo.title": "पोलीस दळणवळण व माहिती तंत्रज्ञान विभाग, पुणे",
+  "accessibility.deptInfo.description": "अतिरिक्त पोलीस महासंचालक आणि संचालक, पोलीस दळणवळण व माहिती तंत्रज्ञान विभाग, महाराष्ट्र राज्य, पुणे अपंग व्यक्तींसाठी डिजिटल प्रवेशयोग्यता सुनिश्चित करण्यासाठी वचनबद्ध आहे. आम्ही सर्वांसाठी वापरकर्ता अनुभव सतत सुधारत आहोत आणि संबंधित प्रवेशयोग्यता मानकांना लागू करत आहोत.",
   "accessibility.visual.title": "दृश्य प्रवेशयोग्यता",
   "accessibility.visual.description": "आमची वेबसाइट स्क्रीन रीडरला समर्थन देते, उच्च कॉन्ट्रास्ट मोड, आकार बदलता येणारा मजकूर आणि प्रतिमांसाठी पर्यायी मजकूर प्रदान करते. वापरकर्ते त्यांच्या आवडीनुसार फॉंट आकार आणि कॉन्ट्रास्ट सेटिंग्ज समायोजित करू शकतात.",
   "accessibility.auditory.title": "श्रवण प्रवेशयोग्यता",
@@ -1851,4 +1873,17 @@ export const MR = {
   "accessibility.contact.email": "ईमेल",
   "accessibility.contact.phone": "फोन",
 
+ // Positive Stories Page
+  "back": "मागे जा",
+  "positive.stories.title": "सकारात्मक कथा",
+  "positive.stories.subtitle": "विभाग आणि त्याच्या कर्मचाऱ्यांची उल्लेखनीय कामगिरी आणि प्रशंसनीय कार्य",
+  "stories.award.title": "पुरस्कार विजेता प्रशिक्षण केंद्र",
+  "stories.award.description": "महाराष्ट्र राज्य पोलीस संप्रेषण आणि माहिती तंत्रज्ञान प्रशिक्षण केंद्र, पुणे, यांना उत्कृष्टतेसाठी ओळखले गेले आहे. त्याने २०१८-२०१९ मध्ये केंद्रीय गृहमंत्री पुरस्कार (झोनल स्तरावर प्रथम पारितोषिक) आणि २०२०-२१ मध्ये राष्ट्रीय स्तरावर केंद्रीय गृहमंत्री पुरस्कार (सर्वोत्कृष्ट पोलीस प्रशिक्षण संस्था) जिंकले, यासोबत ₹२०,००,००० रोख बक्षीस मिळाले.",
+  "stories.event.title": "कार्यक्रम सहभाग",
+  "stories.event.description": "विभाग राष्ट्रीय स्तरावरील महत्त्वाच्या कार्यक्रमांमध्ये सक्रियपणे सहभागी होतो आणि आयोजित करतो, ज्यामुळे जनसहभाग आणि जागरूकता वाढते.\n- स्वातंत्र्यदिन साजरा करणे\n- राष्ट्रीय योग दिन\n- गृहमंत्र्यांद्वारे डॉ. एपीजे अब्दुल कलाम इनोवेशन सेंटरचे उद्घाटन\n- अशोक जोग व्याख्यान हॉलचे उद्घाटन\n- गणतंत्र दिन साजरा करणे",
+  "stories.innovation.title": "नाविन्य आणि विकास",
+  "stories.innovation.description": "डॉ. एपीजे अब्दुल कलाम इनोवेशन सेंटर आणि संशोधन आणि विकास (आरआण्डी) विभागाने पोलिसिंग कार्यक्षमता वाढवण्यासाठी अत्याधुनिक संप्रेषण प्रणाली आणि तंत्रज्ञानाचा पायंडा घातला आहे, ज्यामुळे विभाग आधुनिक कायदा अंमलबजावणीच्या अग्रभागी राहतो.",
+  "stories.welfare.title": "कल्याणकारी उपक्रम",
+  "stories.welfare.description": "विभाग त्याच्या कर्मचाऱ्यांचे आणि समुदायाचे कल्याणावर भर देतो.\n- रक्तदान शिबिरे\n- कर्मचाऱ्यांसाठी आणि त्यांच्या कुटुंबियांसाठी वैद्यकीय शिबिरे\n- समुदाय आणि आरोग्य जागरूकता व्याख्याने",
+  "positive.stories.highlight": "हे सकारात्मक उपक्रम विभागाची नाविन्यपूर्ण कल्पना, समुदायातील सहभाग आणि पोलिसिंगमधील उत्कृष्टतेची वचनबद्धता दर्शवतात.",
 };

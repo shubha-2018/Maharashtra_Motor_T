@@ -73,31 +73,14 @@ export default function DirectorsDesk() {
         <Card className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 
                          shadow-xl rounded-3xl hover:shadow-purple-200 transition-all duration-500">
           <CardContent className="p-10 prose max-w-none space-y-8">
-            <p className="text-lg leading-relaxed text-gray-700 dark:text-gray-300">
-              {t("b1.intro")}{" "}
-              <span className="text-purple-600 font-semibold">{t("b1.hl")}</span>{" "}
-              {t("b1.intro2")}
+            <p className="text-lg leading-relaxed text-gray-700 dark:text-gray-300"
+               dangerouslySetInnerHTML={{ __html: t("b1.intro") }}
+            >
+          
             </p>
 
-            <p className="text-lg text-gray-700 dark:text-gray-300">
-              {t("b1.role")}
-            </p>
+        
 
-            {/* Key Functions */}
-            <ul className="space-y-4">
-              {["f1", "f2", "f3", "f4", "f5"].map((k) => (
-                <li key={k} className="flex items-start gap-3">
-                  <span className="mt-2 w-3 h-3 rounded-full 
-                                   bg-gradient-to-r from-purple-400 to-blue-400 
-                                   shadow-md flex-shrink-0"></span>
-                  <p className="text-gray-800 dark:text-gray-200 text-lg">
-                    <strong>{t(`c1.${k}.t`)}</strong> – {t(`c1.${k}.d`)}
-                  </p>
-                </li>
-              ))}
-            </ul>
-
-            <p className="text-lg text-gray-700 dark:text-gray-300">{t("b1.crisis")}</p>
 
             <div className="bg-gradient-to-r from-purple-100 via-blue-100 to-teal-100 
                             dark:from-purple-900/40 dark:via-blue-900/40 dark:to-teal-900/40 

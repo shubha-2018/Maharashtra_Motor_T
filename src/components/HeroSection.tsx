@@ -18,6 +18,7 @@ import IMG1 from "@/assets/hero/4.jpeg";
 import IMG2 from "@/assets/hero/2.jpg";
 import IMG3 from "@/assets/hero/5.jpg";
 import IMG4 from "@/assets/hero/Aaryabhatt-Garden-4.jpg";
+import IMG6 from "@/assets/hero/Slider.jpeg";
 import DIRECTOR_PHOTO from "@/assets/director.jpg";
 import { Link } from "react-router-dom";
 
@@ -30,12 +31,12 @@ const HeroSection: React.FC = () => {
   // Hero slider images
   const heroSlides = [
     {
-      image: IMG1,
+      image: IMG6,
       title: t("title"),
       subtitle: t("hero.modernTech.subtitle"),
     },
     {
-      image: IMG2,
+      image: IMG1,
       title: t("hero.digitalGovernance.title"),
       subtitle: t("hero.digitalGovernance.subtitle"),
     },
@@ -45,7 +46,7 @@ const HeroSection: React.FC = () => {
       subtitle: t("hero.communityPolicing.subtitle"),
     },
    {
-      image: IMG4,
+      image: IMG2,
       title: t("hero.modernTech.title"),
       subtitle: t("hero.modernTech.subtitle"),
     },
@@ -133,7 +134,7 @@ const HeroSection: React.FC = () => {
               {/* Slide Content */}
               <div className="absolute inset-0 flex items-end mb-[5rem] md:mb-28 justify-center text-center">
                 <div className="container mx-auto px-4 flex-col gap-y-5 justify-center">
-                  <h2 className="text-2xl md:text-5xl xl:text-6xl capitalize font-bold text-white mb-4 fade-in"
+                  <h2 className="text-2xl md:text-5xl xl:text-5xl capitalize font-bold text-white mb-4 fade-in"
                   
                           dangerouslySetInnerHTML={{ __html: t(slide.title) }}>
                     {/* {slide.title} */}

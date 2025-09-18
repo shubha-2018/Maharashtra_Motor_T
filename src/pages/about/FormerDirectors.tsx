@@ -24,78 +24,18 @@ export default function FormerDirectors() {
   const { t } = useLanguage();
 
   const directors = [
-    {
-      name: t("fd.d1.name"),
-      designation: t("fd.d1.designation"),
-      tenure: t("fd.d1.tenure"),
-      img: imgRamanand,
-    },
-    {
-      name: t("fd.d2.name"),
-      designation: t("fd.d2.designation"),
-      tenure: t("fd.d2.tenure"),
-      img: imgRetesh,
-    },
-    {
-      name: t("fd.d3.name"),
-      designation: t("fd.d3.designation"),
-      tenure: t("fd.d3.tenure"),
-      img: imgJagannath,
-    },
-    {
-      name: t("fd.d4.name"),
-      designation: t("fd.d4.designation"),
-      tenure: t("fd.d4.tenure"),
-      img: imgKakkar,
-    },
-    {
-      name: t("fd.d5.name"),
-      designation: t("fd.d5.designation"),
-      tenure: t("fd.d5.tenure"),
-      img: imgSharma,
-    },
-    {
-      name: t("fd.d6.name"),
-      designation: t("fd.d6.designation"),
-      tenure: t("fd.d6.tenure"),
-      img: imgNghinglova,
-    },
-    {
-      name: t("fd.d7.name"),
-      designation: t("fd.d7.designation"),
-      tenure: t("fd.d7.tenure"),
-      img: imgLohar,
-    },
-    {
-      name: t("fd.d8.name"),
-      designation: t("fd.d8.designation"),
-      tenure: t("fd.d8.tenure"),
-      img: imgJoshi,
-    },
-    {
-      name: t("fd.d9.name"),
-      designation: t("fd.d9.designation"),
-      tenure: t("fd.d9.tenure"),
-      img: imgJog,
-    },
-    {
-      name: t("fd.d10.name"),
-      designation: t("fd.d10.designation"),
-      tenure: t("fd.d10.tenure"),
-      img: imgNabar,
-    },
-    {
-      name: t("fd.d11.name"),
-      designation: t("fd.d11.designation"),
-      tenure: t("fd.d11.tenure"),
-      img: imgPaddon,
-    },
-    {
-      name: t("fd.d12.name"),
-      designation: t("fd.d12.designation"),
-      tenure: t("fd.d12.tenure"),
-      img: imgDodwell,
-    },
+    { name: t("fd.d1.name"), designation: t("fd.d1.designation"), tenure: t("fd.d1.tenure"), img: imgRamanand },
+    { name: t("fd.d2.name"), designation: t("fd.d2.designation"), tenure: t("fd.d2.tenure"), img: imgRetesh },
+    { name: t("fd.d3.name"), designation: t("fd.d3.designation"), tenure: t("fd.d3.tenure"), img: imgJagannath },
+    { name: t("fd.d4.name"), designation: t("fd.d4.designation"), tenure: t("fd.d4.tenure"), img: imgKakkar },
+    { name: t("fd.d5.name"), designation: t("fd.d5.designation"), tenure: t("fd.d5.tenure"), img: imgSharma },
+    { name: t("fd.d6.name"), designation: t("fd.d6.designation"), tenure: t("fd.d6.tenure"), img: imgNghinglova },
+    { name: t("fd.d7.name"), designation: t("fd.d7.designation"), tenure: t("fd.d7.tenure"), img: imgLohar },
+    { name: t("fd.d8.name"), designation: t("fd.d8.designation"), tenure: t("fd.d8.tenure"), img: imgJoshi },
+    { name: t("fd.d9.name"), designation: t("fd.d9.designation"), tenure: t("fd.d9.tenure"), img: imgJog },
+    { name: t("fd.d10.name"), designation: t("fd.d10.designation"), tenure: t("fd.d10.tenure"), img: imgNabar },
+    { name: t("fd.d11.name"), designation: t("fd.d11.designation"), tenure: t("fd.d11.tenure"), img: imgPaddon },
+    { name: t("fd.d12.name"), designation: t("fd.d12.designation"), tenure: t("fd.d12.tenure"), img: imgDodwell },
   ];
 
   return (
@@ -120,13 +60,16 @@ export default function FormerDirectors() {
         {directors.map((director, index) => (
           <Card
             key={index}
-            className="shadow-lg hover:shadow-2xl transition duration-300 rounded-2xl overflow-hidden bg-white dark:bg-gray-800"
+            className="shadow-lg hover:shadow-2xl transition duration-300 rounded-2xl bg-white dark:bg-gray-800 flex flex-col items-center p-6"
           >
+            {/* Director Image */}
             <img
               src={director.img}
               alt={director.name}
-              className="w-full h-64 object-cover"
+              className="w-40 h-40 object-cover rounded-full border-4 border-gray-200 dark:border-gray-700"
             />
+
+            {/* Director Info */}
             <CardContent className="p-4 text-center">
               <h2 className="text-lg font-semibold text-gray-800 dark:text-gray-100">
                 {director.name}

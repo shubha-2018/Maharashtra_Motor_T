@@ -180,42 +180,42 @@ export const EN = {
   "tender.status.closingSoon": "Closing Soon",
 
   //FORMERDIRECOTR
-  "fd.back": "Back",
+ "fd.back": "Back",
   "fd.title": "Former Directors of Department",
 
-  "fd.d1.name": "Shri. Sunil Ramanand IPS",
+  "fd.d1.name": "Shri. Sunil Ramanand (IPS)",
   "fd.d1.designation": "Addl. D.G.P.",
   "fd.d1.tenure": "2021-2024",
 
-  "fd.d2.name": "Shri. Retesh Kumaarr IPS",
+  "fd.d2.name": "Shri. Retesh Kumaarr (IPS)",
   "fd.d2.designation": "Addl. D.G.P.",
   "fd.d2.tenure": "2016-2021",
 
-  "fd.d3.name": "Shri. Jagannath IPS",
+  "fd.d3.name": "Shri. Jagannath (IPS)",
   "fd.d3.designation": "Addl. D.G.P.",
   "fd.d3.tenure": "2014-2016",
 
-  "fd.d4.name": "Shri. Suresh Kakkar IPS",
+  "fd.d4.name": "Shri. Suresh Kakkar (IPS)",
   "fd.d4.designation": "Addl. D.G.P.",
   "fd.d4.tenure": "2012-2014",
 
-  "fd.d5.name": "Shri. P.P.P. Sharma IPS",
+  "fd.d5.name": "Shri. P.P.P. Sharma (IPS)",
   "fd.d5.designation": "Addl. D.G.P.",
   "fd.d5.tenure": "2008-2011",
 
-  "fd.d6.name": "Shri. B.T. Nghinglova IPS",
+  "fd.d6.name": "Shri. B.T. Nghinglova (IPS)",
   "fd.d6.designation": "Addl. D.G.P.",
   "fd.d6.tenure": "2007-2008",
 
-  "fd.d7.name": "Shri. P.T. Lohar IPS",
+  "fd.d7.name": "Shri. P.T. Lohar (IPS)",
   "fd.d7.designation": "Addl. D.G.P.",
   "fd.d7.tenure": "2004-2007",
 
-  "fd.d8.name": "Shri. P. K. Joshi IPS",
+  "fd.d8.name": "Shri. P. K. Joshi (IPS)",
   "fd.d8.designation": "SPL I.G.P. 2000-2003 | Addl. D.G.P. 2003-2004",
   "fd.d8.tenure": "2000-2004",
 
-  "fd.d9.name": "Shri. A. D. Jog SPS",
+  "fd.d9.name": "Shri. A. D. Jog (SPS)",
   "fd.d9.designation": "D.I.G. 1979-1987 | SPL I.G. 1989-1999",
   "fd.d9.tenure": "1979-1999",
 
@@ -223,11 +223,11 @@ export const EN = {
   "fd.d10.designation": "SP 1948-1968 | D.I.G.P. 1968-1978",
   "fd.d10.tenure": "1948-1978",
 
-  "fd.d11.name": "Shri. L. A. Paddon Row IP",
+  "fd.d11.name": "Shri. L. A. Paddon Row (IP)",
   "fd.d11.designation": "SP M. T. & W/L",
   "fd.d11.tenure": "1947-1948",
 
-  "fd.d12.name": "Shri. E. A. Dodwell IP",
+  "fd.d12.name": "Shri. E. A. Dodwell (IP)",
   "fd.d12.designation": "SP M. T. & W/L",
   "fd.d12.tenure": "1946-1947",
 

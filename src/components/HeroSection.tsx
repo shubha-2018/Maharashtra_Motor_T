@@ -132,7 +132,7 @@ const HeroSection: React.FC = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-primary/80 via-primary/60 to-saffron/40" />
 
               {/* Slide Content */}
-              <div className="absolute inset-0 flex items-end mb-[5rem] md:mb-28 justify-center text-center">
+              <div className="absolute inset-0 flex items-end mb-[2rem] md:mb-28 justify-center text-center">
                 <div className="container mx-auto px-4 flex-col gap-y-5 justify-center">
                   <h2 className="text-2xl md:text-5xl xl:text-5xl capitalize font-bold text-white mb-4 fade-in"
                   

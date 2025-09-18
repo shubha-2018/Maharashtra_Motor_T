@@ -136,8 +136,17 @@ export default {
           "0%": { transform: "translateX(100%)" },
           "100%": { transform: "translateX(-100%)" },
         },
+
       },
-    },
+      screens: {
+        sm: "640px",
+        md: "768px",
+        lg: "1024px",
+        xl: "1280px",
+        "2xl": "1400px",
+        "md-xl": "1587px",  
+      },
   },
-  plugins: [require("tailwindcss-animate")],
+},
+plugins: [require("tailwindcss-animate")],
 } satisfies Config;

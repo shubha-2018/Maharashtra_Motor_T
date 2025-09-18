@@ -115,7 +115,7 @@ const HeroSection: React.FC = () => {
   return (
     <section className="relative min-h-[80vh] bg-gradient-to-br from-background to-secondary/30">
       {/* Hero Slider */}
-      <div className="relative h-[30vh] md:h-[80vh] overflow-hidden">
+      <div className="relative h-[30vh] md:h-[85vh] overflow-hidden">
         {heroSlides.map((slide, index) => (
           <div
             key={index}
@@ -138,7 +138,7 @@ const HeroSection: React.FC = () => {
                           dangerouslySetInnerHTML={{ __html: t(slide.title) }}>
                     {/* {slide.title} */}
                   </h2>
-                  <p className=" hidden text-lg sm:text-xl md:text-2xl  text-white/90 slide-up">
+                  <p className=" hidden sm:block text-lg sm:text-xl md:text-2xl  text-white/90 slide-up">
                     {slide.subtitle}
                   </p>
                 </div>
@@ -272,8 +272,9 @@ const HeroSection: React.FC = () => {
                 <p className="text-primary font-semibold mb-1">
                   {t("director.rank")}
                 </p>
-                <p className="text-muted-foreground text-sm mb-4">
-                  {t("director.designation")}
+                <p className="text-muted-foreground text-sm mb-4"
+                   dangerouslySetInnerHTML={{ __html: t("director.designation") }}
+                >
                 </p>
                 <Link to={"/about/directors-desk"}>
                   <Button className="btn-police dark:text-white">{t("director.desk")}</Button>

@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -393,12 +394,22 @@
       transform: translateX(-100%);
     }
   }
-}
 
-.navbarbg {
+  .navbarbg {
   /* From https://css.glass */
   background: rgba(255, 255, 255, 0.18);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(8.5px);
   -webkit-backdrop-filter: blur(8.5px);
 }
+
+.figtree-heading {
+  font-family: "Figtree", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+}
+
+}
+
+

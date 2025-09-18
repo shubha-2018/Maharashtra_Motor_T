@@ -19,7 +19,7 @@ const Header: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [fontSize, setFontSize] = useState("normal");
   const [scrolled, setScrolled] = useState(false);
-  
+
   // Use the theme store
   const { theme, setTheme } = useThemeStore();
 
@@ -65,24 +65,38 @@ const Header: React.FC = () => {
       {/* Utility Bar */}
       <div className="bg-secondary/50 border-b border-border">
         <div className="container mx-auto px-4 py-1">
-          <div className="flex  justify-end md:justify-between items-center text-sm md:text-sm">
+          <div className="flex flex-col sm:flex-row justify-end md:justify-between items-center text-sm md:text-sm">
             {/* Left - Government Links (hidden on mobile) */}
             <div className="hidden md:flex space-x-4">
-              <a href="tel:112" className="nav-link text-xs hover:text-primary md:text-sm">
+              <a
+                href="tel:112"
+                className="nav-link text-xs hover:text-primary md:text-sm"
+              >
                 <Phone className="w-3 h-3 inline mr-1" />
                 {t("dial.112")}
               </a>
               <a href="/accessibility" className="nav-link text-xs md:text-sm">
                 {t("footer.accessibility")}
               </a>
-              <a href="https://eoffice.mahapolice.gov.in/" className="nav-link text-xs md:text-sm">
+              <a
+                href="https://eoffice.mahapolice.gov.in/"
+                className="nav-link text-xs md:text-sm"
+              >
                 {t("e.office")}
               </a>
-              <a href="https://accounts.mgovcloud.in/signin?servicename=VirtualOffice&serviceurl=https%3A%2F%2Fmail.mgovcloud.in%2F" className="nav-link text-xs">
+              <a
+                href="https://accounts.mgovcloud.in/signin?servicename=VirtualOffice&serviceurl=https%3A%2F%2Fmail.mgovcloud.in%2F"
+                className="nav-link text-xs"
+              >
                 {t("nic.email")}
               </a>
             </div>
-
+            <h1
+              dangerouslySetInnerHTML={{ __html: t("header.title") }}
+              className={`text-center dark:text-white sm:hidden text font-sans xl:text-2xl py-2 xl:block md-xl:hidden  2xl:text-2xl  figtree-heading  font-[1000] text-brand-primary capitalize`}
+            >
+              {/* title */}
+            </h1>
             {/* Center - Accessibility (always visible) */}
             <div className="flex items-center justify-end md:justify-between space-x-2">
               {/* Font Size Controls */}
@@ -167,11 +181,9 @@ const Header: React.FC = () => {
             </div>
 
             {/* Mobile Menu Button */}
-           
           </div>
 
           {/* Mobile Menu Dropdown - Only shows government links now */}
-         
         </div>
       </div>
     </header>

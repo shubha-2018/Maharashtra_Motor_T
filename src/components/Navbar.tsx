@@ -131,7 +131,7 @@ useEffect(() => {
 
   return (
     <nav
-      className={`w-full border-b selection:file:items-center border-navbar-border rounded-b-lg sticky top-0 z-50 transition-colors duration-300 ${
+      className={`w-full font-sans border-b selection:file:items-center border-navbar-border rounded-b-lg sticky top-0 z-50 transition-colors duration-300 ${
         scrolled ? "navbarbg" : "bg-navbar"
       } `}
     >
@@ -161,7 +161,7 @@ useEffect(() => {
               <Link to="/">
                 <span
                   dangerouslySetInnerHTML={{ __html: t("title") }}
-                  className={`hidden  dark:text-white sm:block xl:hidden 2xl:block xl:text-lg 2xl:text-lg font-extrabold text-brand-primary capitalize ${
+                  className={`hidden  dark:text-white sm:block text font-sans  2xl:hidden md-xl:block  md:text-lg md-xl:text-xl xl:text-sm  figtree-heading  font-[1000] text-brand-primary capitalize ${
                     colorChange ? "text-white" : "text-gray-800"
                   }`}
                 >
@@ -172,7 +172,7 @@ useEffect(() => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden xl:flex items-center space-x-8">
+          <div className="hidden xl:flex items-center 2xl:space-x-4 2xl:pr-28 font-sans">
             {navigationItems.map((item) => (
               <div key={item.name}>
                 {item.hasDropdown ? (
@@ -180,7 +180,7 @@ useEffect(() => {
                     <DropdownMenuTrigger asChild>
                       <Button
                         variant="ghost"
-                        className={`dark:text-white text-sm xl:text-lg font-bold hover:text-navbar-foreground hover:bg-navbar-foreground/5 ${
+                        className={`dark:text-white text-sm xl:text-lg  hover:text-navbar-foreground hover:bg-navbar-foreground/5 ${
                           colorChange ? "text-white" : "text-gray-800"
                         }`}
                       >
@@ -210,7 +210,7 @@ useEffect(() => {
                 ) : (
                   <Button
                     variant="ghost"
-                    className={`text-navbar-foreground text-sm xl:text-lg dark:text-white hover:text-navbar-foreground hover:bg-navbar-foreground/5 font-bold ${
+                    className={`text-navbar-foreground text-sm xl:text-lg dark:text-white hover:text-navbar-foreground hover:bg-navbar-foreground/5 ${
                       colorChange ? "text-white" : "text-gray-800"
                     }`}
                   >

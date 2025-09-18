@@ -237,7 +237,7 @@ const Footer: React.FC = () => {
               {t("copyright")}
             </div>
             <div className="flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400">
-              <span>|</span>
+        
               <Link
                 to="/privacy-policy"
                 className="hover:text-saffron dark:hover:text-yellow-400 transition-colors"
@@ -245,19 +245,21 @@ const Footer: React.FC = () => {
                 {t("footer.privacyPolicy")}
               </Link>
               <span>|</span>
-              <Link
-                to="/terms-of-use"
-                className="hover:text-saffron dark:hover:text-yellow-400 transition-colors"
-              >
-                {t("footer.termsOfUse")}
-              </Link>
-              <span>|</span>
+             
               <Link
                 to="/accessibility"
                 className="hover:text-saffron dark:hover:text-yellow-400 transition-colors"
               >
                 {t("footer.accessibility")}
               </Link>
+               <span>|</span>
+               <Link
+                to="/terms-of-use"
+                className="hover:text-saffron dark:hover:text-yellow-400 transition-colors"
+              >
+                {t("footer.termsOfUse")}
+              </Link>
+             
             </div>
             <div className="text-sm text-gray-500 dark:text-gray-500 text-center md:text-right">
               {t("developed.by")}

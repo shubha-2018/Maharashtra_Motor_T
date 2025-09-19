@@ -44,7 +44,7 @@ export default function FormerDirectors() {
       <Button
         variant="ghost"
         className="mb-6 flex items-center gap-2 text-gray-700 dark:text-gray-200"
-        onClick={() => navigate(-1)}
+        onClick={() => navigate("/")}
       >
         <ArrowLeft className="w-5 h-5" />
         {t("fd.back")}

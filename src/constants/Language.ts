@@ -645,7 +645,7 @@ export const EN = {
   "gallery.image1.caption": "Dr. APJ Abdul Kalam Innovation Center Inauguration",
   "gallery.image2.caption": "Independence Day Celebrations",
   "gallery.image3.caption": "Ashok Jog Lecture Hall Inauguration",
-  "gallery.image4.caption": "DGP Inauguration",
+  "gallery.image4.caption": "Dnyaneshwari Senior Officer's Mess Inauguration",
 
   //trasfer
   "x9r7": "ASI(HWO) ANSHATA BADAL GT 2023-2528",
@@ -1772,7 +1772,7 @@ export const MR = {
   "gallery.image1.caption": "डॉ. एपीजे अब्दुल कलाम इनोवेशन सेंटर उद्घाटन",
   "gallery.image2.caption": "स्वातंत्र्यदिन साजरे",
   "gallery.image3.caption": "अशोक जोग व्याख्यानगृह उद्घाटन",
-  "gallery.image4.caption": "महानिरीक्षक उद्घाटन",
+  "gallery.image4.caption": "ज्ञानेश्वरी वरिष्ठ अधिकाऱ्यांच्या मेसचे उद्घाटन",
 
 
 

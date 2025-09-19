@@ -68,7 +68,7 @@ const HeroSection: React.FC = () => {
 
   const emergencyContacts = [
     {
-      title: t("emergency.police"),
+      title: t("dial"),
       number: "112",
       type: t("type.police"),
       icon: Shield,

@@ -3,6 +3,7 @@
 export const EN = {
   // Header
   "dial.112": "Dial 112",
+  "dial": "Dial",
   "citizen.portal": "Citizen Portal",
   "e.office": "E-Office",
   "nic.email": "NIC Email",
@@ -906,6 +907,7 @@ export const EN = {
 export const MR = {
   // Header
   "dial.112": "डायल 112",
+    "dial": "डायल",
   "citizen.portal": "नागरिक पोर्टल",
   "e.office": "ई-ऑफिस",
   "nic.email": "एनआयसी ईमेल",

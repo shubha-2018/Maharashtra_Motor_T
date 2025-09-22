@@ -13,6 +13,9 @@ import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { cn } from "@/lib/utils";
 import { useThemeStore } from "@/store/themeStore";
+import { Link } from "react-router-dom";
+import PoliceLogo from "@/assets/police-logo.png";
+
 
 const Header: React.FC = () => {
   const { language, setLanguage, t } = useLanguage();
@@ -64,8 +67,17 @@ const Header: React.FC = () => {
     >
       {/* Utility Bar */}
       <div className="bg-secondary/50 border-b border-border">
-        <div className="container mx-auto px-4 py-1">
-          <div className="flex flex-col sm:flex-row justify-end md:justify-between items-center text-sm md:text-sm">
+        <div className="px-10 py-1 flex align-middle justify-center flex-wrap items-center space-x-2">
+           <Link to="/">
+                            <div className="w-10 h-10 md:w-14 md:h-14 bg-brand-primary  xl:hidden rounded-full flex items-center justify-center">
+                              <img
+                                src={PoliceLogo}
+                                className="rounded-full"
+                                alt="logo"
+                              />
+                            </div>
+                              </Link>
+          <div className="flex flex-col sm:flex-row justify-end md:justify-between w-full items-center md:space-x-10 text-sm md:text-sm">
             {/* Left - Government Links (hidden on mobile) */}
             <div className="hidden md:flex space-x-4">
               <a
@@ -91,6 +103,7 @@ const Header: React.FC = () => {
                 {t("nic.email")}
               </a>
             </div>
+             
             <h1
               dangerouslySetInnerHTML={{ __html: t("header.title") }}
               className={`text-center dark:text-white sm:hidden text font-sans xl:text-2xl py-2 xl:block md-xl:hidden  2xl:text-2xl  figtree-heading  font-[1000] text-brand-primary capitalize`}

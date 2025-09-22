@@ -78,10 +78,6 @@ export default function DirectorsDesk() {
             >
           
             </p>
-
-        
-
-
             <div className="bg-gradient-to-r from-purple-100 via-blue-100 to-teal-100 
                             dark:from-purple-900/40 dark:via-blue-900/40 dark:to-teal-900/40 
                             p-8 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-inner">

@@ -294,10 +294,10 @@ export const EN = {
   "hx_intro": "Established in 1946, the Department has evolved from WWII wireless sets to cutting-edge satellite and IP-based networks ensuring secure, real-time communication across Maharashtra.",
 
   "hx_1946_title": "1946 – Foundation",
-  "hx_1946_desc": "Department established in Mumbai during pre-independence. Wireless started with WWII sets; 13 districts linked to Pune HQ.",
+  "hx_1946_desc": "Department established in Mumbai during pre-independence. Wireless started with Radio’s used in World War II.",
 
   "hx_1947_title": "1947 – First Leadership",
-  "hx_1947_desc": "After independence, Mr. N.M. Kamte became the first Special IGP. Wireless Dept. separated administratively, led by Mr. S.M. Nabar.",
+  "hx_1947_desc": "After independence, Mr. N.M. Kamte became the first Inspector General of Police. Wireless Dept. separated administratively, led by Mr. S.M. Nabar.",
 
   "hx_tableTitle": "Maharashtra State Police Communication and Information Technology Strength Chart",
   "hx_table_sr": "SR NO",
@@ -511,14 +511,13 @@ export const EN = {
   copyright:
     "© 2025 Police Communication & IT Department, Maharashtra State. All rights reserved.",
   "developed.by": "Owned by Police Communication & IT Department",
-  "dept.address": "Police Communication & IT Department,<br />Maharashtra State Police Headquarters,<br />Mumbai - 400001"
-  ,
+  "dept.address": "Police Communication & IT Department,<br />Maharashtra State Police Headquarters,<br />Dr. Homi Bhabha Road, Chavannagar, Maharashtra State Pune - 411008",
 
   //rank
 
   "backToHome": "Back to Home",
   "ranks.title": "Ranks Of Department",
-  "ranks.subtitle": "List of Ranks and Designations in Police Communication and Information Technology Department",
+  "ranks.subtitle": "List of Ranks and Designations in Police Communication and Information Technology Department", 
   "ranks.seePDF": "See the Whole PDF",
   "ranks.rank1.title": "Addl. DGP & Director Police Communication, Information Technology & Transportation, M.S. Pune",
   "ranks.rank1.description": "Leads the entire department, sets strategic direction, ensures coordination across all units, and oversees communication, IT, and transportation functions statewide.",
@@ -1184,10 +1183,10 @@ export const MR = {
   "hx_intro": "१९४६ मध्ये स्थापन झालेला हा विभाग, दुसऱ्या महायुद्धातील वायरलेस संचांपासून आधुनिक उपग्रह व आयपी आधारित नेटवर्कपर्यंत विकसित झाला आहे, ज्यामुळे महाराष्ट्र भर सुरक्षित व तत्काळ संप्रेषण शक्य झाले.",
 
   "hx_1946_title": "१९४६ – स्थापना",
-  "hx_1946_desc": "पूर्व-स्वातंत्र्य काळात मुंबई येथे विभागाची स्थापना झाली. वायरलेसची सुरुवात दुसऱ्या महायुद्धातील संचांपासून झाली; १३ जिल्हे पुणे मुख्यालयाशी जोडले गेले.",
+  "hx_1946_desc": "स्वातंत्र्यपूर्व काळात मुंबईत विभाग स्थापन करण्यात आला. वायरलेसची सुरुवात दुसऱ्या महायुद्धात वापरल्या गेलेल्या रेडिओंनी झाली.",
 
   "hx_1947_title": "१९४७ – पहिले नेतृत्व",
-  "hx_1947_desc": "स्वातंत्र्यानंतर श्री. एन. एम. कामटे हे पहिले विशेष आयजीपी झाले. वायरलेस विभागाचे स्वतंत्र प्रशासन झाले आणि नेतृत्व श्री. एस. एम. नाबर यांनी केले.",
+  "hx_1947_desc": "स्वातंत्र्यानंतर श्री. एन. एम. कामटे हे पहिले पोलीस महानिरीक्षक झाले. वायरलेस विभागाचे स्वतंत्र प्रशासन झाले आणि नेतृत्व श्री. एस. एम. नाबर यांनी केले.",
 
   "hx_tableTitle": "पोलीस दळणवळण व माहिती तंत्रज्ञान विभागातील मनुष्यबळ तक्ता",
   "hx_table_sr": "क्रमांक",
@@ -1476,7 +1475,7 @@ export const MR = {
   "c1.f5.d": "संवेदनशील माहिती व अधिकारी यांची सुरक्षा सुनिश्चित करतो.",
 
   "b1.crisis": "कोयना भूकंप (1967) आणि किल्लारी भूकंप (1993) यांनी महाराष्ट्रात मोठी हानी केली. मुंबई पूर (2005) आणि 26/11 दहशतवादी हल्ल्याने संचाराचे महत्त्व अधोरेखित केले. अशा आपत्तीच्या काळात खाजगी नेटवर्क ठप्प झाले असताना वायरलेस प्रणालीमुळे पोलिस सतत जोडले गेले आणि जीव वाचविण्यासाठी समन्वय साधला गेला.",
-  "b1.conc": "प्रभावी वायरलेस संचार हे सार्वजनिक सुरक्षितता व कार्यकुशल पोलीसिंगचे कणा आहे.",
+  "b1.conc": "प्रभावी बिनतारी दळणवळण हे सार्वजनिक सुरक्षितता व कार्यकुशल पोलीसिंगचे कणा आहे.",
 
   // Director Info
   "director.name": "श्री. दीपक शिवानंद पाण्डेय् (भा.पो.से)",
@@ -1681,7 +1680,7 @@ export const MR = {
   copyright:
     "© 2025 पोलीस दळणवळण व माहिती तंत्रज्ञान विभाग, महाराष्ट्र राज्य. सर्व हक्क राखीव.",
   "developed.by": "मालकी हक्क पोलीस दळणवळण व माहिती तंत्रज्ञान विभाग, महाराष्ट्र राज्य.",
-  "dept.address": "पोलीस दळणवळण व आय.टी. विभाग,<br />महाराष्ट्र राज्य पोलीस मुख्यालय,<br />मुंबई - ४००००१",
+  "dept.address": "पोलीस दळणवळण, माहिती तंत्रज्ञान विभाग,<br />डॉ. होमी भाभा रोड, चव्हाणनगर,<br />महाराष्ट्र राज्य, पुणे - ४११००८",
 
 
   // Helpline
@@ -1849,7 +1848,7 @@ export const MR = {
   "terms.changes.title": "अटींमध्ये बदल",
   "terms.changes.description": "पूर्वसूचना न देता कोणत्याही वेळी या अटी सुधारण्याचा किंवा बदलण्याचा आम्हाला अधिकार राखून ठेवला आहे. बदलांसाठी या अटींचे नियतकालिक पुनरावलोकन करणे तुमची जबाबदारी आहे. कोणत्याही सुधारणांनंतर वेबसाइटचा सतत वापर त्या बदलांची स्वीकृती दर्शवतो.",
   "terms.contact.title": "संपर्क माहिती",
-  "terms.contact.description": "वापराच्या या अटींबद्दल कोणत्याही प्रश्नांसाठी, कृपया पोलीस संप्रेषण आणि आयटी विभागाशी pcit@mahapolice.gov.in येथे किंवा +91-22-2262-1234 या क्रमांकावर संपर्क साधा.",
+  "terms.contact.description": "वापराच्या या अटींबद्दल कोणत्याही प्रश्नांसाठी, कृपया पोलीस संप्रेषण आणि आयटी विभागाशी dir.polwireless.pune@mahapolice.gov.in येथे किंवा 020-25652505 या क्रमांकावर संपर्क साधा.",
 
 
 

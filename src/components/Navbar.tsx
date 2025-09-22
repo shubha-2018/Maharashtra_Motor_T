@@ -162,6 +162,7 @@ const Navbar = () => {
                   />
                 </div>
               </Link>
+               
               <Link to="/">
                 <span
                   dangerouslySetInnerHTML={{ __html: t("title") }}
@@ -296,7 +297,7 @@ const Navbar = () => {
                     )}
                   </div>
                 ))}
-                <div className="w-full bg-brand-primary rounded-lg flex items-center justify-center mt-4 p-2">
+                <div className="w-full hidden xl:flex bg-brand-primary rounded-lg items-center justify-center mt-4 p-2">
                   <img src={PoliceLogo} className="w-14 h-14" alt="logo" />
                 </div>
               </div>

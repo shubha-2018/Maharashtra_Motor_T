@@ -157,7 +157,7 @@ const Footer: React.FC = () => {
                     href="tel:+912222621234"
                     className="text-gray-700 dark:text-gray-300 hover:text-saffron dark:hover:text-yellow-400 transition-colors"
                   >
-                    +91-22-2262-1234
+                  020-25652505
                   </a>
                 </div>
               </div>
@@ -172,7 +172,7 @@ const Footer: React.FC = () => {
                     href="mailto:pcit@mahapolice.gov.in"
                     className="text-gray-700 dark:text-gray-300 hover:text-saffron dark:hover:text-yellow-400 transition-colors"
                   >
-                    pcit@mahapolice.gov.in
+                   dir.polwireless.pune@mahapolice.gov.in
                   </a>
                 </div>
               </div>

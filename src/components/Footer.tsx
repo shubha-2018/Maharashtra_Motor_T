@@ -5,13 +5,10 @@ import {
   Mail,
   Globe,
   Eye,
-  Users,
-  Calendar,
   ExternalLink,
   Facebook,
   Twitter,
-  Youtube,
-  Linkedin,
+  Instagram,
 } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Link } from "react-router-dom";
@@ -19,15 +16,17 @@ import { Link } from "react-router-dom";
 const Footer: React.FC = () => {
   const { t } = useLanguage();
 
+  // Internal navigation links
   const quickLinks = [
-    { key: "nav.home", href: "/" },
-    { key: "nav.about", href: "/about/directors-desk" },
-    { key: "nav.citizens", href: "/citizen/press-release" },
-    { key: "nav.tenders", href: "/citizen/recruitments" },
-    { key: "nav.contact", href: "/contact" },
-    { key: "nav.gallery", href: "/gallery" },
+    { key: "nav.home", to: "/" },
+    { key: "nav.about", to: "/about/directors-desk" },
+    { key: "nav.citizens", to: "/citizen/press-release" },
+    { key: "nav.tenders", to: "/citizen/recruitments" },
+    { key: "nav.contact", to: "/contact" },
+    { key: "nav.gallery", to: "/gallery" },
   ];
 
+  // External links only
   const importantLinks = [
     { key: "dial.112", href: "tel:112", external: true },
     {
@@ -45,7 +44,8 @@ const Footer: React.FC = () => {
       href: "https://mahapolice.gov.in",
       external: true,
     },
-    { key: "rti", href: "/citizen/rti", external: true },
+    // RTI is internal, so removed external:true
+    { key: "rti", to: "/citizen/rti" },
   ];
 
   const socialLinks = [
@@ -60,9 +60,9 @@ const Footer: React.FC = () => {
       color: "hover:text-blue-400",
     },
     {
-      icon: Linkedin,
+      icon: Instagram,
       href: "https://www.instagram.com/mh_police_pcit/",
-      color: "hover:text-blue-700",
+      color: "hover:text-pink-500",
     },
   ];
 
@@ -85,13 +85,13 @@ const Footer: React.FC = () => {
             <ul className="space-y-2">
               {quickLinks.map((link) => (
                 <li key={link.key}>
-                  <a
-                    href={link.href}
+                  <Link
+                    to={link.to}
                     className="text-gray-700 dark:text-gray-300 hover:text-saffron dark:hover:text-yellow-400 transition-colors duration-300 text-sm flex items-center gap-1 group"
                   >
                     <span className="w-1 h-1 bg-saffron dark:bg-yellow-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
                     {t(link.key)}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -106,20 +106,26 @@ const Footer: React.FC = () => {
             <ul className="space-y-2">
               {importantLinks.map((link) => (
                 <li key={link.key}>
-                  <a
-                    href={link.href}
-                    className="text-gray-700 dark:text-gray-300 hover:text-saffron dark:hover:text-yellow-400 transition-colors duration-300 text-sm flex items-center gap-1 group"
-                    {...(link.external && {
-                      target: "_blank",
-                      rel: "noopener noreferrer",
-                    })}
-                  >
-                    <span className="w-1 h-1 bg-saffron dark:bg-yellow-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
-                    {t(link.key)}
-                    {link.external && (
+                  {link.external ? (
+                    <a
+                      href={link.href}
+                      className="text-gray-700 dark:text-gray-300 hover:text-saffron dark:hover:text-yellow-400 transition-colors duration-300 text-sm flex items-center gap-1 group"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <span className="w-1 h-1 bg-saffron dark:bg-yellow-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                      {t(link.key)}
                       <ExternalLink className="w-3 h-3 opacity-60" />
-                    )}
-                  </a>
+                    </a>
+                  ) : (
+                    <Link
+                      to={link.to!}
+                      className="text-gray-700 dark:text-gray-300 hover:text-saffron dark:hover:text-yellow-400 transition-colors duration-300 text-sm flex items-center gap-1 group"
+                    >
+                      <span className="w-1 h-1 bg-saffron dark:bg-yellow-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                      {t(link.key)}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>
@@ -141,9 +147,7 @@ const Footer: React.FC = () => {
                   <p
                     className="text-gray-700 dark:text-gray-300 leading-relaxed"
                     dangerouslySetInnerHTML={{ __html: t("dept.address") }}
-                  >
-                    {/* address */}
-                  </p>
+                  />
                 </div>
               </div>
 
@@ -154,10 +158,10 @@ const Footer: React.FC = () => {
                     {t("phone")}:{" "}
                   </span>
                   <a
-                    href="tel:+912222621234"
+                    href="tel:+9120225652505"
                     className="text-gray-700 dark:text-gray-300 hover:text-saffron dark:hover:text-yellow-400 transition-colors"
                   >
-                  020-25652505
+                    020-25652505
                   </a>
                 </div>
               </div>
@@ -169,10 +173,10 @@ const Footer: React.FC = () => {
                     {t("email")}:{" "}
                   </span>
                   <a
-                    href="mailto:pcit@mahapolice.gov.in"
+                    href="mailto:dir.polwireless.pune@mahapolice.gov.in"
                     className="text-gray-700 dark:text-gray-300 hover:text-saffron dark:hover:text-yellow-400 transition-colors"
                   >
-                   dir.polwireless.pune@mahapolice.gov.in
+                    dir.polwireless.pune@mahapolice.gov.in
                   </a>
                 </div>
               </div>
@@ -200,7 +204,7 @@ const Footer: React.FC = () => {
                     Last Uploaded:
                   </span>
                   <span className="font-bold text-saffron dark:text-yellow-400">
-                {new Date().toLocaleDateString()}
+                    {new Date().toLocaleDateString()}
                   </span>
                 </div>
               </div>
@@ -237,7 +241,6 @@ const Footer: React.FC = () => {
               {t("copyright")}
             </div>
             <div className="flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400">
-        
               <Link
                 to="/privacy-policy"
                 className="hover:text-saffron dark:hover:text-yellow-400 transition-colors"
@@ -245,21 +248,19 @@ const Footer: React.FC = () => {
                 {t("footer.privacyPolicy")}
               </Link>
               <span>|</span>
-             
               <Link
                 to="/accessibility"
                 className="hover:text-saffron dark:hover:text-yellow-400 transition-colors"
               >
                 {t("footer.accessibility")}
               </Link>
-               <span>|</span>
-               <Link
+              <span>|</span>
+              <Link
                 to="/terms-of-use"
                 className="hover:text-saffron dark:hover:text-yellow-400 transition-colors"
               >
                 {t("footer.termsOfUse")}
               </Link>
-             
             </div>
             <div className="text-sm text-gray-500 dark:text-gray-500 text-center md:text-right">
               {t("developed.by")}

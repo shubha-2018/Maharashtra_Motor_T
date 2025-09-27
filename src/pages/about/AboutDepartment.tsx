@@ -2,7 +2,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import historyPhoto from "@/assets/1.jpg";
 import { useNavigate } from "react-router";
 import {
   Table,
@@ -16,37 +15,14 @@ import { useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import ABOUT_IMG from "@/assets/about.jpg";
 
-// Table data (designations stay static, but counts can be translated if needed)
+// Table data
 const staffData = [
-  {
-    sr: 1,
-    designation:
-      "Addl. DGP & Director Police Communication, IT & Transport, M.S. Pune",
-    posts: 1,
-  },
-  {
-    sr: 2,
-    designation:
-      "Deputy Inspector General of Police Communication & IT, M.S. Pune",
-    posts: 1,
-  },
-  {
-    sr: 3,
-    designation:
-      "Additional Commissioner of Police Communication & IT, M.S. Mumbai",
-    posts: 1,
-  },
+  { sr: 1, designation: "Addl. DGP & Director Police Communication, IT & Transport, M.S. Pune", posts: 1 },
+  { sr: 2, designation: "Deputy Inspector General of Police Communication & IT, M.S. Pune", posts: 1 },
+  { sr: 3, designation: "Additional Commissioner of Police Communication & IT, M.S. Mumbai", posts: 1 },
   { sr: 4, designation: "Supdt. Of Police Communication & IT", posts: 5 },
-  {
-    sr: 5,
-    designation: "Deputy Commissioner of Police Communication & IT",
-    posts: 2,
-  },
-  {
-    sr: 6,
-    designation: "Deputy Supdt. Of Police / Asst. Commissioner of Police",
-    posts: 37,
-  },
+  { sr: 5, designation: "Deputy Commissioner of Police Communication & IT", posts: 2 },
+  { sr: 6, designation: "Deputy Supdt. Of Police / Asst. Commissioner of Police", posts: 37 },
   { sr: 7, designation: "Police Inspector (PI)", posts: 179 },
   { sr: 8, designation: "Police Sub – Inspector (PSI)", posts: 426 },
   { sr: 9, designation: "ASI (Senior Technical Officer)", posts: 874 },
@@ -133,25 +109,6 @@ export default function History() {
           </CardContent>
         </Card>
 
-        {/* Timeline Section */}
-        <div className="relative border-l-2 border-gray-300 dark:border-gray-700 pl-8 space-y-10">
-          {timelineData.map((item, index) => (
-            <Card
-              key={index}
-              className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 shadow-md rounded-2xl"
-            >
-              <CardContent className="p-6 space-y-4">
-                <h2 className="text-2xl font-bold text-blue-600 dark:text-blue-400">
-                  {t(item.title)}
-                </h2>
-                <p className="text-gray-700 dark:text-gray-300">
-                  {t(item.description)}
-                </p>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-
         {/* Table Section */}
         <div className="bg-white dark:bg-gray-900 shadow-md rounded-2xl p-6 border border-gray-200 dark:border-gray-700 space-y-6">
           <h2 className="text-2xl font-bold">{t("hx_tableTitle")}</h2>
@@ -171,6 +128,16 @@ export default function History() {
                   <TableCell>{row.posts}</TableCell>
                 </TableRow>
               ))}
+
+              {/* Total Row on last page */}
+              {page === totalPages && (
+                <TableRow className="font-bold bg-gray-100 dark:bg-gray-800">
+                  <TableCell colSpan={2}>{t("total")}</TableCell>
+                  <TableCell>
+                    {staffData.reduce((sum, item) => sum + item.posts, 0)}
+                  </TableCell>
+                </TableRow>
+              )}
             </TableBody>
           </Table>
 

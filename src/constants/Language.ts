@@ -107,7 +107,7 @@ export const EN = {
   "a2.loc": "Maharashtra State, Pune",
 
   "b1.intro": `
-  <p>The Police Wireless Department prior to Police Communication and Information Technology Department typically handles communication systems used by law enforcement authority that is Maharashtra State Police. This includes managing radio frequencies, dispatching officers, and ensuring secure and efficient communication between police units in the field. Uninterrupted 24×7 communication system is provided by our Department.</p>
+  <p>Police Communication and Information Technology Department  prior to The Police Wireless Department  typically handles communication systems used by law enforcement authority that is Maharashtra State Police. This includes managing radio frequencies, dispatching officers, and ensuring secure and efficient communication between police units in the field. Uninterrupted 24×7 communication system is provided by our Department.</p>
 <br/>
   <p>The Police Communication and Information Technology Department plays a vital role in policing by ensuring effective communication and coordination among officers with key functions such as real-time Communication which facilitates immediate contact between officers in the field and dispatch, crucial for timely responses to incidents; Situational Awareness which provides officers with updates on ongoing situations, enhancing their ability to make informed decisions; Emergency Response which enables quick coordination during emergencies, allowing for faster deployment of resources; Data Transmission which supports the transfer of critical information, such as criminal records and intelligence, enhancing investigative efforts; Safety and Security which maintains secure communication channels to protect sensitive information and officer safety.</p>
   <br/>
@@ -323,7 +323,7 @@ export const EN = {
                 In the year 1947, after independence, Mr. N. M. Kamte was appointed as the first Director General of Police of the Bombay State. After that Mr. S. M. Nabar was appointed as Superintendent of Police wireless according to his technical qualifications.
               </p>
               <p>
-                The Police wireless Department was then separated from the office of Director General of Police from the administrative point of view and started functioning independently in Pune.
+                The Police wireless Department then separated from the office of Director General of Police from the administrative point of view and started functioning independently in Pune.
               </p>
               <p>
                 In the initial period wireless messaging systems were set up using old wireless sets issued by the Director, Armed Forces. The system was operated by trained soldiers of the police force, trained at the Army and Air Force Wireless Communication Training Center in Pune.
@@ -582,20 +582,24 @@ export const EN = {
   "press.cyber.description": "In October 2024, a new Cyber Command and Control Centre was launched. Equipped with advanced forensic tools and AI-based threat detection, it allows the police to combat cybercrime efficiently and ensures digital safety for citizens and critical infrastructure.",
 
   // RTI Page
-  "rti.title": "RTI (Right to Information)",
-  "rti.subtitle": "Information and procedures for citizens under the Right to Information Act",
-  "rti.pio.title": "Public Information Officer (PIO) Details",
-  "rti.pio.description": "Contact information for the designated PIOs and Appellate Authorities within the Police Communication & IT Department is provided here. Citizens can reach out directly for submitting RTI requests or seeking clarifications.",
-  "rti.procedure.title": "RTI Application Procedure",
-  "rti.procedure.description": "Step-by-step guide on filing an RTI application including the proper format, required details, and applicable fees. Ensure all fields are correctly filled for faster processing.",
-  "rti.portal.title": "Online RTI Portal Link",
-  "rti.portal.description": "Submit RTI applications electronically through the official portals. Maharashtra RTI Portal and Government of India RTI online portals are linked for citizen convenience.",
-  "rti.frequent.title": "Frequently Requested Information",
-  "rti.frequent.description": "Access commonly requested documents such as organizational structure, budget details, citizen charters, and departmental manuals. This improves transparency and eases information retrieval.",
-  "rti.manual.title": "RTI Act Manual",
-  "rti.manual.description": "Download or view the full RTI Act, 2005 and official guidelines for reference. Citizens are encouraged to familiarize themselves with their rights and responsibilities under the Act.",
-  "rti.appeal.title": "Appeal Process",
-  "rti.appeal.description": "If the applicant is unsatisfied with the response, follow the appeal procedure within the prescribed timelines. Details for submitting first and second appeals, along with contact information for appellate authorities, are provided.",
+  "rti.title": "Right To Information",
+  "rti.subtitle": "Promoting transparency in government institutions in India",
+  "rti.overview.title": "RTI Act Overview",
+  "rti.overview.description": "The Right to Information Act, enacted in 2005, allows citizens to demand information from government organizations within 30 days. Failing to provide the information incurs a monetary fine.",
+  "rti.online.title": "RTI Online Portal",
+  "rti.online.description": "Submit RTI applications electronically via the official portal: https://rtionline.maharashtra.gov.in/",
+  "rti.contact.location.title": "Office Location",
+  "rti.contact.location.description": "General Branch, Collector Office, Pune - 411001",
+  "rti.contact.phone.title": "Phone",
+  "rti.contact.phone.description": "02026123370",
+  "rti.contact.email.title": "Email",
+  "rti.contact.email.description": "gb.pune-mh@gov.in",
+  "rti.officer.section": "RTI Officers",
+  "rti.officer.appellate.title": "Appellate Officer",
+  "rti.officer.appellate.name": "Superintendent of Police, B.S. HQ - Mr. R. Raja, IPS",
+  "rti.officer.info.title": "Information Officer",
+  "rti.officer.info.name": "Home Police Inspector, B.S. - Mr. Mahendra Kore",
+  "back.home": "Back to Home",
 
   // Tenders Page
   "tenders.title": "Tenders & Procurement",
@@ -724,7 +728,7 @@ export const EN = {
   "emp_1_name": "SHRI. DEEPAK SHIVANAND PANDEY",
   "emp_1_designation": "ADGP & Dir.PCIT&T",
   "emp_2_name": "SHRI. R. RAJA",
-  "emp_2_designation": "DIGP(PCIT)/SP",
+  "emp_2_designation": "SP PCIT HQ",
   "emp_3_name": "SHRI. RAJESH RAMCHANDRA BANSODE",
   "emp_3_designation": "SP(PCIT)",
   "emp_4_name": "SHRI. SANJAY SUBHASH CHANDKHEDE",
@@ -1003,7 +1007,7 @@ export const MR = {
   "emp_1_name": "श्री. दीपक शिवानंद पांडे",
   "emp_1_designation": "ADGP & Dir.PCIT&T",
   "emp_2_name": "श्री. आर. राजा",
-  "emp_2_designation": "DIGP(PCIT)/SP",
+  "emp_2_designation": "SP PCIT HQ",
   "emp_3_name": "श्री. राजेश रामचंद्र बंसोडे",
   "emp_3_designation": "SP(PCIT)",
   "emp_4_name": "श्री. संजय सुभाष चांदखेडे",
@@ -1039,7 +1043,28 @@ export const MR = {
   "emp_19_name": "श्री. विक्रम विठलराव तांबरे",
   "emp_19_designation": "PSI(PCIT)",
   "emp_20_name": "श्री. सुनील मोरेश्वर पोते",
-  "emp_20_designation": "PSI(PCIT)",
+  "emp_20_designation": "PSI(PCIT)", 
+
+
+  //RTI 
+    "rti.title": "माहितीचा अधिकार",
+  "rti.subtitle": "भारतामधील सरकारी संस्थांमध्ये पारदर्शकता प्रोत्साहन",
+  "rti.overview.title": "माहितीचा अधिकार कायदा",
+  "rti.overview.description": "माहितीचा अधिकार कायदा, 2005 मध्ये लागू करण्यात आला. या कायद्यानुसार नागरिकांना कोणत्याही शासकीय संस्थेकडून 30 दिवसांत माहिती मागविण्याचा अधिकार आहे. विलंब झाल्यास संबंधित अधिकाऱ्यावर दंड आकारला जातो.",
+  "rti.online.title": "RTI ऑनलाइन पोर्टल",
+  "rti.online.description": "अधिकृत पोर्टलवरून इलेक्ट्रॉनिक स्वरूपात RTI अर्ज सादर करा: https://rtionline.maharashtra.gov.in/",
+  "rti.contact.location.title": "कार्यालयाचे ठिकाण",
+  "rti.contact.location.description": "सामान्य शाखा, कलेक्टर कार्यालय, पुणे - 411001",
+  "rti.contact.phone.title": "दूरध्वनी",
+  "rti.contact.phone.description": "02026123370",
+  "rti.contact.email.title": "ईमेल",
+  "rti.contact.email.description": "gb.pune-mh@gov.in",
+  "rti.officer.section": "RTI अधिकारी",
+  "rti.officer.appellate.title": "अपिलीय अधिकारी",
+  "rti.officer.appellate.name": "पोलीस अधीक्षक, बि.सं. मुख्यालय - श्री. आर. राजा, भा.पो.से.",
+  "rti.officer.info.title": "माहिती अधिकारी",
+  "rti.officer.info.name": "गृह पोलीस निरीक्षक, बि.सं. - श्री. महेंद्र कोरे",
+  "back.home": "मुख्य पृष्ठावर परत जा",
 
 
   //promotion
@@ -1453,7 +1478,7 @@ export const MR = {
   "a2.loc": "महाराष्ट्र राज्य, पुणे",
 
   "b1.intro": `
-  <p>पोलीस दळणवळण व माहिती तंत्रज्ञान विभाग, पूर्वीचे पोलीस बिनतारी संदेश विभाग, महाराष्ट्र राज्यातील कायदा व सुव्यवस्थाच्या अंमलबजावणीकरिता कार्यरत असलेले अंतर्गत स्वयंपूर्ण दळणवळण हाताळते. यामध्ये आधुनिक तंत्रज्ञानाचा वापर करून संदेश वहन करणे, पोलीस नियंत्रण कक्षातून जिल्हा व आयुक्तालयातील पोलीस गस्तीमार्फत नियंत्रण ठेवणे आणि पोलीस कार्यक्षेत्रातील घटकांदरम्यान सुरक्षित आणि कार्यक्षम संदेशाचे वहन करणे यांचा समावेश आहे. सदर यंत्रणा २४ X ७ अखंडित कार्यरत ठेवली जाते.</p>
+  <p>पोलीस पोलीस बिनतारी संदेश विभाग,  पूर्वीचे दळणवळण व माहिती तंत्रज्ञान विभाग,  महाराष्ट्र राज्यातील कायदा व सुव्यवस्थाच्या अंमलबजावणीकरिता कार्यरत असलेले अंतर्गत स्वयंपूर्ण दळणवळण हाताळते. यामध्ये आधुनिक तंत्रज्ञानाचा वापर करून संदेश वहन करणे, पोलीस नियंत्रण कक्षातून जिल्हा व आयुक्तालयातील पोलीस गस्तीमार्फत नियंत्रण ठेवणे आणि पोलीस कार्यक्षेत्रातील घटकांदरम्यान सुरक्षित आणि कार्यक्षम संदेशाचे वहन करणे यांचा समावेश आहे. सदर यंत्रणा २४ X ७ अखंडित कार्यरत ठेवली जाते.</p>
 <br/>
 <p>पोलीस दळणवळण व माहिती तंत्रज्ञान विभाग राज्यातील पोलीसांना कायदा व सुव्यवस्था राखणेकामी प्रभावी संवाद आणि समन्वय सुनिश्चित करून रीअल-टाइम कम्युनिकेशन ज्यात कार्यक्षेत्रातील पोलीस अधिकाऱ्यांमध्ये तात्काळ संपर्क साधणे आणि मदत आवश्यक असलेल्या घटनांना वेळेवर प्रतिसाद देणे सहज शक्य होते; परिस्थितीविषयक जागरूकता राखणेकरिता पोलीस अधिका-यांना घडामोडीची अद्यायावत माहिती प्रदान करून त्यांची निर्णय घेण्याची क्षमता वाढवण्यास मदत होते; आपत्कालीन परिस्थितीत जलद समन्वय प्रतिसाद सक्षम करून संसाधनांच्या जलद उपयोजना केली जाते; डेटा ट्रान्समिशनमध्ये गोपनीय माहितीची सुरक्षित देवाणघेवाण करून कायदा व सुव्यवस्था राखली जाते परिणामी माहितीच्या आधारे पुढील तपासास मदत होते; सुरक्षितता आणि सुरक्षा दृष्टीकोनातून संवेदनशील माहितीकरिता दळणवळण वाहिनी उपलब्ध करून दिली जाते.</p>
 <br/>

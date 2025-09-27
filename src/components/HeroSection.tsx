@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";//jnjn
+import React, { useState, useEffect } from "react";
 import {
   ChevronLeft,
   ChevronRight,
@@ -14,7 +14,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { cn } from "@/lib/utils";
-import IMG1 from "@/assets/hero/4.jpeg";
+import IMG1 from "@/assets/hero/4.jpg";
 import IMG2 from "@/assets/hero/2.jpg";
 import IMG3 from "@/assets/hero/5.jpg";
 import IMG4 from "@/assets/hero/Aaryabhatt-Garden-4.jpg";
@@ -45,7 +45,7 @@ const HeroSection: React.FC = () => {
       title: t("hero.communityPolicing.title"),
       subtitle: t("hero.communityPolicing.subtitle"),
     },
-   {
+    {
       image: IMG2,
       title: t("hero.modernTech.title"),
       subtitle: t("hero.modernTech.subtitle"),
@@ -109,10 +109,6 @@ const HeroSection: React.FC = () => {
     window.location.href = `tel:${number}`;
   };
 
-  // Split emergency contacts into two equal groups
-  const leftContacts = emergencyContacts.slice(0, 3); // First 3 contacts
-  const rightContacts = emergencyContacts.slice(3); // Last 3 contacts
-
   return (
     <section className="relative min-h-[80vh] bg-gradient-to-br from-background to-secondary/30">
       {/* Hero Slider */}
@@ -134,12 +130,11 @@ const HeroSection: React.FC = () => {
               {/* Slide Content */}
               <div className="absolute inset-0 flex items-end mb-[2rem] md:mb-28 justify-center text-center">
                 <div className="container mx-auto px-4 flex-col gap-y-5 justify-center">
-                  <h2 className="text-2xl md:text-5xl xl:text-5xl capitalize font-bold text-white mb-4 fade-in"
-                  
-                          dangerouslySetInnerHTML={{ __html: t(slide.title) }}>
-                    {/* {slide.title} */}
-                  </h2>
-                  <p className=" hidden sm:block text-lg sm:text-xl md:text-2xl  text-white/90 slide-up">
+                  <h2
+                    className="text-2xl md:text-5xl xl:text-5xl capitalize font-bold text-white mb-4 fade-in"
+                    dangerouslySetInnerHTML={{ __html: t(slide.title) }}
+                  />
+                  <p className="hidden sm:block text-lg sm:text-xl md:text-2xl text-white/90 slide-up">
                     {slide.subtitle}
                   </p>
                 </div>
@@ -149,29 +144,27 @@ const HeroSection: React.FC = () => {
         ))}
 
         {/* Slider Controls */}
-        {/* Slider Controls */}
-<button
-  onClick={prevSlide}
-  className="absolute left-4 top-1/2 -translate-y-1/2 
+        <button
+          onClick={prevSlide}
+          className="absolute left-4 top-1/2 -translate-y-1/2 
              bg-black/70 hover:bg-black/80 
              text-white p-3 rounded-full shadow-lg 
              backdrop-blur-sm transition-all z-20"
-  aria-label="Previous slide"
->
-  <ChevronLeft className="w-6 h-6 text-white" />
-</button>
+          aria-label="Previous slide"
+        >
+          <ChevronLeft className="w-6 h-6 text-white" />
+        </button>
 
-<button
-  onClick={nextSlide}
-  className="absolute right-4 top-1/2 -translate-y-1/2 
+        <button
+          onClick={nextSlide}
+          className="absolute right-4 top-1/2 -translate-y-1/2 
              bg-black/70 hover:bg-black/80 
              text-white p-3 rounded-full shadow-lg 
              backdrop-blur-sm transition-all z-20"
-  aria-label="Next slide"
->
-  <ChevronRight className="w-6 h-6 text-white" />
-</button>
-
+          aria-label="Next slide"
+        >
+          <ChevronRight className="w-6 h-6 text-white" />
+        </button>
 
         {/* Slider Indicators */}
         <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2 z-10">
@@ -185,66 +178,6 @@ const HeroSection: React.FC = () => {
               )}
               aria-label={`Go to slide ${index + 1}`}
             />
-          ))}
-        </div>
-
-        {/* Emergency Contacts - Left Side */}
-        <div className="absolute left-4 bottom-16 hidden xl:block space-y-3 max-h-[300px] overflow-hidden">
-          {leftContacts.map((contact, index) => (
-            <Card
-              key={index}
-              className="glass-card w-56 hover:scale-105 transition-transform cursor-pointer"
-            >
-              <CardContent className="p-3">
-                <div className="flex items-center space-x-3">
-                  <contact.icon className="w-5 h-5 text-saffron flex-shrink-0" />
-                  <div className="flex-1 min-w-0">
-                    <h4 className="text-black dark:text-white font-semibold text-xs truncate">
-                      {contact.title}
-                    </h4>
-                    <p
-                      className="text-black/80 dark:text-white/80 text-xs cursor-pointer hover:text-saffron transition-colors"
-                      onClick={() => handleCall(contact.number.replace(/\D/g, ""))}
-                    >
-                      {contact.number}
-                    </p>
-                    <span className="inline-block bg-saffron/20 text-saffron text-xs px-2 py-0.5 rounded-full mt-1">
-                      {contact.type}
-                    </span>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-
-        {/* Emergency Contacts - Right Side */}
-        <div className="absolute right-4 bottom-16 hidden xl:block space-y-3 max-h-[300px] overflow-hidden">
-          {rightContacts.map((contact, index) => (
-            <Card
-              key={`right-${index}`}
-              className="glass-card w-56 hover:scale-105 transition-transform cursor-pointer"
-            >
-              <CardContent className="p-3">
-                <div className="flex items-center space-x-3">
-                  <contact.icon className="w-5 h-5 text-saffron flex-shrink-0" />
-                  <div className="flex-1 min-w-0">
-                    <h4 className="text-black dark:text-white font-semibold text-xs truncate">
-                      {contact.title}
-                    </h4>
-                    <p 
-                      className="text-black/80 dark:text-white/80 text-xs cursor-pointer hover:text-saffron transition-colors"
-                      onClick={() => handleCall(contact.number.replace(/\D/g, ""))}
-                    >
-                      {contact.number}
-                    </p>
-                    <span className="inline-block bg-saffron/20 text-saffron text-xs px-2 py-0.5 rounded-full mt-1">
-                      {contact.type}
-                    </span>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
           ))}
         </div>
       </div>
@@ -282,12 +215,14 @@ const HeroSection: React.FC = () => {
                 <p className="text-primary font-semibold mb-1">
                   {t("director.rank")}
                 </p>
-                <p className="text-muted-foreground text-sm mb-4"
-                   dangerouslySetInnerHTML={{ __html: t("director.designation") }}
-                >
-                </p>
+                <p
+                  className="text-muted-foreground text-sm mb-4"
+                  dangerouslySetInnerHTML={{ __html: t("director.designation") }}
+                />
                 <Link to={"/about/directors-desk"}>
-                  <Button className="btn-police dark:text-white">{t("director.desk")}</Button>
+                  <Button className="btn-police dark:text-white">
+                    {t("director.desk")}
+                  </Button>
                 </Link>
               </CardContent>
             </div>
@@ -341,9 +276,11 @@ const HeroSection: React.FC = () => {
                           <h4 className="font-semibold text-sm text-foreground truncate">
                             {contact.title}
                           </h4>
-                          <p 
+                          <p
                             className="text-muted-foreground text-xs cursor-pointer hover:text-primary transition-colors"
-                            onClick={() => handleCall(contact.number.replace(/\D/g, ""))}
+                            onClick={() =>
+                              handleCall(contact.number.replace(/\D/g, ""))
+                            }
                           >
                             {contact.number}
                           </p>

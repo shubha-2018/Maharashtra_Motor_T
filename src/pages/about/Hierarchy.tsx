@@ -4,7 +4,9 @@ import { useNavigate } from "react-router";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 // Replace this with your actual image path
-import hierarchyImage from "@/assets/hierarchy.jpg";
+import hierarchyImage from "@/assets/heirarchy.png";
+
+
 
 export default function Hierarchy() {
   const navigate = useNavigate();

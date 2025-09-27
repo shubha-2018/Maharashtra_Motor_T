@@ -69,7 +69,7 @@ export default function Tenders() {
       </h2>
 
       {/* Active Tenders */}
-      <h3 className="text-3xl font-bold text-blue-500 mb-6 dark:text-blue-400">
+      <h3 className="text-4xl font-bold text-blue-500 mb-6 dark:text-blue-400">
         {t("tenders.active.title")}
       </h3>
       <div className="space-y-6 mb-12">
@@ -110,7 +110,7 @@ export default function Tenders() {
 
       {/* Archived Tenders */}
       <h3 className="text-3xl font-bold text-blue-500 mb-6 dark:text-blue-400">
-        {t("tenders.archived.title")}
+        {t("")}
       </h3>
       <div className="space-y-6 mb-12">
         {archivedTenders.map((tender, idx) => (

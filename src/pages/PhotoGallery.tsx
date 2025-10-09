@@ -51,13 +51,13 @@ export default function PhotoGallery() {
       <Button
         variant="ghost"
         onClick={goBack}
-        className="flex items-center text-gray-900 hover:bg-gray-200 transition-all duration-300 rounded-xl px-4 py-2 shadow-md hover:shadow-gray-300 mb-8 dark:text-gray-100 dark:hover:bg-gray-700 dark:hover:shadow-gray-800"
+        className="flex items-center text-gray-900 hover:bg-blue-50 hover:text-blue-700 transition-all duration-300 rounded-xl px-4 py-2 shadow-md hover:shadow-blue-200 mb-8 dark:text-gray-100 dark:hover:bg-blue-950/30 dark:hover:text-blue-300 dark:hover:shadow-blue-900/30"
       >
         <ArrowLeft className="w-4 h-4 mr-2" /> {t("back.home")}
       </Button>
 
       {/* Heading */}
-      <h1 className="text-5xl p-3 md:text-6xl font-extrabold tracking-tight text-center bg-gradient-to-r from-violet-400 via-blue-400 to-teal-400 bg-clip-text text-transparent drop-shadow-lg mb-10 dark:from-violet-500 dark:via-blue-500 dark:to-teal-500">
+      <h1 className="text-5xl p-3 md:text-6xl font-extrabold tracking-tight text-center bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 bg-clip-text text-transparent drop-shadow-lg mb-10 dark:from-blue-500 dark:via-blue-600 dark:to-blue-700">
         {t("gallery.title")}
       </h1>
 
@@ -75,7 +75,7 @@ export default function PhotoGallery() {
               className="w-full h-44 sm:h-96 object-cover rounded-t-3xl"
             />
             <CardContent className="p-6 text-center">
-              <p className="text-lg font-semibold text-gray-800 dark:text-gray-200">
+              <p className="text-lg font-semibold text-blue-800 dark:text-blue-300">
                 {t(item.captionKey)}
               </p>
             </CardContent>
@@ -88,7 +88,7 @@ export default function PhotoGallery() {
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4">
           <div className="relative max-w-4xl w-full bg-white rounded-3xl overflow-hidden shadow-2xl dark:bg-gray-800">
             <button
-              className="absolute top-4 right-4 text-gray-800 hover:text-gray-600 dark:text-gray-200 dark:hover:text-gray-400"
+              className="absolute top-4 right-4 text-blue-700 hover:text-blue-500 dark:text-blue-400 dark:hover:text-blue-300 bg-white/80 dark:bg-gray-800/80 rounded-full p-1 backdrop-blur-sm"
               onClick={closeModal}
             >
               <X className="w-6 h-6" />
@@ -98,8 +98,8 @@ export default function PhotoGallery() {
               alt={t(activeImage.captionKey)}
               className="w-full h-auto object-cover"
             />
-            <div className="p-6 text-center">
-              <p className="text-xl font-semibold text-gray-900 dark:text-gray-100">
+            <div className="p-6 text-center bg-blue-50 dark:bg-blue-950/30">
+              <p className="text-xl font-semibold text-blue-900 dark:text-blue-200">
                 {t(activeImage.captionKey)}
               </p>
             </div>

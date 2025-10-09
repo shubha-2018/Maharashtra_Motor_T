@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import {
   Calendar,
   MapPin,
-  Users,
-  Award,
   Camera,
   Video,
   Eye,
@@ -25,6 +23,8 @@ const EventsGallery: React.FC = () => {
   const { t } = useLanguage();
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
+  const policeBlue = "#0A1E4A"; // Police theme color
+
   const events = [
     {
       id: 1,
@@ -42,191 +42,94 @@ const EventsGallery: React.FC = () => {
       location: t("event.location.headquarters"),
       type: "project",
       icon: "🤖",
-            link: "/citizen/press-release",
+      link: "/citizen/press-release",
     },
-    // {
-    //   id: 3,
-    //   title: t("event.dial112"),
-    //   date: "2024-05-01",
-    //   location: t("event.location.maharashtra"),
-    //   type: "system",
-    //   icon: "🚨",
-    //   participants: 0,
-    //   status: "operational",
-    // },
-    // {
-    //   id: 4,
-    //   title: t("event.cyber.centerLaunch"),
-    //   date: "2024-10-15",
-    //   location: t("event.location.mumbai"),
-    //   type: "center",
-    //   icon: "💻",
-    //   participants: 0,
-    //   status: "launched",
-    // },
   ];
 
-  // Placeholder gallery images - in real app, these would come from a backend
   const galleryImages = [
-    {
-      id: 1,
-      src: GIMG_1,
-      title: "Police Technology Summit 2024",
-      titleMr: "पोलीस तंत्रज्ञान शिखर परिषद २०२४",
-      category: "event",
-      date: "2024-01-15",
-    },
-    {
-      id: 2,
-      src: GIMG_2,
-      title: "Cybersecurity Training Session",
-      titleMr: "सायबर सुरक्षा प्रशिक्षण सत्र",
-      category: "training",
-      date: "2024-01-12",
-    },
-    {
-      id: 3,
-      src: GIMG_3,
-      title: "New Equipment Inauguration",
-      titleMr: "नवीन उपकरण उद्घाटन",
-      category: "inauguration",
-      date: "2024-01-10",
-    },
-    {
-      id: 4,
-      src: GIMG_4,
-      title: "Awards Ceremony",
-      titleMr: "पुरस्कार सोहळा",
-      category: "ceremony",
-      date: "2024-01-08",
-    },
-    {
-      id: 5,
-      src: GIMG_5,
-      title: "Community Outreach Program",
-      titleMr: "समुदाय पोहोच कार्यक्रम",
-      category: "outreach",
-      date: "2024-01-05",
-    },
-    {
-      id: 6,
-      src: GIMG_6,
-      title: "Digital Innovation Workshop",
-      titleMr: "डिजिटल नाविन्य कार्यशाळा",
-      category: "workshop",
-      date: "2024-01-03",
-    },
+    { id: 1, src: GIMG_1, title: "Police Technology Summit 2024", category: "event", date: "2024-01-15" },
+    { id: 2, src: GIMG_2, title: "Cybersecurity Training Session", category: "training", date: "2024-01-12" },
+    { id: 3, src: GIMG_3, title: "New Equipment Inauguration", category: "inauguration", date: "2024-01-10" },
+    { id: 4, src: GIMG_4, title: "Awards Ceremony", category: "ceremony", date: "2024-01-08" },
+    { id: 5, src: GIMG_5, title: "Community Outreach Program", category: "outreach", date: "2024-01-05" },
+    { id: 6, src: GIMG_6, title: "Digital Innovation Workshop", category: "workshop", date: "2024-01-03" },
   ];
 
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
-    return date.toLocaleDateString("en-IN", {
-      day: "numeric",
-      month: "short",
-      year: "numeric",
-    });
-  };
-
-  const getStatusColor = (status: string) => {
-    switch (status) {
-      case "upcoming":
-        return "bg-blue-100 text-blue-800 border-blue-200";
-      case "ongoing":
-        return "bg-green-100 text-green-800 border-green-200";
-      case "completed":
-        return "bg-gray-100 text-gray-800 border-gray-200";
-      default:
-        return "bg-gray-100 text-gray-800 border-gray-200";
-    }
+    return date.toLocaleDateString("en-IN", { day: "numeric", month: "short", year: "numeric" });
   };
 
   const getEventIcon = (type: string) => {
     switch (type) {
-      case "workshop":
-        return "🛠️";
-      case "summit":
-        return "🏆";
-      case "training":
-        return "📚";
-      case "initiative":
-        return "🚀";
-      case "ceremony":
-        return "🎉";
-      default:
-        return "📅";
+      case "workshop": return "🛠️";
+      case "summit": return "🏆";
+      case "training": return "📚";
+      case "initiative": return "🚀";
+      case "ceremony": return "🎉";
+      default: return "📅";
     }
   };
 
   return (
-    <section className="py-16 bg-background">
+    <section className="py-16 bg-white dark:bg-black transition-colors duration-500">
       <div className="container mx-auto px-4">
+        {/* Section Header */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gradient mb-4 p-3">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900 dark:text-white">
             {t("latest.events")} & {t("photo.gallery")}
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-primary to-saffron mx-auto rounded-full"></div>
+          <div
+            className="w-24 h-1 mx-auto rounded-full"
+            style={{ background: policeBlue }}
+          ></div>
         </div>
 
         <div className="grid lg:grid-cols-3 gap-8">
-          {/* Latest Events Timeline */}
+          {/* Events Timeline */}
           <div className="lg:col-span-1">
-            <Card className="glass-card">
+            <Card className="bg-white dark:bg-[#101B33] shadow-md rounded-xl">
               <CardContent className="p-6">
                 <div className="flex items-center gap-2 mb-6">
-                  <Calendar className="w-6 h-6 text-primary" />
-                  <h3 className="text-xl font-bold text-foreground p-3">
+                  <Calendar className="w-6 h-6 text-[rgb(0,51,102)]" />
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-white">
                     {t("latest.events")}
                   </h3>
                 </div>
 
                 <div className="space-y-4">
                   {events.map((event, index) => (
-                            <Link to={event.link} >
-                    <div
-                      key={event.id}
-                      className="relative pl-8 pb-6 border-l-2 border-border last:border-l-0 last:pb-0 fade-in"
-                      style={{ animationDelay: `${index * 0.1}s` }}
-                    >
-                      {/* Timeline dot */}
-                      <div className="absolute -left-2 top-0 w-4 h-4 bg-primary rounded-full border-2 border-background"></div>
-
-                      <div className="space-y-2">
-                        <div className="flex items-center gap-2">
-                          <span className="text-lg">
-                            {getEventIcon(event.type)}
-                          </span>
-                          
-                        </div>
-
-                        <h4 className="font-semibold text-foreground leading-tight">
-                          {event.title}
-                        </h4>
-                        {/* <p className="text-sm text-muted-foreground">
-                          {event.titleMr}
-                        </p> */}
-
-                        <div className="space-y-1 text-xs text-muted-foreground">
-                          <div className="flex items-center gap-1">
-                            <Calendar className="w-3 h-3" />
-                            {formatDate(event.date)}
-                          </div>
-                          <div className="flex items-center gap-1">
-                            <MapPin className="w-3 h-3" />
-                            {event.location}
+                    <Link key={event.id} to={event.link}>
+                      <div
+                        className="relative pl-8 pb-6 border-l-2 border-[rgb(0,51,102)] last:border-l-0 last:pb-0"
+                        style={{ animationDelay: `${index * 0.1}s` }}
+                      >
+                        <div className="absolute -left-2 top-0 w-4 h-4 bg-[rgb(0,51,102)] rounded-full border-2 dark:border-black"></div>
+                        <div className="space-y-2">
+                          <div className="flex items-center gap-2 text-lg">{getEventIcon(event.type)}</div>
+                          <h4 className="font-semibold text-gray-900 dark:text-white leading-tight">{event.title}</h4>
+                          <div className="space-y-1 text-xs text-gray-500 dark:text-white/70">
+                            <div className="flex items-center gap-1">
+                              <Calendar className="w-3 h-3" />
+                              {formatDate(event.date)}
+                            </div>
+                            <div className="flex items-center gap-1">
+                              <MapPin className="w-3 h-3" />
+                              {event.location}
+                            </div>
                           </div>
                         </div>
                       </div>
-                    </div>
                     </Link>
                   ))}
                 </div>
 
-                <div className="text-center pt-4 border-t border-border">
-                  <Link to={"/citizen/press-release"} >
-                  <Button className="btn-police w-full dark:text-white">
-                    <ArrowRight className="w-4 h-4 mr-2" />
-                    {t("view.all.events")}
-                  </Button>
+                <div className="text-center pt-4 border-t border-gray-300 dark:border-gray-700">
+                  <Link to={"/citizen/press-release"}>
+                    <Button className="w-full bg-[rgb(0,51,102)] hover:bg-[rgb(0,61,122)] text-white dark:text-white">
+                      <ArrowRight className="w-4 h-4 mr-2" />
+                      {t("view.all.events")}
+                    </Button>
                   </Link>
                 </div>
               </CardContent>
@@ -235,23 +138,21 @@ const EventsGallery: React.FC = () => {
 
           {/* Photo Gallery Grid */}
           <div className="lg:col-span-2">
-            <Card className="glass-card">
+            <Card className="bg-white dark:bg-[#101B33] shadow-md rounded-xl">
               <CardContent className="p-6">
                 <div className="flex items-center justify-between mb-6">
                   <div className="flex items-center gap-2">
-                    <Camera className="w-6 h-6 text-saffron" />
-                    <h3 className="text-xl font-bold text-foreground">
-                      {t("photo.gallery")}
-                    </h3>
+                    <Camera className="w-6 h-6 text-[rgb(0,51,102)]" />
+                    <h3 className="text-xl font-bold text-gray-900 dark:text-white">{t("photo.gallery")}</h3>
                   </div>
-                  <Link to={"/gallery"} >
-                  <Button
-                    variant="outline"
-                    className="hover:bg-saffron hover:text-white hover:border-saffron "
-                  >
-                    <Eye className="w-4 h-4 mr-2" />
-                    {t("view.gallery")}
-                  </Button>
+                  <Link to={"/gallery"}>
+                    <Button
+                      variant="outline"
+                      className="hover:bg-[rgb(0,51,102)] hover:text-white hover:border-[rgb(0,51,102)] text-[rgb(0,51,102)] dark:text-white"
+                    >
+                      <Eye className="w-4 h-4 mr-2" />
+                      {t("view.gallery")}
+                    </Button>
                   </Link>
                 </div>
 
@@ -259,56 +160,36 @@ const EventsGallery: React.FC = () => {
                   {galleryImages.map((image, index) => (
                     <div
                       key={image.id}
-                      className="relative group cursor-pointer overflow-hidden rounded-lg slide-up"
-                      style={{
-                        animationDelay: `${index * 0.1}s`,
-                        background: `url('${image.src}')`,
-                        backgroundSize: "cover",
-                      }}
+                      className="relative group cursor-pointer overflow-hidden rounded-lg aspect-square"
+                      style={{ animationDelay: `${index * 0.1}s` }}
                       onClick={() => setSelectedImage(image.src)}
                     >
-                      <div className="aspect-square bg-gradient-to-br from-primary/20 to-saffron/20 flex items-center justify-center">
-                        <Camera className="w-12 h-12 text-primary/50" />
-                      </div>
-
-                      {/* Overlay */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <div className="absolute bottom-0 left-0 right-0 p-4">
-                          <h4 className="font-semibold text-white text-sm leading-tight">
-                            {image.title}
-                          </h4>
-                          <p className="text-white/80 text-xs mt-1">
-                            {formatDate(image.date)}
-                          </p>
-                        </div>
-
-                        <div className="absolute top-2 right-2">
-                          <Badge variant="secondary" className="text-xs">
-                            {image.category}
-                          </Badge>
-                        </div>
-
-                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                          <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm">
-                            <Eye className="w-6 h-6 text-white" />
-                          </div>
-                        </div>
+                      <img
+                        src={image.src}
+                        alt={image.title}
+                        className="w-full h-full object-cover rounded-lg"
+                      />
+                      <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+                        <h4 className="font-semibold text-white text-sm">{image.title}</h4>
+                        <p className="text-white/80 text-xs">{formatDate(image.date)}</p>
+                        <Badge variant="secondary" className="absolute top-2 right-2 text-xs">
+                          {image.category}
+                        </Badge>
                       </div>
                     </div>
                   ))}
                 </div>
 
-                {/* Gallery Navigation */}
-                <div className="flex items-center justify-between mt-6 pt-4 border-t border-border">
-                  <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                <div className="flex items-center justify-between mt-6 pt-4 border-t border-gray-300 dark:border-gray-700">
+                  <div className="flex items-center gap-2 text-sm text-gray-500 dark:text-white/70">
                     <Video className="w-4 h-4" />
                     <span>{t("gallery.videoAvailable")}</span>
                   </div>
-                     <Link to={"/gallery"} >
-                  <Button className="btn-saffron dark:text-white">
-                    <Camera className="w-4 h-4 mr-2" />
-                     {t("gallery.viewAllPhotos")}
-                  </Button>
+                  <Link to={"/gallery"}>
+                    <Button className="bg-[rgb(0,51,102)] hover:bg-[rgb(0,61,122)] text-white dark:text-white">
+                      <Camera className="w-4 h-4 mr-2" />
+                      {t("gallery.viewAllPhotos")}
+                    </Button>
                   </Link>
                 </div>
               </CardContent>
@@ -317,22 +198,22 @@ const EventsGallery: React.FC = () => {
         </div>
       </div>
 
-      {/* Lightbox Modal (simplified) */}
+      {/* Lightbox Modal - Fixed Size with Border and Close Button */}
       {selectedImage && (
         <div
           className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
           onClick={() => setSelectedImage(null)}
         >
-          <div className="relative max-w-4xl max-h-full">
+          <div className="relative w-[600px] h-[400px] flex items-center justify-center bg-black rounded-xl border-4 border-[rgb(0,51,102)] overflow-hidden shadow-lg">
             <img
               src={selectedImage}
               alt="Gallery Image"
-              className="max-w-full max-h-full object-contain"
+              className="w-full h-full object-cover"
             />
             <Button
               variant="ghost"
               size="sm"
-              className="absolute top-4 right-4 text-white hover:bg-white/20"
+              className="absolute top-4 right-4 text-white bg-black/40 hover:bg-[rgb(0,51,102)] rounded-full w-10 h-10 flex items-center justify-center text-xl font-bold shadow-md"
               onClick={() => setSelectedImage(null)}
             >
               ✕

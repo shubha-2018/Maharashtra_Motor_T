@@ -55,13 +55,13 @@ export default function Tenders() {
       <Button
         variant="ghost"
         onClick={() => window.history.back()}
-        className="flex items-center text-gray-900 hover:bg-gray-200 transition-all duration-300 rounded-xl px-4 py-2 shadow-md hover:shadow-gray-300 mb-8 dark:text-gray-100 dark:hover:bg-gray-700 dark:hover:shadow-gray-800"
+        className="flex items-center text-gray-900 hover:bg-blue-50 hover:text-blue-700 transition-all duration-300 rounded-xl px-4 py-2 shadow-md hover:shadow-blue-200 mb-8 dark:text-gray-100 dark:hover:bg-blue-950/30 dark:hover:text-blue-300 dark:hover:shadow-blue-900/30"
       >
         <ArrowLeft className="w-4 h-4 mr-2" /> {t("back.home")}
       </Button>
 
       {/* Heading */}
-      <h1 className="text-5xl md:text-6xl p-3 font-extrabold tracking-tight text-center bg-gradient-to-r from-violet-400 via-blue-400 to-teal-400 bg-clip-text text-transparent drop-shadow-lg mb-6 dark:from-violet-500 dark:via-blue-500 dark:to-teal-500">
+      <h1 className="text-5xl md:text-6xl p-3 font-extrabold tracking-tight text-center bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 bg-clip-text text-transparent drop-shadow-lg mb-6 dark:from-blue-500 dark:via-blue-600 dark:to-blue-700">
         {t("tenders.title")}
       </h1>
       <h2 className="text-lg md:text-xl font-medium text-gray-600 text-center mb-12 dark:text-gray-300">
@@ -69,28 +69,28 @@ export default function Tenders() {
       </h2>
 
       {/* Active Tenders */}
-      <h3 className="text-4xl font-bold text-blue-500 mb-6 dark:text-blue-400">
+      <h3 className="text-4xl font-bold text-blue-700 mb-6 dark:text-blue-400">
         {t("tenders.active.title")}
       </h3>
       <div className="space-y-6 mb-12">
         {activeTenders.map((tender, idx) => (
           <Card
             key={idx}
-            className="bg-white/30 border  border-gray-200 backdrop-blur-md shadow-lg rounded-3xl hover:shadow-blue-400/20 transition-all duration-500 dark:bg-gray-800/30 dark:border-gray-700 dark:hover:shadow-blue-600/20"
+            className="bg-white/30 border border-gray-200 backdrop-blur-md shadow-lg rounded-3xl hover:shadow-blue-400/20 transition-all duration-500 dark:bg-gray-800/30 dark:border-gray-700 dark:hover:shadow-blue-600/20"
           >
             <CardContent className="p-8 space-y-3">
               <div className="flex items-center gap-3">
-                <FileText className="w-6 h-6 text-blue-400 flex-shrink-0 dark:text-blue-500" />
-                <h4 className="text-2xl font-bold text-blue-500 dark:text-blue-400">
+                <FileText className="w-6 h-6 text-blue-600 flex-shrink-0 dark:text-blue-500" />
+                <h4 className="text-2xl font-bold text-blue-700 dark:text-blue-400">
                   {t(tender.titleKey)}
                 </h4>
               </div>
               <p className="text-gray-800 dark:text-gray-200">
-                <span className="font-semibold">{t("tenders.ref")}:</span>{" "}
+                <span className="font-semibold text-blue-800 dark:text-blue-300">{t("tenders.ref")}:</span>{" "}
                 {tender.ref}
               </p>
               <p className="text-gray-800 dark:text-gray-200">
-                <span className="font-semibold">{t("tenders.deadline")}:</span>{" "}
+                <span className="font-semibold text-blue-800 dark:text-blue-300">{t("tenders.deadline")}:</span>{" "}
                 {tender.deadline}
               </p>
               <p className="text-gray-800 dark:text-gray-200">
@@ -99,7 +99,7 @@ export default function Tenders() {
               <a
                 href={tender.documentLink}
                 target="_blank"
-                className="text-blue-600 font-semibold underline hover:text-blue-400 transition-colors duration-300 dark:text-blue-400 dark:hover:text-blue-300"
+                className="text-blue-700 font-semibold underline hover:text-blue-500 transition-colors duration-300 dark:text-blue-400 dark:hover:text-blue-300"
               >
                 {t("tenders.viewDocument")}
               </a>
@@ -109,31 +109,31 @@ export default function Tenders() {
       </div>
 
       {/* Archived Tenders */}
-      <h3 className="text-3xl font-bold text-blue-500 mb-6 dark:text-blue-400">
-        {t("")}
+      <h3 className="text-3xl font-bold text-blue-700 mb-6 dark:text-blue-400">
+        {t("tenders.archived.title")}
       </h3>
       <div className="space-y-6 mb-12">
         {archivedTenders.map((tender, idx) => (
           <Card
             key={idx}
-            className="bg-white/30 border border-gray-200 backdrop-blur-md shadow-lg rounded-3xl hover:shadow-gray-400/20 transition-all duration-500 dark:bg-gray-800/30 dark:border-gray-700 dark:hover:shadow-gray-600/20"
+            className="bg-white/30 border border-gray-200 backdrop-blur-md shadow-lg rounded-3xl hover:shadow-blue-400/20 transition-all duration-500 dark:bg-gray-800/30 dark:border-gray-700 dark:hover:shadow-blue-600/20"
           >
             <CardContent className="p-6 space-y-2">
-              <h4 className="text-xl font-semibold text-gray-800 dark:text-gray-200">
+              <h4 className="text-xl font-semibold text-blue-700 dark:text-blue-400">
                 {t(tender.titleKey)}
               </h4>
               <p className="text-gray-800 dark:text-gray-200">
-                <span className="font-semibold">{t("tenders.ref")}:</span>{" "}
+                <span className="font-semibold text-blue-800 dark:text-blue-300">{t("tenders.ref")}:</span>{" "}
                 {tender.ref}
               </p>
               <p className="text-gray-800 dark:text-gray-200">
-                <span className="font-semibold">{t("tenders.closedOn")}:</span>{" "}
+                <span className="font-semibold text-blue-800 dark:text-blue-300">{t("tenders.closedOn")}:</span>{" "}
                 {tender.closedOn}
               </p>
               <a
                 href={tender.documentLink}
                 target="_blank"
-                className="text-blue-600 font-semibold underline hover:text-blue-400 transition-colors duration-300 dark:text-blue-400 dark:hover:text-blue-300"
+                className="text-blue-700 font-semibold underline hover:text-blue-500 transition-colors duration-300 dark:text-blue-400 dark:hover:text-blue-300"
               >
                 {t("tenders.viewDocument")}
               </a>

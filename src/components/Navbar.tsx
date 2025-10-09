@@ -15,11 +15,9 @@ import { useLanguage } from "@/contexts/LanguageContext";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const [scrolled, setScrolled] = useState(false);
   const navigate = useNavigate();
-  const [colorChange, setColorChange] = useState(false);
-
   const { t } = useLanguage();
 
   const navigationItems = [
@@ -38,7 +36,6 @@ const Navbar = () => {
         { name: t("nav.formerDirectors"), url: "/about/former-directors" },
         { name: t("nav.hierarchy"), url: "/about/hierarchy" },
         { name: t("nav.aboutDepartment"), url: "/about/department" },
-        // { name: t("nav.offices"), url: "/about/offices" },
         { name: t("nav.ranks"), url: "/about/ranks" },
         { name: t("nav.welfare"), url: "/about/welfare" },
       ],
@@ -81,48 +78,6 @@ const Navbar = () => {
     },
   ];
 
-  // 👇 Detect scroll
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 10) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    };
-
-    const handleColorChangeOnScroll = () => {
-      
-        if (window.scrollY > 50 && window.scrollY < 900) {
-          if (window.location.pathname == "/") {
-          setColorChange(true);
-               }
-        } else {
-          setColorChange(false);
-        }
- 
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    window.addEventListener("scroll", handleColorChangeOnScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("scroll", handleColorChangeOnScroll);
-    };
-  }, []);
-
-  // Prevent body scroll when mobile menu is open
-  useEffect(() => {
-    if (isMobileMenuOpen) {
-      // Lock scroll only on mobile menu
-      document.body.style.overflow = "hidden";
-    } else {
-      // Restore scroll normally
-      document.body.style.overflow = "";
-    }
-  }, [isMobileMenuOpen]);
-
   const toggleDropdown = (itemName: string) => {
     setOpenDropdown(openDropdown === itemName ? null : itemName);
   };
@@ -133,61 +88,60 @@ const Navbar = () => {
     setOpenDropdown(null);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <nav
-      className={`w-full font-sans border-b selection:file:items-center border-navbar-border rounded-b-lg sticky top-0 z-50 transition-colors duration-300 ${
-        scrolled ? "navbarbg" : "bg-navbar"
-      } `}
-    >
-      <div className="mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16 md:h-24">
-          {/* Logo */}
-          <div className="flex items-center">
-            <div className="flex items-center space-x-2">
-              <Link to="/">
-                <div className="w-10 h-10 md:w-14 md:h-14 bg-brand-primary rounded-full flex items-center justify-center">
-                  <img
-                    src={AshokStambhLogo}
-                    className="rounded-full"
-                    alt="logo"
-                  />
-                </div>
-              </Link>
-              <Link to="/">
-                <div className="w-24 h-14 bg-brand-primary rounded-lg flex items-center justify-center">
-                  <img
-                    src={WirelessLogo}
-                    alt="logo"
-                    className="rounded-full filter brightness-0  dark:filter dark:invert"
-                  />
-                </div>
-              </Link>
-               
-              <Link to="/">
-                <span
-                  dangerouslySetInnerHTML={{ __html: t("title") }}
-                  className={`hidden  dark:text-white sm:block text font-sans  2xl:hidden md-xl:block  md:text-lg md-xl:text-xl xl:text-sm  figtree-heading  font-[1000] text-brand-primary capitalize ${
-                    colorChange ? "text-white" : "text-gray-800"
-                  }`}
-                >
-                  {/* title */}
-                </span>
-              </Link>
-            </div>
+    <nav className="w-full font-sans border-b border-gray-300 dark:border-gray-700 rounded-b-lg sticky top-0 z-50 bg-white dark:bg-gray-900 shadow-md transition-colors duration-300">
+      <div className="mx-auto px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900">
+        <div className="flex justify-between items-center h-16 md:h-24 bg-white dark:bg-gray-900 transition-all duration-300">
+          {/* Left: Logos */}
+          <div className="flex items-center space-x-2 bg-white dark:bg-gray-900">
+            <Link to="/">
+              <div className="w-10 h-10 md:w-14 md:h-14 bg-white dark:bg-gray-900 rounded-full flex items-center justify-center">
+                <img src={AshokStambhLogo} className="rounded-full" alt="logo" />
+              </div>
+            </Link>
+
+            <Link to="/">
+  <div
+    className="w-24 h-14 rounded-lg flex items-center justify-center
+               bg-white dark:bg-gray-900 border dark:border-gray-700"
+  >
+    <img
+      src={WirelessLogo}
+      alt="Wireless Logo"
+      className="max-h-full max-w-full object-contain"
+    />
+  </div>
+</Link>
+
+
+            {/* Title: Hidden until scrolled */}
+            <Link to="/">
+              <span
+                dangerouslySetInnerHTML={{ __html: t("title") }}
+                className={`hidden sm:block text-gray-800 dark:text-white md:text-lg font-bold transition-opacity duration-500 ${scrolled ? "opacity-100" : "opacity-0"}`}
+                style={{ fontFamily: "Times New Roman, serif" }}
+              ></span>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden xl:flex items-center 2xl:space-x-4 2xl:pr-28 font-sans">
+          <div className="hidden xl:flex items-center space-x-4 pr-16 bg-white dark:bg-gray-900">
             {navigationItems.map((item) => (
-              <div key={item.name}>
+              <div key={item.name} className="bg-white dark:bg-gray-900">
                 {item.hasDropdown ? (
                   <DropdownMenu modal={false}>
                     <DropdownMenuTrigger asChild>
                       <Button
                         variant="ghost"
-                        className={`dark:text-white text-sm xl:text-lg  hover:text-navbar-foreground hover:bg-navbar-foreground/5 ${
-                          colorChange ? "text-white" : "text-gray-800"
-                        }`}
+                        className="text-gray-800 dark:text-gray-100 bg-white dark:bg-gray-900 hover:text-black dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800"
                       >
                         {item.name}
                         <ChevronDown className="w-4 h-4 ml-1" />
@@ -195,15 +149,13 @@ const Navbar = () => {
                     </DropdownMenuTrigger>
                     <DropdownMenuContent
                       align="start"
-                      className="bg-popover border border-border shadow-lg z-[60] min-w-[180px]"
+                      className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 shadow-lg z-[60] min-w-[180px]"
                     >
                       {item.items.map((subItem) => (
                         <DropdownMenuItem
                           key={subItem.name}
-                          onClick={() => {
-                            navigate(subItem.url);
-                          }}
-                          className="text-popover-foreground hover:bg-accent hover:text-accent-foreground cursor-pointer"
+                          onClick={() => navigate(subItem.url)}
+                          className="text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 cursor-pointer"
                         >
                           <Link to={subItem.url} className="w-full">
                             {subItem.name}
@@ -215,9 +167,7 @@ const Navbar = () => {
                 ) : (
                   <Button
                     variant="ghost"
-                    className={`text-navbar-foreground text-sm xl:text-lg dark:text-white hover:text-navbar-foreground hover:bg-navbar-foreground/5 ${
-                      colorChange ? "text-white" : "text-gray-800"
-                    }`}
+                    className="text-gray-800 dark:text-gray-100 bg-white dark:bg-gray-900 hover:text-black dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800"
                   >
                     <Link to={item.url}>{item.name}</Link>
                   </Button>
@@ -226,49 +176,42 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* Login Button */}
-          <div className="hidden xl:flex">
-            <div className="w-16 h-20 bg-brand-primary rounded-lg flex items-center justify-center">
+          {/* Police Logo */}
+          <div className="hidden xl:flex bg-white dark:bg-gray-900">
+            <div className="w-16 h-20 bg-white dark:bg-gray-900 rounded-lg flex items-center justify-center">
               <img src={PoliceLogo} alt="logo" />
             </div>
           </div>
 
-          {/* Mobile menu button */}
-          <div className="xl:hidden">
+          {/* Mobile Menu Toggle */}
+          <div className="xl:hidden bg-white dark:bg-gray-900">
             <Button
               variant="ghost"
               size="icon"
-              onClick={() => {
-                setIsMobileMenuOpen(!isMobileMenuOpen);
-                setOpenDropdown(null); // Close any open dropdown when toggling menu
-              }}
-              className="text-navbar-foreground"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="text-gray-800 dark:text-gray-100 bg-white dark:bg-gray-900"
             >
-              {isMobileMenuOpen ? (
-                <X className="w-6 h-6" />
-              ) : (
-                <Menu className="w-6 h-6" />
-              )}
+              {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </Button>
           </div>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* Mobile Dropdown Menu */}
         {isMobileMenuOpen && (
-          <div className="xl:hidden absolute left-0 right-0 top-full bg-background border-t border-navbar-border shadow-lg z-[55] max-h-[calc(100vh-4rem)] overflow-y-auto">
-            <div className="py-4 px-4">
+          <div className="xl:hidden absolute left-0 right-0 top-full bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700 shadow-lg z-[55] max-h-[calc(100vh-4rem)] overflow-y-auto">
+            <div className="py-4 px-4 bg-white dark:bg-gray-900">
               <div className="flex flex-col space-y-2">
                 {navigationItems.map((item) => (
-                  <div key={item.name} className="py-2">
-                    <div className="flex items-center justify-between">
+                  <div key={item.name} className="py-2 bg-white dark:bg-gray-900">
+                    <div className="flex items-center justify-between bg-white dark:bg-gray-900">
                       {item.hasDropdown ? (
                         <button
                           onClick={() => toggleDropdown(item.name)}
-                          className="flex items-center justify-between w-full text-left text-navbar-foreground font-bold hover:text-navbar-foreground/80 transition-colors"
+                          className="flex items-center justify-between w-full text-left text-gray-800 dark:text-gray-100 font-bold hover:text-black dark:hover:text-white"
                         >
                           <span>{item.name}</span>
                           <ChevronDown
-                            className={`w-4 h-4 text-navbar-muted transition-transform duration-200 ${
+                            className={`w-4 h-4 transition-transform duration-200 ${
                               openDropdown === item.name ? "rotate-180" : ""
                             }`}
                           />
@@ -276,19 +219,19 @@ const Navbar = () => {
                       ) : (
                         <button
                           onClick={() => handleMobileNavigation(item.url)}
-                          className="text-navbar-foreground font-bold hover:text-navbar-foreground/80 transition-colors"
+                          className="text-gray-800 dark:text-gray-100 font-bold hover:text-black dark:hover:text-white"
                         >
                           {item.name}
                         </button>
                       )}
                     </div>
                     {item.hasDropdown && openDropdown === item.name && (
-                      <div className="mt-2 pl-4 space-y-1 animate-in slide-in-from-top-2 duration-200">
+                      <div className="mt-2 pl-4 space-y-1">
                         {item.items.map((subItem) => (
                           <button
                             key={subItem.name}
                             onClick={() => handleMobileNavigation(subItem.url)}
-                            className="block w-full text-left py-2 text-navbar-muted hover:text-navbar-foreground transition-colors"
+                            className="block w-full text-left py-2 text-gray-700 dark:text-gray-200 hover:text-black dark:hover:text-white"
                           >
                             {subItem.name}
                           </button>
@@ -297,7 +240,7 @@ const Navbar = () => {
                     )}
                   </div>
                 ))}
-                <div className="w-full hidden xl:flex bg-brand-primary rounded-lg items-center justify-center mt-4 p-2">
+                <div className="w-full flex bg-white dark:bg-gray-900 rounded-lg items-center justify-center mt-4 p-2">
                   <img src={PoliceLogo} className="w-14 h-14" alt="logo" />
                 </div>
               </div>

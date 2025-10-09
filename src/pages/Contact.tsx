@@ -13,8 +13,8 @@ export default function ContactUs() {
     <div className="min-h-screen bg-gradient-to-b from-gray-50 via-gray-100 to-gray-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-950 text-gray-900 dark:text-gray-100 px-6 py-12 sm:px-12 lg:px-24 relative overflow-hidden">
       {/* Background Glow */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute top-32 left-40 w-96 h-96 bg-violet-400/20 blur-3xl rounded-full dark:bg-violet-600/20"></div>
-        <div className="absolute bottom-32 right-40 w-[32rem] h-[32rem] bg-blue-400/20 blur-3xl rounded-full dark:bg-blue-600/20"></div>
+        <div className="absolute top-32 left-40 w-96 h-96 bg-blue-600/20 blur-3xl rounded-full dark:bg-blue-700/20"></div>
+        <div className="absolute bottom-32 right-40 w-[32rem] h-[32rem] bg-blue-800/20 blur-3xl rounded-full dark:bg-blue-900/20"></div>
       </div>
 
       <div className="max-w-6xl mx-auto space-y-12">
@@ -22,13 +22,13 @@ export default function ContactUs() {
         <Button
           variant="ghost"
           onClick={goBack}
-          className="flex items-center text-gray-900 hover:bg-gray-200 transition-all duration-300 rounded-xl px-4 py-2 shadow-md hover:shadow-gray-300 mb-6 dark:text-gray-100 dark:hover:bg-gray-700 dark:hover:shadow-gray-800"
+          className="flex items-center text-gray-900 hover:bg-blue-50 hover:text-blue-700 transition-all duration-300 rounded-xl px-4 py-2 shadow-md hover:shadow-blue-200 mb-6 dark:text-gray-100 dark:hover:bg-blue-950/30 dark:hover:text-blue-300 dark:hover:shadow-blue-900/30"
         >
           <ArrowLeft className="w-4 h-4 mr-2" /> {t("back.home")}
         </Button>
 
         {/* Heading */}
-        <h1 className="text-5xl md:text-6xl p-3 font-extrabold tracking-tight text-center bg-gradient-to-r from-violet-400 via-blue-400 to-teal-400 bg-clip-text text-transparent drop-shadow-lg dark:from-violet-500 dark:via-blue-500 dark:to-teal-500">
+        <h1 className="text-5xl md:text-6xl p-3 font-extrabold tracking-tight text-center bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 bg-clip-text text-transparent drop-shadow-lg dark:from-blue-500 dark:via-blue-600 dark:to-blue-700">
           {t("contact.title")}
         </h1>
         <h2 className="text-lg md:text-xl font-medium text-gray-600 text-center mb-10 dark:text-gray-300">
@@ -40,9 +40,9 @@ export default function ContactUs() {
           <CardContent className="p-10 space-y-8">
             {/* Address */}
             <div className="flex items-start gap-4">
-              <MapPin className="w-6 h-6 text-blue-400 mt-1 flex-shrink-0 dark:text-blue-500" />
+              <MapPin className="w-6 h-6 text-blue-600 mt-1 flex-shrink-0 dark:text-blue-500" />
               <div className="space-y-1">
-                <h3 className="text-2xl font-bold text-blue-500 dark:text-blue-400">{t("contact.address.title")}</h3>
+                <h3 className="text-2xl font-bold text-blue-700 dark:text-blue-400">{t("contact.address.title")}</h3>
                 <p className="text-gray-800 text-lg leading-relaxed dark:text-gray-200">
                   {t("contact.address.line1")} <br />
                   {t("contact.address.line2")} <br />
@@ -54,18 +54,18 @@ export default function ContactUs() {
 
             {/* Telephone */}
             <div className="flex items-start gap-4">
-              <Phone className="w-6 h-6 text-green-400 mt-1 flex-shrink-0 dark:text-green-500" />
+              <Phone className="w-6 h-6 text-blue-600 mt-1 flex-shrink-0 dark:text-blue-500" />
               <div>
-                <h3 className="text-2xl font-bold text-green-500 dark:text-green-400">{t("contact.phone.title")}</h3>
+                <h3 className="text-2xl font-bold text-blue-700 dark:text-blue-400">{t("contact.phone.title")}</h3>
                 <p className="text-gray-800 text-lg leading-relaxed dark:text-gray-200">{t("contact.phone.number")}</p>
               </div>
             </div>
 
             {/* Email */}
             <div className="flex items-start gap-4">
-              <Mail className="w-6 h-6 text-purple-400 mt-1 flex-shrink-0 dark:text-purple-500" />
+              <Mail className="w-6 h-6 text-blue-600 mt-1 flex-shrink-0 dark:text-blue-500" />
               <div>
-                <h3 className="text-2xl font-bold text-purple-500 dark:text-purple-400">{t("contact.email.title")}</h3>
+                <h3 className="text-2xl font-bold text-blue-700 dark:text-blue-400">{t("contact.email.title")}</h3>
                 <p className="text-gray-800 text-lg leading-relaxed dark:text-gray-200">
                   {t("contact.email.address")}
                 </p>
@@ -75,7 +75,7 @@ export default function ContactUs() {
         </Card>
 
         {/* Map Section Heading */}
-        <h2 className="text-3xl font-bold text-center text-blue-500 mb-6 dark:text-blue-400">
+        <h2 className="text-3xl font-bold text-center text-blue-700 mb-6 dark:text-blue-400">
           {t("contact.map.title")}
         </h2>
 

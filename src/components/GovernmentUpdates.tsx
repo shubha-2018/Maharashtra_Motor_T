@@ -15,6 +15,9 @@ import { Link } from "react-router-dom";
 const GovernmentUpdates: React.FC = () => {
   const { t } = useLanguage();
 
+  const policeBlue = "#0A1E4A"; // Dark Police Blue
+  const accent = "#1D4ED8"; // Medium blue accent
+
   const bulletins = [
     {
       id: 1,
@@ -22,7 +25,6 @@ const GovernmentUpdates: React.FC = () => {
       title: t("bulletin.cybercrimePortal"),
       date: "2024-01-15",
       icon: Megaphone,
-      color: "border-l-blue-500",
       badge: t("badge.new"),
       link: "https://mahpolwireless.stagingdsi.co.in/wp-content/uploads/2024/04/PP-RESULT-RM-ELE.-WO-2024.pdf",
     },
@@ -32,7 +34,6 @@ const GovernmentUpdates: React.FC = () => {
       title: t("bulletin.digitalEvidence"),
       date: "2024-01-12",
       icon: FileText,
-      color: "border-l-green-500",
       badge: t("badge.important"),
       link: "https://mahpolwireless.stagingdsi.co.in/wp-content/uploads/2024/04/PP-RESULT-RM-ELE.-WO-2024.pdf",
     },
@@ -42,7 +43,6 @@ const GovernmentUpdates: React.FC = () => {
       title: t("bulletin.emergencyProtocol"),
       date: "2024-01-10",
       icon: FileText,
-      color: "border-l-orange-500",
       badge: t("badge.update"),
       link: "https://mahpolwireless.stagingdsi.co.in/wp-content/uploads/2024/04/PP-RESULT-RM-ELE.-WO-2024.pdf",
     },
@@ -52,7 +52,6 @@ const GovernmentUpdates: React.FC = () => {
       title: t("bulletin.auditResults"),
       date: "2024-01-08",
       icon: Megaphone,
-      color: "border-l-purple-500",
       badge: t("badge.report"),
       link: "https://mahpolwireless.stagingdsi.co.in/wp-content/uploads/2024/04/PP-RESULT-RM-ELE.-WO-2024.pdf",
     },
@@ -64,7 +63,6 @@ const GovernmentUpdates: React.FC = () => {
       title: t("tender.communicationEquipment"),
       lastDate: "2024-02-15",
       tender_no: "PCIT/2024/001",
-      value: "₹ 2.5 Crores",
       status: t("tender.status.open"),
       link: "https://mahpolwireless.stagingdsi.co.in/wp-content/uploads/2025/01/TenderNoticeSolapur.pdf",
     },
@@ -73,7 +71,6 @@ const GovernmentUpdates: React.FC = () => {
       title: t("tender.mobileApp"),
       lastDate: "2024-02-20",
       tender_no: "PCIT/2024/002",
-      value: "₹ 1.8 Crores",
       status: t("tender.status.open"),
       link: "https://mahpolwireless.stagingdsi.co.in/wp-content/uploads/2025/01/TenderNoticeSolapur.pdf",
     },
@@ -82,7 +79,6 @@ const GovernmentUpdates: React.FC = () => {
       title: t("tender.serverMaintenance"),
       lastDate: "2024-01-30",
       tender_no: "PCIT/2024/003",
-      value: "₹ 85 Lakhs",
       status: t("tender.status.closingSoon"),
       link: "https://mahpolwireless.stagingdsi.co.in/wp-content/uploads/2025/01/TenderNoticeSolapur.pdf",
     },
@@ -98,82 +94,71 @@ const GovernmentUpdates: React.FC = () => {
       case "new":
         return "default";
       case "important":
-        return "destructive";
-      case "update":
         return "secondary";
+      case "update":
+        return "outline";
       default:
         return "outline";
     }
   };
 
-  const getStatusColor = (status: string) => {
-    switch (status.toLowerCase()) {
-      case "open":
-        return "bg-green-100 text-green-800 border-green-200";
-      case "closing soon":
-        return "bg-orange-100 text-orange-800 border-orange-200";
-      case "closed":
-        return "bg-red-100 text-red-800 border-red-200";
-      default:
-        return "bg-gray-100 text-gray-800 border-gray-200";
-    }
-  };
-
   return (
-    <section className="py-16 bg-gradient-to-br from-secondary/30 to-background">
+    <section className="py-16 transition-colors duration-500 bg-white dark:bg-black">
       <div className="container mx-auto px-4">
+        {/* Section Header */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gradient mb-4 p-3">
+          <h2 className="text-3xl md:text-4xl font-bold mb-3 text-gray-900 dark:text-white">
             {t("govt.updates")}
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-primary to-saffron mx-auto rounded-full"></div>
+          <div
+            className="w-24 h-1 mx-auto rounded-full"
+            style={{
+              background: `linear-gradient(to right, ${policeBlue}, ${accent})`,
+            }}
+          ></div>
         </div>
 
+        {/* Two-Column Grid */}
         <div className="grid lg:grid-cols-2 gap-8">
-          {/* Bulletins / Orders / Instructions */}
-          <Card className="glass-card fade-in">
-            <CardHeader className="pb-4">
-              <CardTitle className="flex items-center gap-2 text-xl">
-                <Megaphone className="w-6 h-6 text-primary" />
+          {/* Bulletins */}
+          <Card className="bg-white dark:bg-black shadow-md hover:shadow-lg transition-all duration-300 border border-gray-200 dark:border-[rgb(0,51,102)] rounded-xl">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2 text-xl font-semibold text-gray-900 dark:text-white">
+                <Megaphone className="w-6 h-6" color={policeBlue} />
                 {t("bulletins")}
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
-              {bulletins.map((item, index) => (
+              {bulletins.map((item) => (
                 <div
                   key={item.id}
-                  className={`p-4 border-l-4 ${item.color} bg-card hover:bg-card/80 rounded-r-lg transition-all duration-300 hover:shadow-md card-hover cursor-pointer`}
-                  style={{ animationDelay: `${index * 0.1}s` }}
+                  className="p-4 border-l-4 rounded-lg bg-gray-50 dark:bg-black dark:border-[rgb(0,51,102)] border-[rgb(0,51,102)] hover:bg-gray-100 dark:hover:bg-[#111111] transition-all duration-300 shadow-sm hover:shadow-md"
                 >
                   <div className="flex items-start justify-between mb-2">
                     <div className="flex items-center gap-2">
-                      <item.icon className="w-4 h-4 text-muted-foreground flex-shrink-0 mt-1" />
+                      <item.icon className="w-4 h-4" color={policeBlue} />
                       <Badge
                         variant={getBadgeVariant(item.badge)}
-                        className="text-xs"
+                        className="text-xs bg-[rgb(0,51,102)] text-white"
                       >
                         {item.badge}
                       </Badge>
                     </div>
-                    <div className="flex items-center gap-1 text-xs text-muted-foreground">
+                    <div className="flex items-center gap-1 text-xs text-white">
                       <Calendar className="w-3 h-3" />
                       {formatDate(item.date)}
                     </div>
                   </div>
 
-                  <h3 className="font-semibold text-foreground mb-1 leading-tight">
+                  <h3 className="font-semibold mb-2 leading-tight text-gray-900 dark:text-white">
                     {item.title}
                   </h3>
-                  {/* <p className="text-sm text-muted-foreground mb-3">
-                    {item.titleMr}
-                  </p> */}
 
-                  <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-3">
                     <Link to={item.link} target="_blank">
                       <Button
-                        variant="ghost"
                         size="sm"
-                        className="text-primary hover:text-primary-hover"
+                        className="bg-[rgb(0,51,102)] hover:bg-[rgb(0,61,122)] text-white dark:text-white transition-colors"
                       >
                         <ExternalLink className="w-3 h-3 mr-1" />
                         {t("read.more")}
@@ -181,9 +166,9 @@ const GovernmentUpdates: React.FC = () => {
                     </Link>
                     <Link to={item.link} target="_blank">
                       <Button
-                        variant="ghost"
                         size="sm"
-                        className="text-muted-foreground hover:text-foreground"
+                        variant="outline"
+                        className="border-[rgb(0,51,102)] text-[rgb(0,51,102)] dark:text-white hover:bg-[rgb(0,51,102)] hover:text-white transition-colors"
                       >
                         <Download className="w-3 h-3 mr-1" />
                         PDF
@@ -192,69 +177,47 @@ const GovernmentUpdates: React.FC = () => {
                   </div>
                 </div>
               ))}
-
-              {/* <div className="text-center pt-4">
-                <Button className="btn-police">{t("view.all")}</Button>
-              </div> */}
             </CardContent>
           </Card>
 
           {/* Tenders */}
-          <Card className="glass-card slide-up">
-            <CardHeader className="pb-4">
-              <CardTitle className="flex items-center gap-2 text-xl">
-                <FileText className="w-6 h-6 text-saffron" />
+          <Card className="bg-white dark:bg-black shadow-md hover:shadow-lg transition-all duration-300 border border-gray-200 dark:border-[rgb(0,51,102)] rounded-xl">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2 text-xl font-semibold text-gray-900 dark:text-white">
+                <FileText className="w-6 h-6" color={policeBlue} />
                 {t("tenders.section")}
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
-              {tenders.map((tender, index) => (
+              {tenders.map((tender) => (
                 <div
                   key={tender.id}
-                  className="p-4 border border-border rounded-lg bg-card hover:bg-card/80 transition-all duration-300 hover:shadow-md card-hover cursor-pointer"
-                  style={{ animationDelay: `${index * 0.1}s` }}
+                  className="p-4 border border-gray-200 dark:border-[rgb(0,51,102)] rounded-lg bg-gray-50 dark:bg-black hover:bg-gray-100 dark:hover:bg-[#111111] transition-all duration-300 shadow-sm hover:shadow-md"
                 >
                   <div className="flex items-start justify-between mb-3">
-                    <div className="flex-1">
-                      <h3 className="font-semibold text-foreground mb-1 leading-tight">
+                    <div>
+                      <h3 className="font-semibold mb-1 leading-tight text-gray-900 dark:text-white">
                         {tender.title}
                       </h3>
-                      {/* <p className="text-sm text-muted-foreground mb-2">
-                        {tender.titleMr}
-                      </p> */}
+                      <p className="text-xs text-gray-500 dark:text-white/70">
+                        Tender No: {tender.tender_no}
+                      </p>
                     </div>
-                    <Badge
-                      className={`text-xs ${getStatusColor(tender.status)}`}
-                    >
+                    <Badge className="text-xs bg-[rgb(0,51,102)]/10 text-[rgb(0,51,102)] border border-[rgb(0,51,102)]/30">
                       {tender.status}
                     </Badge>
                   </div>
 
-                  <div className="grid grid-cols-2 gap-4 text-sm mb-3">
-                    <div>
-                      <span className="text-muted-foreground">Tender No:</span>
-                      <p className="font-medium text-foreground">
-                        {tender.tender_no}
-                      </p>
-                    </div>
-                    {/* <div>
-                      <span className="text-muted-foreground">Value:</span>
-                      <p className="font-medium text-foreground">
-                        {tender.value}
-                      </p>
-                    </div> */}
-                  </div>
-
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-1 text-sm text-muted-foreground">
+                  <div className="flex items-center justify-between mt-3 text-white">
+                    <div className="flex items-center gap-1 text-sm">
                       <Calendar className="w-3 h-3" />
                       Last Date: {formatDate(tender.lastDate)}
                     </div>
                     <Link to={tender.link} target="_blank">
                       <Button
-                        variant="outline"
                         size="sm"
-                        className="hover:bg-saffron hover:text-white hover:border-saffron"
+                        variant="outline"
+                        className="border-[rgb(0,51,102)] text-[rgb(0,51,102)] dark:text-white hover:bg-[rgb(0,51,102)] hover:text-white transition-colors"
                       >
                         <Download className="w-3 h-3 mr-1" />
                         Download
@@ -266,7 +229,7 @@ const GovernmentUpdates: React.FC = () => {
 
               <div className="text-center pt-4">
                 <Link to={"/citizen/tender"}>
-                  <Button className="btn-saffron dark:text-white">
+                  <Button className="bg-[rgb(0,51,102)] hover:bg-[rgb(0,61,122)] text-white dark:text-white">
                     {t("view.all")} {t("tenders.section")}
                   </Button>
                 </Link>

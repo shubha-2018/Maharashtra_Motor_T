@@ -7,7 +7,6 @@ import {
   Shield,
   AlertTriangle,
   Flame,
-  Baby,
   PhoneCall,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -17,7 +16,6 @@ import { cn } from "@/lib/utils";
 import IMG1 from "@/assets/hero/4.jpg";
 import IMG2 from "@/assets/hero/2.jpg";
 import IMG3 from "@/assets/hero/5.jpg";
-import IMG4 from "@/assets/hero/Aaryabhatt-Garden-4.jpg";
 import IMG6 from "@/assets/hero/Slider.jpeg";
 import DIRECTOR_PHOTO from "@/assets/director.jpg";
 import { Link } from "react-router-dom";
@@ -28,28 +26,11 @@ const HeroSection: React.FC = () => {
   const { t } = useLanguage();
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  // Hero slider images
   const heroSlides = [
-    {
-      image: IMG6,
-      title: t("title"),
-      subtitle: t("hero.modernTech.subtitle"),
-    },
-    {
-      image: IMG1,
-      title: t("hero.digitalGovernance.title"),
-      subtitle: t("hero.digitalGovernance.subtitle"),
-    },
-    {
-      image: IMG3,
-      title: t("hero.communityPolicing.title"),
-      subtitle: t("hero.communityPolicing.subtitle"),
-    },
-    {
-      image: IMG2,
-      title: t("hero.modernTech.title"),
-      subtitle: t("hero.modernTech.subtitle"),
-    },
+    { image: IMG6, title: t(""), subtitle: t("") },
+    { image: IMG1, title: t(""), subtitle: t("") },
+    { image: IMG3, title: t(""), subtitle: t("") },
+    { image: IMG2, title: t(""), subtitle: t("") },
   ];
 
   useEffect(() => {
@@ -59,50 +40,16 @@ const HeroSection: React.FC = () => {
     return () => clearInterval(timer);
   }, [heroSlides.length]);
 
-  const nextSlide = () =>
-    setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
-  const prevSlide = () =>
-    setCurrentSlide(
-      (prev) => (prev - 1 + heroSlides.length) % heroSlides.length
-    );
+  const nextSlide = () => setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
+  const prevSlide = () => setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
 
   const emergencyContacts = [
-    {
-      title: t("dial"),
-      number: "112",
-      type: t("type.police"),
-      icon: Shield,
-    },
-    {
-      title: t("emergency.fire"),
-      number: "101",
-      type: t("type.fire"),
-      icon: Flame,
-    },
-    {
-      title: t("emergency.ambulance"),
-      number: "102",
-      type: t("type.medical"),
-      icon: Heart,
-    },
-    {
-      title: t("emergency.disaster"),
-      number: "108",
-      type: t("type.disaster"),
-      icon: AlertTriangle,
-    },
-    {
-      title: t("emergency.women"),
-      number: "1091",
-      type: t("type.women"),
-      icon: Phone,
-    },
-    {
-      title: t("emergency.single"),
-      number: "112",
-      type: t("type.allInOne"),
-      icon: PhoneCall,
-    },
+    { title: t("dial"), number: "112", type: t("type.police"), icon: Shield },
+    { title: t("emergency.fire"), number: "101", type: t("type.fire"), icon: Flame },
+    { title: t("emergency.ambulance"), number: "102", type: t("type.medical"), icon: Heart },
+    { title: t("emergency.disaster"), number: "108", type: t("type.disaster"), icon: AlertTriangle },
+    { title: t("emergency.women"), number: "1091", type: t("type.women"), icon: Phone },
+    { title: t("emergency.single"), number: "112", type: t("type.allInOne"), icon: PhoneCall },
   ];
 
   const handleCall = (number: string) => {
@@ -110,7 +57,7 @@ const HeroSection: React.FC = () => {
   };
 
   return (
-    <section className="relative min-h-[80vh] bg-gradient-to-br from-background to-secondary/30">
+    <section className="relative min-h-[80vh] bg-white dark:bg-gray-950 transition-colors duration-300">
       {/* Hero Slider */}
       <div className="relative h-[30vh] md:h-[85vh] overflow-hidden">
         {heroSlides.map((slide, index) => (
@@ -121,20 +68,21 @@ const HeroSection: React.FC = () => {
               index === currentSlide ? "opacity-100" : "opacity-0"
             )}
           >
+            {/* Crisp, clear image without dark overlay */}
             <div
-              className="w-full h-full bg-cover bg-center relative"
-              style={{ backgroundImage: `url(${slide.image})` }}
+              className="w-full h-full bg-cover bg-center relative brightness-105 contrast-110 saturate-125"
+              style={{
+                backgroundImage: `url(${slide.image})`,
+              }}
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-primary/80 via-primary/60 to-saffron/40" />
-
               {/* Slide Content */}
               <div className="absolute inset-0 flex items-end mb-[2rem] md:mb-28 justify-center text-center">
                 <div className="container mx-auto px-4 flex-col gap-y-5 justify-center">
                   <h2
-                    className="text-2xl md:text-5xl xl:text-5xl capitalize font-bold text-white mb-4 fade-in"
+                    className="text-2xl md:text-5xl xl:text-5xl capitalize font-bold text-white drop-shadow-lg mb-4 fade-in"
                     dangerouslySetInnerHTML={{ __html: t(slide.title) }}
                   />
-                  <p className="hidden sm:block text-lg sm:text-xl md:text-2xl text-white/90 slide-up">
+                  <p className="hidden sm:block text-lg sm:text-xl md:text-2xl text-white/90 drop-shadow slide-up">
                     {slide.subtitle}
                   </p>
                 </div>
@@ -147,7 +95,7 @@ const HeroSection: React.FC = () => {
         <button
           onClick={prevSlide}
           className="absolute left-4 top-1/2 -translate-y-1/2 
-             bg-black/70 hover:bg-black/80 
+             bg-black/50 hover:bg-black/70 
              text-white p-3 rounded-full shadow-lg 
              backdrop-blur-sm transition-all z-20"
           aria-label="Previous slide"
@@ -158,7 +106,7 @@ const HeroSection: React.FC = () => {
         <button
           onClick={nextSlide}
           className="absolute right-4 top-1/2 -translate-y-1/2 
-             bg-black/70 hover:bg-black/80 
+             bg-black/50 hover:bg-black/70 
              text-white p-3 rounded-full shadow-lg 
              backdrop-blur-sm transition-all z-20"
           aria-label="Next slide"
@@ -186,9 +134,8 @@ const HeroSection: React.FC = () => {
       <div className="container mx-auto px-4 py-12">
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Director Card */}
-          <Card className="glass-card overflow-hidden fade-in">
+          <Card className="glass-card overflow-hidden fade-in dark:bg-gray-900/50 dark:border-gray-800 transition-all">
             <div className="relative">
-              {/* Background Emblem Watermark */}
               <div className="absolute inset-0 flex items-center justify-center opacity-10">
                 <img
                   src={maharashtraEmblem}
@@ -204,7 +151,7 @@ const HeroSection: React.FC = () => {
                     alt="Director of Police"
                     className="w-52 h-52 object-cover rounded-lg shadow-xl mx-auto"
                   />
-                  <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-saffron rounded-full flex items-center justify-center">
+                  <div className="absolute -bottom-2 -right-2 w-8 h-8 bg rounded-full flex items-center justify-center">
                     <Shield className="w-4 h-4 text-white" />
                   </div>
                 </div>
@@ -231,7 +178,7 @@ const HeroSection: React.FC = () => {
           {/* Welcome Message */}
           <div className="space-y-6 slide-up">
             <div>
-              <h2 className="text-3xl md:text-4xl font-sans font-extrabold text-gradient mb-4 p-3">
+              <h2 className="text-3xl md:text-4xl font-sans font-extrabold mb-4 p-3 text-foreground">
                 {t("welcome.title")}
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
@@ -239,7 +186,7 @@ const HeroSection: React.FC = () => {
               </p>
             </div>
 
-            <Card className="glass-card border-l-4 border-l-saffron">
+            <Card className="glass-card border-l-4 border-l dark:bg-gray-900/50 dark:border-gray-800">
               <CardContent className="p-6">
                 <h3 className="text-muted-foreground mb-4 leading-relaxed text-justify">
                   {t("director.desk")}
@@ -267,7 +214,7 @@ const HeroSection: React.FC = () => {
                 {emergencyContacts.map((contact, index) => (
                   <Card
                     key={index}
-                    className="glass-card hover:scale-105 transition-transform cursor-pointer"
+                    className="glass-card hover:scale-105 transition-transform cursor-pointer dark:bg-gray-900/50"
                   >
                     <CardContent className="p-4">
                       <div className="flex items-center space-x-3">

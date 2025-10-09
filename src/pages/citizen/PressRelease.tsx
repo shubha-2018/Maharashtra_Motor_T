@@ -33,8 +33,8 @@ export default function PressRelease() {
     <div className="min-h-screen bg-gradient-to-b from-gray-50 via-gray-100 to-gray-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-950 text-gray-900 dark:text-gray-100 px-6 py-12 sm:px-12 lg:px-24 relative overflow-hidden">
       {/* Background Glow */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute top-32 left-40 w-96 h-96 bg-violet-400/20 dark:bg-violet-600/20 blur-3xl rounded-full animate-pulse-slow"></div>
-        <div className="absolute bottom-32 right-40 w-[32rem] h-[32rem] bg-blue-400/20 dark:bg-blue-600/20 blur-3xl rounded-full animate-pulse-slow"></div>
+        <div className="absolute top-32 left-40 w-96 h-96 bg-blue-600/20 dark:bg-blue-700/20 blur-3xl rounded-full animate-pulse-slow"></div>
+        <div className="absolute bottom-32 right-40 w-[32rem] h-[32rem] bg-blue-800/20 dark:bg-blue-900/20 blur-3xl rounded-full animate-pulse-slow"></div>
       </div>
 
       <div className="max-w-6xl mx-auto space-y-12">
@@ -42,13 +42,13 @@ export default function PressRelease() {
         <Button
           variant="ghost"
           onClick={goBack}
-          className="flex items-center text-gray-900 dark:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-300 rounded-xl px-4 py-2 shadow-md hover:shadow-gray-400 dark:hover:shadow-gray-800 mb-6"
+          className="flex items-center text-gray-900 dark:text-gray-100 hover:bg-blue-50 dark:hover:bg-blue-950/30 hover:text-blue-700 dark:hover:text-blue-300 transition-all duration-300 rounded-xl px-4 py-2 shadow-md hover:shadow-blue-200 dark:hover:shadow-blue-900/30 mb-6"
         >
           <ArrowLeft className="w-4 h-4 mr-2" /> {t("back.home")}
         </Button>
 
         {/* Main Heading */}
-        <h1 className="text-5xl md:text-6xl p-3 font-extrabold tracking-tight text-center bg-gradient-to-r from-violet-400 via-blue-400 to-teal-400 dark:from-violet-500 dark:via-blue-500 dark:to-teal-500 bg-clip-text text-transparent drop-shadow-lg">
+        <h1 className="text-5xl md:text-6xl p-3 font-extrabold tracking-tight text-center bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 dark:from-blue-500 dark:via-blue-600 dark:to-blue-700 bg-clip-text text-transparent drop-shadow-lg">
           {t("press.title")}
         </h1>
         <h2 className="text-lg md:text-xl font-medium text-gray-600 dark:text-gray-400 text-center mb-12">
@@ -77,8 +77,8 @@ export default function PressRelease() {
               {/* Content Section */}
               <CardContent className="p-8 flex-1 space-y-4">
                 <div className="flex items-center gap-3">
-                  <Newspaper className="w-6 h-6 text-blue-400 dark:text-blue-500 flex-shrink-0" />
-                  <h3 className="text-2xl p-2 md:text-3xl font-bold text-blue-500 dark:text-blue-400 bg-gradient-to-r from-blue-400 to-teal-400 dark:from-blue-500 dark:to-teal-500 bg-clip-text text-transparent">
+                  <Newspaper className="w-6 h-6 text-blue-600 dark:text-blue-500 flex-shrink-0" />
+                  <h3 className="text-2xl p-2 md:text-3xl font-bold text-blue-700 dark:text-blue-400 bg-gradient-to-r from-blue-600 to-blue-800 dark:from-blue-500 dark:to-blue-700 bg-clip-text text-transparent">
                     {item.title}
                   </h3>
                 </div>

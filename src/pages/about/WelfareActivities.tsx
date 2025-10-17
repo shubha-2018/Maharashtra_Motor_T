@@ -29,8 +29,8 @@ export default function WelfareActivities() {
     { title: t("welfare.item5.title"), img: img15 },
     { title: t("welfare.item6.title"), img: img16 },
     { title: t("welfare.item7.title"), img: img17 },
-    { title: t("welfare.item8.title"), img: img18 },
-    { title: t("welfare.item9.title"), img: img19 },
+    // { title: t("welfare.item8.title"), img: img18 },
+    // { title: t("welfare.item9.title"), img: img19 },
     { title: t("welfare.item10.title"), img: img20 },
   ];
 

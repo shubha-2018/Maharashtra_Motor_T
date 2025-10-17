@@ -28,8 +28,8 @@ const HeroSection: React.FC = () => {
 
   const heroSlides = [
     { image: IMG6, title: t(""), subtitle: t("") },
-    { image: IMG1, title: t(""), subtitle: t("") },
-    { image: IMG3, title: t(""), subtitle: t("") },
+    // { image: IMG1, title: t(""), subtitle: t("") },
+    // { image: IMG3, title: t(""), subtitle: t("") },
     { image: IMG2, title: t(""), subtitle: t("") },
   ];
 

@@ -80,16 +80,16 @@ const Header: React.FC = () => {
           <div className="flex flex-col sm:flex-row justify-end md:justify-between w-full items-center md:space-x-10 text-sm md:text-sm">
             {/* Left - Government Links (hidden on mobile) */}
             <div className="hidden md:flex space-x-4">
-              <a
+              {/* <a
                 href="tel:112"
                 className="nav-link text-xs hover:text-primary md:text-sm"
               >
                 <Phone className="w-3 h-3 inline mr-1" />
                 {t("dial.112")}
-              </a>
-              <a href="/accessibility" className="nav-link text-xs md:text-sm">
+              </a> */}
+              {/* <a href="/accessibility" className="nav-link text-xs md:text-sm">
                 {t("footer.accessibility")}
-              </a>
+              </a> */}
               <a
                 href="https://eoffice.mahapolice.gov.in/"
                 className="nav-link text-xs md:text-sm"

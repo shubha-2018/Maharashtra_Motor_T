@@ -14,9 +14,9 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import GIMG_1 from "@/assets/gallery/img1.jpeg";
 import GIMG_2 from "@/assets/gallery/img2.jpeg";
 import GIMG_3 from "@/assets/gallery/img3.jpeg";
-import GIMG_4 from "@/assets/hero/4.jpg";
+import GIMG_4 from "@/assets/gallery/6.jpg";
 import GIMG_5 from "@/assets/hero/2.jpg";
-import GIMG_6 from "@/assets/hero/5.jpg";
+import GIMG_6 from "@/assets/gallery/7.jpg";
 import { Link } from "react-router-dom";
 
 const EventsGallery: React.FC = () => {

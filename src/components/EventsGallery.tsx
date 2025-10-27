@@ -145,7 +145,7 @@ const EventsGallery: React.FC = () => {
                     <Camera className="w-6 h-6 text-[rgb(0,51,102)]" />
                     <h3 className="text-xl font-bold text-gray-900 dark:text-white">{t("photo.gallery")}</h3>
                   </div>
-                  <Link to={"/gallery"}>
+                  {/* <Link to={"/gallery"}>
                     <Button
                       variant="outline"
                       className="hover:bg-[rgb(0,51,102)] hover:text-white hover:border-[rgb(0,51,102)] text-[rgb(0,51,102)] dark:text-white"
@@ -153,7 +153,7 @@ const EventsGallery: React.FC = () => {
                       <Eye className="w-4 h-4 mr-2" />
                       {t("view.gallery")}
                     </Button>
-                  </Link>
+                  </Link> */}
                 </div>
 
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
@@ -182,15 +182,15 @@ const EventsGallery: React.FC = () => {
 
                 <div className="flex items-center justify-between mt-6 pt-4 border-t border-gray-300 dark:border-gray-700">
                   <div className="flex items-center gap-2 text-sm text-gray-500 dark:text-white/70">
-                    <Video className="w-4 h-4" />
-                    <span>{t("gallery.videoAvailable")}</span>
+                    {/* <Video className="w-4 h-4" /> */}
+                    {/* <span>{t("gallery.videoAvailable")}</span> */}
                   </div>
-                  <Link to={"/gallery"}>
+                  {/* <Link to={"/gallery"}>
                     <Button className="bg-[rgb(0,51,102)] hover:bg-[rgb(0,61,122)] text-white dark:text-white">
                       <Camera className="w-4 h-4 mr-2" />
                       {t("gallery.viewAllPhotos")}
                     </Button>
-                  </Link>
+                  </Link> */}
                 </div>
               </CardContent>
             </Card>

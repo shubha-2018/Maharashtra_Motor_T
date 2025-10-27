@@ -38,6 +38,7 @@ import PhotoGallery from "./pages/PhotoGallery";
 import PrivacyPolicy from "./pages/general/PrivacyPolicy";
 import TermsOfUse from "./pages/general/ terms-of-use";
 import AccessibilityPage from "./pages/general/AccessibilityPage";
+import FlashSection  from "./pages/FlashSection";
 
 const queryClient = new QueryClient();
 
@@ -54,8 +55,8 @@ const AppRoutes = () => (
       <Route path="about/welfare" element={<WelfareActivities />} />
       <Route path="/citizen/press-release" element={<PressRelease />} />
       <Route path="/citizen/rti" element={<RTI />} />
-      <Route path="/citizen/tender" element={<Tender />} />
-      <Route path="/citizen/recruitments" element={<Recruitments />} />
+      {/* <Route path="/citizen/tender" element={<Tender />} /> */}
+      {/* <Route path="/citizen/recruitments" element={<Recruitments />} /> */}
       <Route path="/police/gazette" element={<Gazette />} />
 
       <Route path="/police/gazette" element={<Gazette />} />
@@ -67,7 +68,9 @@ const AppRoutes = () => (
       <Route path="/police/transfers" element={<Transfers />} />
       <Route path="/police/gradation" element={<GradationList />} />
       <Route path="/police/stories" element={<PositiveStories />} />
-
+       
+      <Route path="/tender" element={<Tender />} />
+      <Route path="/recruitments" element={<Recruitments />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/gallery" element={<PhotoGallery />} />
 
@@ -75,6 +78,8 @@ const AppRoutes = () => (
       <Route path="/terms-of-use" element={<TermsOfUse />} />
       <Route path="/accessibility" element={<AccessibilityPage />} />
       <Route path="*" element={<NotFound />} />
+
+       <Route path="/flashsection " element={<FlashSection />} />
     </Route>
   </Routes>
 );

@@ -21,6 +21,13 @@ export default function GradationList({ goBack }) {
       email: "igpcit.pna@mahapolice.gov.in",
       contact: "020-25658422",
     },
+     {
+      sr: 3,
+      name: t("emp_21_name"),
+      designation: t("emp_22_designation"),
+      email: "spcit.pna@mahapolice.gov.in",
+      contact: "020-25652623",
+    },
     // ... continue for all employees
   ];
 
@@ -61,6 +68,7 @@ export default function GradationList({ goBack }) {
     link.click();
     document.body.removeChild(link);
   };
+
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 via-gray-100 to-gray-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-950 text-gray-900 dark:text-gray-100 px-6 py-12 sm:px-12 lg:px-24 relative overflow-hidden">

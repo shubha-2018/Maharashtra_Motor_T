@@ -41,9 +41,9 @@ export const EN = {
 
   // Navigation
   "nav.home": "Home",
-  "nav.about": "About",
+  "nav.about": "About Us",
   "nav.directorDesk": "From Director’s Desk",
-  "nav.formerDirectors": "Former Directors",
+  "nav.formerDirectors": "Former Directors of Department",
   "nav.hierarchy": "Hierarchy of Department",
   "nav.aboutDepartment": "About Department",
   "nav.offices": "Offices in Headquarters",
@@ -61,15 +61,19 @@ export const EN = {
   "nav.transfers": "Transfers",
   "nav.gradationList": "Gradation List",
   "nav.strategySupport": "Strategy Support System",
-  "nav.positiveStories": "Positive Stories",
+  "nav.positiveStories": "Positive Stories / Good Work",
   "nav.police_corner": "Police Corner",
-  "nav.tenders": "Tender List",
+  "nav.flash":"Flash",
+  // "nav.tenders": "Tender List",
   "nav.recruitments": "Recruitments",
+
+   "nav.tenders": "Tenders",
+
 
   "nav.media": "Media",
   "nav.gallery": "Photo Gallery",
 
-  "nav.contact": "Contact",
+  "nav.contact": "Contact Us",
   "nav.contactUs": "Contact Us",
 
 
@@ -85,6 +89,18 @@ export const EN = {
   "director.desk": "From Director's Desk",
   "director.caption": `"The Police Wireless Department prior to Police Communication and Information Technology Department typically handles communication systems used by law enforcement authority that is Maharashtra State Police..."`,
   "read.more": "Read More",
+
+
+  // 📑 Tender Page
+  "tenders.title": "Tenders",
+  "tenders.back": "Back to Home",
+  "tenders.srno": "Sr. No.",
+  "tenders.date": "Date",
+  "tenders.tenderTitle": "Tender Title",
+  "tenders.view": "View",
+  "tenders.download": "Download",
+  "tenders.size": "File Size",
+  "tenders.none": "No tenders found.",
 
   // Hero slider images
 
@@ -602,7 +618,7 @@ export const EN = {
   "back.home": "Back to Home",
 
   // Tenders Page
-  "tenders.title": "Tenders & Procurement",
+  "tenders.title": "Tenders ",
   "tenders.subtitle": "Official procurement notices and contract opportunities for the Maharashtra Police Wireless Department",
   "tenders.active.title": "Active Tenders",
   "tenders.archived.title": "Archived / Completed Tenders",
@@ -727,8 +743,10 @@ export const EN = {
   "of": "of",
   "emp_1_name": "SHRI. DEEPAK SHIVANAND PANDEY",
   "emp_1_designation": "ADGP & Dir.PCIT&T",
-  "emp_2_name": "SHRI. R. RAJA",
-  "emp_2_designation": "SP PCIT HQ",
+  "emp_2_name": "SHRI. G.Sreedhar",
+  "emp_2_designation": "DIGP PCIT",
+  "emp_21_name": "SHRI. R. RAJA",
+  "emp_22_designation": "SP PCIT HQ",
   "emp_3_name": "SHRI. RAJESH RAMCHANDRA BANSODE",
   "emp_3_designation": "SP(PCIT)",
   "emp_4_name": "SHRI. SANJAY SUBHASH CHANDKHEDE",
@@ -988,22 +1006,96 @@ export const MR = {
   "z4c6": "ए.एस.आय. (एच.डब्ल्यू.ओ.) – ०१/०१/२०२१",
   "q2d8": "ए.एस.आय. (एच.डब्ल्यू.ओ.) – ०१/०१/२०२२",
   "p5e1": "सेवाज्येष्ठता सूची पी.डब्ल्यू.एस.आय. इलेक्ट्रिशियन",
+
+
+ // 🌐 Header / General
+  // "header.title": "महाराष्ट्र पोलीस वायरलेस",
+  "back_to_home": "मुख्यपृष्ठावर जा",
+  // "english": "English",
+  // "marathi": "मराठी",
+  "view": "पाहा",
+  "download": "डाउनलोड",
+  "date": "दिनांक",
+  "sr_no": "क्र. क्र.",
+  // "title": "शीर्षक",
+  "no_tenders": "सध्या कोणत्याही निविदा उपलब्ध नाहीत.",
+  "tenders": "निविदा",
+  "tender_notice": "निविदा सूचना",
+  "file_size": "फाईल आकार",
+  // "language": "भाषा",
+  // "font.size": "अक्षर आकार",
+  // "light.mode": "लाइट मोड",
+  // "dark.mode": "डार्क मोड",
+  "latest_news": "ताज्या बातम्या",
+
+  // 📄 Gradation List page
+  "list_of_officers": "अधिकाऱ्यांची यादी",
+  "seniority_ranking_description": "खाली वरिष्ठतेनुसार अधिकाऱ्यांची ग्रेडेशन यादी दिली आहे.",
+  "email1": "ईमेल",
+  "contact": "संपर्क",
+  "previous": "मागील",
+  "next": "पुढील",
+  "page": "पृष्ठ",
+  "of": "पैकी",
+  "export_csv": "CSV स्वरूपात निर्यात करा",
+  "csv_file_name": "GradationList.csv",
+
+  en: {
+    marathi: "मराठी",
+    english: "English",
+    recruit: {
+      title: "Recruitment",
+      back: "Back to Home",
+      srno: "Sr. No.",
+      date: "Date",
+      titleCol: "Title",
+      view: "View",
+      download: "Download",
+      none: "No recruitment notifications available.",
+    },
+  },
+  mr: {
+    marathi: "मराठी",
+    english: "English",
+    recruit: {
+      title: "भरती",
+      back: "मुख्यपृष्ठावर जा",
+      srno: "क्र. क्र.",
+      date: "दिनांक",
+      titleCol: "शीर्षक",
+      view: "पाहा",
+      download: "डाउनलोड",
+      none: "सध्या कोणतीही भरती सूचना उपलब्ध नाहीत.",
+    },
+  },
+
+  // 📑 Tender Page
+  "tenders.title": "निविदा",
+  "tenders.back": "मुख्यपृष्ठावर जा",
+  "tenders.srno": "क्र. क्र.",
+  "tenders.date": "दिनांक",
+  "tenders.tenderTitle": "निविदेचे शीर्षक",
+  "tenders.view": "पाहा",
+  "tenders.download": "डाउनलोड",
+  "tenders.size": "फाईल आकार",
+  "tenders.none": "सध्या कोणत्याही निविदा उपलब्ध नाहीत.",
+
   //listofofficer
   "back_to_home": "मुख्यपृष्ठावर परत",
 
-  "export_csv": "CSV निर्यात करा",
-  "list_of_officers": "अधिकारी व अंमलदार यादी",
-  "seniority_ranking_description": "महाराष्ट्र पोलीस कम्युनिकेशन आणि आयटी विभागातील वरिष्ठतेनुसार अधिकारी आणि कर्मचारी क्रमवारी",
+  // "export_csv": "CSV निर्यात करा",
+  // "list_of_officers": "अधिकारी व अंमलदार यादी",
+  // "seniority_ranking_description": "महाराष्ट्र पोलीस कम्युनिकेशन आणि आयटी विभागातील वरिष्ठतेनुसार अधिकारी आणि कर्मचारी क्रमवारी",
   "sr_no": "अनुक्रमांक",
   "full_name": "पूर्ण नाव",
   "designation": "पदनाम",
   "email": "ईमेल",
-  "contact": "संपर्क",
-  "csv_file_name": "maharashtra_police_employees.csv",
-  "previous": "मागील",
-  "next": "पुढील",
-  "page": "पृष्ठ",
-  "of": "चा/ची",
+  // "contact": "संपर्क",
+  // "csv_file_name": "maharashtra_police_employees.csv",
+  // "previous": "मागील",
+  // "next": "पुढील",
+  // "page": "पृष्ठ",
+  // "of": "चा/ची",
   "emp_1_name": "श्री. दीपक शिवानंद पांडे",
   "emp_1_designation": "ADGP & Dir.PCIT&T",
   "emp_2_name": "श्री. आर. राजा",
@@ -1108,29 +1200,30 @@ export const MR = {
 
   // Navigation
   "nav.home": "मुख्यपृष्ठ",
-  "nav.about": "आमच्याबद्दल",
+  "nav.about": "आमच्याविषयी ",
   "nav.directorDesk": "संचालकांच्या लेखणीतून",
   "nav.formerDirectors": "विभागाचे पूर्व संचालक",
-  "nav.hierarchy": "संघटनात्मक संरचना",
-  "nav.aboutDepartment": "विभागाबद्दल",
+  "nav.hierarchy": "विभागाचा पदानुक्रम ",
+  "nav.aboutDepartment": "विभागाविषयी ",
   "nav.offices": "मुख्यालयातील कार्यालये",
-  "nav.ranks": "विभागातील पदानुक्रम",
+  "nav.ranks": "विभागातील पदे ",
   "nav.welfare": "कल्याणकारी उपक्रम",
 
-  "nav.citizens": "नागरिकांकरिता",
+  "nav.citizens": "नागरिकांसाठी ",
   "nav.policeCorner": "पोलीस कोपरे",
   "nav.pressRelease": "प्रेस प्रकाशन",
   "nav.rti": "माहिती अधिकार (RTI)",
   "nav.gazette": "प्रसिद्धीपत्रक",
   "nav.officersList": "अधिकारी व अंमलदार यादी",
-  "nav.promotionOrders": "बढती आदेश",
+  "nav.promotionOrders": "पदोन्नती आदेश ",
   "nav.transfers": "बदली आदेश",
-  "nav.gradationList": "क्रमवारी यादी",
+  "nav.gradationList": "सेवा जेष्ठता यादी ",
   "nav.strategySupport": "धोरण समर्थन प्रणाली",
-  "nav.positiveStories": "सकारात्मक कथा",
+  "nav.positiveStories": "सकारात्मक कथा / चांगले काम ",
+  "nav.flash":"फ्लॅश ",
 
   "nav.police_corner": "पोलीस कॉर्नर",
-  "nav.tenders": "निविदा यादी",
+  "nav.tenders": "निविदा",
   "nav.recruitments": "भरती",
 
   "nav.media": "माध्यमे",
@@ -1478,7 +1571,7 @@ export const MR = {
   "a2.loc": "महाराष्ट्र राज्य, पुणे",
 
   "b1.intro": `
-  <p>पोलीस पोलीस बिनतारी संदेश विभाग,  पूर्वीचे दळणवळण व माहिती तंत्रज्ञान विभाग,  महाराष्ट्र राज्यातील कायदा व सुव्यवस्थाच्या अंमलबजावणीकरिता कार्यरत असलेले अंतर्गत स्वयंपूर्ण दळणवळण हाताळते. यामध्ये आधुनिक तंत्रज्ञानाचा वापर करून संदेश वहन करणे, पोलीस नियंत्रण कक्षातून जिल्हा व आयुक्तालयातील पोलीस गस्तीमार्फत नियंत्रण ठेवणे आणि पोलीस कार्यक्षेत्रातील घटकांदरम्यान सुरक्षित आणि कार्यक्षम संदेशाचे वहन करणे यांचा समावेश आहे. सदर यंत्रणा २४ X ७ अखंडित कार्यरत ठेवली जाते.</p>
+  <p> पोलीस दळणवळण व माहिती तंत्रज्ञान विभाग,पूर्वीचे बिनतारी संदेश विभाग, महाराष्ट्र राज्यातील कायदा व सुव्यवस्थाच्या अंमलबजावणीकरिता कार्यरत असलेले अंतर्गत स्वयंपूर्ण दळणवळण हाताळते. यामध्ये आधुनिक तंत्रज्ञानाचा वापर करून संदेश वहन करणे, पोलीस नियंत्रण कक्षातून जिल्हा व आयुक्तालयातील पोलीस गस्तीमार्फत नियंत्रण ठेवणे आणि पोलीस कार्यक्षेत्रातील घटकांदरम्यान सुरक्षित आणि कार्यक्षम संदेशाचे वहन करणे यांचा समावेश आहे. सदर यंत्रणा २४ X ७ अखंडित कार्यरत ठेवली जाते.</p>
 <br/>
 <p>पोलीस दळणवळण व माहिती तंत्रज्ञान विभाग राज्यातील पोलीसांना कायदा व सुव्यवस्था राखणेकामी प्रभावी संवाद आणि समन्वय सुनिश्चित करून रीअल-टाइम कम्युनिकेशन ज्यात कार्यक्षेत्रातील पोलीस अधिकाऱ्यांमध्ये तात्काळ संपर्क साधणे आणि मदत आवश्यक असलेल्या घटनांना वेळेवर प्रतिसाद देणे सहज शक्य होते; परिस्थितीविषयक जागरूकता राखणेकरिता पोलीस अधिका-यांना घडामोडीची अद्यायावत माहिती प्रदान करून त्यांची निर्णय घेण्याची क्षमता वाढवण्यास मदत होते; आपत्कालीन परिस्थितीत जलद समन्वय प्रतिसाद सक्षम करून संसाधनांच्या जलद उपयोजना केली जाते; डेटा ट्रान्समिशनमध्ये गोपनीय माहितीची सुरक्षित देवाणघेवाण करून कायदा व सुव्यवस्था राखली जाते परिणामी माहितीच्या आधारे पुढील तपासास मदत होते; सुरक्षितता आणि सुरक्षा दृष्टीकोनातून संवेदनशील माहितीकरिता दळणवळण वाहिनी उपलब्ध करून दिली जाते.</p>
 <br/>
@@ -1750,7 +1843,7 @@ export const MR = {
 
 
   // Tenders Page
-  "tenders.title": "टेंडर आणि खरेदी",
+  "tenders.title": " टेंडर्स ",
   "tenders.subtitle": "महाराष्ट्र पोलीस वायरलेस विभागासाठी अधिकृत खरेदी सूचना आणि कराराच्या संधी",
   "tenders.active.title": "सक्रिय टेंडर",
   "tenders.archived.title": "संग्रहित / पूर्ण झालेले टेंडर",
@@ -1806,7 +1899,7 @@ export const MR = {
   "contact.title": "आमच्याशी संपर्क साधा",
   "contact.subtitle": "फोन, ईमेल द्वारे किंवा आमच्या कार्यालयाला भेट देऊन आमच्याशी संपर्क साधा",
   "contact.address.title": "कार्यालयाचा पत्ता",
-  "contact.address.line1": "पोलीस पोलीस दळणवळण व माहिती तंत्रज्ञान विभाग विभाग",
+  "contact.address.line1": " पोलीस दळणवळण व माहिती तंत्रज्ञान  विभाग",
   "contact.address.line2": "महाराष्ट्र राज्य पुणे",
   "contact.address.line3": "डॉ. होमी भाभा रोड, चव्हाणनगर",
   "contact.address.line4": "पुणे – ४११००८, महाराष्ट्र, भारत",

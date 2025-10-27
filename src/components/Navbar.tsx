@@ -543,12 +543,13 @@ const Navbar = () => {
     {
       name: t("nav.about"),
       hasDropdown: true,
-      url: "/about",
+      url: "/about ",
       items: [
         { name: t("nav.directorDesk"), url: "/about/directors-desk" },
         { name: t("nav.formerDirectors"), url: "/about/former-directors" },
         { name: t("nav.hierarchy"), url: "/about/hierarchy" },
         { name: t("nav.aboutDepartment"), url: "/about/department" },
+        { name: t("nav.offices"), url: "/about" },
         { name: t("nav.ranks"), url: "/about/ranks" },
         { name: t("nav.welfare"), url: "/about/welfare" },
       ],
@@ -560,8 +561,8 @@ const Navbar = () => {
       items: [
         { name: t("nav.pressRelease"), url: "/citizen/press-release" },
         { name: t("nav.rti"), url: "/citizen/rti" },
-        { name: t("nav.tenders"), url: "/citizen/tender" },
-        { name: t("nav.recruitments"), url: "/citizen/recruitments" },
+        // { name: t("nav.tenders"), url: "/citizen/tender" },
+        // { name: t("nav.recruitments"), url: "/citizen/recruitments" },
       ],
     },
     {
@@ -574,8 +575,21 @@ const Navbar = () => {
         { name: t("nav.promotionOrders"), url: "/police/promotions" },
         { name: t("nav.transfers"), url: "/police/transfers" },
         { name: t("nav.gradationList"), url: "/police/gradation" },
+        { name: t("nav.strategySupport"), url: "/police" },
         { name: t("nav.positiveStories"), url: "/police/stories" },
       ],
+    },
+     {
+      name: t("nav.tenders"),
+      hasDropdown: false,
+      url: "/tender",
+      items: [{ name: t("nav.tenders"), url: "/tender" }],
+    },
+     {
+      name: t("nav.recruitments"),
+      hasDropdown: false,
+    url: "/recruitments",
+      items: [{ name: t("nav.recruitments"), url: "/recruitments" }],
     },
     {
       name: t("nav.gallery"),

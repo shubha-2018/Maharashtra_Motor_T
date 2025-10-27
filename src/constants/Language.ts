@@ -49,6 +49,8 @@ export const EN = {
   "nav.offices": "Offices in Headquarters",
   "nav.ranks": "Ranks Of Department",
   "nav.welfare": "Welfare Activities",
+  "nav.nav.Recruitments": "Recruitments",
+
 
   "nav.citizens": "Citizen Corner",
   "nav.citizenCorner": "Citizen Corner",
@@ -613,20 +615,17 @@ export const EN = {
   "rti.officer.section": "RTI Officers",
   "rti.officer.appellate.title": "Appellate Officer",
   "rti.officer.appellate.name": "Superintendent of Police, B.S. HQ - Mr. R. Raja, IPS",
-  "rti.officer.info.title": "Information Officer",
-  "rti.officer.info.name": "Home Police Inspector, B.S. - Mr. Mahendra Kore",
-  "back.home": "Back to Home",
-
-  // Tenders Page
-  "tenders.title": "Tenders ",
-  "tenders.subtitle": "Official procurement notices and contract opportunities for the Maharashtra Police Wireless Department",
-  "tenders.active.title": "Active Tenders",
+ "rti.officer.info.title": "Information Officer",
+"rti.officer.info.name": "Home Police Inspector, B.S. - Mr. Mahendra Kore",
+"back.home": "Back to Home",
+ 
   "tenders.archived.title": "Archived / Completed Tenders",
   "tenders.procurement.title": "Tender-Related Information",
   "tenders.ref": "Tender Ref",
   "tenders.deadline": "Deadline",
   "tenders.closedOn": "Closed On",
   "tenders.viewDocument": "View Tender Document",
+  
 
   // Active Tenders
   "tenders.active.radios.title": "Procurement of Digital Mobile Radios",
@@ -680,23 +679,22 @@ export const EN = {
   "k9v3": "View",
   "h2d7": "Download",
   "b3p8": "Page",
-  "f5z1": "of",
+  "f5z1": "of", 
   "n6x4": "Prev",
   "c7r2": "Next",
 
 
 
-    // 🔹 Recruitment Page
-    "recruit.title": "Recruitment",
-    "recruit.subtitle": "Latest Recruitment Notifications and Job Details",
-    "recruit.back": "Back to Home",
-    "recruit.none": "No recruitment notifications are currently available.",
-    "recruit.srno": "Sr. No.",
-    "recruit.date": "Date",
-    "recruit.titleCol": "Title",
-    "recruit.view": "View",
-    "recruit.download": "Download",
-
+// 🔹 Recruitment Page
+"recruit.title": "Recruitment",
+"recruit.subtitle": "Latest Recruitment Notifications and Job Details",
+"recruit.back": "Back to Home",
+"recruit.none": "No recruitment notifications are currently available.",
+"recruit.srno": "Sr. No.",
+"recruit.date": "Date",
+"recruit.titleCol": "Title",
+"recruit.view": "View",
+"recruit.download": "Download",
 
   //STATERGY
   "p1o2": "Back to Home",
@@ -2002,6 +2000,72 @@ export const MR = {
   "terms.contact.description": "वापराच्या या अटींबद्दल कोणत्याही प्रश्नांसाठी, कृपया पोलीस संप्रेषण आणि आयटी विभागाशी dir.polwireless.pune@mahapolice.gov.in येथे किंवा 020-25652505 या क्रमांकावर संपर्क साधा.",
 
 
+
+// Tenders Page
+"tenders.title": "Tenders",
+"tenders.subtitle": "Official procurement notices and contract opportunities for the Maharashtra Police Wireless Department",
+"tenders.active.title": "Active Tenders",
+"tenders.back": "Back to Home",
+"tenders.srno": "Sr. No.",
+"tenders.date": "Date",
+"tenders.tenderTitle": "Tender Title",
+"tenders.view": "View",
+"tenders.download": "Download",
+"tenders.size": "File Size",
+"tenders.none": "No tenders are currently available.",
+
+"smart.features.item2": "Location tracking for quick response",
+"smart.features.item3": "Multiple language support available",
+"smart.features.item4": "Emergency services integration",
+"digital_india_desc": "Visit Digital India government initiative website",
+"government_partners": "Government Partners and Related Websites",
+"carousel_instructions": "Use arrow keys to navigate government partner website links",
+"copyright": "© 2025 Police Communication & Information Technology Department, Maharashtra State. All rights reserved.",
+"developed.by": "Copyright Police Communication & Information Technology Department, Maharashtra State.",
+"dept.address": "Police Communication, Information Technology Department,<br />Dr. Homi Bhabha Road, Chavhan Nagar,<br />Maharashtra State, Pune - 411008",
+
+"press.title": "Press Releases",
+"press.subtitle": "Positive developments and ongoing projects in Maharashtra Police Wireless Department",
+"press.tech.title": "Technical Upgrades",
+"press.tech.description": "Independence Day was celebrated with enthusiasm at the Police Communication & Information Technology Department. Officers and staff participated in flag hoisting, national anthem, and various cultural programs in a patriotic atmosphere. This celebration raised awareness about patriotism, unity, and technological progress.",
+"press.ai.title": "AI-Based Policing - MARVEL Project",
+
+"rti.title": "Right to Information (RTI)",
+"rti.subtitle": "Information and procedures for citizens under Right to Information Act",
+"rti.pio.title": "Public Information Officer (PIO) Details",
+"rti.pio.description": "Contact information of designated PIOs and appellate authorities in Police Communication & Information Technology Department is provided here. Citizens can directly contact to submit RTI applications or get clarifications.",
+
+// Marathi Translations
+"tenders.back.mr": "मुख्यपृष्ठावर जा",
+"tenders.srno.mr": "अ.क्र",
+"tenders.date.mr": "दिनांक",
+"tenders.tenderTitle.mr": "निविदेचे शीर्षक",
+"tenders.view.mr": "पाहा",
+"tenders.download.mr": "डाउनलोड",
+"tenders.size.mr": "फाईल आकार",
+"tenders.none.mr": "सध्या कोणत्याही निविदा उपलब्ध नाहीत.",
+"smart.features.item2.mr": "त्वरित प्रतिसादासाठी ठिकाण ट्रॅकिंग",
+"smart.features.item3.mr": "अनेक भाषा समर्थन उपलब्ध",
+"smart.features.item4.mr": "आपत्कालीन सेवा एकत्रीकरण",
+"digital_india_desc.mr": "डिजिटल इंडिया सरकारी उपक्रमाची वेबसाइट पहा",
+"government_partners.mr": "सरकारी भागीदार आणि संबंधित वेबसाइट्स",
+"carousel_instructions.mr": "सरकारी भागीदारांच्या वेबसाइट लिंकवर नेव्हिगेट करण्यासाठी अ‍ॅरो की वापरा",
+"copyright.mr": "© 2025 पोलीस दळणवळण व माहिती तंत्रज्ञान विभाग, महाराष्ट्र राज्य. सर्व हक्क राखीव.",
+"developed.by.mr": "मालकी हक्क पोलीस दळणवळण व माहिती तंत्रज्ञान विभाग, महाराष्ट्र राज्य.",
+"dept.address.mr": "पोलीस दळणवळण, माहिती तंत्रज्ञान विभाग,<br />डॉ. होमी भाभा रोड, चव्हाणनगर,<br />महाराष्ट्र राज्य, पुणे - ४११००८",
+"back.home.mr": "मुख्यपृष्ठावर परत",
+"press.title.mr": "प्रेस प्रकाशन",
+"press.subtitle.mr": "महाराष्ट्र पोलीस वायरलेस विभागातील सकारात्मक घडामोडी आणि चालू प्रकल्प",
+"press.tech.title.mr": "तांत्रिक उन्नयन",
+"press.tech.description.mr": "पोलीस दळणवळण व माहिती तंत्रज्ञान विभागामध्ये स्वातंत्र्य दिन उत्साहात साजरा करण्यात आला. विभागातील अधिकारी व कर्मचारी यांनी देशभक्तिपूर्ण वातावरणात ध्वजारोहण, राष्ट्रगीत आणि विविध सांस्कृतिक कार्यक्रमांमध्ये सहभाग घेतला. या उत्सवातून देशभक्ती, एकात्मता आणि तांत्रिक प्रगतीबद्दल जागरूकता निर्माण करण्यात आली.",
+"press.ai.title.mr": "कृत्रिम बुद्धिमत्ता आधारित पोलिसिंग - MARVEL प्रकल्प",
+"rti.title.mr": "माहितीचा अधिकार (आरटीआय)",
+"rti.subtitle.mr": "माहितीचा अधिकार कायद्याखाली नागरिकांसाठी माहिती आणि प्रक्रिया",
+"rti.pio.title.mr": "लोक माहिती अधिकारी (PIO) तपशील",
+"rti.pio.description.mr": "पोलीस दळणवळण व माहिती तंत्रज्ञान विभागातील नियुक्त PIO आणि अपीलीय प्राधिकरणांची संपर्क माहिती येथे प्रदान केली आहे. नागरिक आरटीआय अर्ज सादर करण्यासाठी किंवा स्पष्टीकरण घेण्यासाठी थेट संपर्क करू शकतात.",
+"tenders.title.mr": "टेंडर्स",
+"tenders.subtitle.mr": "महाराष्ट्र पोलीस वायरलेस विभागासाठी अधिकृत खरेदी सूचना आणि कराराच्या संधी",
+"tenders.active.title.mr": "सक्रिय टेंडर",
 
   // Accessibility Page
   "accessibility.title": "प्रवेशयोग्यता विधान",

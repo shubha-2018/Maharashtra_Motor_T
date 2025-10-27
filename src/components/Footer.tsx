@@ -21,6 +21,7 @@ const Footer: React.FC = () => {
     { key: "nav.about", to: "/about/directors-desk" },
     { key: "nav.citizens", to: "/citizen/press-release" },
     { key: "nav.tenders", to: "/citizen/recruitments" },
+    { key: "nav.Recruitments ", to: "/citizen/recruitments" },
     { key: "nav.flash", to: "/flashsection" },
     { key: "nav.contact", to: "/contact" },
     { key: "nav.gallery", to: "/gallery" },

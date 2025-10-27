@@ -49,7 +49,7 @@ export const EN = {
   "nav.offices": "Offices in Headquarters",
   "nav.ranks": "Ranks Of Department",
   "nav.welfare": "Welfare Activities",
-  "nav.nav.Recruitments": "Recruitments",
+  "nav.Recruitments": "Recruitments",
 
 
   "nav.citizens": "Citizen Corner",

@@ -339,7 +339,7 @@ export default function Tenders() {
         </Button>
 
         {/* 🌐 Language Toggle */}
-        <div className="flex items-center space-x-2">
+        {/* <div className="flex items-center space-x-2">
           <Globe className="w-4 h-4 text-blue-700 dark:text-blue-300" />
           <button
             onClick={() => setLanguage(language === "en" ? "mr" : "en")}
@@ -347,7 +347,7 @@ export default function Tenders() {
           >
             {language === "en" ? t("marathi") : t("english")}
           </button>
-        </div>
+        </div> */}
       </div>
 
       {/* 🏷️ Heading */}

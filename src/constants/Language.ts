@@ -685,6 +685,19 @@ export const EN = {
   "c7r2": "Next",
 
 
+
+    // 🔹 Recruitment Page
+    "recruit.title": "Recruitment",
+    "recruit.subtitle": "Latest Recruitment Notifications and Job Details",
+    "recruit.back": "Back to Home",
+    "recruit.none": "No recruitment notifications are currently available.",
+    "recruit.srno": "Sr. No.",
+    "recruit.date": "Date",
+    "recruit.titleCol": "Title",
+    "recruit.view": "View",
+    "recruit.download": "Download",
+
+
   //STATERGY
   "p1o2": "Back to Home",
   "l3s7": "Light Mode",
@@ -1016,7 +1029,7 @@ export const MR = {
   "view": "पाहा",
   "download": "डाउनलोड",
   "date": "दिनांक",
-  "sr_no": "क्र. क्र.",
+  "sr_no": "अ.क्र ",
   // "title": "शीर्षक",
   "no_tenders": "सध्या कोणत्याही निविदा उपलब्ध नाहीत.",
   "tenders": "निविदा",
@@ -1060,7 +1073,7 @@ export const MR = {
     recruit: {
       title: "भरती",
       back: "मुख्यपृष्ठावर जा",
-      srno: "क्र. क्र.",
+      srno: "अ.क्र ",
       date: "दिनांक",
       titleCol: "शीर्षक",
       view: "पाहा",
@@ -1072,13 +1085,14 @@ export const MR = {
   // 📑 Tender Page
   "tenders.title": "निविदा",
   "tenders.back": "मुख्यपृष्ठावर जा",
-  "tenders.srno": "क्र. क्र.",
+  "tenders.srno": "अ.क्र ",
   "tenders.date": "दिनांक",
   "tenders.tenderTitle": "निविदेचे शीर्षक",
   "tenders.view": "पाहा",
   "tenders.download": "डाउनलोड",
   "tenders.size": "फाईल आकार",
   "tenders.none": "सध्या कोणत्याही निविदा उपलब्ध नाहीत.",
+  
 
   //listofofficer
   "back_to_home": "मुख्यपृष्ठावर परत",
@@ -1096,6 +1110,13 @@ export const MR = {
   // "next": "पुढील",
   // "page": "पृष्ठ",
   // "of": "चा/ची",
+
+
+
+
+
+
+  
   "emp_1_name": "श्री. दीपक शिवानंद पांडे",
   "emp_1_designation": "ADGP & Dir.PCIT&T",
   "emp_2_name": "श्री. आर. राजा",
@@ -1257,6 +1278,18 @@ export const MR = {
   "welfare.item8.title": "सौर विद्युतीकरण प्रकल्प",
   "welfare.item9.title": "पावसाचे पाणी संग्रहण",
   "welfare.item10.title": "महाराष्ट्र पोलीस वायरलेस कल्याण संकुल आणि परिषद केंद्र",
+
+
+    // 🔹 भरती पृष्ठ
+    "recruit.title": "भरती",
+    "recruit.subtitle": "नवीन भरती सूचना आणि नोकरीची माहिती",
+    "recruit.back": "मुख्यपृष्ठावर जा",
+    "recruit.none": "सध्या कोणत्याही भरती जाहिराती उपलब्ध नाहीत.",
+    "recruit.srno": "अ.क्र ",
+    "recruit.date": "दिनांक",
+    "recruit.titleCol": "शीर्षक",
+    "recruit.view": "पाहा",
+    "recruit.download": "डाउनलोड",
 
   //STARTGEY
   "p1o2": "मुख्यपृष्ठावर परत",

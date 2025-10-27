@@ -252,7 +252,7 @@ export default function Recruitment() {
         </Button>
 
         {/* 🌐 Language Toggle */}
-        <div className="flex items-center space-x-2">
+        {/* <div className="flex items-center space-x-2">
           <Globe className="w-4 h-4 text-blue-700 dark:text-blue-300" />
           <button
             onClick={() => setLanguage(language === "en" ? "mr" : "en")}
@@ -261,7 +261,7 @@ export default function Recruitment() {
           >
             {language === "en" ? t("marathi") : t("english")}
           </button>
-        </div>
+        </div> */}
       </div>
 
       {/* 🏷️ Heading */}
@@ -270,25 +270,32 @@ export default function Recruitment() {
         {t("recruit.title")}
       </h1>
 
-      {/* 📑 Recruitment Table */}
-      <Card className="bg-white/40 border border-gray-300 backdrop-blur-md rounded-2xl 
-                       shadow-xl dark:bg-gray-800/30 dark:border-gray-700">
+      {/* 📑 Recruitment Table (same as Tenders table style) */}
+      <Card className="bg-white/40 border border-gray-300 backdrop-blur-md rounded-2xl shadow-xl dark:bg-gray-800/30 dark:border-gray-700">
         <CardContent className="p-6 overflow-x-auto">
           {recruitments.length === 0 ? (
             <p className="text-center py-6 text-gray-600 dark:text-gray-300">
               {t("recruit.none")}
             </p>
           ) : (
-            <table className="w-full text-left border-collapse border border-gray-300 
-                               dark:border-gray-700">
+            <table className="w-full text-left border-collapse border border-gray-300 dark:border-gray-700">
               <thead>
-                <tr className="bg-blue-100 dark:bg-blue-950/40 text-blue-900 
-                               dark:text-blue-300 font-semibold text-center">
-                  <th className="border border-gray-300 px-3 py-2">{t("recruit.srno")}</th>
-                  <th className="border border-gray-300 px-3 py-2">{t("recruit.date")}</th>
-                  <th className="border border-gray-300 px-3 py-2">{t("recruit.titleCol")}</th>
-                  <th className="border border-gray-300 px-3 py-2">{t("recruit.view")}</th>
-                  <th className="border border-gray-300 px-3 py-2">{t("recruit.download")}</th>
+                <tr className="bg-blue-100 dark:bg-blue-950/40 text-blue-900 dark:text-blue-300 font-semibold text-center">
+                  <th className="border border-gray-300 px-3 py-2">
+                    {t("recruit.srno")}
+                  </th>
+                  <th className="border border-gray-300 px-3 py-2">
+                    {t("recruit.date")}
+                  </th>
+                  <th className="border border-gray-300 px-3 py-2">
+                    {t("recruit.titleCol")}
+                  </th>
+                  <th className="border border-gray-300 px-3 py-2">
+                    {t("recruit.view")}
+                  </th>
+                  <th className="border border-gray-300 px-3 py-2">
+                    {t("recruit.download")}
+                  </th>
                 </tr>
               </thead>
               <tbody>
@@ -309,8 +316,7 @@ export default function Recruitment() {
                         href={item.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1 text-blue-700 hover:text-blue-500 
-                                   dark:text-blue-400 dark:hover:text-blue-300 font-medium"
+                        className="inline-flex items-center gap-1 text-blue-700 hover:text-blue-500 dark:text-blue-400 dark:hover:text-blue-300 font-medium"
                       >
                         <Eye className="w-4 h-4" /> {t("recruit.view")}
                       </a>
@@ -321,8 +327,7 @@ export default function Recruitment() {
                         target="_blank"
                         rel="noopener noreferrer"
                         download
-                        className="inline-flex items-center gap-1 text-blue-700 hover:text-blue-500 
-                                   dark:text-blue-400 dark:hover:text-blue-300 font-medium"
+                        className="inline-flex items-center gap-1 text-blue-700 hover:text-blue-500 dark:text-blue-400 dark:hover:text-blue-300 font-medium"
                       >
                         <Download className="w-4 h-4" /> {t("recruit.download")} ({item.fileSize})
                       </a>

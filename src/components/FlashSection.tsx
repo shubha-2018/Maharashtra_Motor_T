@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext"; // ✅ Make sure this exists
+import { ArrowLeft } from "lucide-react"; // ✅ Optional icon (uses lucide-react)
 
 export default function FlashSection() {
   const navigate = useNavigate();
@@ -15,6 +16,7 @@ export default function FlashSection() {
       promotion: "Promotion Orders",
       press: "Press Release",
       other: "Other Flash",
+      back: "Back",
     },
     mr: {
       title: "फ्लॅश",
@@ -23,6 +25,7 @@ export default function FlashSection() {
       promotion: "पदोन्नती आदेश",
       press: "प्रेस प्रकाशन",
       other: "इतर फ्लॅश",
+      back: "मागे",
     },
   };
 
@@ -38,6 +41,15 @@ export default function FlashSection() {
 
   return (
     <div className="p-10 bg-gray-50 min-h-screen">
+      {/* 🔹 Back Button */}
+      <button
+        onClick={() => navigate(-1)}
+        className="flex items-center gap-2 text-[#1A0066] font-medium mb-6 hover:underline"
+      >
+        <ArrowLeft size={20} />
+        {t.back}
+      </button>
+
       {/* 🔹 Title */}
       <div className="mb-6">
         <h1 className="text-4xl font-bold text-[#1A0066] relative inline-block">

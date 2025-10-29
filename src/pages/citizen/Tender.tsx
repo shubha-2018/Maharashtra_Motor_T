@@ -343,7 +343,7 @@ export default function Tenders() {
       srno: "अ. क्र.",
       date: "दिनांक",
       tenderTitle: "निविदेचे शीर्षक",
-      view: "पाहा",
+      view: "पहा",
       download: "डाउनलोड",
       none: "सध्या कोणत्याही निविदा उपलब्ध नाहीत.",
     },
@@ -383,7 +383,7 @@ export default function Tenders() {
                 <tr className="bg-blue-100 dark:bg-blue-950/40 text-blue-900 dark:text-blue-300 font-semibold text-center">
                   <th className="border border-gray-300 px-3 py-2">{L.srno}</th>
                   <th className="border border-gray-300 px-3 py-2">{L.date}</th>
-                  <th className="border border-gray-300 px-3 py-2">{L.tenderTitle}</th>
+                  <th className="border border-gray-300 px-3 py-2">{L.title}</th>
                   <th className="border border-gray-300 px-3 py-2">{L.view}</th>
                   <th className="border border-gray-300 px-3 py-2">{L.download}</th>
                 </tr>

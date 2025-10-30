@@ -122,7 +122,7 @@ export default function GovernmentPublications() {
       srno: 1,
       date_en: "10 January 2025",
       date_mr: "१० जानेवारी २०२५",
-      title_en: "Government Gazette – January 2025",
+      title_en: "Gazette – January 2025",
       title_mr: "राजपत्र – जानेवारी २०२५",
       link: "https://mahpolwireless.stagingdsi.co.in/wp-content/uploads/2025/04/February-2021.pdf",
       fileSize: "1.2 MB",
@@ -132,7 +132,7 @@ export default function GovernmentPublications() {
       srno: 2,
       date_en: "25 February 2025",
       date_mr: "२५ फेब्रुवारी २०२५",
-      title_en: "Government Gazette – February 2025",
+      title_en: "Gazette – February 2025",
       title_mr: "राजपत्र – फेब्रुवारी २०२५",
       link: "https://mahpolwireless.stagingdsi.co.in/wp-content/uploads/2025/04/March-2021.pdf",
       fileSize: "1.5 MB",
@@ -142,7 +142,7 @@ export default function GovernmentPublications() {
       srno: 3,
       date_en: "30 March 2025",
       date_mr: "३० मार्च २०२५",
-      title_en: "Government Gazette – March 2025",
+      title_en: " Gazette – March 2025",
       title_mr: "राजपत्र – मार्च २०२५",
       link: "https://mahpolwireless.stagingdsi.co.in/wp-content/uploads/2025/04/April-2021.pdf",
       fileSize: "1.3 MB",
@@ -158,7 +158,7 @@ export default function GovernmentPublications() {
   // 🌐 Bilingual Labels
   const labels = {
     en: {
-      title: "Government Gazette",
+      title: " Gazette",
       back: "Back to Home",
       srno: "Sr. No.",
       date: "Date",

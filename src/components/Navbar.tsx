@@ -790,7 +790,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const [openDropdown, setOpenDropdown] = useState(null);
   const navigate = useNavigate();
   const { t } = useLanguage();
 
@@ -835,7 +835,8 @@ const Navbar = () => {
         { name: t("nav.promotionOrders"), url: "/police/promotions" },
         { name: t("nav.transfers"), url: "/police/transfers" },
         { name: t("nav.gradationList"), url: "/police/gradation" },
-        { name: t("nav.strategySupport"), url: "/police" },
+        // ✅ external link (opens in new tab)
+        { name: t("nav.strategySupport"), url: "https://117.222.38.165/SSS/" },
         { name: t("nav.positiveStories"), url: "/police/stories" },
       ],
     },
@@ -865,17 +866,26 @@ const Navbar = () => {
     },
   ];
 
-  const toggleDropdown = (itemName: string) => {
+  const toggleDropdown = (itemName) => {
     setOpenDropdown(openDropdown === itemName ? null : itemName);
   };
 
-  const handleNavigation = (url: string) => {
-    navigate(url);
-    setOpenDropdown(null); // ✅ Close dropdown after click
+  // ✅ Handles internal vs external navigation
+  const handleNavigation = (url) => {
+    if (url.startsWith("http")) {
+      window.open(url, "_blank", "noopener,noreferrer");
+    } else {
+      navigate(url);
+    }
+    setOpenDropdown(null);
   };
 
-  const handleMobileNavigation = (url: string) => {
-    navigate(url);
+  const handleMobileNavigation = (url) => {
+    if (url.startsWith("http")) {
+      window.open(url, "_blank", "noopener,noreferrer");
+    } else {
+      navigate(url);
+    }
     setIsMobileMenuOpen(false);
     setOpenDropdown(null);
   };
@@ -931,7 +941,7 @@ const Navbar = () => {
                       {item.items.map((subItem) => (
                         <DropdownMenuItem
                           key={subItem.name}
-                          onClick={() => handleNavigation(subItem.url)} // ✅ Auto-close dropdown
+                          onClick={() => handleNavigation(subItem.url)} // ✅ external handled
                           className="text-gray-700 dark:text-gray-200 hover:bg-blue-50 dark:hover:bg-gray-800 cursor-pointer"
                         >
                           {subItem.name}
@@ -942,9 +952,10 @@ const Navbar = () => {
                 ) : (
                   <Button
                     variant="ghost"
+                    onClick={() => handleNavigation(item.url)} // ✅ unified logic
                     className="text-white md:text-[18px] bg-transparent hover:text-white hover:bg-blue-800 dark:hover:bg-blue-900 transition-all duration-200 flex items-center"
                   >
-                    <Link to={item.url}>{item.name}</Link>
+                    {item.name}
                   </Button>
                 )}
               </div>
@@ -993,7 +1004,7 @@ const Navbar = () => {
                         </button>
                       ) : (
                         <button
-                          onClick={() => handleMobileNavigation(item.url)}
+                          onClick={() => handleMobileNavigation(item.url)} // ✅ handles external links too
                           className="text-white text-xl font-bold hover:text-blue-200"
                         >
                           {item.name}
@@ -1005,7 +1016,7 @@ const Navbar = () => {
                         {item.items.map((subItem) => (
                           <button
                             key={subItem.name}
-                            onClick={() => handleMobileNavigation(subItem.url)} // ✅ closes mobile dropdown
+                            onClick={() => handleMobileNavigation(subItem.url)} // ✅ unified
                             className="block w-full text-left py-2 text-blue-200 hover:text-white text-lg"
                           >
                             {subItem.name}

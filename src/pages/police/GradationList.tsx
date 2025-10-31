@@ -15,7 +15,7 @@ export default function GradationList() {
     {
       id: 1,
       title_en: "Gradation List – January 2025",
-      title_mr: "ज्येष्ठता सूची – जानेवारी २०२५",
+      title_mr: "सेवाज्येष्ठता यादी– जानेवारी २०२५",
       size: "1.52 MB",
       link: "https://mahpolwireless.stagingdsi.co.in/UploadedFiles/GradationLists/156.pdf",
       uploadDate: "2025-01-10",
@@ -23,7 +23,7 @@ export default function GradationList() {
     {
       id: 2,
       title_en: "Gradation List – February 2025",
-      title_mr: "ज्येष्ठता सूची – फेब्रुवारी २०२५",
+      title_mr: "सेवाज्येष्ठता यादी – फेब्रुवारी २०२५",
       size: "1.12 MB",
       link: "https://mahpolwireless.stagingdsi.co.in/UploadedFiles/GradationLists/159.pdf",
       uploadDate: "2025-02-15",
@@ -31,7 +31,7 @@ export default function GradationList() {
     {
       id: 3,
       title_en: "Gradation List – March 2025",
-      title_mr: "ज्येष्ठता सूची – मार्च २०२५",
+      title_mr: "सेवाज्येष्ठता यादी – मार्च २०२५",
       size: "930.17 KB",
       link: "https://mahpolwireless.stagingdsi.co.in/UploadedFiles/GradationLists/163.pdf",
       uploadDate: "2025-03-25",
@@ -56,14 +56,14 @@ export default function GradationList() {
       none: "No gradation lists available currently.",
     },
     mr: {
-      title: "ज्येष्ठता सूची",
+      title: "सेवाज्येष्ठता यादी",
       back: "मुख्यपृष्ठावर जा",
       srno: "अ. क्र.",
       date: "दिनांक",
       orderTitle: "शीर्षक",
       view: "पहा",
       download: "डाउनलोड",
-      none: "सध्या कोणतीही ज्येष्ठता सूची उपलब्ध नाही.",
+      none: "सध्या कोणतीही सेवाज्येष्ठता यादी उपलब्ध नाही.",
     },
   };
 

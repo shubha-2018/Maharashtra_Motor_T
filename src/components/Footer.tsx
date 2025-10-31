@@ -136,11 +136,16 @@ const Footer: React.FC = () => {
                   </p>
                   {language === "mr" ? (
                     <p className="text-gray-800 dark:text-gray-200 leading-relaxed">
-                      पोलीस वायरलेस विभाग, पुणे मुख्यालय, महाराष्ट्र राज्य
+                      पोलीस दळणवळण व माहिती तंत्रज्ञान  विभाग महाराष्ट्र राज्य पुणे
+डॉ. होमी भाभा रोड, चव्हाणनगर
+पुणे – ४११००८, महाराष्ट्र
                     </p>
                   ) : (
                     <p className="text-gray-800 dark:text-gray-200 leading-relaxed">
-                      Police Wireless Department, Pune Headquarters, Maharashtra 
+                     Police Communication and Information Technology Department
+Maharashtra State Pune
+Dr. Homi Bhabha Road, Chavannagar
+Pune – 411008, Maharashtra, India 
                     </p>
                   )}
                 </div>

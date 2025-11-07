@@ -20,7 +20,7 @@ export default function FlashSection() {
     },
     mr: {
       title: "फ्लॅश",
-      gradation: "सेवाज्येष्ठता सूची",
+      gradation: "सेवाज्येष्ठता यादी ",
       transfer: "बदली आदेश",
       promotion: "पदोन्नती आदेश",
       press: "प्रेस प्रकाशन",

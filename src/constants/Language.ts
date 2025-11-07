@@ -1749,6 +1749,55 @@ export const MR = {
   "b2": "PC(WH)PRAMOTION (ANSHTA BADAL)-2023-2626",
   "b3": "PC(WH)PRAMOTION (ANSHATA BADAL)-2023-2603",
 
+
+//letes new and recruitment
+
+  en: {
+  news: {
+    kolhapur: {
+      visit: "Kolhapur Visit Again",
+    },
+  },
+  recruitment: {
+    retired: {
+      pi: {
+        dysp: "Advertisement for Retired PI-DYSP",
+      },
+    },
+    notice: "As per department notice",
+  },
+},
+mr: {
+  news: {
+    kolhapur: {
+      visit: "कोल्हापूर भेट पुन्हा",
+    },
+  },
+  recruitment: {
+    retired: {
+      pi: {
+        dysp: "निवृत्त PI-DYSP साठी जाहिरात",
+      },
+    },
+    notice: "शासन नियमाप्रमाणे",
+  },
+}   ,
+    //news recruitment
+    "news.yoga.training": "Yoga Training Conducted",
+"news.kolhapur.visit": "Kolhapur Visit Again",
+"news.face.authentication": "Face Authentication System Launch",
+"news.director.correspondence": "Correspondence from Director",
+ "latest.news": "Latest News",
+"recruitment": "Recruitment",
+"recruitment.retired.pi.dysp": "Advertisement for Retired PI-DYSP",
+"recruitment.sub.inspector": "Sub-Inspector Recruitment",
+"recruitment.data.operator": "Data Operator Recruitment",
+"recruitment.notice": "As per department notice",
+
+
+
+
+
   // Events
   "latest.events": "ताज्या घटना",
   "photo.gallery": "फोटो गॅलरी",
@@ -1925,6 +1974,22 @@ export const MR = {
   "gallery.image2.caption": "स्वातंत्र्यदिन साजरे",
   "gallery.image3.caption": "अशोक जोग व्याख्यानगृह उद्घाटन",
   "gallery.image4.caption": "ज्ञानेश्वरी वरिष्ठ अधिकाऱ्यांच्या मेसचे उद्घाटन",
+  
+  //news   recruitment
+ 
+"latest.news": "ताज्या बातम्या",
+"recruitment": "भरती",
+
+  "news.yoga.training": "योग प्रशिक्षण आयोजित",
+"news.kolhapur.visit": "कोल्हापूर भेट पुन्हा",
+"news.face.authentication": "चेहरा प्रमाणीकरण प्रणाली उद्घाटन",
+"news.director.correspondence": "संचालकांचे पत्रव्यवहार",
+
+"recruitment.retired.pi.dysp": "निवृत्त PI-DYSP साठी जाहिरात",
+"recruitment.sub.inspector": "उपनिरीक्षक भरती",
+"recruitment.data.operator": "डेटा ऑपरेटर भरती",
+"recruitment.notice": "शासन नियमाप्रमाणे",
+
 
 
 

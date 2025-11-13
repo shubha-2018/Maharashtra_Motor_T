@@ -28,22 +28,32 @@ const Header: React.FC = () => {
 
         {/* Left Links */}
         <div className="flex space-x-4 text-sm font-semibold text-blue-900 dark:text-blue-300">
-          <a href="https://eoffice.mahapolice.gov.in/" target="_blank" rel="noopener noreferrer" className="hover:text-primary">
+          <a
+            href="https://eoffice.mahapolice.gov.in/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-primary"
+          >
             {t("e.office")}
           </a>
-          <a href="https://accounts.mgovcloud.in/signin?servicename=VirtualOffice" target="_blank" rel="noopener noreferrer" className="hover:text-primary">
+          <a
+            href="https://accounts.mgovcloud.in/signin?servicename=VirtualOffice"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-primary"
+          >
             {t("nic.email")}
           </a>
         </div>
 
-        {/* ✅ Center Title (English smaller size, Marathi bigger) */}
-        <div
-          className={`text-center flex-1 font-merri tracking-wide leading-snug font-bold text-[#0A1E4A] dark:text-white 
-          ${language === "mr" ? "text-base md:text-3xl" : "text-sm md:text-2xl"}`}
-        >
-          {language === "mr"
-            ? "पोलीस दळणवळण व माहिती तंत्रज्ञान विभाग, पुणे"
-            : "Police Communication & Information Technology Department, Pune"}
+        {/* ✅ Center Title (Marathi on top, English below - same font size) */}
+        <div className="text-center flex-1 font-merri tracking-wide leading-snug font-bold text-[#0A1E4A] dark:text-white">
+          <div className="text-base md:text-3xl">
+            पोलीस दळणवळण व माहिती तंत्रज्ञान विभाग, पुणे
+          </div>
+          <div className="text-base md:text-3xl">
+            Police Communication & Information Technology Department, Pune
+          </div>
         </div>
 
         {/* Right Controls */}
@@ -53,26 +63,52 @@ const Header: React.FC = () => {
           <div className="hidden sm:flex items-center space-x-1 text-xs">
             <span>{t("font.size")}:</span>
             {["small", "normal", "large"].map((size) => (
-              <button key={size} onClick={() => handleFontSize(size)} className={cn("px-1 hover:text-primary", fontSize === size && "text-primary font-bold")}>
+              <button
+                key={size}
+                onClick={() => handleFontSize(size)}
+                className={cn(
+                  "px-1 hover:text-primary",
+                  fontSize === size && "text-primary font-bold"
+                )}
+              >
                 {size === "small" ? "A-" : size === "normal" ? "A" : "A+"}
               </button>
             ))}
           </div>
 
+          {/* Theme Toggle */}
           <div className="flex items-center space-x-1">
-            <button onClick={() => toggleTheme("light")} className={cn("p-1 rounded hover:bg-primary/10", theme === "light" && "bg-primary/20")}><Sun className="w-4 h-4" /></button>
-            <button onClick={() => toggleTheme("dark")} className={cn("p-1 rounded hover:bg-primary/10", theme === "dark" && "bg-primary/20")}><Moon className="w-4 h-4" /></button>
-          </div>
-
-          <div className="flex items-center space-x-2 cursor-pointer">
-            <Globe className="w-4 h-4 text-blue-700 dark:text-blue-300" />
-            <button onClick={() => setLanguage(language === "en" ? "mr" : "en")} className="text-sm font-bold text-primary hover:underline">
-              {language === "en" ? "मराठी" : "English"}
+            <button
+              onClick={() => toggleTheme("light")}
+              className={cn(
+                "p-1 rounded hover:bg-primary/10",
+                theme === "light" && "bg-primary/20"
+              )}
+            >
+              <Sun className="w-4 h-4" />
+            </button>
+            <button
+              onClick={() => toggleTheme("dark")}
+              className={cn(
+                "p-1 rounded hover:bg-primary/10",
+                theme === "dark" && "bg-primary/20"
+              )}
+            >
+              <Moon className="w-4 h-4" />
             </button>
           </div>
 
+          {/* Language Toggle */}
+          <div className="flex items-center space-x-2 cursor-pointer">
+            <Globe className="w-4 h-4 text-blue-700 dark:text-blue-300" />
+            <button
+              onClick={() => setLanguage(language === "en" ? "mr" : "en")}
+              className="text-sm font-bold text-primary hover:underline"
+            >
+              {language === "en" ? "मराठी" : "English"}
+            </button>
+          </div>
         </div>
-
       </div>
     </header>
   );

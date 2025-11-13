@@ -48,6 +48,7 @@ export const EN = {
   "nav.aboutDepartment": "About Department",
   "nav.offices": "Offices in Headquarters",
   "nav.ranks": "Ranks Of Department",
+  "nav.training": "Training", 
   "nav.welfare": "Welfare Activities",
   "nav.Recruitments": "Recruitments",
 
@@ -1229,7 +1230,7 @@ export const MR = {
   "nav.offices": "मुख्यालयातील कार्यालये",
   "nav.ranks": "विभागातील पदे ",
   "nav.welfare": "कल्याणकारी उपक्रम",
-
+ "nav.training": "प्रशिक्षण", 
   "nav.citizens": "नागरिकांसाठी ",
   "nav.policeCorner": "पोलीस कोपरे",
   "nav.pressRelease": "प्रेस प्रकाशन",
@@ -1816,6 +1817,10 @@ mr: {
   "gallery.viewAllPhotos": "सर्व फोटो पहा",
 
 
+
+  //training 
+
+  "training": "Training",
   // Emergency Helplines 
   "emergency.message": "आपत्कालीन परिस्थितीत त्वरित मदतीसाठी या क्रमांकांवर कॉल करा",
 
@@ -1850,6 +1855,8 @@ mr: {
   "smart.features.item3": "अनेक भाषा समर्थन उपलब्ध",
   "smart.features.item4": "आपत्कालीन सेवा एकत्रीकरण",
 
+
+  
 
   // goverment links
 
@@ -1975,6 +1982,7 @@ mr: {
   "gallery.image3.caption": "अशोक जोग व्याख्यानगृह उद्घाटन",
   "gallery.image4.caption": "ज्ञानेश्वरी वरिष्ठ अधिकाऱ्यांच्या मेसचे उद्घाटन",
   
+  
   //news   recruitment
  
 "latest.news": "ताज्या बातम्या",
@@ -2043,6 +2051,8 @@ mr: {
   "privacy.changes.description": "आमच्या पद्धतींमधील किंवा कायदेशीर आवश्यकतांमधील बदल प्रतिबिंबित करण्यासाठी आम्ही हे गोपनीयता धोरण नियतकालिकरित्या अद्यतनित करू शकतो. अद्यतनित धोरण प्रभावी तारखेसह आमच्या वेबसाइटवर पोस्ट केले जाईल. आम्ही तुम्हाला हे धोरण नियमितपणे तपासण्याची शिफारस करतो.",
   "privacy.contact.title": "संपर्क माहिती",
   "privacy.contact.description": "या गोपनीयता धोरणासंबंधी किंवा आमच्या डेटा पद्धतींसंबंधी कोणत्याही प्रश्न किंवा चिंतांसाठी, कृपया आमच्या डेटा संरक्षण अधिकाऱ्याशी संपर्क साधा: पोलीस संप्रेषण आणि आयटी विभाग, पुणे. ईमेल: dpo-pcit@mahapolice.gov.in | फोन: +91-20-2612-XXXX",
+
+  //training 
 
 
   // Terms of Use Page

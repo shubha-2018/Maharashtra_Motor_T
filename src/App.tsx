@@ -155,9 +155,19 @@ import AccessibilityPage from "./pages/general/AccessibilityPage";
 import OtherFlash from "./pages/OtherFlash";
 import TransferOrders from "./pages/TransferOrders";
 
+        {/* ✅ Faculty Route */}
+import Faculty from "./pages/Faculty";
+
 
 // ⚡ Flash Section
 import FlashSection from "./components/FlashSection";
+
+
+       {/* Training Calendar route */}
+      //  import TrainingCalendar from ';
+      import TrainingCalender from "./pages/TrainingCalender";
+       
+
 
 // (Optional) Flash Sub Pages
 // import TransferOrders from "./pages/TransferOrders";
@@ -181,6 +191,7 @@ const AppRoutes = () => (
       <Route path="about/ranks" element={<Ranks />} />
       <Route path="about/welfare" element={<WelfareActivities />} />
 
+
       {/* 👥 Citizen Section */}
       <Route path="citizen/press-release" element={<PressRelease />} />
       <Route path="citizen/rti" element={<RTI />} />
@@ -194,6 +205,17 @@ const AppRoutes = () => (
       <Route path="police/transfers" element={<Transfers />} />
       <Route path="police/gradation" element={<GradationList />} />
       <Route path="police/stories" element={<PositiveStories />} />
+
+ 
+
+  
+       {/* Training Calendar route */}
+     {/* <Route path="/training-calendar" element={<TrainingCalendar />} /> */}
+       {/* <Route path="/" element={<Navigate to="/training-calendar" replace />} /> */}
+        {/* <Route path="/training-calendar" element={<TrainingCalendar />} /> */}
+      {/* <Route path="/training-calender" element={<TrainingCalender />} /> */}
+              <Route path="/training-calendar" element={<TrainingCalender />} />
+
 
       {/* ⚡ Flash Section */}
     <Route path="/flashsection" element={<FlashSection />} />
@@ -210,6 +232,11 @@ const AppRoutes = () => (
       <Route path="privacy-policy" element={<PrivacyPolicy />} />
       <Route path="terms-of-use" element={<TermsOfUse />} />
       <Route path="accessibility" element={<AccessibilityPage />} />
+
+              {/* ✅ Faculty Route */}
+        <Route path="/faculty" element={<Faculty />} />
+
+
 
       {/* 🚫 404 Page */}
       <Route path="*" element={<NotFound />} />

@@ -51,6 +51,13 @@ export const EN = {
   "nav.training": "Training", 
   "nav.welfare": "Welfare Activities",
   "nav.Recruitments": "Recruitments",
+   "nav.introduction":"Introduction",
+   "nav.trainingCalendar":"Training Calendar",
+   "nav.notificationCircular":"Notification Circular",
+    "nav.faculties":"Faculties",
+    "nav.museum":"Museum",
+
+ 
 
 
   "nav.citizens": "Citizen Corner",
@@ -201,7 +208,7 @@ export const EN = {
 
   //FORMERDIRECOTR
  "fd.back": "Back",
-  "fd.title": "Former Directors of Department",
+  "fd.title": "Former Directors ",
 
   "fd.d1.name": "Shri. Sunil Ramanand (IPS)",
   "fd.d1.designation": "Addl. D.G.P.",
@@ -1243,6 +1250,14 @@ export const MR = {
   "nav.strategySupport": " स्ट्रॅटेजी सपोर्ट सिस्टिम ",
   "nav.positiveStories": "सकारात्मक कथा / चांगले काम ",
   "nav.flash":"फ्लॅश ",
+   "nav.introduction":"परिचय",
+   "nav.trainingCalendar":"प्रशिक्षण दिनदर्शिका",
+   "nav.notificationCircular":"सूचना / परिपत्रक",
+    "nav.faculties":"प्रशिक्षक",
+    "nav.museum":"संग्रहालय",
+
+
+
 
   "nav.police_corner": "पोलीस कॉर्नर",
   "nav.tenders": "निविदा",

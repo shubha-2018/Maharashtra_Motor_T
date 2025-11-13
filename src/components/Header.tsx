@@ -24,15 +24,22 @@ const Header: React.FC = () => {
 
   return (
     <header className="w-full bg-white dark:bg-gray-900 shadow-lg sticky top-0 z-50">
-      <div className="px-6 py-2 flex items-center justify-between border-b border-gray-300 dark:border-gray-700">
-
+      <div
+        className="
+          px-4 md:px-6 py-2 
+          flex flex-wrap md:flex-nowrap 
+          items-center justify-between 
+          gap-y-2 md:gap-y-0
+          border-b border-gray-300 dark:border-gray-700
+        "
+      >
         {/* Left Links */}
-        <div className="flex space-x-4 text-sm font-semibold text-blue-900 dark:text-blue-300">
+        <div className="flex flex-wrap items-center justify-center md:justify-start space-x-3 text-xs sm:text-sm font-semibold text-blue-900 dark:text-blue-300 w-full md:w-auto">
           <a
             href="https://eoffice.mahapolice.gov.in/"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-primary"
+            className="hover:text-primary transition-colors"
           >
             {t("e.office")}
           </a>
@@ -40,24 +47,24 @@ const Header: React.FC = () => {
             href="https://accounts.mgovcloud.in/signin?servicename=VirtualOffice"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-primary"
+            className="hover:text-primary transition-colors"
           >
             {t("nic.email")}
           </a>
         </div>
 
-        {/* ✅ Center Title (Marathi on top, English below - same font size) */}
-        <div className="text-center flex-1 font-merri tracking-wide leading-snug font-bold text-[#0A1E4A] dark:text-white">
-          <div className="text-base md:text-3xl">
+        {/* Center Title */}
+        <div className="flex-1 text-center font-merri tracking-wide leading-snug font-bold text-[#0A1E4A] dark:text-white">
+          <div className="text-sm sm:text-base md:text-3xl">
             पोलीस दळणवळण व माहिती तंत्रज्ञान विभाग, पुणे
           </div>
-          <div className="text-base md:text-3xl">
+          <div className="text-sm sm:text-base md:text-3xl">
             Police Communication & Information Technology Department, Pune
           </div>
         </div>
 
         {/* Right Controls */}
-        <div className="flex items-center space-x-4">
+        <div className="flex items-center justify-center md:justify-end space-x-3 w-full md:w-auto">
 
           {/* Font size controls */}
           <div className="hidden sm:flex items-center space-x-1 text-xs">
@@ -67,7 +74,7 @@ const Header: React.FC = () => {
                 key={size}
                 onClick={() => handleFontSize(size)}
                 className={cn(
-                  "px-1 hover:text-primary",
+                  "px-1 hover:text-primary transition-colors",
                   fontSize === size && "text-primary font-bold"
                 )}
               >
@@ -81,29 +88,29 @@ const Header: React.FC = () => {
             <button
               onClick={() => toggleTheme("light")}
               className={cn(
-                "p-1 rounded hover:bg-primary/10",
+                "p-1 rounded hover:bg-primary/10 transition",
                 theme === "light" && "bg-primary/20"
               )}
             >
-              <Sun className="w-4 h-4" />
+              <Sun className="w-4 h-4 sm:w-5 sm:h-5" />
             </button>
             <button
               onClick={() => toggleTheme("dark")}
               className={cn(
-                "p-1 rounded hover:bg-primary/10",
+                "p-1 rounded hover:bg-primary/10 transition",
                 theme === "dark" && "bg-primary/20"
               )}
             >
-              <Moon className="w-4 h-4" />
+              <Moon className="w-4 h-4 sm:w-5 sm:h-5" />
             </button>
           </div>
 
           {/* Language Toggle */}
           <div className="flex items-center space-x-2 cursor-pointer">
-            <Globe className="w-4 h-4 text-blue-700 dark:text-blue-300" />
+            <Globe className="w-4 h-4 sm:w-5 sm:h-5 text-blue-700 dark:text-blue-300" />
             <button
               onClick={() => setLanguage(language === "en" ? "mr" : "en")}
-              className="text-sm font-bold text-primary hover:underline"
+              className="text-xs sm:text-sm font-bold text-primary hover:underline"
             >
               {language === "en" ? "मराठी" : "English"}
             </button>

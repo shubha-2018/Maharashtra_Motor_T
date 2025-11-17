@@ -43,7 +43,7 @@ export const EN = {
   "nav.home": "Home",
   "nav.about": "About Us",
   "nav.directorDesk": "From Director’s Desk",
-  "nav.formerDirectors": "Former Directors of Department",
+  "nav.formerDirectors": "Former Directors ",
   "nav.hierarchy": "Hierarchy of Department",
   "nav.aboutDepartment": "About Department",
   "nav.offices": "Offices in Headquarters",
@@ -54,8 +54,22 @@ export const EN = {
    "nav.introduction":"Introduction",
    "nav.trainingCalendar":"Training Calendar",
    "nav.notificationCircular":"Notification Circular",
-    "nav.faculties":"Faculties",
+  "nav.faculties":"Faculties",
     "nav.museum":"Museum",
+
+    //Museum submenu 
+    "nav.videos": "Videos",
+  "nav.photos": "Photos",
+
+
+    //Faculty page
+    "nav.title": "Faculty",
+    "nav.srNo": "Sr. No.",
+    "nav.docTitle": "Title",
+    "nav.date": "Date",
+    "nav.view": "View",
+    "nav.download": "Download",
+    "nav.noRecords": "No records available",
 
  
 
@@ -1027,6 +1041,18 @@ export const MR = {
   "p5e1": "सेवाज्येष्ठता यादी पी.डब्ल्यू.एस.आय. इलेक्ट्रिशियन",
 
 
+
+  //Faculty page
+
+   "nav.title": "शिक्षकवर्ग",
+    "nav.srNo": "अनुक्रमांक",
+    "nav.docTitle": "शीर्षक",
+    "nav.date": "तारीख",
+    "nav.view": "पहा",
+    "nav.download": "डाउनलोड",
+    "nav.noRecords": "नोंदी उपलब्ध नाहीत",
+
+
  // 🌐 Header / General
   // "header.title": "महाराष्ट्र पोलीस वायरलेस",
   "back_to_home": "मुख्यपृष्ठावर जा",
@@ -1046,6 +1072,12 @@ export const MR = {
   // "light.mode": "लाइट मोड",
   // "dark.mode": "डार्क मोड",
   "latest_news": "ताज्या बातम्या",
+
+
+   //Museum submenu 
+
+   "nav.videos": "व्हिडिओ",
+  "nav.photos": "फोटो",
 
   // 📄 Gradation List page
   "list_of_officers": "अधिकारी व अंमलदार यादी  ",

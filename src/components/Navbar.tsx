@@ -1045,12 +1045,6 @@
 
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
 import { ChevronDown, Menu, X } from "lucide-react";
 import AshokStambhLogo from "@/assets/ashok-stambh.png";
 import WirelessLogo from "@/assets/wireless.png";
@@ -1060,20 +1054,16 @@ import { useLanguage } from "@/contexts/LanguageContext";
 
 const Navbar: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const [hoveredMenu, setHoveredMenu] = useState<string | null>(null);
+  const [hoveredSubmenu, setHoveredSubmenu] = useState<string | null>(null);
   const navigate = useNavigate();
   const { t } = useLanguage();
 
-  // 🧭 Updated Navigation List (Faculty link added)
   const navigationItems = [
-    {
-      name: t("nav.home"),
-      hasDropdown: false,
-      url: "/",
-    },
+    { name: t("nav.home"), url: "/" },
+
     {
       name: t("nav.about"),
-      hasDropdown: true,
       items: [
         { name: t("nav.directorDesk"), url: "/about/directors-desk" },
         { name: t("nav.formerDirectors"), url: "/about/former-directors" },
@@ -1083,17 +1073,17 @@ const Navbar: React.FC = () => {
         { name: t("nav.ranks"), url: "/about/ranks" },
       ],
     },
+
     {
       name: t("nav.citizens"),
-      hasDropdown: true,
       items: [
         { name: t("nav.pressRelease"), url: "/citizen/press-release" },
         { name: t("nav.rti"), url: "/citizen/rti" },
       ],
     },
+
     {
       name: t("nav.police_corner"),
-      hasDropdown: true,
       items: [
         { name: t("nav.gazette"), url: "/police/gazette" },
         { name: t("nav.flash"), url: "/flashsection" },
@@ -1106,113 +1096,113 @@ const Navbar: React.FC = () => {
         { name: t("nav.welfare"), url: "/about/welfare" },
       ],
     },
+
     {
       name: t("nav.training"),
-      hasDropdown: true,
       items: [
         { name: t("nav.introduction"), url: "/training/introduction" },
         { name: t("nav.trainingCalendar"), url: "/training-calendar" },
         { name: t("nav.notificationCircular"), url: "/training/notification" },
-        // { name: t("nav.faculties"), url: "/training/faculties" },
-        { name: t("nav.museum"), url: "/training/museum" },
-        // ✅ NEW Faculty page link
-        { name: "Faculty ", url: "/faculty" },
+        {
+          name: t("nav.museum"),
+          items: [
+            { name: t("nav.videos"), url: "/training/museum/videos" },
+            { name: t("nav.photos"), url: "/training/museum/photos" },
+          ],
+        },
+        { name: t("nav.faculties"), url: "/faculty" },
       ],
     },
-    {
-      name: t("nav.tenders"),
-      hasDropdown: false,
-      url: "/tender",
-    },
-    {
-      name: t("nav.recruitments"),
-      hasDropdown: false,
-      url: "/recruitments",
-    },
-    {
-      name: t("nav.gallery"),
-      hasDropdown: false,
-      url: "/gallery",
-    },
-    {
-      name: t("nav.contact"),
-      hasDropdown: false,
-      url: "/contact",
-    },
+
+    { name: t("nav.tenders"), url: "/tender" },
+    { name: t("nav.recruitments"), url: "/recruitments" },
+    { name: t("nav.gallery"), url: "/gallery" },
+    { name: t("nav.contact"), url: "/contact" },
   ];
 
   const handleNavigation = (url: string) => {
     if (url.startsWith("http")) {
-      window.open(url, "_blank", "noopener,noreferrer");
+      window.open(url, "_blank");
     } else {
       navigate(url);
     }
     setIsMobileMenuOpen(false);
-    setOpenDropdown(null);
-  };
-
-  const toggleDropdown = (itemName: string) => {
-    setOpenDropdown(openDropdown === itemName ? null : itemName);
   };
 
   return (
     <nav className="w-full border-b border-blue-900 sticky top-0 z-50 bg-gradient-to-r from-blue-900 to-blue-950 shadow-lg">
       <div className="mx-auto px-3 sm:px-6 lg:px-8">
-        {/* Header Section */}
+
         <div className="flex justify-between items-center h-16 md:h-20">
+
           {/* Left Logos */}
           <div className="flex items-center space-x-4">
             <Link to="/">
-              <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg">
-                <img src={AshokStambhLogo} alt="Ashok Stambh" />
+              <div className="w-14 h-14 bg-white rounded-full flex items-center justify-center shadow-lg overflow-hidden">
+                <img src={AshokStambhLogo} className="w-10 h-10 object-contain" />
               </div>
             </Link>
+
             <Link to="/">
               <div className="w-20 h-16 flex items-center justify-center">
-                <img
-                  src={PoliceLogo}
-                  alt="Maharashtra Police Logo"
-                  className="max-h-full"
-                />
+                <img src={PoliceLogo} className="max-h-full" />
               </div>
             </Link>
           </div>
 
-          {/* Desktop Navigation */}
-          <div className="hidden xl:flex flex-1 justify-center items-center">
+          {/* Desktop Menu */}
+          <div className="hidden xl:flex flex-1 justify-center items-center space-x-1">
             {navigationItems.map((item) => (
-              <div key={item.name} className="mx-1">
-                {item.hasDropdown && item.items ? (
-                  <DropdownMenu modal={false}>
-                    <DropdownMenuTrigger asChild>
-                      <Button
-                        variant="ghost"
-                        className="text-white text-[15px] hover:bg-blue-800 px-3 py-2"
+              <div
+                key={item.name}
+                className="relative"
+                onMouseEnter={() => setHoveredMenu(item.name)}
+                onMouseLeave={() => {
+                  setHoveredMenu(null);
+                  setHoveredSubmenu(null);
+                }}
+              >
+                <Button
+                  variant="ghost"
+                  className="text-white text-[15px] hover:bg-blue-800 px-3 py-2"
+                  onClick={() => !item.items && handleNavigation(item.url!)}
+                >
+                  {item.name}
+                  {item.items && <ChevronDown className="w-4 h-4 ml-1" />}
+                </Button>
+
+                {hoveredMenu === item.name && item.items && (
+                  <div className="absolute left-0 top-full bg-gradient-to-br from-blue-50 to-blue-100 border-2 border-blue-200 shadow-xl rounded-lg py-2 w-56 mt-1">
+                    {item.items.map((sub) => (
+                      <div
+                        key={sub.name}
+                        className="relative"
+                        onMouseEnter={() => setHoveredSubmenu(sub.name)}
                       >
-                        {item.name}
-                        <ChevronDown className="w-4 h-4 ml-1" />
-                      </Button>
-                    </DropdownMenuTrigger>
-                    <DropdownMenuContent className="bg-white border border-gray-200 shadow-md">
-                      {item.items.map((subItem) => (
-                        <DropdownMenuItem
-                          key={subItem.name}
-                          onClick={() => handleNavigation(subItem.url)}
-                          className="text-gray-700 hover:bg-blue-50 cursor-pointer"
+                        <div
+                          className="px-4 py-2.5 text-gray-800 hover:bg-gradient-to-r hover:from-blue-600 hover:to-blue-700 hover:text-white cursor-pointer flex justify-between items-center transition-all duration-200 font-medium"
+                          onClick={() => !sub.items && handleNavigation(sub.url!)}
                         >
-                          {subItem.name}
-                        </DropdownMenuItem>
-                      ))}
-                    </DropdownMenuContent>
-                  </DropdownMenu>
-                ) : (
-                  <Button
-                    variant="ghost"
-                    onClick={() => handleNavigation(item.url!)}
-                    className="text-white text-[15px] hover:bg-blue-800 px-3 py-2"
-                  >
-                    {item.name}
-                  </Button>
+                          {sub.name}
+                          {sub.items && <ChevronDown className="w-4 h-4" />}
+                        </div>
+
+                        {hoveredSubmenu === sub.name && sub.items && (
+                          <div className="absolute left-full top-0 bg-gradient-to-br from-blue-50 to-blue-100 border-2 border-blue-200 shadow-xl rounded-lg py-2 w-48 ml-1">
+                            {sub.items.map((child) => (
+                              <div
+                                key={child.name}
+                                className="px-4 py-2.5 text-gray-800 hover:bg-gradient-to-r hover:from-blue-600 hover:to-blue-700 hover:text-white cursor-pointer transition-all duration-200 font-medium"
+                                onClick={() => handleNavigation(child.url)}
+                              >
+                                {child.name}
+                              </div>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    ))}
+                  </div>
                 )}
               </div>
             ))}
@@ -1221,73 +1211,68 @@ const Navbar: React.FC = () => {
           {/* Right Logo */}
           <div className="hidden xl:flex items-center">
             <div className="w-14 h-12 bg-white rounded-lg flex items-center justify-center shadow-lg mr-10">
-              <img
-                src={WirelessLogo}
-                alt="Wireless Logo"
-                className="max-h-full"
-              />
+              <img src={WirelessLogo} className="max-h-full" />
             </div>
           </div>
 
-          {/* Mobile Menu Toggle */}
+          {/* Mobile Button */}
           <div className="xl:hidden">
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="text-white hover:bg-blue-800"
-            >
+            <Button variant="ghost" size="icon" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="text-white hover:bg-blue-800">
               {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </Button>
           </div>
+
         </div>
 
-        {/* Mobile Dropdown Menu */}
+        {/* MOBILE MENU */}
         {isMobileMenuOpen && (
-          <div className="xl:hidden bg-gradient-to-r from-blue-900 to-blue-950 border-t border-blue-800 shadow-lg">
-            <div className="py-4 px-4">
+          <div className="xl:hidden bg-blue-900 border-t border-blue-800">
+            <div className="py-4 px-4 text-white space-y-2">
               {navigationItems.map((item) => (
-                <div key={item.name} className="py-2">
-                  {item.hasDropdown && item.items ? (
-                    <>
-                      <button
-                        onClick={() => toggleDropdown(item.name)}
-                        className="w-full flex justify-between text-white text-lg font-medium"
-                      >
-                        {item.name}
-                        <ChevronDown
-                          className={`w-4 h-4 transition-transform ${
-                            openDropdown === item.name ? "rotate-180" : ""
-                          }`}
-                        />
-                      </button>
-                      {openDropdown === item.name && (
-                        <div className="pl-4 mt-2 space-y-1">
-                          {item.items.map((subItem) => (
-                            <button
-                              key={subItem.name}
-                              onClick={() => handleNavigation(subItem.url)}
-                              className="block w-full text-left text-blue-200 hover:text-white text-base"
-                            >
-                              {subItem.name}
-                            </button>
-                          ))}
+                <div key={item.name}>
+                  <button
+                    className="w-full flex justify-between text-left text-lg font-medium"
+                    onClick={() => item.items ? setHoveredMenu(item.name) : handleNavigation(item.url!)}
+                  >
+                    {item.name}
+                    {item.items && <ChevronDown className={`w-5 h-5 ${hoveredMenu === item.name && "rotate-180"}`} />}
+                  </button>
+
+                  {hoveredMenu === item.name && item.items && (
+                    <div className="pl-4 space-y-1 mt-2">
+                      {item.items.map((sub) => (
+                        <div key={sub.name}>
+                          <button
+                            className="flex justify-between w-full text-left text-base text-blue-200 hover:text-white"
+                            onClick={() => sub.items ? setHoveredSubmenu(sub.name) : handleNavigation(sub.url!)}
+                          >
+                            {sub.name}
+                            {sub.items && <ChevronDown className={`w-4 h-4 ${hoveredSubmenu === sub.name && "rotate-180"}`} />}
+                          </button>
+
+                          {hoveredSubmenu === sub.name && sub.items && (
+                            <div className="pl-4 space-y-1 mt-1">
+                              {sub.items.map((child) => (
+                                <button
+                                  key={child.name}
+                                  onClick={() => handleNavigation(child.url)}
+                                  className="block w-full text-left text-blue-200 hover:text-white text-sm"
+                                >
+                                  {child.name}
+                                </button>
+                              ))}
+                            </div>
+                          )}
                         </div>
-                      )}
-                    </>
-                  ) : (
-                    <button
-                      onClick={() => handleNavigation(item.url!)}
-                      className="text-white text-lg font-medium hover:text-blue-200"
-                    >
-                      {item.name}
-                    </button>
+                      ))}
+                    </div>
                   )}
                 </div>
               ))}
             </div>
           </div>
         )}
+
       </div>
     </nav>
   );

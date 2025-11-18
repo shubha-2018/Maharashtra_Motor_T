@@ -1102,6 +1102,14 @@ const Navbar: React.FC = () => {
       items: [
         { name: t("nav.introduction"), url: "/training/introduction" },
         { name: t("nav.trainingCalendar"), url: "/training-calendar" },
+        { name: t("nav.library"), url: "/library" },
+         {
+          name: t("nav.traininggallery"),
+          items: [
+            { name: t("nav.videos"), url: "/training/traininggallery/videos" },
+            { name: t("nav.photos"), url: "/training/traininggallery/photos" },
+          ],
+        },
         { name: t("nav.notificationCircular"), url: "/training/notification" },
         {
           name: t("nav.museum"),

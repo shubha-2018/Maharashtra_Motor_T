@@ -56,6 +56,8 @@ export const EN = {
    "nav.notificationCircular":"Notification Circular",
   "nav.faculties":"Faculties",
     "nav.museum":"Museum",
+    "nav.traininggallery":"Training Gallery",
+    "nav.library":"Library",
 
     //Museum submenu 
     "nav.videos": "Videos",
@@ -705,6 +707,7 @@ export const EN = {
   "n6x4": "Prev",
   "c7r2": "Next",
 
+   
 
 
 // 🔹 Recruitment Page
@@ -757,6 +760,32 @@ export const EN = {
   "contact.email.title": "Email",
   "contact.email.address": "dir.polwireless.pune@mahapolice.gov.in",
   "contact.map.title": "Find Us on Map",
+
+
+
+  //Traning Calender 
+  // translations/en.ts
+
+  trainingCalendar: {
+    title: "Training Calendar",
+    srNo: "Sr. No.",
+    nameOfCourse: "Name of Course",
+    duration: "Duration",
+    dateFrom: "Date From",
+    dateTo: "Date To",
+    eligibility: "Eligibility Level",
+    courseCoordinator: "Course Coordinator",
+
+    enterSubject: "Enter course name",
+    durationExample: "e.g. 3 weeks",
+    enterEligibility: "Enter eligibility level",
+    enterCourseCoordinator: "Enter course coordinator",
+
+    addRow: "Add Row",
+  },
+ 
+
+
 
 
   //listofofficer
@@ -958,6 +987,30 @@ export const EN = {
 
 // marathi
 
+
+
+// translations/mr.ts
+export const mr = {
+  trainingCalendar: {
+    title: "प्रशिक्षण दिनदर्शिका",
+    srNo: "अनु. क्र.",
+    nameOfCourse: "अभ्यासक्रमाचे नाव",
+    duration: "कालावधी",
+    dateFrom: "पासून तारीख",
+    dateTo: "पर्यंत तारीख",
+    eligibility: "पात्रता स्तर",
+    courseCoordinator: "अभ्यासक्रम समन्वयक",
+
+    enterSubject: "अभ्यासक्रमाचे नाव लिहा",
+    durationExample: "उदा. ३ आठवडे",
+    enterEligibility: "पात्रता लिहा",
+    enterCourseCoordinator: "अभ्यासक्रम समन्वयकचे नाव लिहा",
+
+    addRow: "नवीन नोंद जोडा",
+  },
+};
+
+
 export const MR = {
   // Header
   "dial.112": "डायल 112",
@@ -1044,7 +1097,7 @@ export const MR = {
 
   //Faculty page
 
-   "nav.title": "शिक्षकवर्ग",
+   "nav.title": "प्रशिक्षक",
     "nav.srNo": "अनुक्रमांक",
     "nav.docTitle": "शीर्षक",
     "nav.date": "तारीख",
@@ -1054,30 +1107,26 @@ export const MR = {
 
 
  // 🌐 Header / General
-  // "header.title": "महाराष्ट्र पोलीस वायरलेस",
   "back_to_home": "मुख्यपृष्ठावर जा",
-  // "english": "English",
-  // "marathi": "मराठी",
   "view": "पहा",
   "download": "डाउनलोड",
   "date": "दिनांक",
   "sr_no": "अ.क्र ",
-  // "title": "शीर्षक",
   "no_tenders": "सध्या कोणत्याही निविदा उपलब्ध नाहीत.",
   "tenders": "निविदा",
   "tender_notice": "निविदा सूचना",
   "file_size": "फाईल आकार",
-  // "language": "भाषा",
-  // "font.size": "अक्षर आकार",
-  // "light.mode": "लाइट मोड",
-  // "dark.mode": "डार्क मोड",
+ 
   "latest_news": "ताज्या बातम्या",
+
+ 
 
 
    //Museum submenu 
 
    "nav.videos": "व्हिडिओ",
   "nav.photos": "फोटो",
+  "nav.traininggallery":"प्रशिक्षण गॅलरी",
 
   // 📄 Gradation List page
   "list_of_officers": "अधिकारी व अंमलदार यादी  ",
@@ -1142,15 +1191,7 @@ export const MR = {
   "full_name": "पूर्ण नाव",
   "designation": "पदनाम",
   "email": "ईमेल",
-  // "contact": "संपर्क",
-  // "csv_file_name": "maharashtra_police_employees.csv",
-  // "previous": "मागील",
-  // "next": "पुढील",
-  // "page": "पृष्ठ",
-  // "of": "चा/ची",
-
-
-
+ 
 
 
 
@@ -1263,7 +1304,7 @@ export const MR = {
   "nav.home": "मुख्यपृष्ठ",
   "nav.about": "आमच्याविषयी ",
   "nav.directorDesk": "संचालकांच्या लेखणीतून",
-  "nav.formerDirectors": "विभागाचे पूर्व संचालक",
+  "nav.formerDirectors": "पूर्व संचालक",
   "nav.hierarchy": "संघटनात्मक संरचना",
   "nav.aboutDepartment": "विभागाविषयी ",
   "nav.offices": "मुख्यालयातील कार्यालये",
@@ -1287,6 +1328,7 @@ export const MR = {
    "nav.notificationCircular":"सूचना / परिपत्रक",
     "nav.faculties":"प्रशिक्षक",
     "nav.museum":"संग्रहालय",
+    "nav.library":"लायब्ररी",
 
 
 
@@ -1338,6 +1380,26 @@ export const MR = {
     "recruit.titleCol": "शीर्षक",
     "recruit.view": "पहा",
     "recruit.download": "डाउनलोड",
+
+ //Traning Calender 
+ "trainingCalendar.title": "प्रशिक्षण दिनदर्शिका",
+  "trainingCalendar.srNo": "अनु. क्र.",
+  "trainingCalendar.nameOfCourse": "अभ्यासक्रमाचे नाव",
+  "trainingCalendar.duration": "कालावधी",
+  "trainingCalendar.dateFrom": "पासून तारीख",
+  "trainingCalendar.dateTo": "पर्यंत तारीख",
+  "trainingCalendar.eligibility": "पात्रता स्तर",
+  "trainingCalendar.courseCoordinator": "अभ्यासक्रम समन्वयक",
+
+  "trainingCalendar.enterSubject": "अभ्यासक्रमाचे नाव लिहा",
+  "trainingCalendar.durationExample": "उदा. ३ आठवडे",
+  "trainingCalendar.enterEligibility": "पात्रता लिहा",
+  "trainingCalendar.enterCourseCoordinator": "अभ्यासक्रम समन्वयकचे नाव लिहा",
+
+  "trainingCalendar.addRow": "नवीन नोंद जोडा",
+
+
+
 
   //STARTGEY
   "p1o2": "मुख्यपृष्ठावर परत",
@@ -1683,7 +1745,7 @@ export const MR = {
 
   //FORMAERDIRECOTR
   "fd.back": "मागे",
-  "fd.title": "विभागाचे पूर्व संचालक",
+  "fd.title": " पूर्व संचालक",
 
   "fd.d1.name": "श्री. सुनील रामानंद (आयपीएस)",
   "fd.d1.designation": "अपर पोलीस महासंचालक",

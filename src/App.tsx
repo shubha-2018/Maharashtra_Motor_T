@@ -154,6 +154,7 @@ import TermsOfUse from "./pages/general/ terms-of-use";
 import AccessibilityPage from "./pages/general/AccessibilityPage";
 import OtherFlash from "./pages/OtherFlash";
 import TransferOrders from "./pages/TransferOrders";
+import i18 from "./i18n";
 
         {/* ✅ Faculty Route */}
 import Faculty from "./pages/Faculty";
@@ -214,7 +215,10 @@ const AppRoutes = () => (
        {/* <Route path="/" element={<Navigate to="/training-calendar" replace />} /> */}
         {/* <Route path="/training-calendar" element={<TrainingCalendar />} /> */}
       {/* <Route path="/training-calender" element={<TrainingCalender />} /> */}
-              <Route path="/training-calendar" element={<TrainingCalender />} />
+              {/* <Route path="/training-calendar" element={<TrainingCalender />} /> */}
+                  {/* <TrainingCalendar language={language} /> */}
+                  <Route path="/training-calendar" element={<TrainingCalender />} />
+
 
 
       {/* ⚡ Flash Section */}

@@ -1,8 +1,8 @@
+// Updated EventsGallery.jsx with bottom-to-top scrolling for Latest Events (fixed)
 import React, { useState, useEffect, useRef } from "react";
-import { Calendar, MapPin, Camera, ArrowRight } from "lucide-react";
+import { Calendar, MapPin, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { useLanguage } from "@/contexts/LanguageContext";
 import GIMG_1 from "@/assets/gallery/img1.jpeg";
 import GIMG_2 from "@/assets/gallery/img2.jpeg";
@@ -61,24 +61,26 @@ const EventsGallery = () => {
     { id: 6, src: GIMG_6, title: "Digital Innovation Workshop", date: "2024-01-03" },
   ];
 
-  const formatDate = (date) =>
-    new Date(date).toLocaleDateString("en-IN", { day: "numeric", month: "short", year: "numeric" });
+  const formatDate = (date) => new Date(date).toLocaleDateString("en-IN", { day: "numeric", month: "short", year: "numeric" });
 
+  // FIXED Auto-scroll bottom-to-top
   const autoScroll = (ref) => {
     let pos = 0;
     const el = ref.current;
     if (!el) return;
+
     const scroll = () => {
-      pos += 0.5;
+      pos += 0.4;
       if (pos >= el.scrollHeight - el.clientHeight) pos = 0;
       el.scrollTop = pos;
       requestAnimationFrame(scroll);
     };
+
     requestAnimationFrame(scroll);
   };
 
   useEffect(() => {
-    autoScroll(eventsScrollRef);
+    autoScroll(eventsScrollRef); // FIXED: Added for Latest Events
     autoScroll(newsScrollRef);
     autoScroll(recruitmentScrollRef);
   }, []);
@@ -86,8 +88,6 @@ const EventsGallery = () => {
   return (
     <section className="py-16 bg-white dark:bg-black transition-colors duration-500">
       <div className="container mx-auto px-4">
-
-        {/* HEADER */}
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
             {t("latest.events")} & {t("photo.gallery")}
@@ -95,10 +95,7 @@ const EventsGallery = () => {
           <div className="w-24 h-1 mx-auto rounded-full" style={{ background: policeBlue }}></div>
         </div>
 
-        {/* EVENTS + GALLERY */}
         <div className="grid lg:grid-cols-3 gap-8">
-
-          {/* EVENTS */}
           <Card className="bg-white dark:bg-[#101B33] shadow-md rounded-xl">
             <CardContent className="p-6">
               <h3 className="text-xl font-bold flex items-center gap-2 text-gray-900 dark:text-white">
@@ -129,7 +126,6 @@ const EventsGallery = () => {
             </CardContent>
           </Card>
 
-          {/* ✅ UPDATED GALLERY (SIZE FIXED) */}
           <Card className="lg:col-span-2 bg-white dark:bg-[#101B33] shadow-md rounded-xl">
             <CardContent className="p-6">
               <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
@@ -139,10 +135,7 @@ const EventsGallery = () => {
                     className="cursor-pointer h-40 md:h-48 overflow-hidden rounded-lg"
                     onClick={() => setSelectedImage(img.src)}
                   >
-                    <img
-                      src={img.src}
-                      className="w-full h-full object-cover rounded-lg"
-                    />
+                    <img src={img.src} className="w-full h-full object-cover rounded-lg" />
                   </div>
                 ))}
               </div>
@@ -150,9 +143,7 @@ const EventsGallery = () => {
           </Card>
         </div>
 
-        {/* NEWS + RECRUITMENT */}
         <div className="grid md:grid-cols-2 gap-6 mt-8">
-
           <Card className="bg-white dark:bg-[#101B33] shadow-md rounded-xl">
             <div className="bg-[rgb(0,51,102)] text-white py-3 text-center text-xl font-bold">
               {t("latest.news")}
@@ -184,7 +175,6 @@ const EventsGallery = () => {
               ))}
             </CardContent>
           </Card>
-
         </div>
       </div>
 

@@ -1061,7 +1061,6 @@ const Navbar: React.FC = () => {
 
   const navigationItems = [
     { name: t("nav.home"), url: "/" },
-
     {
       name: t("nav.about"),
       items: [
@@ -1073,7 +1072,6 @@ const Navbar: React.FC = () => {
         { name: t("nav.ranks"), url: "/about/ranks" },
       ],
     },
-
     {
       name: t("nav.citizens"),
       items: [
@@ -1081,7 +1079,6 @@ const Navbar: React.FC = () => {
         { name: t("nav.rti"), url: "/citizen/rti" },
       ],
     },
-
     {
       name: t("nav.police_corner"),
       items: [
@@ -1096,14 +1093,13 @@ const Navbar: React.FC = () => {
         { name: t("nav.welfare"), url: "/about/welfare" },
       ],
     },
-
     {
       name: t("nav.training"),
       items: [
         { name: t("nav.introduction"), url: "/training/introduction" },
         { name: t("nav.trainingCalendar"), url: "/training-calendar" },
         { name: t("nav.library"), url: "/library" },
-         {
+        {
           name: t("nav.traininggallery"),
           items: [
             { name: t("nav.videos"), url: "/training/traininggallery/videos" },
@@ -1121,7 +1117,6 @@ const Navbar: React.FC = () => {
         { name: t("nav.faculties"), url: "/faculty" },
       ],
     },
-
     { name: t("nav.tenders"), url: "/tender" },
     { name: t("nav.recruitments"), url: "/recruitments" },
     { name: t("nav.gallery"), url: "/gallery" },
@@ -1140,20 +1135,18 @@ const Navbar: React.FC = () => {
   return (
     <nav className="w-full border-b border-blue-900 sticky top-0 z-50 bg-gradient-to-r from-blue-900 to-blue-950 shadow-lg">
       <div className="mx-auto px-3 sm:px-6 lg:px-8">
-
         <div className="flex justify-between items-center h-16 md:h-20">
 
           {/* Left Logos */}
           <div className="flex items-center space-x-4">
             <Link to="/">
               <div className="w-14 h-14 bg-white rounded-full flex items-center justify-center shadow-lg overflow-hidden">
-                <img src={AshokStambhLogo} className="w-10 h-10 object-contain" />
+                <img src={AshokStambhLogo} className="w-10 h-10 object-contain" alt="Ashok Stambh" />
               </div>
             </Link>
-
             <Link to="/">
               <div className="w-20 h-16 flex items-center justify-center">
-                <img src={PoliceLogo} className="max-h-full" />
+                <img src={PoliceLogo} className="max-h-full" alt="Police Logo" />
               </div>
             </Link>
           </div>
@@ -1170,37 +1163,41 @@ const Navbar: React.FC = () => {
                   setHoveredSubmenu(null);
                 }}
               >
+                {/* MAIN NAV ITEM - WHITE BG ON HOVER */}
                 <Button
                   variant="ghost"
-                  className="text-white text-[15px] hover:bg-blue-800 px-3 py-2"
+                  className="text-white text-[15px] hover:bg-white hover:text-blue-900 px-4 py-6 font-medium transition-all duration-200"
                   onClick={() => !item.items && handleNavigation(item.url!)}
                 >
                   {item.name}
                   {item.items && <ChevronDown className="w-4 h-4 ml-1" />}
                 </Button>
 
+                {/* DROPDOWN - थोड़ा सा gap (2px) ताकि mouse आसानी से जाए */}
                 {hoveredMenu === item.name && item.items && (
-                  <div className="absolute left-0 top-full bg-gradient-to-br from-blue-50 to-blue-100 border-2 border-blue-200 shadow-xl rounded-lg py-2 w-56 mt-1">
+                  <div className="absolute left-0 top-full mt-[2px] w-64 bg-gradient-to-br from-blue-50 to-blue-100 border-2 border-blue-300 shadow-2xl rounded-md">
                     {item.items.map((sub) => (
                       <div
                         key={sub.name}
                         className="relative"
                         onMouseEnter={() => setHoveredSubmenu(sub.name)}
+                        onMouseLeave={() => setHoveredSubmenu(null)}
                       >
                         <div
-                          className="px-4 py-2.5 text-gray-800 hover:bg-gradient-to-r hover:from-blue-600 hover:to-blue-700 hover:text-white cursor-pointer flex justify-between items-center transition-all duration-200 font-medium"
+                          className="px-5 py-3 text-gray-800 hover:bg-white hover:text-blue-900 cursor-pointer flex justify-between items-center font-medium transition-all"
                           onClick={() => !sub.items && handleNavigation(sub.url!)}
                         >
                           {sub.name}
                           {sub.items && <ChevronDown className="w-4 h-4" />}
                         </div>
 
+                        {/* SUB DROPDOWN - भी 2px gap */}
                         {hoveredSubmenu === sub.name && sub.items && (
-                          <div className="absolute left-full top-0 bg-gradient-to-br from-blue-50 to-blue-100 border-2 border-blue-200 shadow-xl rounded-lg py-2 w-48 ml-1">
+                          <div className="absolute left-full top-0 mt-[2px] ml-[-2px] w-56 bg-gradient-to-br from-blue-50 to-blue-100 border-2 border-blue-300 shadow-2xl rounded-md">
                             {sub.items.map((child) => (
                               <div
                                 key={child.name}
-                                className="px-4 py-2.5 text-gray-800 hover:bg-gradient-to-r hover:from-blue-600 hover:to-blue-700 hover:text-white cursor-pointer transition-all duration-200 font-medium"
+                                className="px-5 py-3 text-gray-800 hover:bg-white hover:text-blue-900 cursor-pointer font-medium transition-all"
                                 onClick={() => handleNavigation(child.url)}
                               >
                                 {child.name}
@@ -1219,7 +1216,7 @@ const Navbar: React.FC = () => {
           {/* Right Logo */}
           <div className="hidden xl:flex items-center">
             <div className="w-14 h-12 bg-white rounded-lg flex items-center justify-center shadow-lg mr-10">
-              <img src={WirelessLogo} className="max-h-full" />
+              <img src={WirelessLogo} className="max-h-full" alt="Wireless Logo" />
             </div>
           </div>
 
@@ -1229,43 +1226,42 @@ const Navbar: React.FC = () => {
               {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </Button>
           </div>
-
         </div>
 
-        {/* MOBILE MENU */}
+        {/* Mobile Menu - unchanged */}
         {isMobileMenuOpen && (
           <div className="xl:hidden bg-blue-900 border-t border-blue-800">
-            <div className="py-4 px-4 text-white space-y-2">
+            <div className="py-3 px-4 text-white">
               {navigationItems.map((item) => (
                 <div key={item.name}>
                   <button
-                    className="w-full flex justify-between text-left text-lg font-medium"
-                    onClick={() => item.items ? setHoveredMenu(item.name) : handleNavigation(item.url!)}
+                    className="w-full flex justify-between text-left text-lg font-medium py-3 hover:bg-white hover:text-blue-900 rounded transition-all"
+                    onClick={() => item.items ? setHoveredMenu(hoveredMenu === item.name ? null : item.name) : handleNavigation(item.url!)}
                   >
                     {item.name}
-                    {item.items && <ChevronDown className={`w-5 h-5 ${hoveredMenu === item.name && "rotate-180"}`} />}
+                    {item.items && <ChevronDown className={`w-5 h-5 transition-transform ${hoveredMenu === item.name ? "rotate-180" : ""}`} />}
                   </button>
 
                   {hoveredMenu === item.name && item.items && (
-                    <div className="pl-4 space-y-1 mt-2">
+                    <div className="bg-blue-800">
                       {item.items.map((sub) => (
                         <div key={sub.name}>
                           <button
-                            className="flex justify-between w-full text-left text-base text-blue-200 hover:text-white"
-                            onClick={() => sub.items ? setHoveredSubmenu(sub.name) : handleNavigation(sub.url!)}
+                            className="w-full flex justify-between text-left py-2.5 pl-8 pr-4 text-blue-100 hover:bg-white hover:text-blue-900 transition-all"
+                            onClick={() => sub.items ? setHoveredSubmenu(hoveredSubmenu === sub.name ? null : sub.name) : handleNavigation(sub.url!)}
                           >
                             {sub.name}
-                            {sub.items && <ChevronDown className={`w-4 h-4 ${hoveredSubmenu === sub.name && "rotate-180"}`} />}
+                            {sub.items && <ChevronDown className={`w-4 h-4 transition-transform ${hoveredSubmenu === sub.name ? "rotate-180" : ""}`} />}
                           </button>
 
                           {hoveredSubmenu === sub.name && sub.items && (
-                            <div className="pl-4 space-y-1 mt-1">
+                            <div className="bg-blue-700">
                               {sub.items.map((child) => (
                                 <button
                                   key={child.name}
                                   onClick={() => handleNavigation(child.url)}
-                                  className="block w-full text-left text-blue-200 hover:text-white text-sm"
-                                >
+                                  className="block w-full text-left py-2 pl-12 text-blue-200 hover:bg-white hover:text-blue-900"
+                                  >
                                   {child.name}
                                 </button>
                               ))}
@@ -1280,7 +1276,6 @@ const Navbar: React.FC = () => {
             </div>
           </div>
         )}
-
       </div>
     </nav>
   );

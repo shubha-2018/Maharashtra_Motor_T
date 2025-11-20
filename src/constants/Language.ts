@@ -274,6 +274,23 @@ export const EN = {
   "fd.d12.designation": "SP M. T. & W/L",
   "fd.d12.tenure": "1946-1947",
 
+  //faculty page
+ "planning.faculties.title": "Faculties Of Training Centre",
+
+"planning.faculty.sanjay.name": "Dr. Sanjaykumar G. Sonar",
+"planning.faculty.sanjay.designation": "Associate Professor",
+
+"planning.faculty.arati.name": "Dr. Arati Siddharth Petkar",
+"planning.faculty.arati.designation": "Assistant Professor",
+
+"planning.faculty.example": "Dr. Example Person",
+
+"planning.designation.associate": "Associate Professor",
+"planning.designation.assistant": "Assistant Professor",
+"planning.designation.professor": "Professor",
+
+"common.phone": "Phone",
+
   // Events
   "latest.events": "Latest Events",
   "photo.gallery": "Photo Gallery",
@@ -761,6 +778,19 @@ export const EN = {
   "contact.email.address": "dir.polwireless.pune@mahapolice.gov.in",
   "contact.map.title": "Find Us on Map",
 
+  //Ourimapct Page 
+  // English
+"impact.title": "Our Impact",
+// "impact.subtitle": "Achievements and service milestones of Maharashtra Police Motor Transport Department",
+
+"impact.operating": "Operating ",
+"impact.zoneoffices": "Zone Offices ",
+"impact.rangeoffices": "Range Offices ",
+"impact.employees": "Employee ",
+"impact.Units": "Units ",
+"impact.repeters": "Repeters ",
+"impact.mobileradio": "Mobile Radio ",
+"impact.handlesradio": "Handles Radio ",
 
 
   //Traning Calender 
@@ -1118,6 +1148,37 @@ export const MR = {
   "file_size": "फाईल आकार",
  
   "latest_news": "ताज्या बातम्या",
+
+  //faculty page 
+  "planning.faculties.title": "प्रशिक्षण केंद्रातील प्राध्यापक",
+
+"planning.faculty.sanjay.name": "डॉ. संजयकुमार जी. सोनार",
+"planning.faculty.sanjay.designation": "सहयोगी प्राध्यापक",
+
+"planning.faculty.arati.name": "डॉ. आरती सिद्धार्थ पेटकर",
+"planning.faculty.arati.designation": "सहाय्यक प्राध्यापक",
+
+"planning.faculty.example": "डॉ. (उदाहरण) व्यक्ती",
+
+"planning.designation.associate": "सहयोगी प्राध्यापक",
+"planning.designation.assistant": "सहाय्यक प्राध्यापक",
+"planning.designation.professor": "प्राध्यापक",
+
+"common.phone": "फोन",
+
+//Ourimpact Page
+// Marathi
+"impact.title": "आमचा प्रभाव",
+// "impact.subtitle": "महाराष्ट्र पोलीस मोटार परिवहन विभागाच्या कामगिरी आणि सेवा मैलाचे दगड",
+
+"impact.operating": "कार्यरत ",
+"impact.zoneoffices": "परिमंडळ कार्यालय ",
+"impact.rangeoffices": "परिक्षेत्रीय कार्यालये ",
+"impact.employees": "कर्मचारी ",
+"impact.Units": "घटक कार्यालये ",
+"impact.repeters": "पुनर्प्रक्षेपण ",
+"impact.mobileradio": "मोबाईल रेडिओ ",
+"impact.handlesradio": "ओकीटॉकी रेडिओ  ",
 
  
 

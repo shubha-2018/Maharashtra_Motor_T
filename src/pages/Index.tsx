@@ -2,6 +2,7 @@ import HeroSection from "@/components/HeroSection";
 import GovernmentUpdates from "@/components/GovernmentUpdates";
 import EventsGallery from "@/components/EventsGallery";
 import HelplineSection from "@/components/HelplineSection";
+import OurImpact from "@/components/OurImpact";
 
 
 const Index = () => {
@@ -11,6 +12,7 @@ const Index = () => {
 
           <HeroSection />
           <GovernmentUpdates />
+           <OurImpact />
           <EventsGallery />
           {/* <HelplineSection /> */}
 

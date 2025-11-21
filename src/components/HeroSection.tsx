@@ -206,7 +206,7 @@ const HeroSection: React.FC = () => {
             </Card>
 
             {/* Mobile Emergency Contacts */}
-            <div className="xl:hidden mt-8">
+            {/* <div className="xl:hidden mt-8">
               <h3 className="text-xl font-semibold mb-4 text-foreground">
                 {t("emergency_contacts")}
               </h3>
@@ -240,7 +240,7 @@ const HeroSection: React.FC = () => {
                   </Card>
                 ))}
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

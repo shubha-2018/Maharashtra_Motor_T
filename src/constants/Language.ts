@@ -784,13 +784,13 @@ export const EN = {
 // "impact.subtitle": "Achievements and service milestones of Maharashtra Police Motor Transport Department",
 
 "impact.operating": "Operating ",
-"impact.zoneoffices": "Zone Offices ",
+"impact.zoneoffices": "Zonal offices ",
 "impact.rangeoffices": "Range Offices ",
-"impact.employees": "Employee ",
+"impact.employees": "Employees ",
 "impact.Units": "Units ",
-"impact.repeters": "Repeters ",
+"impact.repeters": "Repeaters ",
 "impact.mobileradio": "Mobile Radio ",
-"impact.handlesradio": "Handles Radio ",
+"impact.handlesradio": "Handheld radios",
 
 
   //Traning Calender 
@@ -1176,9 +1176,9 @@ export const MR = {
 "impact.rangeoffices": "परिक्षेत्रीय कार्यालये ",
 "impact.employees": "कर्मचारी ",
 "impact.Units": "घटक कार्यालये ",
-"impact.repeters": "पुनर्प्रक्षेपण ",
-"impact.mobileradio": "मोबाईल रेडिओ ",
-"impact.handlesradio": "ओकीटॉकी रेडिओ  ",
+"impact.repeters": "पुनःप्रक्षेपण केंद्र ",
+"impact.mobileradio": "मोबाईल रेडीओ ",
+"impact.handlesradio": "हॅन्डहेल्ड रेडीओ  ",
 
  
 
@@ -1384,12 +1384,12 @@ export const MR = {
   "nav.strategySupport": " स्ट्रॅटेजी सपोर्ट सिस्टिम ",
   "nav.positiveStories": "सकारात्मक कथा / चांगले काम ",
   "nav.flash":"फ्लॅश ",
-   "nav.introduction":"परिचय",
+   "nav.introduction":"प्रस्तावना",
    "nav.trainingCalendar":"प्रशिक्षण दिनदर्शिका",
    "nav.notificationCircular":"सूचना / परिपत्रक",
     "nav.faculties":"प्रशिक्षक",
     "nav.museum":"संग्रहालय",
-    "nav.library":"लायब्ररी",
+    "nav.library":"ग्रंथालय",
 
 
 
@@ -1954,12 +1954,14 @@ mr: {
   },
 }   ,
     //news recruitment
+    "photo.gallery": "Photo Gallery",
+  "latest.news": "Latest News",
+  "recruitment": "Recruitment",
     "news.yoga.training": "Yoga Training Conducted",
 "news.kolhapur.visit": "Kolhapur Visit Again",
 "news.face.authentication": "Face Authentication System Launch",
 "news.director.correspondence": "Correspondence from Director",
- "latest.news": "Latest News",
-"recruitment": "Recruitment",
+
 "recruitment.retired.pi.dysp": "Advertisement for Retired PI-DYSP",
 "recruitment.sub.inspector": "Sub-Inspector Recruitment",
 "recruitment.data.operator": "Data Operator Recruitment",
@@ -1970,6 +1972,7 @@ mr: {
 
 
   // Events
+  
   "latest.events": "ताज्या घटना",
   "photo.gallery": "फोटो गॅलरी",
   "view.all.events": "सर्व घटना पहा",

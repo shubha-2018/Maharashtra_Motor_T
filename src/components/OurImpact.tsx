@@ -26,7 +26,7 @@ const impactStats: ImpactStat[] = [
   { id: 1, value: 1946, suffix: "", labelKey: "impact.operating", bgImage: cardBg1, gradient: "from-blue-600/90 to-cyan-600/90" },
   { id: 2, value: 6, suffix: "", labelKey: "impact.zoneoffices", bgImage: cardBg2, gradient: "from-teal-600/90 to-emerald-600/90" },
   { id: 3, value: 8, suffix: "", labelKey: "impact.rangeoffices", bgImage: cardBg3, gradient: "from-amber-600/90 to-orange-600/90" },
-  { id: 4, value: 573, suffix: "", labelKey: "impact.employees", bgImage: cardBg4, gradient: "from-rose-600/90 to-pink-600/90" },
+  { id: 4, value: 1470, suffix: "", labelKey: "impact.employees", bgImage: cardBg4, gradient: "from-rose-600/90 to-pink-600/90" },
   { id: 5, value: 73, suffix: "", labelKey: "impact.Units", bgImage: cardBg5, gradient: "from-purple-600/90 to-indigo-600/90" },
   { id: 6, value: 297, suffix: "", labelKey: "impact.repeters", bgImage: cardBg6, gradient: "from-green-600/90 to-teal-600/90" },
   { id: 7, value: 12353, suffix: "", labelKey: "impact.mobileradio", bgImage: cardBg7, gradient: "from-red-600/90 to-pink-600/90" },

@@ -28,7 +28,7 @@ export const EN = {
   "welfare.accordionTitle": "Welfare Activities",
   "welfare.viewButton": "View",
   "welfare.detailsButton": "Details",
-  "welfare.item1.title": "Museum – Evolution in Wireless",
+  "welfare.item1.title": "Museum – Evolution in Wireless Department",
   "welfare.item2.title": "Canteen – Muktai",
   "welfare.item3.title": "Badminton Hall – Sant Tukaram Sankul",
   "welfare.item4.title": "Senior Officers Mess – Dnyaneshwari",
@@ -834,11 +834,11 @@ export const EN = {
   "page": "Page",
   "of": "of",
   "emp_1_name": "SHRI. DEEPAK SHIVANAND PANDEY",
-  "emp_1_designation": "ADGP & Dir.PCIT&T",
+  "emp_1_designation": "ADGP & DirectorPCIT & T M.S Pune",
   "emp_2_name": "SHRI. G.Sreedhar",
-  "emp_2_designation": "DIGP PCIT",
+  "emp_24_designation": "DIGP PCIT",
   "emp_21_name": "SHRI. R. RAJA",
-  "emp_22_designation": "SP PCIT HQ",
+  "emp_22_designation": "SP PCIT HQ M.S Pune",
   "emp_3_name": "SHRI. RAJESH RAMCHANDRA BANSODE",
   "emp_3_designation": "SP(PCIT)",
   "emp_4_name": "SHRI. SANJAY SUBHASH CHANDKHEDE",
@@ -1258,9 +1258,9 @@ export const MR = {
 
   
   "emp_1_name": "श्री. दीपक शिवानंद पांडे",
-  "emp_1_designation": "ADGP & Dir.PCIT&T",
+  "emp_1_designation": "ADGP & DirectorPCIT & T M.S Pune",
   "emp_21_name": "श्री. आर. राजा",
-  "emp_22_designation": "SP PCIT HQ",
+  "emp_22_designation": "SP PCIT HQ M.S Pune",
   "emp_3_name": "श्री. राजेश रामचंद्र बंसोडे",
   "emp_3_designation": "SP(PCIT)",
   "emp_4_name": "श्री. संजय सुभाष चांदखेडे",
@@ -1298,7 +1298,7 @@ export const MR = {
   "emp_20_name": "श्री. सुनील मोरेश्वर पोते",
   "emp_20_designation": "PSI(PCIT)",
   "emp_2_name":"श्री. जी श्रीधर", 
-  "emp_24_designation":"DIGP PCIT",
+  "emp_24_designation":"DIGP PCIT M.S Pune",
 
 
   //RTI 
@@ -1419,7 +1419,7 @@ export const MR = {
   "welfare.accordionTitle": "कल्याणकारी उपक्रम",
   "welfare.viewButton": "पहा",
   "welfare.detailsButton": "तपशील",
-  "welfare.item1.title": "संग्रहालय – वायरलेस मधील विकास",
+  "welfare.item1.title": "संग्रहालय – बिनतारी विभागातील तंत्रज्ञान विकास ",
   "welfare.item2.title": "कॅन्टीन – मुक्ताई",
   "welfare.item3.title": "बॅडमिंटन हॉल – संत तुकाराम संकुल",
   "welfare.item4.title": "वरिष्ठ अधिकाऱ्यांचे मेस – ज्ञानेश्वरी",

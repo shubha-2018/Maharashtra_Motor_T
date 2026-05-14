@@ -1,42 +1,74 @@
-// src/components/OurImpact.tsx
 import { useEffect, useRef, useState } from "react";
-import { Card, CardContent } from "@/components/ui/card";
+import { Clock, MapPin, Users, Ship, Building, Car } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
-
-// Images
-import cardBg1 from "../assets/hero/2.jpg";
-import cardBg2 from "../assets/hero/2.jpg";
-import cardBg3 from "../assets/hero/2.jpg";
-import cardBg4 from "../assets/hero/2.jpg";
-import cardBg5 from "../assets/hero/2.jpg";
-import cardBg6 from "../assets/hero/repters.jpeg";
-import cardBg7 from "../assets/hero/mobileradio12.jpeg";
-import cardBg8 from "../assets/hero/handle radio.jpeg";
 
 interface ImpactStat {
   id: number;
-  value: number | string;
+  icon: React.ReactNode;
+  value: number;
   suffix: string;
-  labelKey: string;
-  bgImage: string;
-  gradient: string;
+  label: {
+    mr: string;
+    en: string;
+  };
+  bgImage?: string;
 }
 
 const impactStats: ImpactStat[] = [
-  { id: 1, value: 1946, suffix: "", labelKey: "impact.operating", bgImage: cardBg1, gradient: "from-blue-600/90 to-cyan-600/90" },
-  { id: 2, value: 6, suffix: "", labelKey: "impact.zoneoffices", bgImage: cardBg2, gradient: "from-teal-600/90 to-emerald-600/90" },
-  { id: 3, value: 8, suffix: "", labelKey: "impact.rangeoffices", bgImage: cardBg3, gradient: "from-amber-600/90 to-orange-600/90" },
-  { id: 4, value: 1470, suffix: "", labelKey: "impact.employees", bgImage: cardBg4, gradient: "from-rose-600/90 to-pink-600/90" },
-  { id: 5, value: 73, suffix: "", labelKey: "impact.Units", bgImage: cardBg5, gradient: "from-purple-600/90 to-indigo-600/90" },
-  { id: 6, value: 297, suffix: "", labelKey: "impact.repeters", bgImage: cardBg6, gradient: "from-green-600/90 to-teal-600/90" },
-  { id: 7, value: 12353, suffix: "", labelKey: "impact.mobileradio", bgImage: cardBg7, gradient: "from-red-600/90 to-pink-600/90" },
-  { id: 8, value: 16471, suffix: "", labelKey: "impact.handlesradio", bgImage: cardBg8, gradient: "from-yellow-500/90 to-orange-600/90" },
+  {
+    id: 3,
+    icon: <Clock className="w-6 h-6" />,
+    value: 1948,
+    suffix: "",
+    bgImage: "/images/impact/1948.jpg",
+    label: { mr: "पासून सेवेत कार्यरत", en: "In Service Since" },
+  },
+  {
+    id: 4,
+    icon: <MapPin className="w-6 h-6" />,
+    value: 4,
+    suffix: "",
+    bgImage: "/images/impact/offices.jpg",
+    label: { mr: "प्रादेशिक कार्यालये", en: "Regional Offices" },
+  },
+  {
+    id: 5,
+    icon: <Building className="w-6 h-6" />,
+    value: 89,
+    suffix: "",
+    bgImage: "/images/impact/department.jpg",
+    label: { mr: "मोटार परिवहन विभाग", en: "Motor Transport Dept" },
+  },
+  {
+    id: 6,
+    icon: <Users className="w-6 h-6" />,
+    value: 2650,
+    suffix: "+",
+    bgImage: "/images/impact/staff.jpg",
+    label: { mr: "कर्मचारी", en: "Employees" },
+  },
+  {
+    id: 1,
+    icon: <Car className="w-6 h-6" />,
+    value: 19159,
+    suffix: "+",
+    bgImage: "/images/impact/vehicles.jpg",
+    label: { mr: "वाहने", en: "Vehicles" },
+  },
+  {
+    id: 2,
+    icon: <Ship className="w-6 h-6" />,
+    value: 55,
+    suffix: "+",
+    bgImage: "/images/impact/boats.jpg",
+    label: { mr: "नौका", en: "Boats" },
+  },
 ];
 
 const OurImpact = () => {
-  const { t } = useLanguage();
+  const { language } = useLanguage();
   const [isVisible, setIsVisible] = useState(false);
-  const [animatedValues, setAnimatedValues] = useState<{ [key: number]: string | number }>({});
+  const [animatedValues, setAnimatedValues] = useState<{ [key: number]: number }>({});
   const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -45,93 +77,101 @@ const OurImpact = () => {
         if (entry.isIntersecting && !isVisible) {
           setIsVisible(true);
           impactStats.forEach((stat) => {
-            if (typeof stat.value === "string") {
-              setAnimatedValues(prev => ({ ...prev, [stat.id]: stat.value }));
-              return;
-            }
             let current = 0;
-            const target = stat.value as number;
-            const increment = Math.max(1, Math.floor(target / 60));
+            const increment = stat.value / 50;
             const timer = setInterval(() => {
               current += increment;
-              if (current >= target) {
+              if (current >= stat.value) {
+                current = stat.value;
                 clearInterval(timer);
-                current = target;
               }
-              setAnimatedValues(prev => ({ ...prev, [stat.id]: current }));
-            }, 30);
+              setAnimatedValues((prev) => ({
+                ...prev,
+                [stat.id]: Math.floor(current),
+              }));
+            }, 25);
           });
         }
       },
-      { threshold: 0.3 }
+      { threshold: 0.2 }
     );
-
     if (sectionRef.current) observer.observe(sectionRef.current);
     return () => observer.disconnect();
   }, [isVisible]);
 
+  const lang = language === "mr" ? "mr" : "en";
+
   return (
-    <section ref={sectionRef} className="relative py-16 bg-gradient-to-b from-gray-50 via-blue-50 to-white dark:from-gray-900 dark:via-slate-900 dark:to-black">
-      <div className="container mx-auto px-4">
+    <section ref={sectionRef} className="py-16 bg-gray-50">
 
-        {/* Title */}
-        <div className="text-center mb-12">
-          <h2 className="text-black dark:text-white text-3xl md:text-4xl font-extrabold tracking-wide">
-            {t("impact.title")}
-          </h2>
-        </div>
+      {/* Heading */}
+      <div className="text-center mb-12 px-4">
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+          {lang === "mr" ? "आमचा प्रभाव" : "Our Impact"}
+        </h2>
+        <p className="text-gray-500 mt-2 text-sm md:text-base tracking-wide">
+          {lang === "mr"
+            ? "महाराष्ट्र पोलीस मोटार परिवहन विभाग"
+            : "Maharashtra Police Motor Transport Department"}
+        </p>
+      </div>
 
-        {/* 8 Cards – 2 Rows × 4 Cards – NO ICONS */}
-        <div className="space-y-8">
-          {/* Row 1 */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-            {impactStats.slice(0, 4).map((stat, index) => (
-              <ImpactCard key={stat.id} stat={stat} index={index} isVisible={isVisible} animatedValues={animatedValues} t={t} />
-            ))}
+      {/* Cards Grid */}
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-5 px-6">
+        {impactStats.map((stat) => (
+          <div
+            key={stat.id}
+            className="relative rounded-2xl overflow-hidden shadow-lg hover:-translate-y-2 transition-all duration-300 group"
+            style={{ height: "240px" }}
+          >
+            {/* Deep blue gradient background */}
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-blue-700 to-blue-500" />
+
+            {/* Subtle dot pattern overlay */}
+            <div
+              className="absolute inset-0 opacity-10"
+              style={{
+                backgroundImage:
+                  "radial-gradient(circle, white 1px, transparent 1px)",
+                backgroundSize: "24px 24px",
+              }}
+            />
+
+            {/* Glow orb top-right */}
+            <div className="absolute -top-8 -right-8 w-24 h-24 rounded-full bg-blue-300/20" />
+
+            {/* Top gradient bar */}
+            <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-blue-300 via-blue-400 to-blue-600" />
+
+            {/* Card Content */}
+            <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-4 gap-3">
+
+              {/* Frosted icon badge */}
+              <div className="w-12 h-12 rounded-xl bg-white/15 border border-white/25 flex items-center justify-center text-blue-200">
+                {stat.icon}
+              </div>
+
+              {/* Animated Number */}
+              <div className="text-3xl font-bold text-white leading-none tracking-tight">
+                {(animatedValues[stat.id] || 0).toLocaleString()}
+                {stat.suffix}
+              </div>
+
+              {/* Label */}
+              <div
+                className="text-xs font-medium text-blue-200 leading-snug flex items-center justify-center tracking-wide"
+                style={{ minHeight: "36px" }}
+              >
+                {stat.label[lang]}
+              </div>
+
+              {/* Bottom accent line */}
+              <div className="w-8 h-[2px] bg-blue-300/60 rounded-full" />
+            </div>
           </div>
-
-          {/* Row 2 */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-            {impactStats.slice(4, 8).map((stat, index) => (
-              <ImpactCard key={stat.id} stat={stat} index={index + 4} isVisible={isVisible} animatedValues={animatedValues} t={t} />
-            ))}
-          </div>
-        </div>
+        ))}
       </div>
     </section>
-  );
-};
-
-// Card without any Icon – Super Clean!
-const ImpactCard = ({ stat, index, isVisible, animatedValues, t }: any) => {
-  return (
-    <div
-      className={`group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-400 h-full
-        ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}
-        hover:scale-105`}
-      style={{ transitionDelay: `${index * 80}ms` }}
-    >
-      {/* Background Image */}
-      <div className="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-500" 
-           style={{ backgroundImage: `url(${stat.bgImage})` }} />
-      <div className={`absolute inset-0 bg-gradient-to-br ${stat.gradient}`} />
-
-      <div className="relative z-10 p-6 md:p-8 text-center flex flex-col items-center justify-center h-48 md:h-56">
-        {/* Number – Bigger & Bolder */}
-        <div className="text-4xl md:text-5xl font-extrabold text-white drop-shadow-2xl">
-          {animatedValues[stat.id] ?? "0"}
-          <span className="text-3xl md:text-4xl ml-1">{stat.suffix}</span>
-        </div>
-
-        {/* Label */}
-        <p className="mt-4 text-sm md:text-base font-bold text-white/95 uppercase tracking-wider">
-          {t(stat.labelKey)}
-        </p>
-
-        {/* Decorative Line */}
-        <div className="mt-5 w-16 h-1 bg-white/60 group-hover:bg-white group-hover:w-24 mx-auto rounded-full transition-all duration-400" />
-      </div>
-    </div>
   );
 };
 

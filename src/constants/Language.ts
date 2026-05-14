@@ -149,13 +149,15 @@ export const EN = {
   "a2.loc": "Maharashtra State, Pune",
 
   "b1.intro": `
-  <p>Police Communication and Information Technology Department  prior to The Police Wireless Department  typically handles communication systems used by law enforcement authority that is Maharashtra State Police. This includes managing radio frequencies, dispatching officers, and ensuring secure and efficient communication between police units in the field. Uninterrupted 24×7 communication system is provided by our Department.</p>
-<br/>
-  <p>The Police Communication and Information Technology Department plays a vital role in policing by ensuring effective communication and coordination among officers with key functions such as real-time Communication which facilitates immediate contact between officers in the field and dispatch, crucial for timely responses to incidents; Situational Awareness which provides officers with updates on ongoing situations, enhancing their ability to make informed decisions; Emergency Response which enables quick coordination during emergencies, allowing for faster deployment of resources; Data Transmission which supports the transfer of critical information, such as criminal records and intelligence, enhancing investigative efforts; Safety and Security which maintains secure communication channels to protect sensitive information and officer safety.</p>
-  <br/>
-  <p>The Koyna earthquake on December 10, 1967 with a magnitude of 6.3 and the Killari earthquake on September 30, 1993 with a magnitude of 6.04 occurred in Maharashtra state, India. It caused significant damage and resulted in over 200 deaths, largely due to the collapse of buildings and infrastructure. The floods that followed on July 26, 2005, in Mumbai, were devastating. Heavy rainfall led to widespread flooding, impacting transportation, displacing thousands, and causing numerous fatalities. The city faced significant challenges in emergency response and infrastructure resilience during this disaster. 26/11 terrorist attack, riots and blasts were happened in Maharashtra state. Wireless communication has played a crucial role in disaster management and response during such crucial events when private network like mass communication, mobile network failed. Hence effective wireless communication is essential for maintaining public safety and operational efficiency in policing.</p>
-  `,
-  "b1.hl": "Uninterrupted 24×7 communication",
+
+  
+  <p>The Maharashtra Police Force is the backbone of our state. As vast as the responsibilities of the police force are, equally important are the resources and vehicles it requires. The responsibility of planning, maintenance, repair, and ensuring high efficiency of all these vehicles lies with the Motor Transport Department.
+
+Be it disasters, riots, law-and-order situations, or the need to provide prompt services to citizens – the Motor Transport Department plays a vital role in providing special state-of-the-art vehicles, overcoming challenges during maritime security, and maintaining all vehicles and high-speed police boats ready and operational for patrols.
+
+I feel proud to lead a department equipped with speed, readiness, and technical efficiency, working in the service of the citizens. The Motor Transport Department will continue its relentless efforts for the Maharashtra Police Force.
+
+Jai Hind..........!!!</p>`,
   "b1.intro2": "system is provided by our Department.",
   "b1.role": "The Police Communication and Information Technology Department plays a vital role in policing by ensuring effective communication and coordination among officers with key functions such as:",
 
@@ -171,7 +173,7 @@ export const EN = {
   "c1.f5.d": "protects sensitive information and officer safety.",
 
   "b1.crisis": "The Koyna earthquake (1967) and Killari earthquake (1993) caused significant devastation in Maharashtra. The Mumbai floods (2005) and 26/11 terrorist attack highlighted the importance of communication. During such crises, when private networks collapsed, wireless systems kept police connected, enabling life-saving coordination.",
-  "b1.conc": "Effective wireless communication is the backbone of public safety and operational excellence in policing.",
+//  "b1.conc": "Effective wireless communication is the backbone of public safety and operational excellence in policing.",
 
 
   // Director Info
@@ -1058,7 +1060,7 @@ export const MR = {
   marathi: "मराठी",
   english: "इंग्रजी",
   "title": "पोलीस दळणवळण व माहिती <br/> तंत्रज्ञान विभाग, पुणे",
-  "header.title": "पोलीस दळणवळण व माहिती तंत्रज्ञान विभाग, पुणे",
+  "header.title": "मोटार परिवहन विभाग, महाराष्ट्र राज्य पुणे",
   //rank
   "backToHome": "मुख्यपृष्ठावर परत जा",
   "ranks.title": "विभागातील पदानुक्रम",
@@ -1775,11 +1777,14 @@ export const MR = {
   "a2.loc": "महाराष्ट्र राज्य, पुणे",
 
   "b1.intro": `
-  <p> पोलीस दळणवळण व माहिती तंत्रज्ञान विभाग,पूर्वीचे बिनतारी संदेश विभाग, महाराष्ट्र राज्यातील कायदा व सुव्यवस्थाच्या अंमलबजावणीकरिता कार्यरत असलेले अंतर्गत स्वयंपूर्ण दळणवळण हाताळते. यामध्ये आधुनिक तंत्रज्ञानाचा वापर करून संदेश वहन करणे, पोलीस नियंत्रण कक्षातून जिल्हा व आयुक्तालयातील पोलीस गस्तीमार्फत नियंत्रण ठेवणे आणि पोलीस कार्यक्षेत्रातील घटकांदरम्यान सुरक्षित आणि कार्यक्षम संदेशाचे वहन करणे यांचा समावेश आहे. सदर यंत्रणा २४ X ७ अखंडित कार्यरत ठेवली जाते.</p>
+  <p></p>
 <br/>
-<p>पोलीस दळणवळण व माहिती तंत्रज्ञान विभाग राज्यातील पोलीसांना कायदा व सुव्यवस्था राखणेकामी प्रभावी संवाद आणि समन्वय सुनिश्चित करून रीअल-टाइम कम्युनिकेशन ज्यात कार्यक्षेत्रातील पोलीस अधिकाऱ्यांमध्ये तात्काळ संपर्क साधणे आणि मदत आवश्यक असलेल्या घटनांना वेळेवर प्रतिसाद देणे सहज शक्य होते; परिस्थितीविषयक जागरूकता राखणेकरिता पोलीस अधिका-यांना घडामोडीची अद्यायावत माहिती प्रदान करून त्यांची निर्णय घेण्याची क्षमता वाढवण्यास मदत होते; आपत्कालीन परिस्थितीत जलद समन्वय प्रतिसाद सक्षम करून संसाधनांच्या जलद उपयोजना केली जाते; डेटा ट्रान्समिशनमध्ये गोपनीय माहितीची सुरक्षित देवाणघेवाण करून कायदा व सुव्यवस्था राखली जाते परिणामी माहितीच्या आधारे पुढील तपासास मदत होते; सुरक्षितता आणि सुरक्षा दृष्टीकोनातून संवेदनशील माहितीकरिता दळणवळण वाहिनी उपलब्ध करून दिली जाते.</p>
+<p>महाराष्ट्र पोलीस दल हा आपल्या राज्याचा कणा आहे. पोलीस दलाचे कार्यक्षेत्र जितके व्यापक आहे, तितकी त्याला लागणारी साधनसामग्री आणि वाहने हे देखील महत्त्वाचे घटक आहेत. या सर्व वाहनांचे नियोजन, देखभाल, दुरुस्ती आणि उच्च कार्यक्षमता राखणेसाठी जे अखंड परिश्रम घेतले जातात, ती जबाबदारी मोटार परिवहन विभागामार्फत पार पाङली जाते.
+
+आपत्ती असो, दंगली असो, कायदा सुव्यवस्था राखण्याची वेळ असो, किंवा नागरीकांसाठी तत्परसेवा पुरविण्याची आवश्यकता असो, परिवहन सुविधा पुरविण्याकरिता विशेष अत्याधुनिक वाहने, सागरी सुरक्षा दरम्यान येणारी आव्हाने पार पाडण्यासाठी व सागरी गस्तीकरिता हाय स्पीड पोलीस नौका तसेच सर्व वाहने व नौका सुसज्ज व कार्यरत ठेवणेकरिता मोटार परिवहन विभाग मोलाची भूमीका बजावत असतो.
+
+आजच्या आधुनिक युगात पोलीस दलातील वेग, तत्परता आणि तांत्रिक क्षमतेने सुसज्ज असलेल्या व नागरिकांच्या तत्पर सेवेत कार्यरत असलेल्या विभागाचे नेतृत्व करण्याचा मला सार्थ अभिमान आहे. मोटार परिवहन विभाग, महाराष्ट्र राज्य पोलीस दलाकरिता अविरत प्रयत्नशील राहील.</p>
 <br/>
-<p>10 डिसेंबर 1967 रोजी महाराष्ट्रात 6.3 रिश्टर स्केलचा कोयना भूकंप व 30 सेप्टेंबर 1993 रोजी 6.04 रिश्टर स्केलचा किल्लारी भूकंप झाला होता. इमारती आणि पायाभूत सुविधांच्या पडझडीमुळे लक्षणीय आर्थिक नुकसान आणि जीवितहानी झाली होती. तसेच 26 जुलै 2005 रोजी मुंबईत आलेला पूर विनाशकारी होता. मुसळधार पावसामुळे मोठ्या प्रमाणावर पूर आला, वाहतुकीवर परिणाम झाला, हजारो लोक विस्थापित झाले आणि असंख्य मृत्यू झाले. या आपत्तीदरम्यान शहराला आपत्कालीन प्रतिसाद आणि पायाभूत सुविधांना आव्हानांचा सामना करावा लागला. त्याचप्रमाणे मुंबईतील 26/11 चा दहशतवादी हल्ला, दंगली आणि बॉम्बस्फोट असे प्रसंग उद्भवले होते. अशा प्रसंगी प्रसार माध्यमे, मोबाईल नेटवर्क यांसारखे खाजगी नेटवर्क अयशस्वी झाल्याने राज्याने खूप अडचणींचा सामना केला होता, दरम्यान या महत्त्वपूर्ण घटनांमध्ये आपत्ती व्यवस्थापन आणि प्रतिसादामध्ये महाराष्ट्र राज्य पोलीसांचा बिनतारी संदेश विभाग यांनी महत्त्वपूर्ण भूमिका बजावलेली आहे.</p>
   `,
   "b1.hl": " अखंडित 24×7 संचार ",
   "b1.intro2": "प्रणाली आमच्या विभागामार्फत पुरवली जाते.",
@@ -1797,7 +1802,6 @@ export const MR = {
   "c1.f5.d": "संवेदनशील माहिती व अधिकारी यांची सुरक्षा सुनिश्चित करतो.",
 
   "b1.crisis": "कोयना भूकंप (1967) आणि किल्लारी भूकंप (1993) यांनी महाराष्ट्रात मोठी हानी केली. मुंबई पूर (2005) आणि 26/11 दहशतवादी हल्ल्याने संचाराचे महत्त्व अधोरेखित केले. अशा आपत्तीच्या काळात खाजगी नेटवर्क ठप्प झाले असताना वायरलेस प्रणालीमुळे पोलिस सतत जोडले गेले आणि जीव वाचविण्यासाठी समन्वय साधला गेला.",
-  "b1.conc": "प्रभावी बिनतारी दळणवळण हे सार्वजनिक सुरक्षितता व कार्यकुशल पोलीसिंगचे कणा आहे.",
 
   // Director Info
   "director.name": "श्री. दीपक शिवानंद पाण्डेय् (भा.पो.से)",
@@ -2205,7 +2209,7 @@ mr: {
   // Privacy Policy Page
   "privacy.title": "गोपनीयता धोरण",
   "privacy.subtitle": "तुमची वैयक्तिक माहिती संरक्षण आणि डेटा सुरक्षा सुनिश्चित करणे",
-  "privacy.departmentInfo": "पोलीस दळणवळण व माहिती तंत्रज्ञान विभाग, पुणे | अतिरिक्त पोलीस महासंचालक आणि संचालक, पोलीस पोलीस दळणवळण, माहिती तंत्रज्ञान आणि परिवहन विभाग, महाराष्ट्र राज्य, पुणे",
+  "privacy.departmentInfo": "मोटार परिवहन विभाग, महाराष्ट्र राज्य पुणे | अतिरिक्त पोलीस महासंचालक आणि संचालक, पोलीस पोलीस दळणवळण, माहिती तंत्रज्ञान आणि परिवहन विभाग, महाराष्ट्र राज्य, पुणे",
   "privacy.introduction.title": "परिचय",
   "privacy.introduction.description": "पोलीस पोलीस दळणवळण व माहिती तंत्रज्ञान विभाग विभाग सर्व वापरकर्त्यांच्या वैयक्तिक माहितीची गोपनीयता आणि सुरक्षा संरक्षणासाठी वचनबद्ध आहे. हे गोपनीयता धोरण आमच्या सेवा आणि डिजिटल प्लॅटफॉर्मशी संवाद साधताना आम्ही तुमचा डेटा कसा संकलित, वापर आणि संरक्षित करतो याची रूपरेषा दर्शवते.",
   "privacy.dataCollection.title": "आम्ही कोणती माहिती संकलित करतो",
@@ -2230,8 +2234,8 @@ mr: {
 
   // Terms of Use Page
   "terms.title": "वापराच्या अटी",
-  "terms.subtitle": "महाराष्ट्र पोलीस पोलीस दळणवळण व माहिती तंत्रज्ञान विभाग, पुणे वेबसाइट वापरण्यासाठी अधिकृत अटी आणि नियम",
-  "terms.deptInfo": "महाराष्ट्र पोलीस पोलीस दळणवळण व माहिती तंत्रज्ञान विभाग, पुणे. अतिरिक्त पोलीस महासंचालक आणि संचालक, पोलीस संप्रेषण, माहिती तंत्रज्ञान आणि परिवहन विभाग, महाराष्ट्र राज्य, पुणे.",
+  "terms.subtitle": "महाराष्ट्र पोलीस मोटार परिवहन विभाग, महाराष्ट्र राज्य पुणे वेबसाइट वापरण्यासाठी अधिकृत अटी आणि नियम",
+  "terms.deptInfo": "महाराष्ट्र पोलीस मोटार परिवहन विभाग, महाराष्ट्र राज्य पुणे. अतिरिक्त पोलीस महासंचालक आणि संचालक, पोलीस संप्रेषण, माहिती तंत्रज्ञान आणि परिवहन विभाग, महाराष्ट्र राज्य, पुणे.",
   "terms.acceptance.title": "अटींची स्वीकृती",
   "terms.acceptance.description": "हे वेबसाइट access करून आणि वापरून, तुम्ही या वापराच्या अटी स्वीकारता आणि त्यांना बांधील राहण्यास सहमती दर्शवता. जर तुम्ही या अटींशी सहमत नसाल, तर कृपया आमचे वेबसाइट वापरणे टाळा. ह्या अटी सर्व भेट देणाऱ्यांना, वापरकर्त्यांना आणि इतरांना लागू होतात जे सेवा access करतात किंवा वापरतात.",
   "terms.usage.title": "परवानगीयुक्त वापर",
@@ -2320,7 +2324,7 @@ mr: {
   // Accessibility Page
   "accessibility.title": "प्रवेशयोग्यता विधान",
   "accessibility.subtitle": "सर्व नागरिकांसाठी डिजिटल सेवांची समान प्रवेशयोग्यता सुनिश्चित करणे",
-  "accessibility.deptInfo.title": "पोलीस दळणवळण व माहिती तंत्रज्ञान विभाग, पुणे",
+  "accessibility.deptInfo.title": "मोटार परिवहन विभाग, महाराष्ट्र राज्य पुणे",
   "accessibility.deptInfo.description": "अतिरिक्त पोलीस महासंचालक आणि संचालक, पोलीस दळणवळण व माहिती तंत्रज्ञान विभाग, महाराष्ट्र राज्य, पुणे अपंग व्यक्तींसाठी डिजिटल प्रवेशयोग्यता सुनिश्चित करण्यासाठी वचनबद्ध आहे. आम्ही सर्वांसाठी वापरकर्ता अनुभव सतत सुधारत आहोत आणि संबंधित प्रवेशयोग्यता मानकांना लागू करत आहोत.",
   "accessibility.visual.title": "दृश्य प्रवेशयोग्यता",
   "accessibility.visual.description": "आमची वेबसाइट स्क्रीन रीडरला समर्थन देते, उच्च कॉन्ट्रास्ट मोड, आकार बदलता येणारा मजकूर आणि प्रतिमांसाठी पर्यायी मजकूर प्रदान करते. वापरकर्ते त्यांच्या आवडीनुसार फॉंट आकार आणि कॉन्ट्रास्ट सेटिंग्ज समायोजित करू शकतात.",

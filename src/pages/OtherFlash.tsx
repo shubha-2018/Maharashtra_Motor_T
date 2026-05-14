@@ -151,7 +151,7 @@ export default function OtherFlash() {
 
   const labels = {
     en: {
-      title: "Police Communication & Information Technology Department",
+      title: "Police Communication & Information Technology Department  ",
       
       srno: "Sr. No.",
       date: "Date",

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script type="module">import { injectIntoGlobalHook } from "/@react-refresh";
+injectIntoGlobalHook(window);
+window.$RefreshReg$ = () => {};
+window.$RefreshSig$ = () => (type) => type;</script>
+
+    <script type="module" src="/@vite/client"></script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+    मोटार  परिवहन विभाग, महाराष्ट्र राज्य पुणे | Motor Transport Department, Maharashtra State, Pune
+    </title>
+    <meta
+      name="description"
+      content="Official website of Motor Transport Department, Maharashtra Police. मोटार  ट्रान्सपोर्ट विभाग, महाराष्ट्र पोलीस"
+    />
+    <meta name="author" content="Dreamcare Developers" />
+    <meta
+      name="keywords"
+      content="Maharashtra Police, Motor Transport, मोटार  ट्रान्सपोर्ट, महाराष्ट्र पोलीस, Police Vehicles, Fleet Management"
+    />
+
+    <!-- Open Graph Meta -->
+    <meta
+      property="og:title"
+      content="मोटार  ट्रान्सपोर्ट विभाग, महाराष्ट्र पोलीस | Motor Transport Department"
+    />
+    <meta
+      property="og:description"
+      content="Official website of Motor Transport Department, Maharashtra Police"
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="/favicon.png"
+    />
+
+    <!-- Twitter Meta -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@MahPolice" />
+    <meta name="twitter:image" content="/favicon.png" />
+
+    <!-- Favicon Placeholder -->
+    <link rel="icon" type="image/png" href="https://i.pinimg.com/736x/09/bd/6b/09bd6bb99a7d71a8dcc34a795619e64c.jpg" />
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

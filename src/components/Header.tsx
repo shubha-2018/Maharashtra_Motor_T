@@ -56,10 +56,11 @@ const Header: React.FC = () => {
         {/* Center Title */}
         <div className="flex-1 text-center font-merri tracking-wide leading-snug font-bold text-[#0A1E4A] dark:text-white">
           <div className="text-sm sm:text-base md:text-3xl">
-            पोलीस दळणवळण व माहिती तंत्रज्ञान विभाग, पुणे
+            मोटार परिवहन विभाग, महाराष्ट्र राज्य पुणे
           </div>
           <div className="text-sm sm:text-base md:text-3xl">
-            Police Communication & Information Technology Department, Pune
+            Motor Transport Department
+Maharashtra State, Pune
           </div>
         </div>
 

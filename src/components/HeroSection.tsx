@@ -4,8 +4,10 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 // ✅ Import Images
 import slider1 from "@/assets/hero slider/police1.jpg";
 import slider2 from "@/assets/hero slider/police22.jpg";
-import slider3 from "@/assets/hero slider/WhatsApp Image 2026-05-13 at 5.38.04 PM.jpeg";
+import slider3 from "@/assets/mt_photos/new-ig-office.jpeg";
 import slider4 from "@/assets/hero slider/igoffice.jpg";
+import slider5 from "@/assets/photo-Gallery-mt/karmachari.jpg";
+
 
 // ✅ Static Slider Images
 const slides = [
@@ -19,16 +21,24 @@ const slides = [
     image: slider2,
     
   },
-  {
-    id: 3,
-    image: slider3,
-    
-  },
-  {
+   {
     id: 3,
     image: slider4,
     
   },
+  {
+    id: 4
+    ,
+    image: slider3,
+    
+  },
+   {
+    id: 5
+    ,
+    image: slider5,
+    
+  },
+ 
 ];
 
 const HeroSection: React.FC = () => {

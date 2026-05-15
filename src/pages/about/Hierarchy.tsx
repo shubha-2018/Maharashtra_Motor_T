@@ -1,7 +1,7 @@
 import React from "react";
 import { Shield, MapPin, Award, Star, BadgeCheck } from "lucide-react";
 import { useLanguageContext } from "../../contexts/LanguageContext";
-import FlowChart from "../../components/FlowChart";
+// import FlowChart from "../../components/Flash";
 
 import id1 from "../../assets/MT-Officer/deshmukh123.jpg";
 import id3 from "../../assets/MT-Officer/sandip_shinde.jpg";

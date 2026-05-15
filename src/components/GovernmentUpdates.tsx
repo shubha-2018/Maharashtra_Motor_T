@@ -1,197 +1,214 @@
-import React, { useEffect, useState } from "react";
-import { ExternalLink, Download } from "lucide-react";
-import { useLanguage } from "@/contexts/LanguageContext";
+import {
+  ExternalLink,
+  Download,
+} from "lucide-react";
 
-interface Notice {
-  _id: string;
-  title_en?: string;
-  title_mr?: string;
-  pdf: string;
-  createdAt: string;
-}
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const GovernmentUpdates: React.FC = () => {
   const { language } = useLanguage();
 
-  const [bulletins, setBulletins] = useState<Notice[]>([]);
-  const [tenders, setTenders] = useState<Notice[]>([]);
-  const [bulletinOffset, setBulletinOffset] = useState(0);
-  const [tenderOffset, setTenderOffset] = useState(0);
-  const [pauseBulletins, setPauseBulletins] = useState(false);
-  const [pauseTenders, setPauseTenders] = useState(false);
+  // ================= STATIC DATA =================
+  // Put PDFs inside:
+  // public/pdfs/
 
-  // ================= FETCH DATA =================
-  useEffect(() => {
-    // Bulletins
-    fetch("http://localhost:5000/api/notices")
-      .then((res) => res.json())
-      .then((data) => {
-        // Backend object देत असेल तरी safe
-        setBulletins(Array.isArray(data) ? data : data.files || []);
-      })
-      .catch(() => console.error("Failed to load bulletins"));
+  const bulletins = [
+    {
+      id: 1,
+      title_en:
+        "Recruitment Notice for Contract Base Appointment",
+      title_mr:
+        "पोलीस निरीक्षक यांचे सेवा करार पद्धतीने नियुक्ती आदेश",
 
-    // Tenders
-    fetch("http://localhost:5000/api/tenders")
-      .then((res) => res.json())
-      .then((data) => {
-        setTenders(Array.isArray(data) ? data : data.data || []);
-      })
-      .catch(() => console.error("Failed to load tenders"));
-  }, []);
+      pdf: "PI contract base appointment.pdf",
 
-  // ================= AUTO SCROLL =================
-  useEffect(() => {
-    if (pauseBulletins) return;
-    const interval = setInterval(() => setBulletinOffset((o) => o + 1), 40);
-    return () => clearInterval(interval);
-  }, [pauseBulletins]);
+      pdfLink:
+        "/pdfs/PI-contract-base-appointment.pdf",
 
-  useEffect(() => {
-    if (pauseTenders) return;
-    const interval = setInterval(() => setTenderOffset((o) => o + 1), 40);
-    return () => clearInterval(interval);
-  }, [pauseTenders]);
+      createdAt: "2026-05-15",
+    },
 
-  useEffect(() => {
-    if (bulletinOffset > bulletins.length * 80) setBulletinOffset(0);
-  }, [bulletinOffset, bulletins.length]);
+    {
+      id: 2,
+      title_en:
+        "Government Resolution Regarding Fuel Conservation",
 
-  useEffect(() => {
-    if (tenderOffset > tenders.length * 80) setTenderOffset(0);
-  }, [tenderOffset, tenders.length]);
+      title_mr:
+        "इंधन बचतीबाबत शासन निर्णय",
 
-  const bulletinItems = [...bulletins, ...bulletins];
-  const tenderItems = [...tenders, ...tenders];
+      pdf:
+        "Government Resolution.pdf",
 
-  const getTitle = (item: Notice) =>
-    language === "en" ? item.title_en : item.title_mr;
+      pdfLink:
+        "/pdfs/Government-Resolution.pdf",
 
-  const bulletinTitle =
-    language === "en"
-      ? "Latest Bulletins / Orders / Notices"
-      : "नवीन बुलेटिन / आदेश / सूचना";
+      createdAt: "2026-05-10",
+    },
+  ];
 
-  const tenderTitle =
-    language === "en" ? "Latest Tenders" : "नवीन निविदा";
+  const tenders = [
+    {
+      id: 1,
+      title_en:
+        "Tender Notice for Office Work",
+
+      title_mr:
+        "कार्यालयीन कामासाठी निविदा सूचना",
+
+      pdf:
+        "Office Tender Notice.pdf",
+
+      pdfLink:
+        "/pdfs/Office-Tender-Notice.pdf",
+
+      createdAt: "2026-05-12",
+    },
+
+    {
+      id: 2,
+      title_en:
+        "Tyre/ Battery Tender",
+
+      title_mr:
+        "टायर / बॅटरी/ निविदा",
+
+      pdf:
+        "Tyre / battery tender.pdf",
+
+      pdfLink:
+        "/pdfs/Road-Construction.pdf",
+
+      createdAt: "2026-05-08",
+    },
+  ];
+
+  // ================= TITLE =================
+  const getTitle = (
+    item: any
+  ) => {
+    return language === "en"
+      ? item.title_en
+      : item.title_mr;
+  };
+
+  // ================= DATE =================
+  const formatDate = (
+    dateString: string
+  ) => {
+    return new Date(
+      dateString
+    ).toLocaleDateString(
+      language === "en"
+        ? "en-IN"
+        : "mr-IN",
+      {
+        day: "2-digit",
+        month: "short",
+        year: "numeric",
+      }
+    );
+  };
+
+  // ================= CARD =================
+  const renderCard = (
+    item: any
+  ) => {
+    return (
+      <div className="border-b border-gray-200 p-5 hover:bg-gray-50 transition">
+
+        {/* PDF FILE NAME */}
+        <h3 className="text-lg font-bold text-blue-900 break-words">
+          {item.pdf}
+        </h3>
+
+        {/* NOTICE TITLE */}
+        <p className="text-gray-800 mt-3 text-base leading-7">
+          {getTitle(item)}
+        </p>
+
+        {/* DATE */}
+        <p className="text-sm text-gray-500 mt-2">
+          {formatDate(
+            item.createdAt
+          )}
+        </p>
+
+        {/* BUTTONS */}
+        <div className="flex gap-3 mt-5 flex-wrap">
+
+          {/* VIEW PDF */}
+          <a
+            href={item.pdfLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 bg-blue-900 text-white px-4 py-2 rounded-md text-sm hover:bg-blue-800 transition"
+          >
+            <ExternalLink size={16} />
+
+            {language === "en"
+              ? "View PDF"
+              : "PDF पहा"}
+          </a>
+
+          {/* DOWNLOAD PDF */}
+          <a
+            href={item.pdfLink}
+            download
+            className="flex items-center gap-2 bg-gray-200 text-gray-700 px-4 py-2 rounded-md text-sm hover:bg-gray-300 transition"
+          >
+            <Download size={16} />
+
+            {language === "en"
+              ? "Download"
+              : "डाउनलोड"}
+          </a>
+
+        </div>
+      </div>
+    );
+  };
 
   return (
     <section className="py-16 bg-gray-100">
-      <div className="max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-6">
+      <div className="max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-8">
 
         {/* ================= BULLETINS ================= */}
-        <div
-          className="bg-white rounded-2xl shadow-lg overflow-hidden"
-          onMouseEnter={() => setPauseBulletins(true)}
-          onMouseLeave={() => setPauseBulletins(false)}
-        >
-          <div className="bg-blue-900 text-white py-4 text-center font-bold">
-            {bulletinTitle}
+        <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
+
+          {/* HEADER */}
+          <div className="bg-blue-900 py-4 text-center">
+            <h2 className="text-white text-2xl font-bold">
+              {language === "en"
+                ? "Latest Bulletins / Orders / Notices"
+                : "नवीन बुलेटिन / आदेश / सूचना"}
+            </h2>
           </div>
 
-          <div className="relative h-80 overflow-hidden">
-            <div
-              className="absolute w-full"
-              style={{ transform: `translateY(-${bulletinOffset}px)` }}
-            >
-              {bulletinItems.map((b, i) => (
-                <div
-                  key={`${b._id || i}`}
-                  className="mx-6 my-3 p-4 bg-gray-50 rounded-lg border-l-4 border-blue-900"
-                >
-                  <div className="flex justify-between">
-                    <h3 className="text-sm font-medium">
-                      {getTitle(b) || "No Title"}
-                    </h3>
-                    <span className="text-xs text-gray-600">
-                      {b.createdAt
-                        ? new Date(b.createdAt).toLocaleDateString(
-                            language === "en" ? "en-IN" : "mr-IN"
-                          )
-                        : ""}
-                    </span>
-                  </div>
-
-                  <div className="flex gap-3 mt-2 text-xs">
-                    <a
-                      href={`http://localhost:5000/uploads/pdfs/${b.pdf}`}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="flex items-center gap-1 text-blue-900"
-                    >
-                      <ExternalLink size={14} />
-                      {language === "en" ? "Open" : "पहा"}
-                    </a>
-                    <a
-                      href={`http://localhost:5000/uploads/pdfs/${b.pdf}`}
-                      download
-                      className="flex items-center gap-1 text-gray-700"
-                    >
-                      <Download size={14} />
-                      {language === "en" ? "Download" : "डाउनलोड"}
-                    </a>
-                  </div>
-                </div>
-              ))}
-            </div>
+          {/* LIST */}
+          <div>
+            {bulletins.map((item) =>
+              renderCard(item)
+            )}
           </div>
         </div>
 
         {/* ================= TENDERS ================= */}
-        <div
-          className="bg-white rounded-2xl shadow-lg overflow-hidden"
-          onMouseEnter={() => setPauseTenders(true)}
-          onMouseLeave={() => setPauseTenders(false)}
-        >
-          <div className="bg-blue-900 text-white py-4 text-center font-bold">
-            {tenderTitle}
+        <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
+
+          {/* HEADER */}
+          <div className="bg-blue-900 py-4 text-center">
+            <h2 className="text-white text-2xl font-bold">
+              {language === "en"
+                ? "Latest Tenders"
+                : "नवीन निविदा"}
+            </h2>
           </div>
 
-          <div className="relative h-80 overflow-hidden">
-            <div
-              className="absolute w-full"
-              style={{ transform: `translateY(-${tenderOffset}px)` }}
-            >
-              {tenderItems.map((t, i) => (
-                <div
-                  key={`${t._id || i}`}
-                  className="mx-6 my-3 p-4 bg-gray-50 rounded-lg border-l-4 border-blue-900"
-                >
-                  <div className="flex justify-between">
-                    <h3 className="text-sm font-medium">
-                      {getTitle(t) || "No Title"}
-                    </h3>
-                    <span className="text-xs text-gray-600">
-                      {t.createdAt
-                        ? new Date(t.createdAt).toLocaleDateString(
-                            language === "en" ? "en-IN" : "mr-IN"
-                          )
-                        : ""}
-                    </span>
-                  </div>
-
-                  <div className="flex gap-3 mt-2 text-xs">
-                    <a
-                      href={`http://localhost:5000/uploads/tenders/${t.pdf}`}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="flex items-center gap-1 text-blue-900"
-                    >
-                      <ExternalLink size={14} />
-                      {language === "en" ? "Open" : "पहा"}
-                    </a>
-                    <a
-                      href={`http://localhost:5000/uploads/tenders/${t.pdf}`}
-                      download
-                      className="flex items-center gap-1 text-gray-700"
-                    >
-                      <Download size={14} />
-                      {language === "en" ? "Download" : "डाउनलोड"}
-                    </a>
-                  </div>
-                </div>
-              ))}
-            </div>
+          {/* LIST */}
+          <div>
+            {tenders.map((item) =>
+              renderCard(item)
+            )}
           </div>
         </div>
 

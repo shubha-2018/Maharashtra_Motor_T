@@ -13,7 +13,7 @@ import {
 } from "@/components/ui/table";
 import { useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
-import ABOUT_IMG from "@/assets/about.jpg";
+import ABOUT_IMG from "@/assets/hero slider/igoffice.jpg";
 
 // Table data
 const staffData = [
@@ -110,79 +110,7 @@ export default function History() {
         </Card>
 
         {/* Table Section */}
-        <div className="bg-white dark:bg-gray-900 shadow-md rounded-2xl p-6 border border-gray-200 dark:border-gray-700 space-y-6">
-          <h2 className="text-2xl font-bold text-blue-800 dark:text-blue-300">
-            {t("hx_tableTitle")}
-          </h2>
-          <Table>
-            <TableHeader>
-              <TableRow className="bg-blue-600 hover:bg-blue-700 dark:bg-blue-800 dark:hover:bg-blue-900">
-                <TableHead className="text-white font-bold">
-                  {t("hx_table_sr")}
-                </TableHead>
-                <TableHead className="text-white font-bold">
-                  {t("hx_table_desig")}
-                </TableHead>
-                <TableHead className="text-white font-bold">
-                  {t("hx_table_posts")}
-                </TableHead>
-              </TableRow>
-            </TableHeader>
-            <TableBody>
-              {currentData.map((row) => (
-                <TableRow 
-                  key={row.sr}
-                  className="hover:bg-blue-50 dark:hover:bg-blue-950/30 border-b border-blue-100 dark:border-blue-900"
-                >
-                  <TableCell className="font-medium text-blue-900 dark:text-blue-200">
-                    {row.sr}
-                  </TableCell>
-                  <TableCell className="text-blue-800 dark:text-blue-300">
-                    {row.designation}
-                  </TableCell>
-                  <TableCell className="text-blue-700 dark:text-blue-400 font-semibold">
-                    {row.posts}
-                  </TableCell>
-                </TableRow>
-              ))}
-
-              {/* Total Row on last page */}
-              {page === totalPages && (
-                <TableRow className="font-bold bg-blue-100 dark:bg-blue-900/40 border-t-2 border-blue-300 dark:border-blue-700">
-                  <TableCell colSpan={2} className="text-blue-900 dark:text-blue-200">
-                    {t("total")}
-                  </TableCell>
-                  <TableCell className="text-blue-800 dark:text-blue-300">
-                    {staffData.reduce((sum, item) => sum + item.posts, 0)}
-                  </TableCell>
-                </TableRow>
-              )}
-            </TableBody>
-          </Table>
-
-          {/* Pagination */}
-          <div className="flex justify-between items-center pt-4">
-            <Button
-              variant="outline"
-              disabled={page === 1}
-              onClick={() => setPage(page - 1)}
-              className="border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white dark:border-blue-400 dark:text-blue-400 dark:hover:bg-blue-400 dark:hover:text-gray-900"
-            >
-              {t("hx_prev")}
-            </Button>
-            <span className="text-blue-700 dark:text-blue-300 font-medium">
-              {t("hx_page")} {page} {t("hx_of")} {totalPages}
-            </span>
-            <Button
-              variant="outline"
-              disabled={page === totalPages}
-              onClick={() => setPage(page + 1)}
-              className="border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white dark:border-blue-400 dark:text-blue-400 dark:hover:bg-blue-400 dark:hover:text-gray-900"
-            >
-              {t("hx_next")}
-            </Button>
-          </div>
-        </div>
+       
       </div>
     </div>
   );

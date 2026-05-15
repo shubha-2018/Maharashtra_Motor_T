@@ -10,9 +10,9 @@ import { Link } from "react-router-dom";
 import GIMG_1 from "@/assets/photo-Gallery-mt/PoliceCar2.jpg";
 import GIMG_2 from "@/assets/photo-Gallery-mt/car11.jpg";
 import GIMG_3 from "@/assets/photo-Gallery-mt/j1.jpg";
-import GIMG_4 from "@/assets/photo-Gallery-mt/m3.jpg";
+import GIMG_4 from "@/assets/mt_photos/adg2.jpeg";
 import GIMG_5 from "@/assets/photo-Gallery-mt/nauka.jpg";
-import GIMG_6 from "@/assets/gallery/7.jpg";
+import GIMG_6 from "@/assets/mt_photos/adg-grp.jpeg";
 
 const EventsGallery = () => {
   const { t } = useLanguage();

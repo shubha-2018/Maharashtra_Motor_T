@@ -43,19 +43,19 @@ const Footer: React.FC = () => {
   const socialLinks = [
     {
       icon: Facebook,
-      href: "https://www.facebook.com/profile.php?id=61577227071617",
+      // href: "https://www.facebook.com/profile.php?id=61577227071617",
     },
     {
       icon: Twitter,
-      href: "https://x.com/MH_POLICE_PCIT/status/1932359777243586983",
+      // href: "https://x.com/MH_POLICE_PCIT/status/1932359777243586983",
     },
     {
       icon: Instagram,
-      href: "https://www.instagram.com/mh_police_pcit/",
+      // href: "https://www.instagram.com/mh_police_pcit/",
     },
     {
       icon: Youtube,
-      href: "https://www.youtube.com/@pcit-mhpolice",
+      // href: "https://www.youtube.com/@pcit-mhpolice",
     },
   ];
 
@@ -136,16 +136,23 @@ const Footer: React.FC = () => {
                   </p>
                   {language === "mr" ? (
                     <p className="text-gray-800 dark:text-gray-200 leading-relaxed">
-                      पोलीस दळणवळण व माहिती तंत्रज्ञान  विभाग महाराष्ट्र राज्य पुणे
-डॉ. होमी भाभा रोड, चव्हाणनगर
-पुणे – ४११००८, महाराष्ट्र
+                      मोटार परिवहन विभाग, महाराष्ट्र राज्य, पुणे
+
+विशेष पोलीस महानिरीक्षक, मोटार परिवहन विभाग
+
+धनकुडे वस्ती, पॅन कार्ड क्लब रोड, बाणेर, पुणे – ४११०४५, महाराष्ट्र, भारत
                     </p>
                   ) : (
                     <p className="text-gray-800 dark:text-gray-200 leading-relaxed">
-                     Police Communication and Information Technology Department
-Maharashtra State Pune
-Dr. Homi Bhabha Road, Chavannagar
-Pune – 411008, Maharashtra, India 
+                    Motor Transport Department, Maharashtra State, Pune
+
+Office of the Special Inspector General of Police, Motor Transport Department
+
+Dhanukude Wasti, Pancard Club Road, Baner, Pune – 411045, Maharashtra, India
+
+
+
+ 
                     </p>
                   )}
                 </div>
@@ -162,7 +169,7 @@ Pune – 411008, Maharashtra, India
                     href="tel:+9120225652505"
                     className="text-gray-800 dark:text-white hover:text-[#1D4ED8] transition-colors"
                   >
-                    020-25652505
+                +91 02025883841
                   </a>
                 </div>
               </div>
@@ -178,7 +185,7 @@ Pune – 411008, Maharashtra, India
                     href="mailto:dir.polwireless.pune@mahapolice.gov.in"
                     className="text-gray-800 dark:text-white hover:text-[#1D4ED8] transition-colors"
                   >
-                    dir.polwireless.pune@mahapolice.gov.in
+                    motortransport@mahapolice.gov.in
                   </a>
                 </div>
               </div>

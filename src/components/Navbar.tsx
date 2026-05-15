@@ -228,8 +228,8 @@ const Navbar: React.FC = () => {
         { name: t("nav.formerDirectors"), url: "/about/former-directors" },
         { name: t("nav.hierarchy"), url: "/about/hierarchy" },
         { name: t("nav.aboutDepartment"), url: "/about/department" },
-        { name: t("nav.offices"), url: "/about" },
-        { name: t("nav.ranks"), url: "/about/ranks" },
+        // { name: t("nav.offices"), url: "/about" },
+        // { name: t("nav.ranks"), url: "/about/ranks" },
       ],
     },
 
@@ -245,39 +245,39 @@ const Navbar: React.FC = () => {
       name: t("nav.police_corner"),
       items: [
         { name: t("nav.gazette"), url: "/police/gazette" },
-        { name: t("nav.flash"), url: "/flashsection" },
-        { name: t("nav.officersList"), url: "/police/officers" },
+        // { name: t("nav.flash"), url: "/flashsection" },
+        // { name: t("nav.officersList"), url: "/police/officers" },
         { name: t("nav.promotionOrders"), url: "/police/promotions" },
         { name: t("nav.transfers"), url: "/police/transfers" },
         { name: t("nav.gradationList"), url: "/police/gradation" },
         { name: t("nav.strategySupport"), url: "https://117.222.38.165/SSS/" },
         { name: t("nav.positiveStories"), url: "/police/stories" },
-        { name: t("nav.welfare"), url: "/about/welfare" },
+        // { name: t("nav.welfare"), url: "/about/welfare" },
       ],
     },
 
     {
       name: t("nav.training"),
       items: [
-        { name: t("nav.introduction"), url: "/training/introduction" },
+        // { name: t("nav.introduction"), url: "/training/introduction" },
         { name: t("nav.trainingCalendar"), url: "/training-calendar" },
-        { name: t("nav.library"), url: "/library" },
+        // { name: t("nav.library"), url: "/library" },
         {
           name: t("nav.traininggallery"),
           items: [
-            { name: t("nav.videos"), url: "/training/traininggallery/videos" },
+            // { name: t("nav.videos"), url: "/training/traininggallery/videos" },
             { name: t("nav.photos"), url: "/training/traininggallery/photos" },
           ],
         },
         { name: t("nav.notificationCircular"), url: "/training/notification" },
-        {
-          name: t("nav.museum"),
-          items: [
-            { name: t("nav.videos"), url: "/training/museum/videos" },
-            { name: t("nav.photos"), url: "/training/museum/photos" },
-          ],
-        },
-        { name: t("nav.faculties"), url: "/faculty" },
+        // {
+        //   name: t("nav.museum"),
+        //   items: [
+        //     // { name: t("nav.videos"), url: "/training/museum/videos" },
+        //     { name: t("nav.photos"), url: "/training/museum/photos" },
+        //   ],
+        // },
+        // { name: t("nav.faculties"), url: "/faculty" },
       ],
     },
 

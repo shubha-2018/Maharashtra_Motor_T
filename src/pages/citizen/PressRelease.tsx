@@ -1,8 +1,8 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Newspaper } from "lucide-react";
-import techPhoto from "@/assets/press/press1.png";
-import aiPhoto from "@/assets/press/press2.png";
+import techPhoto from "@/assets/mt-news/WhatsApp Image 2026-05-15 at 3.42.14 PM.jpeg";
+// import aiPhoto from "@/assets/press/press2.png";
 import emergencyPhoto from "@/assets/1.jpg";
 import cyberPhoto from "@/assets/1.jpg";
 import { useNavigate } from "react-router";
@@ -21,12 +21,7 @@ export default function PressRelease() {
       image: techPhoto,
       link: "https://mahpolwireless.stagingdsi.co.in/wp-content/uploads/2025/01/Adobe-Scan-29-Jan-2025-1.pdf",
     },
-    {
-      title: t("event.marvel.aiProject"),
-      description: t("press.ai.description"),
-      image: aiPhoto,
-      link: "https://mahpolwireless.stagingdsi.co.in/wp-content/uploads/2025/01/Adobe-Scan-29-Jan-2025.pdf",
-    },
+    
   ];
 
   return (

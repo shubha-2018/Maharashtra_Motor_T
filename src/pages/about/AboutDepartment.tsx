@@ -13,7 +13,7 @@ import {
 } from "@/components/ui/table";
 import { useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
-import ABOUT_IMG from "@/assets/hero slider/igoffice.jpg";
+import ABOUT_IMG from "@/assets/hero slider/igoff11.jpeg";
 
 // Table data
 const staffData = [

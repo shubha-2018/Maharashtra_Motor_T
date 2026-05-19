@@ -44,6 +44,22 @@ const GovernmentUpdates: React.FC = () => {
 
       createdAt: "2026-05-10",
     },
+    {
+      id: 3,
+      title_en:
+        "Regarding submission of condemnation proposal for the year 2025-26",
+
+      title_mr:
+        "सन २०२५-२६ चा निकामीकरण प्रस्ताव सादर करण्याबाबत…",
+
+      pdf:
+        "2025/26 Condemnation Orders",
+
+      pdfLink:
+        "/pdfs/.pdf",
+
+      createdAt: "2026-05-10",
+    },
   ];
 
   const tenders = [

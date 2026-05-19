@@ -1,242 +1,350 @@
-// import { Card, CardContent } from "@/components/ui/card";
-// import { Button } from "@/components/ui/button";
-// import { ArrowLeft, X } from "lucide-react";
-// import { useState } from "react";
-// import { useNavigate } from "react-router";
-// import { useLanguage } from "@/contexts/LanguageContext"; // Import the language hook
+import React, { useState } from "react";
+import { X, Heart, Maximize2 } from "lucide-react";
+import { useLanguage } from "../contexts/LanguageContext";
 
-// // Import 4 images
-// import img1 from "@/assets/gallery/Dr-APJ-Abdul-Kalam-Innovation-Centre-HM-Inaugration-1.jpg";
-// import img2 from "@/assets/gallery/Republic-Day-4.jpg";
-// import img3 from "@/assets/gallery/Ashok-Jog-Lecture-Hall-Inauguration-2.jpeg";
-// import img4 from "@/assets/gallery/DGP-Inaugration-1.jpg";
+// ✅ Import Images
+import photo1 from "../assets/images/t1.jpg";
+import photo2 from "../assets/images/t2.jpg";
+import photo3 from "../assets/images/t3.jpg";
+import photo4 from "../assets/images/t4.jpg";
+import photo5 from "../assets/images/t5.jpg";
 
-// export default function PhotoGallery() {
-//   const navigate = useNavigate();
-//   const { t } = useLanguage(); // Use the language hook
-//   const goBack = () => navigate(-1);
+import photo6 from "../assets/images/m11.jpg";
+import photo7 from "../assets/images/m12.jpg";
+import photo8 from "../assets/images/m13.jpg";
+import photo9 from "../assets/images/m14.jpg";
+import photo10 from "../assets/images/m15.jpg";
 
-//   const galleryItems = [
-//     {
-//       src: img1,
-//       captionKey: "gallery.image1.caption",
-//     },
-//     {
-//       src: img2,
-//       captionKey: "gallery.image2.caption",
-//     },
-//     {
-//       src: img3,
-//       captionKey: "gallery.image3.caption",
-//     },
-//     {
-//       src: img4,
-//       captionKey: "gallery.image4.caption",
-//     },
-//   ];
+import photo11 from "../assets/images/a1.jpg";
+import photo12 from "../assets/images/a2.jpg";
+import photo13 from "../assets/images/a3.jpg";
+import photo14 from "../assets/images/karmachari.jpg";
+import photo15 from "../assets/images/a2.jpg";
 
-//   const [modalOpen, setModalOpen] = useState(false);
-//   const [activeImage, setActiveImage] = useState({ src: "", captionKey: "" });
+import photo16 from "../assets/mt_photos/photo-gallery-mt/puneR1.jpeg";
+import photo17 from "../assets/mt_photos/photo-gallery-mt/puneR5.jpeg";
+import photo18 from "../assets/mt_photos/photo-gallery-mt/puneR2.jpeg";
+import photo19 from "../assets/mt_photos/photo-gallery-mt/puneR3.jpeg";
+import photo20 from "../assets/mt_photos/photo-gallery-mt/puneR4.jpeg";
 
-//   const openModal = (item) => {
-//     setActiveImage(item);
-//     setModalOpen(true);
-//   };
+import photo21 from "../assets/mt_photos/photo-gallery-mt/punecity1.jpeg";
+import photo22 from "../assets/mt_photos/photo-gallery-mt/punecity2.jpeg";
+import photo23 from "../assets/mt_photos/photo-gallery-mt/punecity3.jpeg";
+import photo24 from "../assets/mt_photos/photo-gallery-mt/punecity4.jpeg";
+import photo25 from "../assets/mt_photos/photo-gallery-mt/punecity5.jpeg";
 
-//   const closeModal = () => setModalOpen(false);
-
-//   return (
-//     <div className="min-h-screen bg-gradient-to-b from-gray-50 via-gray-100 to-gray-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-950 text-gray-900 dark:text-gray-100 px-6 py-12 sm:px-12 lg:px-24 relative overflow-hidden">
-//       {/* Back to Home Button */}
-//       <Button
-//         variant="ghost"
-//         onClick={goBack}
-//         className="flex items-center text-gray-900 hover:bg-blue-50 hover:text-blue-700 transition-all duration-300 rounded-xl px-4 py-2 shadow-md hover:shadow-blue-200 mb-8 dark:text-gray-100 dark:hover:bg-blue-950/30 dark:hover:text-blue-300 dark:hover:shadow-blue-900/30"
-//       >
-//         <ArrowLeft className="w-4 h-4 mr-2" /> {t("back.home")}
-//       </Button>
-
-//       {/* Heading */}
-//       <h1 className="text-5xl p-3 md:text-6xl font-extrabold tracking-tight text-center bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 bg-clip-text text-transparent drop-shadow-lg mb-10 dark:from-blue-500 dark:via-blue-600 dark:to-blue-700">
-//         {t("gallery.title")}
-//       </h1>
-
-//       {/* Gallery Grid */}
-//       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
-//         {galleryItems.map((item, idx) => (
-//           <Card
-//             key={idx}
-//             className="bg-white/30 border border-gray-200 backdrop-blur-md shadow-lg rounded-3xl hover:shadow-blue-400/20 transition-all duration-500 cursor-pointer dark:bg-gray-800/30 dark:border-gray-700 dark:hover:shadow-blue-600/20"
-//             onClick={() => openModal(item)}
-//           >
-//             <img
-//               src={item.src}
-//               alt={t(item.captionKey)}
-//               className="w-full h-44 sm:h-96 object-cover rounded-t-3xl"
-//             />
-//             <CardContent className="p-6 text-center">
-//               <p className="text-lg font-semibold text-blue-800 dark:text-blue-300">
-//                 {t(item.captionKey)}
-//               </p>
-//             </CardContent>
-//           </Card>
-//         ))}
-//       </div>
-
-//       {/* Fullscreen Modal */}
-//       {modalOpen && (
-//         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4">
-//           <div className="relative max-w-4xl w-full bg-white rounded-3xl overflow-hidden shadow-2xl dark:bg-gray-800">
-//             <button
-//               className="absolute top-4 right-4 text-blue-700 hover:text-blue-500 dark:text-blue-400 dark:hover:text-blue-300 bg-white/80 dark:bg-gray-800/80 rounded-full p-1 backdrop-blur-sm"
-//               onClick={closeModal}
-//             >
-//               <X className="w-6 h-6" />
-//             </button>
-//             <img
-//               src={activeImage.src}
-//               alt={t(activeImage.captionKey)}
-//               className="w-full h-auto object-cover"
-//             />
-//             <div className="p-6 text-center bg-blue-50 dark:bg-blue-950/30">
-//               <p className="text-xl font-semibold text-blue-900 dark:text-blue-200">
-//                 {t(activeImage.captionKey)}
-//               </p>
-//             </div>
-//           </div>
-//         </div>
-//       )}
-//     </div>
-//   );
-// }
-
-
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { ArrowLeft, X, ChevronLeft, ChevronRight } from "lucide-react";
-import { useState } from "react";
-import { useNavigate } from "react-router";
-import { useLanguage } from "@/contexts/LanguageContext";
-
-// Import 4 images
-import img1 from "@/assets/gallery/Dr-APJ-Abdul-Kalam-Innovation-Centre-HM-Inaugration-1.jpg";
-import img2 from "@/assets/gallery/Republic-Day-4.jpg";
-import img3 from "@/assets/gallery/Ashok-Jog-Lecture-Hall-Inauguration-2.jpeg";
-import img4 from "@/assets/gallery/DGP-Inaugration-1.jpg";
+import photo26 from "../assets/mt_photos/photo-gallery-mt/SRPF1.jpeg";
+import photo27 from "../assets/mt_photos/photo-gallery-mt/SRPF2.jpeg";
+import photo28 from "../assets/mt_photos/photo-gallery-mt/SRPF3.jpeg";
+import photo29 from "../assets/mt_photos/photo-gallery-mt/SRPF4.jpeg";
+import photo30 from "../assets/mt_photos/photo-gallery-mt/SRPF5.jpeg";
 
 export default function PhotoGallery() {
-  const navigate = useNavigate();
-  const { t } = useLanguage(); // Use the language hook
-  const goBack = () => navigate(-1);
+  const [selectedImage, setSelectedImage] = useState(null);
+  const [likedImages, setLikedImages] = useState(new Set());
 
-  const galleryItems = [
-    { src: img1, captionKey: "gallery.image1.caption" },
-    { src: img2, captionKey: "gallery.image2.caption" },
-    { src: img3, captionKey: "gallery.image3.caption" },
-    { src: img4, captionKey: "gallery.image4.caption" },
-  ];
+  const { language } = useLanguage();
 
-  const [modalOpen, setModalOpen] = useState(false);
-  const [activeIndex, setActiveIndex] = useState(0);
+  // ✅ Translation Function
+  const translations = {
+    viewButton: {
+      mr: "पहा",
+      en: "VIEW",
+    },
 
-  const openModal = (index: number) => {
-    setActiveIndex(index);
-    setModalOpen(true);
+    closeText: {
+      mr: "बाहेर क्लिक करा बंद करण्यासाठी",
+      en: "Click outside to close",
+    },
   };
 
-  const closeModal = () => setModalOpen(false);
+  const t = (key) => translations[key]?.[language] || "";
 
-  const nextImage = () => {
-    setActiveIndex((prevIndex) => (prevIndex + 1) % galleryItems.length);
+  // ✅ Gallery Data
+  const galleryData = {
+    dgpVisit: [
+      { id: 1, url: photo1 },
+      { id: 2, url: photo2 },
+      { id: 3, url: photo3 },
+      { id: 4, url: photo4 },
+      { id: 5, url: photo5 },
+    ],
+
+    igOffice: [
+      { id: 6, url: photo6 },
+      { id: 7, url: photo7 },
+      { id: 8, url: photo8 },
+      { id: 9, url: photo9 },
+      { id: 10, url: photo10 },
+    ],
+
+    pimpriVisit: [
+      { id: 11, url: photo11 },
+      { id: 12, url: photo12 },
+      { id: 13, url: photo13 },
+      { id: 14, url: photo14 },
+      { id: 15, url: photo15 },
+    ],
+
+    punecityvisit: [
+      { id: 16, url: photo21 },
+      { id: 17, url: photo22 },
+      { id: 18, url: photo23 },
+      { id: 19, url: photo24 },
+      { id: 20, url: photo25 },
+    ],
+
+    puneruralvisit: [
+      { id: 21, url: photo16 },
+      { id: 22, url: photo17 },
+      { id: 23, url: photo18 },
+      { id: 24, url: photo19 },
+      { id: 25, url: photo20 },
+    ],
+
+    SRPFVisit: [
+      { id: 26, url: photo26 },
+      { id: 27, url: photo27 },
+      { id: 28, url: photo28 },
+      { id: 29, url: photo29 },
+      { id: 30, url: photo30 },
+    ],
+
+    AwardDistribution: [
+      { id: 31, url: photo11 },
+      { id: 32, url: photo12 },
+      { id: 33, url: photo13 },
+      { id: 34, url: photo14 },
+      { id: 35, url: photo15 },
+    ],
+
+    mahindracompanyVisit: [
+      { id: 36, url: photo6 },
+      { id: 37, url: photo7 },
+      { id: 38, url: photo8 },
+      { id: 39, url: photo9 },
+      { id: 40, url: photo10 },
+    ],
+
+    tatamotorVisit: [
+      { id: 41, url: photo1 },
+      { id: 42, url: photo2 },
+      { id: 43, url: photo3 },
+      { id: 44, url: photo4 },
+      { id: 45, url: photo5 },
+    ],
   };
 
-  const prevImage = () => {
-    setActiveIndex((prevIndex) =>
-      prevIndex === 0 ? galleryItems.length - 1 : prevIndex - 1
-    );
+  // ✅ Like Function
+  const toggleLike = (id, e) => {
+    e.stopPropagation();
+
+    const newLiked = new Set(likedImages);
+
+    if (newLiked.has(id)) {
+      newLiked.delete(id);
+    } else {
+      newLiked.add(id);
+    }
+
+    setLikedImages(newLiked);
   };
 
-  const activeImage = galleryItems[activeIndex];
+  // ✅ Photo Card
+  const PhotoCard = ({ photo }) => (
+    <div
+      className="group relative overflow-hidden rounded-xl cursor-pointer transform transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:z-10"
+      onClick={() => setSelectedImage(photo)}
+    >
+      <div className="aspect-[4/3] relative">
+        <img
+          src={photo.url}
+          alt="gallery"
+          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+        />
 
-  return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 via-gray-100 to-gray-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-950 text-gray-900 dark:text-gray-100 px-6 py-12 sm:px-12 lg:px-24 relative overflow-hidden">
-      {/* Back to Home Button */}
-      <Button
-        variant="ghost"
-        onClick={goBack}
-        className="flex items-center text-gray-900 hover:bg-blue-50 hover:text-blue-700 transition-all duration-300 rounded-xl px-4 py-2 shadow-md hover:shadow-blue-200 mb-8 dark:text-gray-100 dark:hover:bg-blue-950/30 dark:hover:text-blue-300 dark:hover:shadow-blue-900/30"
-      >
-        <ArrowLeft className="w-4 h-4 mr-2" /> {t("back.home")}
-      </Button>
-
-      {/* Heading */}
-      <h1 className="text-5xl p-3 md:text-6xl font-extrabold tracking-tight text-center bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 bg-clip-text text-transparent drop-shadow-lg mb-10 dark:from-blue-500 dark:via-blue-600 dark:to-blue-700">
-        {t("gallery.title")}
-      </h1>
-
-      {/* Gallery Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
-        {galleryItems.map((item, idx) => (
-          <Card
-            key={idx}
-            className="bg-white/30 border border-gray-200 backdrop-blur-md shadow-lg rounded-3xl hover:shadow-blue-400/20 transition-all duration-500 cursor-pointer dark:bg-gray-800/30 dark:border-gray-700 dark:hover:shadow-blue-600/20"
-            onClick={() => openModal(idx)}
-          >
-            <img
-              src={item.src}
-              alt={t(item.captionKey)}
-              className="w-full h-44 sm:h-96 object-cover rounded-t-3xl"
-            />
-            <CardContent className="p-6 text-center">
-              <p className="text-lg font-semibold text-blue-800 dark:text-blue-300">
-                {t(item.captionKey)}
-              </p>
-            </CardContent>
-          </Card>
-        ))}
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       </div>
 
-      {/* Fullscreen Modal */}
-      {modalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4">
-          <div className="relative max-w-4xl w-full bg-white rounded-3xl overflow-hidden shadow-2xl dark:bg-gray-800">
-            {/* Close Button */}
-            <button
-              className="absolute top-4 right-4 text-blue-700 hover:text-blue-500 dark:text-blue-400 dark:hover:text-blue-300 bg-white/80 dark:bg-gray-800/80 rounded-full p-1 backdrop-blur-sm"
-              onClick={closeModal}
-            >
-              <X className="w-6 h-6" />
-            </button>
+      {/* Hover Buttons */}
+      <div className="absolute inset-0 flex flex-col justify-end p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <div className="flex items-center justify-between transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">
 
-            {/* Prev Button */}
-            <button
-              className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white/70 dark:bg-gray-700/70 hover:bg-white/90 dark:hover:bg-gray-600 rounded-full p-2"
-              onClick={prevImage}
-            >
-              <ChevronLeft className="w-6 h-6 text-blue-700 dark:text-blue-300" />
-            </button>
-
-            {/* Next Button */}
-            <button
-              className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white/70 dark:bg-gray-700/70 hover:bg-white/90 dark:hover:bg-gray-600 rounded-full p-2"
-              onClick={nextImage}
-            >
-              <ChevronRight className="w-6 h-6 text-blue-700 dark:text-blue-300" />
-            </button>
-
-            <img
-              src={activeImage.src}
-              alt={t(activeImage.captionKey)}
-              className="w-full h-auto object-cover"
+          {/* Like */}
+          <button
+            onClick={(e) => toggleLike(photo.id, e)}
+            className="p-2 rounded-full bg-white/20 backdrop-blur-sm hover:bg-white/30 transition-all"
+          >
+            <Heart
+              className={`w-5 h-5 transition-all ${
+                likedImages.has(photo.id)
+                  ? "fill-red-500 text-red-500 scale-110"
+                  : "text-white"
+              }`}
             />
-            <div className="p-6 text-center bg-blue-50 dark:bg-blue-950/30">
-              <p className="text-xl font-semibold text-blue-900 dark:text-blue-200">
-                {t(activeImage.captionKey)}
-              </p>
-            </div>
+          </button>
+
+          {/* Zoom */}
+          <button className="p-2 rounded-full bg-white/20 backdrop-blur-sm hover:bg-white/30 transition-all">
+            <Maximize2 className="w-5 h-5 text-white" />
+          </button>
+        </div>
+      </div>
+
+      {/* View Button */}
+      <div className="absolute top-3 right-3 bg-gradient-to-r from-blue-600 to-blue-800 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        {t("viewButton")}
+      </div>
+    </div>
+  );
+
+  // ✅ Section Component
+  const GallerySection = ({ titleMr, titleEn, photos }) => (
+    <div className="mb-16 text-center">
+      <h2 className="text-3xl font-bold text-gray-800 dark:text-gray-100 mb-4">
+        {language === "mr" ? titleMr : titleEn}
+      </h2>
+
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
+        {photos.map((photo) => (
+          <PhotoCard key={photo.id} photo={photo} />
+        ))}
+      </div>
+    </div>
+  );
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-slate-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-950 transition-colors duration-500 mt-28">
+
+      <div className="max-w-7xl mx-auto px-4 py-12">
+
+        {/* 1. DGP Visit */}
+        <GallerySection
+          titleMr="पोलीस महासंचालक भेट"
+          titleEn="Hon.DGP Visit"
+          photos={galleryData.dgpVisit}
+        />
+
+        {/* 2. IG Office Udghatan */}
+        <GallerySection
+          titleMr="पोलीस महानिरीक्षक कार्यालय उद्घाटन"
+          titleEn="IG Office Inauguration"
+          photos={galleryData.igOffice}
+        />
+
+        {/* 3. Pimpri Chinchwad MT Visit */}
+        <GallerySection
+          titleMr="पिंपरी चिंचवड मोटार परिवहन  भेट"
+          titleEn="Pimpri Chinchwad MT Visit"
+          photos={galleryData.pimpriVisit}
+        />
+
+        {/* 4. Pune City MT Visit */}
+        <GallerySection
+          titleMr="पुणे शहर मोटार परिवहन  भेट"
+          titleEn="Pune City MT Visit"
+          photos={galleryData.punecityvisit}
+        />
+
+        {/* 5. Pune Rural MT Visit */}
+        <GallerySection
+          titleMr="पुणे ग्रामीण मोटार परिवहन  भेट"
+          titleEn="Pune Rural MT Visit"
+          photos={galleryData.puneruralvisit}
+        />
+
+        {/* 6. SRPF Visit */}
+        <GallerySection
+          titleMr="राज्य राखीव पोलीस दल भेट"
+          titleEn="SRPF Visit"
+          photos={galleryData.SRPFVisit}
+        />
+
+        {/* 7. Tata Motors Visit */}
+        <GallerySection
+          titleMr="टाटा मोटर्स भेट"
+          titleEn="Tata Motors Visit"
+          photos={galleryData.tatamotorVisit}
+        />
+
+        {/* 8. Mahindra Company Visit */}
+        <GallerySection
+          titleMr="महिंद्रा कंपनी भेट"
+          titleEn="Mahindra Company Visit"
+          photos={galleryData.mahindracompanyVisit}
+        />
+
+        {/* 9. Award Distribution */}
+        <GallerySection
+          titleMr="आढावा बैठक / उत्कृष्ठ मोटार परिवहन विभाग पुरस्कार वितरण"
+          titleEn="Review Meeting & Award Distribution"
+          photos={galleryData.AwardDistribution}
+        />
+      </div>
+
+      {/* ✅ Modal */}
+      {selectedImage && (
+        <div
+          className="fixed inset-0 bg-black/95 backdrop-blur-sm z-50 flex items-center justify-center p-4 animate-fadeIn"
+          onClick={() => setSelectedImage(null)}
+        >
+          {/* Close Button */}
+          <button
+            onClick={() => setSelectedImage(null)}
+            className="absolute top-4 right-4 p-3 bg-white/10 backdrop-blur-md rounded-full hover:bg-white/20 transition-all group"
+          >
+            <X className="w-6 h-6 text-white group-hover:rotate-90 transition-transform duration-300" />
+          </button>
+
+          {/* Image */}
+          <div
+            className="max-w-6xl w-full animate-scaleIn"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <img
+              src={selectedImage.url}
+              alt="preview"
+              className="w-full h-auto rounded-2xl shadow-2xl"
+            />
+
+            <p className="text-center text-gray-300 mt-4 text-sm">
+              {t("closeText")}
+            </p>
           </div>
         </div>
       )}
+
+      {/* ✅ Animation */}
+      <style jsx>{`
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+          }
+          to {
+            opacity: 1;
+          }
+        }
+
+        @keyframes scaleIn {
+          from {
+            transform: scale(0.9);
+            opacity: 0;
+          }
+          to {
+            transform: scale(1);
+            opacity: 1;
+          }
+        }
+
+        .animate-fadeIn {
+          animation: fadeIn 0.2s ease-out;
+        }
+
+        .animate-scaleIn {
+          animation: scaleIn 0.3s ease-out;
+        }
+      `}</style>
     </div>
   );
 }

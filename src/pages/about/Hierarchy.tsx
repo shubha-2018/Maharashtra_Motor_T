@@ -1,7 +1,7 @@
-import React from "react";
-import { Shield, MapPin, Award, Star, BadgeCheck } from "lucide-react";
+import React, { useEffect, useState } from "react";
+import { Shield, ArrowLeft, MapPin, BadgeCheck, Star, Award } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import { useLanguageContext } from "../../contexts/LanguageContext";
-// import FlowChart from "../../components/Flash";
 
 import id1 from "../../assets/MT-Officer/deshmukh123.jpg";
 import id3 from "../../assets/MT-Officer/sandip_shinde.jpg";
@@ -10,14 +10,13 @@ import id7 from "../../assets/MT-Officer/morale_sir12.jpg";
 import id8 from "../../assets/MT-Officer/gayatri_sp-removebg-preview.png";
 import id2 from "../../assets/MT-Officer/atul_patilsir.jpg";
 
+/* ─────────────── DATA ─────────────── */
+
 const officers = [
   {
     id: 0, type: "adgp",
     name: { marathi: "श्री. दीपक शिवानंद पाण्डेय्", english: "Shri. Deepak Shivanand Pandey" },
-    position: {
-      marathi: "अपर पोलीस महासंचालक व संचालक, पोलीस दळणवळण, माहिती तंत्रज्ञान व परिवहन, महाराष्ट्र राज्य, पुणे",
-      english: "Additional Director General of Police And Director, IT and Logistics, Maharashtra State, Pune",
-    },
+    position: { marathi: "अपर पोलीस महासंचालक व संचालक, पोलीस दळणवळण, माहिती तंत्रज्ञान व परिवहन, महाराष्ट्र राज्य, पुणे", english: "Additional Director General of Police & Director, IT and Logistics, Maharashtra State, Pune" },
     badge: { marathi: "भा पो से", english: "IPS" },
     rank: { marathi: "अपर महासंचालक", english: "Addl. Director General" },
     image: id0,
@@ -25,10 +24,7 @@ const officers = [
   {
     id: 1, type: "igp",
     name: { marathi: "श्री अशोक मोराळे", english: "Shri. Ashok Morale" },
-    position: {
-      marathi: "विशेष पोलीस महानिरीक्षक, मोटार परिवहन, महाराष्ट्र राज्य, पुणे",
-      english: "Special Inspector General of Police, Motor Transport, Maharashtra State, Pune",
-    },
+    position: { marathi: "विशेष पोलीस महानिरीक्षक, मोटार परिवहन, महाराष्ट्र राज्य, पुणे", english: "Special Inspector General of Police, Motor Transport, Maharashtra State, Pune" },
     badge: { marathi: "भा पो से", english: "IPS" },
     rank: { marathi: "विशेष महानिरीक्षक", english: "Spl. Inspector General" },
     image: id7,
@@ -36,10 +32,7 @@ const officers = [
   {
     id: 2, type: "dig",
     name: { marathi: "श्री. अतुल पाटील", english: "Shri. Atul Patil" },
-    position: {
-      marathi: "पोलीस उप-महानिरीक्षक, मोटार परिवहन, महाराष्ट्र राज्य, पुणे",
-      english: "Deputy Inspector General of Police, Motor Transport, Maharashtra State, Pune",
-    },
+    position: { marathi: "पोलीस उप-महानिरीक्षक, मोटार परिवहन, महाराष्ट्र राज्य, पुणे", english: "Deputy Inspector General of Police, Motor Transport, Maharashtra State, Pune" },
     rank: { marathi: "उप महानिरीक्षक", english: "Dy. Inspector General" },
     image: id2,
   },
@@ -85,280 +78,635 @@ const officers = [
   },
 ];
 
-// ── Tier configs ───────────────────────────────────────────────
-const tierConfig: Record<string, {
-  accentBar: string;
-  rankBg: string;
-  rankText: string;
-  divider: string;
-  photoHeight: string;
-}> = {
-  adgp: {
-    accentBar:   "bg-amber-500",
-    rankBg:      "bg-amber-50 dark:bg-amber-900/30",
-    rankText:    "text-amber-900 dark:text-amber-300",
-    divider:     "bg-amber-500",
-    photoHeight: "w-[120px] h-[160px]",
-  },
-  igp: {
-    accentBar:   "bg-blue-500",
-    rankBg:      "bg-blue-50 dark:bg-blue-900/30",
-    rankText:    "text-blue-900 dark:text-blue-300",
-    divider:     "bg-blue-500",
-    photoHeight: "w-[120px] h-[148px]",
-  },
-  dig: {
-    accentBar:   "bg-indigo-400",
-    rankBg:      "bg-indigo-50 dark:bg-indigo-900/30",
-    rankText:    "text-indigo-900 dark:text-indigo-300",
-    divider:     "bg-indigo-400",
-    photoHeight: "w-[120px] h-[136px]",
-  },
-  sp: {
-    accentBar:   "bg-slate-400",
-    rankBg:      "bg-gray-100 dark:bg-gray-800",
-    rankText:    "text-gray-600 dark:text-gray-300",
-    divider:     "bg-slate-400",
-    photoHeight: "w-full",
-  },
+/* ─────────────── STYLES ─────────────── */
+
+const injectStyles = () => {
+  if (document.getElementById("hierarchy-styles")) return;
+  const style = document.createElement("style");
+  style.id = "hierarchy-styles";
+  style.textContent = `
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Nunito:wght@300;400;500;600&display=swap');
+
+    /* ── Page ── */
+    .hier-page {
+      font-family: 'Nunito', sans-serif;
+      min-height: 100vh;
+      background: #060d1f;
+      background-image:
+        radial-gradient(ellipse 90% 55% at 50% -5%, rgba(201,168,76,0.18) 0%, transparent 65%),
+        radial-gradient(ellipse 50% 60% at 90% 100%, rgba(20,50,110,0.5) 0%, transparent 55%),
+        radial-gradient(ellipse 50% 60% at 10% 100%, rgba(20,50,110,0.4) 0%, transparent 55%);
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* subtle grid texture */
+    .hier-page::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        repeating-linear-gradient(0deg, transparent, transparent 59px, rgba(201,168,76,0.025) 59px, rgba(201,168,76,0.025) 60px),
+        repeating-linear-gradient(90deg, transparent, transparent 59px, rgba(201,168,76,0.025) 59px, rgba(201,168,76,0.025) 60px);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .hier-content { position: relative; z-index: 1; }
+
+    /* ── Back button ── */
+    .hier-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      background: rgba(201,168,76,0.1);
+      border: 1px solid rgba(201,168,76,0.35);
+      color: #c9a84c;
+      font-size: 12px;
+      font-family: 'Nunito', sans-serif;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.25s;
+      position: fixed;
+      top: 22px;
+      left: 22px;
+      z-index: 50;
+      backdrop-filter: blur(10px);
+    }
+    .hier-back:hover {
+      background: rgba(201,168,76,0.22);
+      border-color: rgba(201,168,76,0.65);
+      transform: translateX(-2px);
+    }
+
+    /* ── Header ── */
+    .hier-header {
+      text-align: center;
+      padding: 72px 20px 48px;
+    }
+    .hier-emblem {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: linear-gradient(145deg, #a07830 0%, #e8c97a 45%, #b09040 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+      box-shadow:
+        0 0 0 1px rgba(201,168,76,0.4),
+        0 0 0 8px rgba(201,168,76,0.07),
+        0 0 50px rgba(201,168,76,0.25);
+    }
+    .hier-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 40px;
+      font-weight: 700;
+      color: #f0e0b0;
+      letter-spacing: 0.01em;
+      margin: 0 0 10px;
+      text-shadow: 0 2px 20px rgba(201,168,76,0.3);
+    }
+    .hier-subtitle {
+      font-size: 13px;
+      font-weight: 500;
+      color: rgba(201,168,76,0.7);
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      margin: 0;
+    }
+    .hier-divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      margin-top: 24px;
+    }
+    .hier-divider-line {
+      width: 100px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(201,168,76,0.6));
+    }
+    .hier-divider-line.rev { background: linear-gradient(90deg, rgba(201,168,76,0.6), transparent); }
+    .hier-divider-diamond {
+      width: 8px; height: 8px;
+      background: #c9a84c;
+      transform: rotate(45deg);
+      box-shadow: 0 0 8px rgba(201,168,76,0.5);
+    }
+
+    /* ── Senior officer cards ── */
+    .hier-senior-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0 20px;
+    }
+
+    .hier-senior-card {
+      width: 100%;
+      max-width: 560px;
+      background: linear-gradient(145deg, rgba(255,255,255,0.07) 0%, rgba(255,255,255,0.025) 100%);
+      border: 1px solid rgba(201,168,76,0.25);
+      border-radius: 16px;
+      overflow: hidden;
+      position: relative;
+      transition: transform 0.3s, box-shadow 0.3s;
+      animation: fadeSlideIn 0.55s cubic-bezier(0.22,1,0.36,1) both;
+      backdrop-filter: blur(6px);
+    }
+    .hier-senior-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 28px 70px rgba(0,0,0,0.5), 0 0 0 1px rgba(201,168,76,0.4), 0 0 40px rgba(201,168,76,0.08);
+    }
+    .hier-senior-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, #c9a84c 30%, #f0d878 50%, #c9a84c 70%, transparent);
+    }
+
+    /* ADGP gets special glow */
+    .hier-senior-card.adgp-card {
+      border-color: rgba(201,168,76,0.4);
+      background: linear-gradient(145deg, rgba(201,168,76,0.1) 0%, rgba(255,255,255,0.03) 100%);
+    }
+    .hier-senior-card.adgp-card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 16px;
+      box-shadow: inset 0 0 60px rgba(201,168,76,0.05);
+      pointer-events: none;
+    }
+
+    .hier-card-inner {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      padding: 28px 32px;
+    }
+
+    /* ── Photo rings ── */
+    .hier-photo-ring {
+      flex-shrink: 0;
+      border-radius: 50%;
+      padding: 3px;
+      background: linear-gradient(145deg, #a07830, #f0d878, #a07830);
+      box-shadow: 0 0 0 3px rgba(201,168,76,0.15), 0 8px 30px rgba(0,0,0,0.4);
+    }
+    .hier-photo-ring.size-adgp { width: 130px; height: 130px; }
+    .hier-photo-ring.size-igp  { width: 116px; height: 116px; }
+    .hier-photo-ring.size-dig  { width: 110px; height: 110px; }
+
+    .hier-photo-ring img,
+    .hier-photo-placeholder {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #111d35;
+    }
+
+    .hier-card-info { flex: 1; min-width: 0; }
+
+    .hier-card-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 4px 12px;
+      background: rgba(201,168,76,0.14);
+      border: 1px solid rgba(201,168,76,0.35);
+      border-radius: 4px;
+      font-size: 10px;
+      font-weight: 700;
+      color: #c9a84c;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .hier-card-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      font-weight: 700;
+      color: #f0e0b0;
+      margin: 0 0 10px;
+      line-height: 1.2;
+    }
+    .hier-senior-card.adgp-card .hier-card-name {
+      font-size: 26px;
+    }
+
+    .hier-card-pos {
+      font-size: 13px;
+      font-weight: 400;
+      color: rgba(210,210,230,0.7);
+      line-height: 1.65;
+      margin: 0;
+    }
+
+    /* ── Rank strip ── */
+    .hier-rank-strip {
+      background: rgba(201,168,76,0.07);
+      border-top: 1px solid rgba(201,168,76,0.15);
+      padding: 10px 32px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .hier-rank-strip span {
+      font-size: 10px;
+      font-weight: 700;
+      color: rgba(201,168,76,0.85);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    /* ── Connector ── */
+    .hier-connector {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2px 0;
+    }
+    .hier-connector-line {
+      width: 2px;
+      background: linear-gradient(to bottom, rgba(201,168,76,0.6), rgba(201,168,76,0.2));
+    }
+    .hier-connector-line.tall { height: 32px; }
+    .hier-connector-line.short { height: 18px; }
+    .hier-connector-dot {
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      border: 2px solid #c9a84c;
+      background: rgba(201,168,76,0.25);
+      box-shadow: 0 0 8px rgba(201,168,76,0.4);
+    }
+
+    /* ── Branch ── */
+    .hier-branch {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      padding: 0 20px;
+    }
+    .hier-branch-line {
+      position: relative;
+      width: 92%;
+      max-width: 1000px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent 2%, rgba(201,168,76,0.35) 15%, rgba(201,168,76,0.35) 85%, transparent 98%);
+    }
+    .hier-branch-line::after {
+      content: '';
+      position: absolute;
+      top: -4px; left: 50%;
+      transform: translateX(-50%);
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      background: #c9a84c;
+      box-shadow: 0 0 10px rgba(201,168,76,0.6);
+    }
+    .hier-tick {
+      position: absolute;
+      top: 0;
+      width: 2px;
+      height: 14px;
+      background: rgba(201,168,76,0.4);
+      transform: translateX(-50%);
+    }
+
+    .hier-branch-label {
+      font-size: 11px;
+      font-weight: 600;
+      color: rgba(201,168,76,0.65);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin: 14px 0 6px;
+      text-align: center;
+    }
+
+    /* ── SP grid ── */
+    .hier-sp-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 20px;
+      padding: 16px 28px 60px;
+      max-width: 1100px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .hier-sp-card {
+      background: linear-gradient(160deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.02) 100%);
+      border: 1px solid rgba(201,168,76,0.18);
+      border-radius: 14px;
+      overflow: hidden;
+      position: relative;
+      transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+      animation: fadeSlideIn 0.55s cubic-bezier(0.22,1,0.36,1) both;
+      backdrop-filter: blur(6px);
+    }
+    .hier-sp-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(201,168,76,0.4);
+      box-shadow: 0 20px 55px rgba(0,0,0,0.35), 0 0 30px rgba(201,168,76,0.07);
+    }
+    .hier-sp-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, rgba(201,168,76,0.6), transparent);
+    }
+    .hier-sp-card.vacant {
+      border-color: rgba(255,255,255,0.07);
+      opacity: 0.55;
+    }
+    .hier-sp-card.vacant::before {
+      background: rgba(255,255,255,0.05);
+    }
+
+    /* SP photo — bigger now */
+    .hier-sp-photo {
+      display: flex;
+      justify-content: center;
+      padding: 24px 0 14px;
+    }
+    .hier-sp-photo-ring {
+      width: 100px; height: 100px;
+      border-radius: 50%;
+      padding: 3px;
+      background: linear-gradient(145deg, #a07830, #f0d878, #a07830);
+      box-shadow: 0 0 0 3px rgba(201,168,76,0.12), 0 6px 24px rgba(0,0,0,0.4);
+    }
+    .hier-sp-photo-ring.vacant-ring {
+      background: rgba(255,255,255,0.08);
+      box-shadow: none;
+    }
+    .hier-sp-photo-ring img {
+      width: 100%; height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    .hier-sp-photo-placeholder {
+      width: 100%; height: 100%;
+      border-radius: 50%;
+      background: #0e1928;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hier-sp-info {
+      padding: 4px 20px 18px;
+      text-align: center;
+    }
+    .hier-sp-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: #e8d8b0;
+      margin: 0 0 8px;
+      line-height: 1.25;
+    }
+    .hier-sp-name.vacant-name {
+      color: rgba(255,255,255,0.28);
+      font-style: italic;
+      font-weight: 400;
+    }
+    .hier-sp-pos {
+      font-size: 12px;
+      font-weight: 400;
+      color: rgba(190,190,215,0.6);
+      line-height: 1.55;
+      margin: 0 0 14px;
+    }
+
+    .hier-sp-footer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      flex-wrap: wrap;
+      padding: 8px 14px;
+      background: rgba(201,168,76,0.07);
+      border-top: 1px solid rgba(201,168,76,0.12);
+    }
+    .hier-sp-footer span {
+      font-size: 10px;
+      font-weight: 700;
+      color: rgba(201,168,76,0.85);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    /* ── Animations ── */
+    @keyframes fadeSlideIn {
+      from { opacity: 0; transform: translateY(28px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+  `;
+  document.head.appendChild(style);
 };
 
-// ── Connector ─────────────────────────────────────────────────
+/* ─────────────── CONNECTOR ─────────────── */
 const Connector = () => (
-  <div className="flex flex-col items-center py-1">
-    <div className="w-px h-6 bg-gray-200 dark:bg-gray-700" />
-    <div className="w-2 h-2 rounded-full border-[1.5px] border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900" />
-    <div className="w-px h-6 bg-gray-200 dark:bg-gray-700" />
+  <div className="hier-connector">
+    <div className="hier-connector-line tall" />
+    <div className="hier-connector-dot" />
+    <div className="hier-connector-line tall" />
   </div>
 );
 
-// ── Senior Officer Card (horizontal layout) ───────────────────
-const SeniorCard = ({ officer }: { officer: any }) => {
+/* ─────────────── SENIOR CARD ─────────────── */
+const SeniorCard = ({ officer, delay = 0 }) => {
   const { language } = useLanguageContext();
-  const t = (obj: any) => (language === "mr" ? obj.marathi : obj.english);
-  const cfg = tierConfig[officer.type];
+  const t = (obj) => (language === "mr" ? obj.marathi : obj.english);
   const isVacant = officer.name.english === "Vacant";
+  const sizeClass = `size-${officer.type}`;
 
   return (
-    <div className="w-full flex rounded-xl overflow-hidden border border-gray-100 dark:border-gray-800 bg-white dark:bg-gray-900 hover:border-gray-200 dark:hover:border-gray-700 transition-all duration-200">
-      
-      {/* Left accent bar */}
-      <div className={`w-1 flex-shrink-0 ${cfg.accentBar}`} />
+    <div
+      className={`hier-senior-card ${officer.type === "adgp" ? "adgp-card" : ""}`}
+      style={{ animationDelay: `${delay}ms` }}
+    >
+      <div className="hier-card-inner">
+        <div className={`hier-photo-ring ${sizeClass}`}>
+          {officer.image && !isVacant ? (
+            <img src={officer.image} alt={t(officer.name)} />
+          ) : (
+            <div className="hier-photo-placeholder">
+              <Shield size={32} color="rgba(201,168,76,0.5)" />
+            </div>
+          )}
+        </div>
 
-      {/* Photo */}
-      <div className={`relative flex-shrink-0 overflow-hidden bg-gray-100 dark:bg-gray-800 ${cfg.photoHeight}`}>
-        {officer.image && !isVacant ? (
-          <img
-            src={officer.image}
-            alt={t(officer.name)}
-            className="w-full h-full object-cover"
-            style={{ objectPosition: "center 20%" }}
-          />
-        ) : (
-          <div className="w-full h-full flex items-center justify-center">
-            <Shield className="w-10 h-10 text-gray-300 dark:text-gray-600" />
-          </div>
-        )}
-
-        {/* IPS badge */}
-        {officer.badge && (
-          <div className="absolute top-2 right-2 flex items-center gap-1 bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm px-2 py-0.5 rounded-full">
-            <BadgeCheck className="w-3 h-3 text-blue-600" />
-            <span className="text-[10px] font-medium text-blue-700 dark:text-blue-400">
+        <div className="hier-card-info">
+          {officer.badge && (
+            <div className="hier-card-badge">
+              <Award size={10} />
               {t(officer.badge)}
-            </span>
-          </div>
-        )}
+            </div>
+          )}
+          <p className="hier-card-name">{t(officer.name)}</p>
+          <p className="hier-card-pos">{t(officer.position)}</p>
+        </div>
       </div>
 
-      {/* Info */}
-      <div className="flex-1 px-5 py-4 flex flex-col justify-center gap-1.5">
-        <span className={`self-start text-[10px] font-medium px-3 py-0.5 rounded-full ${cfg.rankBg} ${cfg.rankText}`}>
-          {t(officer.rank)}
-        </span>
-        <h3 className="text-[15px] font-medium text-gray-900 dark:text-white leading-snug">
-          {t(officer.name)}
-        </h3>
-        <div className={`w-7 h-[2px] rounded-full ${cfg.divider}`} />
-        <p className="text-[11.5px] text-gray-500 dark:text-gray-400 leading-relaxed">
-          {t(officer.position)}
-        </p>
+      <div className="hier-rank-strip">
+        <BadgeCheck size={14} color="#c9a84c" />
+        <span>{t(officer.rank)}</span>
       </div>
     </div>
   );
 };
 
-// ── SP Card ───────────────────────────────────────────────────
-const SpCard = ({ officer }: { officer: any }) => {
+/* ─────────────── SP CARD ─────────────── */
+const SPCard = ({ officer, delay = 0 }) => {
   const { language } = useLanguageContext();
-  const t = (obj: any) => (language === "mr" ? obj.marathi : obj.english);
+  const t = (obj) => (language === "mr" ? obj.marathi : obj.english);
   const isVacant = officer.name.english === "Vacant";
 
   return (
     <div
-      className={`rounded-xl overflow-hidden bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 border-l-[3px] border-l-slate-400 flex flex-col hover:border-gray-200 dark:hover:border-gray-700 transition-all duration-200 ${isVacant ? "opacity-45" : ""}`}
+      className={`hier-sp-card ${isVacant ? "vacant" : ""}`}
+      style={{ animationDelay: `${delay}ms` }}
     >
-      {/* Photo */}
-      <div className="relative w-full aspect-[3/4] max-h-[160px] overflow-hidden bg-gray-100 dark:bg-gray-800">
-        {officer.image && !isVacant ? (
-          <img
-            src={officer.image}
-            alt={t(officer.name)}
-            className="w-full h-full object-cover"
-            style={{ objectPosition: "center 20%" }}
-          />
-        ) : (
-          <div className="w-full h-full flex items-center justify-center">
-            <Shield className="w-8 h-8 text-gray-300 dark:text-gray-600" />
-          </div>
-        )}
-
-        {officer.location && (
-          <div className="absolute bottom-1.5 left-1.5 flex items-center gap-1 bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm px-2 py-0.5 rounded-full">
-            <MapPin className="w-2.5 h-2.5 text-blue-600 flex-shrink-0" />
-            <span className="text-[9px] font-medium text-blue-700 dark:text-blue-300">
-              {t(officer.location)}
-            </span>
-          </div>
-        )}
+      <div className="hier-sp-photo">
+        <div className={`hier-sp-photo-ring ${isVacant ? "vacant-ring" : ""}`}>
+          {officer.image && !isVacant ? (
+            <img src={officer.image} alt={t(officer.name)} />
+          ) : (
+            <div className="hier-sp-photo-placeholder">
+              <Shield size={28} color="rgba(201,168,76,0.35)" />
+            </div>
+          )}
+        </div>
       </div>
 
-      {/* Info */}
-      <div className="px-3 py-3 flex flex-col gap-1.5 flex-1">
-        <span className="self-start text-[9px] font-medium px-2.5 py-0.5 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400">
-          {t(officer.rank)}
-        </span>
-        <h3 className="text-[12px] font-medium text-gray-900 dark:text-white leading-tight">
+      <div className="hier-sp-info">
+        <p className={`hier-sp-name ${isVacant ? "vacant-name" : ""}`}>
           {t(officer.name)}
-        </h3>
-        <div className="w-4 h-[2px] rounded-full bg-slate-400" />
-        <p className="text-[10px] text-gray-400 dark:text-gray-500 leading-snug flex-1">
-          {t(officer.position)}
         </p>
+        <p className="hier-sp-pos">{t(officer.position)}</p>
+      </div>
+
+      <div className="hier-sp-footer">
+        <BadgeCheck size={11} color="rgba(201,168,76,0.75)" />
+        <span>{t(officer.rank)}</span>
+        {officer.location && (
+          <>
+            <span style={{ opacity: 0.35 }}>·</span>
+            <MapPin size={10} color="rgba(201,168,76,0.65)" />
+            <span>{t(officer.location)}</span>
+          </>
+        )}
       </div>
     </div>
   );
 };
 
-// ── Main Page ─────────────────────────────────────────────────
-const OrganisationStructure = () => {
+/* ─────────────── MAIN ─────────────── */
+const Hierarchy = () => {
+  const navigate = useNavigate();
   const { language } = useLanguageContext();
+  const isMarathi = language === "mr";
 
-  const adgp = officers.find((o) => o.type === "adgp")!;
-  const igp  = officers.find((o) => o.type === "igp")!;
-  const dig  = officers.find((o) => o.type === "dig")!;
+  useEffect(() => { injectStyles(); }, []);
+
+  const adgp = officers.find((o) => o.type === "adgp");
+  const igp  = officers.find((o) => o.type === "igp");
+  const dig  = officers.find((o) => o.type === "dig");
   const sps  = officers.filter((o) => o.type === "sp");
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-950 pb-24">
+    <div className="hier-page">
+      <div className="hier-content">
 
-      {/* ── Hero Header ── */}
-      <div className="relative bg-gradient-to-br from-blue-950 via-blue-900 to-indigo-900 py-14 text-center overflow-hidden">
-        <div
-          className="absolute inset-0 opacity-[0.06]"
-          style={{
-            backgroundImage: "repeating-linear-gradient(45deg,#fff 0,#fff 1px,transparent 0,transparent 50%)",
-            backgroundSize: "18px 18px",
-          }}
-        />
-        <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-amber-600 via-amber-300 to-amber-600" />
+        {/* Back */}
+        <button className="hier-back" onClick={() => navigate(-1)}>
+          <ArrowLeft size={13} />
+          {isMarathi ? "मागे" : "Back"}
+        </button>
 
-        <div className="relative z-10 flex flex-col items-center gap-2.5">
-          <div className="flex items-center gap-3 mb-0.5">
-            <div className="w-10 h-px bg-amber-400" />
-            <Award className="w-5 h-5 text-amber-400" />
-            <div className="w-10 h-px bg-amber-400" />
+        {/* Header */}
+        <div className="hier-header">
+          <div className="hier-emblem">
+            <Shield size={34} color="#060d1f" />
           </div>
-          <h1 className="text-3xl md:text-4xl font-bold text-white tracking-tight">
-            {language === "mr" ? "संघटनात्मक रचना" : "Organisational Structure"}
+          <h1 className="hier-title">
+            {isMarathi ? "संघटनात्मक रचना" : "Organizational Structure"}
           </h1>
-          <p className="text-blue-200/80 text-sm max-w-md mx-auto px-4">
-            {language === "mr"
+          <p className="hier-subtitle">
+            {isMarathi
               ? "महाराष्ट्र राज्य पोलीस मोटार परिवहन विभाग"
-              : "Maharashtra State Police Motor Transport Department"}
+              : "Maharashtra State Police · Motor Transport Department"}
           </p>
-          <div className="flex items-center gap-3 mt-0.5">
-            <div className="w-10 h-px bg-amber-400" />
-            <Star className="w-3.5 h-3.5 text-amber-400 fill-amber-400" />
-            <div className="w-10 h-px bg-amber-400" />
+          <div className="hier-divider">
+            <div className="hier-divider-line" />
+            <div className="hier-divider-diamond" />
+            <div className="hier-divider-line rev" />
           </div>
         </div>
 
-        <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-gradient-to-r from-amber-600 via-amber-300 to-amber-600" />
-      </div>
-
-      {/* ── Flow Chart ── */}
-      <div className="flex justify-center my-10 px-4">
-        <FlowChart />
-      </div>
-
-      {/* ── Hierarchy ── */}
-      <div className="flex flex-col items-center px-4">
-
-        <div className="flex items-center gap-3 mb-8">
-          <div className="h-px w-14 bg-gray-200 dark:bg-gray-800" />
-          <span className="text-[10px] font-medium tracking-widest uppercase text-gray-400 dark:text-gray-500">
-            {language === "mr" ? "अधिकारी पदानुक्रम" : "Officer Hierarchy"}
-          </span>
-          <div className="h-px w-14 bg-gray-200 dark:bg-gray-800" />
+        {/* Senior chain */}
+        <div className="hier-senior-wrap">
+          <SeniorCard officer={adgp} delay={0} />
+          <Connector />
+          <SeniorCard officer={igp} delay={120} />
+          <Connector />
+          <SeniorCard officer={dig} delay={240} />
         </div>
 
-        {/* ADGP */}
-        <div className="w-full max-w-[460px]">
-          <SeniorCard officer={adgp} />
-        </div>
-
-        <Connector />
-
-        {/* IGP */}
-        <div className="w-full max-w-[460px]">
-          <SeniorCard officer={igp} />
-        </div>
-
-        <Connector />
-
-        {/* DIG */}
-        <div className="w-full max-w-[460px]">
-          <SeniorCard officer={dig} />
-        </div>
-
-        {/* Branch down */}
-        <div className="flex flex-col items-center">
-          <div className="w-px h-6 bg-gray-200 dark:bg-gray-700" />
-          <div className="w-2 h-2 rounded-full border-[1.5px] border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900" />
-          <div className="w-px h-4 bg-gray-200 dark:bg-gray-700" />
-        </div>
-
-        {/* Horizontal branch */}
-        <div className="w-full max-w-[680px] relative">
-          <div className="absolute top-0 left-[12.5%] right-[12.5%] h-px bg-gray-200 dark:bg-gray-700" />
-          <div className="grid grid-cols-4 gap-3">
+        {/* Branch lines to SP row */}
+        <div className="hier-branch" style={{ marginTop: 8 }}>
+          <div
+            className="hier-connector-line tall"
+            style={{ marginBottom: 0 }}
+          />
+          <div className="hier-branch-line">
             {sps.map((_, i) => (
-              <div key={i} className="flex justify-center">
-                <div className="w-px h-5 bg-gray-200 dark:bg-gray-700" />
-              </div>
+              <div
+                key={i}
+                className="hier-tick"
+                style={{ left: `${(i * 100) / (sps.length - 1)}%` }}
+              />
             ))}
           </div>
         </div>
 
-        {/* Range Officers label */}
-        <div className="flex items-center gap-3 mb-5 mt-1.5">
-          <div className="h-px w-10 bg-gray-200 dark:bg-gray-700" />
-          <span className="text-[10px] font-medium tracking-widest uppercase text-gray-400 dark:text-gray-500">
-            {language === "mr" ? "परिक्षेत्र अधिकारी" : "Range Officers"}
-          </span>
-          <div className="h-px w-10 bg-gray-200 dark:bg-gray-700" />
-        </div>
+        {/* SP section label */}
+        <p className="hier-branch-label">
+          {isMarathi
+            ? "पोलीस अधीक्षक · परिक्षेत्र"
+            : "Addl. Superintendents of Police · Regional Offices"}
+        </p>
 
-        {/* SP Cards */}
-        <div className="w-full max-w-[680px] grid grid-cols-2 md:grid-cols-4 gap-3">
-          {sps.map((officer) => (
-            <SpCard key={officer.id} officer={officer} />
+        {/* SP cards */}
+        <div className="hier-sp-grid">
+          {sps.map((officer, i) => (
+            <SPCard
+              key={officer.id}
+              officer={officer}
+              delay={360 + i * 70}
+            />
           ))}
         </div>
+
       </div>
     </div>
   );
 };
 
-export default OrganisationStructure;
+export default Hierarchy;

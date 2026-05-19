@@ -4,7 +4,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 // ✅ Import Images
 import slider1 from "@/assets/hero slider/police1.jpg";
 import slider2 from "@/assets/hero slider/police22.jpg";
-import slider3 from "@/assets/mt_photos/new-ig-office.jpeg";
+import slider3 from "@/assets/hero slider/igoff11.jpeg";
 import slider4 from "@/assets/hero slider/igoffice.jpg";
 import slider5 from "@/assets/photo-Gallery-mt/karmachari.jpg";
 

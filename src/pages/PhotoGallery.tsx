@@ -39,6 +39,12 @@ import photo28 from "../assets/mt_photos/photo-gallery-mt/SRPF3.jpeg";
 import photo29 from "../assets/mt_photos/photo-gallery-mt/SRPF4.jpeg";
 import photo30 from "../assets/mt_photos/photo-gallery-mt/SRPF5.jpeg";
 
+import photo31 from "../assets/mt_photos/photo-gallery-mt/dgp3.jpeg";
+import photo32 from "../assets/mt_photos/photo-gallery-mt/dgp2.jpeg";
+import photo33 from "../assets/mt_photos/photo-gallery-mt/dgp1.jpeg";
+import photo34 from "../assets/mt_photos/photo-gallery-mt/d1.jpeg";
+import photo35 from "../assets/mt_photos/photo-gallery-mt/d2.jpeg";
+
 export default function PhotoGallery() {
   const [selectedImage, setSelectedImage] = useState(null);
   const [likedImages, setLikedImages] = useState(new Set());
@@ -63,11 +69,11 @@ export default function PhotoGallery() {
   // ✅ Gallery Data
   const galleryData = {
     dgpVisit: [
-      { id: 1, url: photo1 },
-      { id: 2, url: photo2 },
-      { id: 3, url: photo3 },
-      { id: 4, url: photo4 },
-      { id: 5, url: photo5 },
+      { id: 1, url: photo31 },
+      { id: 2, url: photo32 },
+      { id: 3, url: photo33 },
+      { id: 4, url: photo34 },
+      { id: 5, url: photo35 },
     ],
 
     igOffice: [

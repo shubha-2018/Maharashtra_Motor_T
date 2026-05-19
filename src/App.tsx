@@ -22,7 +22,7 @@ import DirectorsDesk from "./pages/about/DirectorsDesk";
 import FormerDirectors from "./pages/about/FormerDirectors";
 import Hierarchy from "./pages/about/Hierarchy";
 import AboutDepartment from "./pages/about/AboutDepartment";
-import OfficesHeadquarters from "./pages/about/OfficesHeadquarters";
+// import OfficesHeadquarters from "./pages/about/OfficesHeadquarters";
 
 /* ================= TRAINING ================= */
 import TrainingGallery from "./pages/Training/TrainingGallery";
@@ -84,7 +84,7 @@ const AppRoutes = () => {
         <Route path="about/former-directors" element={<FormerDirectors />} />
         <Route path="about/hierarchy" element={<CombinedHierarchy />} />
         <Route path="about/department" element={<AboutDepartment />} />
-        <Route path="about/offices" element={<OfficesHeadquarters />} />
+        {/* <Route path="about/offices" element={<OfficesHeadquarters />} /> */}
 
         {/* ================= TRAINING ================= */}
 

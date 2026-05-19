@@ -45,6 +45,27 @@ import photo33 from "../assets/mt_photos/photo-gallery-mt/dgp1.jpeg";
 import photo34 from "../assets/mt_photos/photo-gallery-mt/d1.jpeg";
 import photo35 from "../assets/mt_photos/photo-gallery-mt/d2.jpeg";
 
+
+import photo36 from "../assets/mt_photos/photo-gallery-mt/s1.jpeg";
+import photo37 from "../assets/mt_photos/photo-gallery-mt/s2.jpeg";
+import photo38 from "../assets/mt_photos/photo-gallery-mt/s4.jpeg";
+import photo39 from "../assets/mt_photos/photo-gallery-mt/h1.jpeg";
+import photo40 from "../assets/mt_photos/photo-gallery-mt/h2.jpeg";
+
+import photo41 from "../assets/mt_photos/photo-gallery-mt/c1.jpeg";
+import photo42 from "../assets/mt_photos/photo-gallery-mt/c2.jpeg";
+import photo43 from "../assets/mt_photos/photo-gallery-mt/c5.jpeg";
+import photo44 from "../assets/mt_photos/photo-gallery-mt/s5.jpeg";
+import photo45 from "../assets/mt_photos/photo-gallery-mt/c4.jpeg";
+
+import photo91 from "../assets/mt_photos/photo-gallery-mt/i1.jpeg";
+import photo92 from "../assets/mt_photos/photo-gallery-mt/i2.jpeg";
+import photo93 from "../assets/mt_photos/photo-gallery-mt/i3.jpeg";
+import photo94 from "../assets/mt_photos/photo-gallery-mt/i4.jpeg";
+import photo95 from "../assets/mt_photos/photo-gallery-mt/i5.jpeg";
+
+
+
 export default function PhotoGallery() {
   const [selectedImage, setSelectedImage] = useState(null);
   const [likedImages, setLikedImages] = useState(new Set());
@@ -75,21 +96,28 @@ export default function PhotoGallery() {
       { id: 4, url: photo34 },
       { id: 5, url: photo35 },
     ],
+     igOffice1: [
+      { id: 6, url: photo91 },
+      { id: 7, url: photo92 },
+      { id: 8, url: photo93 },
+      { id: 9, url: photo94 },
+      { id: 10, url: photo95 },
+    ],
 
     igOffice: [
-      { id: 6, url: photo6 },
-      { id: 7, url: photo7 },
-      { id: 8, url: photo8 },
-      { id: 9, url: photo9 },
-      { id: 10, url: photo10 },
+      { id: 6, url: photo36 },
+      { id: 7, url: photo37 },
+      { id: 8, url: photo38 },
+      { id: 9, url: photo39 },
+      { id: 10, url: photo40 },
     ],
 
     pimpriVisit: [
-      { id: 11, url: photo11 },
-      { id: 12, url: photo12 },
-      { id: 13, url: photo13 },
-      { id: 14, url: photo14 },
-      { id: 15, url: photo15 },
+      { id: 11, url: photo45 },
+      { id: 12, url: photo41 },
+      { id: 13, url: photo43 },
+       { id: 14, url: photo44 },
+       { id: 15, url: photo42},
     ],
 
     punecityvisit: [
@@ -227,43 +255,51 @@ export default function PhotoGallery() {
 
         {/* 1. DGP Visit */}
         <GallerySection
-          titleMr="पोलीस महासंचालक भेट"
+          titleMr="मा.पोलीस महासंचालक भेट"
           titleEn="Hon.DGP Visit"
           photos={galleryData.dgpVisit}
         />
 
+        
         {/* 2. IG Office Udghatan */}
         <GallerySection
-          titleMr="पोलीस महानिरीक्षक कार्यालय उद्घाटन"
-          titleEn="IG Office Inauguration"
+          titleMr="मा. विशेष पोलीस महानिरीक्षक कार्यालय उद्घाटन समारंभ"
+          titleEn="Hon.IG MT Office Inauguration"
+          photos={galleryData.igOffice1}
+        />
+
+        {/* 2. Office Udghatan */}
+        <GallerySection
+          titleMr="पोलीस चालक प्रशिक्षण केंद्र उद्घाटन"
+          titleEn="Police Driver Training Center Inauguration"
           photos={galleryData.igOffice}
         />
 
         {/* 3. Pimpri Chinchwad MT Visit */}
         <GallerySection
-          titleMr="पिंपरी चिंचवड मोटार परिवहन  भेट"
+          titleMr="पिंपरी चिंचवड पोलीस मोटार परिवहन विभाग भेट"
           titleEn="Pimpri Chinchwad MT Visit"
           photos={galleryData.pimpriVisit}
         />
 
         {/* 4. Pune City MT Visit */}
         <GallerySection
-          titleMr="पुणे शहर मोटार परिवहन  भेट"
+          titleMr="पुणे शहर पोलीस मोटार परिवहन विभाग भेट"
           titleEn="Pune City MT Visit"
           photos={galleryData.punecityvisit}
         />
 
         {/* 5. Pune Rural MT Visit */}
         <GallerySection
-          titleMr="पुणे ग्रामीण मोटार परिवहन  भेट"
+          titleMr="पुणे ग्रामीण पोलीस मोटार परिवहन विभाग भेट"
           titleEn="Pune Rural MT Visit"
           photos={galleryData.puneruralvisit}
         />
 
         {/* 6. SRPF Visit */}
         <GallerySection
-          titleMr="राज्य राखीव पोलीस दल भेट"
-          titleEn="SRPF Visit"
+          titleMr="राज्य राखीव पोलीस बल गट क्र १/२ मोटार परिवहन विभाग भेट"
+          titleEn="SRPF MT Visit"
           photos={galleryData.SRPFVisit}
         />
 

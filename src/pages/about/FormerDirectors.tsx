@@ -4,6 +4,20 @@ import { useLanguageContext } from "../../contexts/LanguageContext";
 import officer1 from "../../assets/SeniorOfficersMT/senioroff1.jpg";
 import officer2 from "../../assets/SeniorOfficersMT/senioroff2.jpg";
 import officer3 from "../../assets/SeniorOfficersMT/senioroff3.jpg";
+import officer4 from "../../assets/SeniorOfficersMT/GD-pol.jpeg";
+import officer5 from "../../assets/SeniorOfficersMT/rathod-sir.jpeg";
+import officer6 from "../../assets/SeniorOfficersMT/sp-gupta-sir.jpeg";
+import officer7 from "../../assets/SeniorOfficersMT/ugale.jpeg";
+import officer8 from "../../assets/SeniorOfficersMT/morale-sir.jpeg";
+import officer9 from "../../assets/SeniorOfficersMT/Quaiser-sir.jpeg";
+import officer10 from "../../assets/SeniorOfficersMT/r.k.sahaye.jpg";
+import officer11 from "../../assets/SeniorOfficersMT/fulare-sir.jpg";
+
+
+
+
+
+
 
 const SeniorOfficers = () => {
   const { language } = useLanguageContext();
@@ -46,25 +60,25 @@ const SeniorOfficers = () => {
       from: "14/11/2000", to: "30/11/2001",
     },
     {
-      image: null,
+      image: officer5,
       name:        { marathi: "श्री. एम. के. राठोड, भापोसे",      english: "Shri. M. K. Rathod, IPS"        },
       designation: { marathi: "उप महानिरीक्षक",                    english: "D.I.G.P."                       },
       from: "11/06/2002", to: "07/10/2003",
     },
     {
-      image: null,
+      image: officer4,
       name:        { marathi: "श्री. जी. डी. पोळ, भापोसे",        english: "Shri. G. D. Pol, IPS"           },
       designation: { marathi: "उप महानिरीक्षक",                    english: "D.I.G.P."                       },
       from: "24/11/2003", to: "21/07/2004",
     },
     {
-      image: null,
+      image: officer6,
       name:        { marathi: "श्री. एस. पी. गुप्ता, भापोसे",     english: "Shri. S. P. Gupta, IPS"         },
       designation: { marathi: "उप महानिरीक्षक",                    english: "D.I.G.P."                       },
       from: "12/08/2004", to: "27/09/2005",
     },
     {
-      image: null,
+      image: officer10,
       name:        { marathi: "श्री. आर. के. सहाय, भापोसे",       english: "Shri. R. K. Sahay, IPS"         },
       designation: { marathi: "उप महानिरीक्षक",                    english: "D.I.G.P."                       },
       from: "23/01/2006", to: "21/02/2007",
@@ -82,7 +96,7 @@ const SeniorOfficers = () => {
       from: "07/08/2010", to: "31/05/2011",
     },
     {
-      image: null,
+      image: officer7,
       name:        { marathi: "श्री. सी. एस. उघडे, भापोसे",       english: "Shri. C. S. Ughade, IPS"        },
       designation: { marathi: "विशेष पोलीस महानिरीक्षक",           english: "Spl. I.G.P."                    },
       from: "16/07/2012", to: "31/07/2015",
@@ -100,16 +114,22 @@ const SeniorOfficers = () => {
       from: "27/06/2019", to: "31/10/2019",
     },
     {
-      image: null,
+      image: officer11,
       name:        { marathi: "श्री. सुनील फुलारी, भापोसे",        english: "Shri. Sunil Phulari, IPS"       },
       designation: { marathi: "विशेष पोलीस महानिरीक्षक",           english: "Spl. I.G.P."                    },
       from: "28/04/2022", to: "16/12/2022",
     },
     {
-      image: null,
+      image: officer9,
       name:        { marathi: "श्री. क्वेझर खालिद, भापोसे",        english: "Shri. Quaiser Khalid, IPS"      },
       designation: { marathi: "विशेष पोलीस महानिरीक्षक",           english: "Spl. I.G.P."                    },
       from: "21/04/2023", to: "03/10/2023",
+    },
+    {
+      image: officer8,
+      name:        { marathi: "श्री.अशोक मोराळे, भापोसे",        english: "Shri.Ashok Morale, IPS"      },
+      designation: { marathi: "विशेष पोलीस महानिरीक्षक",           english: "Spl. I.G.P."                    },
+      from: "18/03/2025", to: "",
     },
   ];
 

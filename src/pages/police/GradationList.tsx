@@ -18,7 +18,7 @@ export default function GradationList() {
       title_mr: "सेवाज्येष्ठता यादी– जानेवारी २०२५",
       size: "1.52 MB",
       link: "https://mahpolwireless.stagingdsi.co.in/UploadedFiles/GradationLists/156.pdf",
-      uploadDate: "2025-01-10",
+      uploadDate: "2025-01-15",
     },
     {
       id: 2,

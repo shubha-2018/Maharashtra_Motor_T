@@ -12,10 +12,10 @@ export default function TrainingGallery() {
       enTitle: "Training Batch 71",
       mrTitle: "प्रशिक्षण बॅच ७१",
       images: [
-        "/batch71/img1.JPG",
-        "/batch71/img2.JPG",
-        "/batch71/img3.JPG",
-        "/batch71/img4.JPG",
+        "/batch71/IMG_8364.JPG",
+        "/batch71/DSCN0417.JPG",
+        "/batch71/DSCN0331.JPG",
+        "/batch71/DSCN0430.JPG",
       ],
     },
     {
@@ -23,10 +23,10 @@ export default function TrainingGallery() {
       enTitle: "Training Batch 72",
       mrTitle: "प्रशिक्षण बॅच ७२",
       images: [
-        "/batch71/img5.JPG",
-        "/batch71/img6.JPG",
-        "/batch71/img7.JPG",
-        "/batch71/img8.JPG",
+        "/batch72/IMG_3095.JPG",
+        "/batch72/IMG_3018.JPG",
+        "/batch72/IMG_3206.JPG",
+        "/batch72/IMG_3923.JPG",
       ],
     },
     {

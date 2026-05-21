@@ -36,7 +36,7 @@ import ListOfOfficers from "./pages/police/ListOfOfficers";
 import PromotionOrders from "./pages/police/PromotionOrders";
 import Transfers from "./pages/police/Transfers";
 import GradationList from "./pages/police/GradationList";
-import PositiveStories from "./pages/police/PositiveStories";
+// import PositiveStories from "./pages/police/PositiveStories";
 
 /* ================= CITIZEN PAGES ================= */
 import PressRelease from "./pages/citizen/PressRelease";
@@ -112,7 +112,7 @@ const AppRoutes = () => {
         <Route path="police/promotions" element={<PromotionOrders />} />
         <Route path="police/transfers" element={<Transfers />} />
         <Route path="police/gradation" element={<GradationList />} />
-        <Route path="police/stories" element={<PositiveStories />} />
+        {/* <Route path="police/stories" element={<PositiveStories />} /> */}
 
         {/* ================= FLASH ================= */}
         <Route path="gradation-list" element={<GradationList />} />

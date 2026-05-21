@@ -19,7 +19,7 @@ import photo11 from "../assets/images/a1.jpg";
 import photo12 from "../assets/images/a2.jpg";
 import photo13 from "../assets/images/a3.jpg";
 import photo14 from "../assets/images/karmachari.jpg";
-import photo15 from "../assets/images/a2.jpg";
+import photo15 from "../assets/images/a4.jpg";
 
 import photo16 from "../assets/mt_photos/photo-gallery-mt/puneR1.jpeg";
 import photo17 from "../assets/mt_photos/photo-gallery-mt/puneR5.jpeg";
@@ -116,8 +116,9 @@ export default function PhotoGallery() {
       { id: 11, url: photo45 },
       { id: 12, url: photo41 },
       { id: 13, url: photo43 },
-       { id: 14, url: photo44 },
-       { id: 15, url: photo42},
+       { id: 14, url: photo42},
+       { id: 15, url: photo44 },
+
     ],
 
     punecityvisit: [
@@ -137,11 +138,13 @@ export default function PhotoGallery() {
     ],
 
     SRPFVisit: [
-      { id: 26, url: photo26 },
+      { id: 30, url: photo30 },
+
       { id: 27, url: photo27 },
       { id: 28, url: photo28 },
       { id: 29, url: photo29 },
-      { id: 30, url: photo30 },
+      { id: 26, url: photo26 },
+
     ],
 
     AwardDistribution: [

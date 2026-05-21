@@ -81,9 +81,9 @@ export default function DirectorsDesk() {
             <div className="bg-gradient-to-r from-blue-50 via-blue-100 to-blue-50 
                             dark:from-blue-900/40 dark:via-blue-800/40 dark:to-blue-900/40 
                             p-8 rounded-2xl border border-blue-200 dark:border-blue-700 shadow-inner">
-              <p className="text-xl font-bold text-center text-blue-900 dark:text-blue-200">
+              {/* <p className="text-xl font-bold text-center text-blue-900 dark:text-blue-200">
                 {t("b1.conc")}
-              </p>
+              </p> */}
             </div>
           </CardContent>
         </Card>

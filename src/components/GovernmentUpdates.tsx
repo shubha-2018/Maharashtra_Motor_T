@@ -9,9 +9,6 @@ const GovernmentUpdates: React.FC = () => {
   const { language } = useLanguage();
 
   // ================= STATIC DATA =================
-  // Put PDFs inside:
-  // public/pdfs/
-
   const bulletins = [
     {
       id: 1,
@@ -41,22 +38,6 @@ const GovernmentUpdates: React.FC = () => {
 
       pdfLink:
         "/pdfs/Government-Resolution.pdf",
-
-      createdAt: "2026-05-10",
-    },
-    {
-      id: 3,
-      title_en:
-        "Regarding submission of condemnation proposal for the year 2025-26",
-
-      title_mr:
-        "सन २०२५-२६ चा निकामीकरण प्रस्ताव सादर करण्याबाबत…",
-
-      pdf:
-        "2025/26 Condemnation Orders",
-
-      pdfLink:
-        "/pdfs/.pdf",
 
       createdAt: "2026-05-10",
     },
@@ -96,12 +77,27 @@ const GovernmentUpdates: React.FC = () => {
 
       createdAt: "2026-05-08",
     },
+
+    {
+      id: 3,
+      title_en:
+        "Regarding submission of condemnation proposal for the year 2025-26",
+
+      title_mr:
+        "सन २०२५-२६ चा निकामीकरण प्रस्ताव सादर करण्याबाबत…",
+
+      pdf:
+        "2025/26 Condemnation Orders",
+
+      pdfLink:
+        "/pdfs/.pdf",
+
+      createdAt: "2026-05-10",
+    },
   ];
 
   // ================= TITLE =================
-  const getTitle = (
-    item: any
-  ) => {
+  const getTitle = (item: any) => {
     return language === "en"
       ? item.title_en
       : item.title_mr;
@@ -130,24 +126,25 @@ const GovernmentUpdates: React.FC = () => {
     item: any
   ) => {
     return (
-      <div className="border-b border-gray-200 p-5 hover:bg-gray-50 transition">
+      <div className="border-b border-gray-200 p-5 hover:bg-gray-50 transition min-h-[250px] flex flex-col justify-between">
 
-        {/* PDF FILE NAME */}
-        <h3 className="text-lg font-bold text-blue-900 break-words">
-          {item.pdf}
-        </h3>
+        {/* TOP CONTENT */}
+        <div>
+          {/* PDF FILE NAME */}
+          <h3 className="text-lg font-bold text-blue-900 break-words">
+            {item.pdf}
+          </h3>
 
-        {/* NOTICE TITLE */}
-        <p className="text-gray-800 mt-3 text-base leading-7">
-          {getTitle(item)}
-        </p>
+          {/* NOTICE TITLE */}
+          <p className="text-gray-800 mt-3 text-base leading-7">
+            {getTitle(item)}
+          </p>
 
-        {/* DATE */}
-        <p className="text-sm text-gray-500 mt-2">
-          {formatDate(
-            item.createdAt
-          )}
-        </p>
+          {/* DATE */}
+          <p className="text-sm text-gray-500 mt-2">
+            {formatDate(item.createdAt)}
+          </p>
+        </div>
 
         {/* BUTTONS */}
         <div className="flex gap-3 mt-5 flex-wrap">
@@ -192,7 +189,7 @@ const GovernmentUpdates: React.FC = () => {
         <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
 
           {/* HEADER */}
-          <div className="bg-blue-900 py-4 text-center">
+          <div className="bg-blue-900 py-4 text-center sticky top-0 z-10">
             <h2 className="text-white text-2xl font-bold">
               {language === "en"
                 ? "Latest Bulletins / Orders / Notices"
@@ -200,11 +197,17 @@ const GovernmentUpdates: React.FC = () => {
             </h2>
           </div>
 
-          {/* LIST */}
-          <div>
-            {bulletins.map((item) =>
-              renderCard(item)
-            )}
+          {/* AUTO SCROLL LIST */}
+          <div className="h-[520px] overflow-hidden relative">
+            <div className="animate-scroll-up">
+
+              {[...bulletins, ...bulletins].map((item, index) => (
+                <div key={index}>
+                  {renderCard(item)}
+                </div>
+              ))}
+
+            </div>
           </div>
         </div>
 
@@ -212,7 +215,7 @@ const GovernmentUpdates: React.FC = () => {
         <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
 
           {/* HEADER */}
-          <div className="bg-blue-900 py-4 text-center">
+          <div className="bg-blue-900 py-4 text-center sticky top-0 z-10">
             <h2 className="text-white text-2xl font-bold">
               {language === "en"
                 ? "Latest Tenders"
@@ -220,15 +223,41 @@ const GovernmentUpdates: React.FC = () => {
             </h2>
           </div>
 
-          {/* LIST */}
-          <div>
-            {tenders.map((item) =>
-              renderCard(item)
-            )}
+          {/* AUTO SCROLL LIST */}
+          <div className="h-[520px] overflow-hidden relative">
+            <div className="animate-scroll-up">
+
+              {[...tenders, ...tenders].map((item, index) => (
+                <div key={index}>
+                  {renderCard(item)}
+                </div>
+              ))}
+
+            </div>
           </div>
         </div>
 
       </div>
+
+      {/* ================= CUSTOM CSS ================= */}
+      <style>{`
+        @keyframes scrollUp {
+          0% {
+            transform: translateY(0);
+          }
+          100% {
+            transform: translateY(-50%);
+          }
+        }
+
+        .animate-scroll-up {
+          animation: scrollUp 25s linear infinite;
+        }
+
+        .animate-scroll-up:hover {
+          animation-play-state: paused;
+        }
+      `}</style>
     </section>
   );
 };

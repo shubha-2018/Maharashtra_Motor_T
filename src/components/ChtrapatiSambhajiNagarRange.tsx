@@ -35,8 +35,8 @@ const ChtrapatiSambhajiNagarRange: React.FC = () => {
       <div className="max-w-6xl mx-auto">
         <h1 className="text-3xl md:text-4xl font-bold text-center text-black mb-8">
           {language === "marathi"
-            ? "पोलीस मोटार परिवहन छत्रपती संभाजीनगर परिक्षेत्र"
-            : "POLICE MOTOR TRANSPORT CHHATRAPATI SAMBHAJINAGAR RANGE"}
+            ? "घटक"
+            : "Units"}
         </h1>
 
         <div className="overflow-x-auto shadow-md rounded-lg border border-gray-300">

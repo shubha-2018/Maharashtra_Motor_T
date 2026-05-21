@@ -143,7 +143,7 @@ const PuneRangeTable: React.FC = () => {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 dark:text-gray-100 mb-8">
-          {t({ marathi: "पोलीस मोटार परिवहन पुणे परिक्षेत्र", english: "Pune Range - Motor Transport Department" })}
+          {t({ marathi: "घटक", english: "Units" })}
         </h2>
 
         {/* Table */}

@@ -2,11 +2,11 @@ import React, { useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 // ✅ Import Images
-import slider1 from "@/assets/hero slider/police1.jpg";
+import slider1 from "@/assets/hero slider/police1.jpeg";
 import slider2 from "@/assets/hero slider/police22.jpg";
 import slider3 from "@/assets/hero slider/igoff11.jpeg";
 import slider4 from "@/assets/hero slider/igoffice.jpg";
-import slider5 from "@/assets/photo-Gallery-mt/karmachari.jpg";
+import slider5 from "@/assets/hero slider/grp.jpeg";
 
 
 // ✅ Static Slider Images

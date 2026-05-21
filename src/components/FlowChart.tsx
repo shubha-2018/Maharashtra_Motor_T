@@ -1,7 +1,10 @@
 import React from "react";
 import { Users, Building2, ArrowLeft } from "lucide-react";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useLanguage } from "../contexts/LanguageContext";
+
+// Import your flow chart image
+import flowChart from "../assets/mt_photos/flowchart/flowchart.png";
 
 const OrganizationalChart: React.FC = () => {
   const { language } = useLanguage();
@@ -10,63 +13,80 @@ const OrganizationalChart: React.FC = () => {
   const organizationData = {
     headquarters: {
       id: "hq",
-      title: { marathi: "पोलीस अधीक्षक, मुख्यालय", english: "Superintendent of Police, HQ" },
+      title: {
+        marathi: "पोलीस अधीक्षक, मुख्यालय",
+        english: "Superintendent of Police, HQ",
+      },
       fullName: {
-        marathi: "पोलीस अधीक्षक (मुख्यालय), मोटार परिवहन, महाराष्ट्र राज्य, पुणे",
-        english: "Superintendent of Police (Headquarters), Motor Transport, Maharashtra State, Pune",
+        marathi:
+          "पोलीस अधीक्षक (मुख्यालय), मोटार परिवहन, महाराष्ट्र राज्य, पुणे",
+        english:
+          "Superintendent of Police (Headquarters), Motor Transport, Maharashtra State, Pune",
       },
       route: "/unit-dysp",
       color: "from-yellow-400 to-yellow-600",
     },
+
     ranges: [
       {
         id: "pune",
         title: {
           marathi: "पोलीस अधीक्षक, पुणे परिक्षेत्र",
-          english: "Addl. Superintendent of Police, Motor Transport, Pune",
+          english: "Superintendent of Police, Motor Transport, Pune",
         },
         description: {
-          marathi: "पोलीस अधीक्षक, मोटार परिवहन, पुणे परिक्षेत्र",
-          english: "Additional Superintendent of Police, Motor Transport, Pune Range",
+          marathi:
+            "पोलीस अधीक्षक, मोटार परिवहन, पुणे परिक्षेत्र",
+          english:
+            "Superintendent of Police, Motor Transport, Pune Range",
         },
         route: "/range/pune",
         color: "from-indigo-500 to-indigo-700",
       },
+
       {
         id: "nagpur",
         title: {
           marathi: "पोलीस अधीक्षक, नागपूर परिक्षेत्र",
-          english: "Addl. Superintendent of Police, Motor Transport, Nagpur",
+          english: "Superintendent of Police, Motor Transport, Nagpur",
         },
         description: {
-          marathi: "पोलीस अधीक्षक, मोटार परिवहन, नागपूर परिक्षेत्र",
-          english: "Additional Superintendent of Police, Motor Transport, Nagpur Range",
+          marathi:
+            "पोलीस अधीक्षक, मोटार परिवहन, नागपूर परिक्षेत्र",
+          english:
+            "Superintendent of Police, Motor Transport, Nagpur Range",
         },
         route: "/range/nagpur",
         color: "from-teal-500 to-teal-700",
       },
+
       {
         id: "cs_nagar",
         title: {
           marathi: "पोलीस अधीक्षक, छत्रपती संभाजीनगर परिक्षेत्र",
-          english: "Addl. Superintendent of Police, Motor Transport, C.S. Nagar",
+          english: "Superintendent of Police, Motor Transport, C.S. Nagar",
         },
         description: {
-          marathi: "पोलीस अधीक्षक, मोटार परिवहन, छत्रपती संभाजीनगर परिक्षेत्र",
-          english: "Additional Superintendent of Police, Motor Transport, C.S. Nagar Range",
+          marathi:
+            "पोलीस अधीक्षक, मोटार परिवहन, छत्रपती संभाजीनगर परिक्षेत्र",
+          english:
+            "Superintendent of Police, Motor Transport, C.S. Nagar Range",
         },
         route: "/range/cs_nagar",
         color: "from-orange-500 to-orange-700",
       },
+
       {
         id: "konkan",
         title: {
           marathi: "पोलीस अधीक्षक, कोकण परिक्षेत्र",
-          english: "Addl. Superintendent of Police, Motor Transport, Konkan",
+          english: "Superintendent of Police, Motor Transport, Konkan",
         },
         description: {
-          marathi: "पोलीस अधीक्षक, मोटार परिवहन, कोकण परिक्षेत्र",
-          english: "Additional Superintendent of Police, Motor Transport, Konkan Range",
+          marathi:
+            "पोलीस अधीक्षक, मोटार परिवहन, कोकण परिक्षेत्र",
+          english:
+            "Superintendent of Police, Motor Transport, Konkan Range",
         },
         route: "/range/konkan",
         color: "from-purple-500 to-purple-700",
@@ -81,6 +101,7 @@ const OrganizationalChart: React.FC = () => {
 
       {/* Header */}
       <div className="bg-gradient-to-r from-blue-900 via-blue-800 to-indigo-900 py-14 text-center relative">
+
         {/* Back Button */}
         <button
           onClick={() => navigate(-1)}
@@ -90,63 +111,91 @@ const OrganizationalChart: React.FC = () => {
           {language === "marathi" ? "मागे" : "Back"}
         </button>
 
-        <p className="text-3xl sm:text-4xl md:text-5xl text-blue-200 dark:text-blue-300 font-semibold px-4">
+        <p className="text-3xl sm:text-4xl md:text-5xl text-blue-200 dark:text-blue-300 font-semibold px-4 leading-snug">
           {language === "marathi"
             ? "पोलीस मोटार परिवहन विभागाची रचना"
-            : "Organizational Structure of State Police Motor Transport Department"}
+            : "Organizational Structure of Police Motor Transport Department Maharashtra State"}
         </p>
       </div>
 
       {/* Main Content */}
       <div className="container mx-auto px-4 py-16">
 
-        {/* SP Headquarters Card — centered, clickable */}
+        {/* ================= FLOW CHART SECTION ================= */}
+        <div className="mb-20">
+          <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-2xl p-4 sm:p-8 border border-gray-200 dark:border-gray-700">
+            <img
+              src={flowChart}
+              alt="Organizational Flow Chart"
+              className="w-full h-auto rounded-xl object-contain"
+            />
+          </div>
+        </div>
+
+        {/* ================= HQ CARD ================= */}
         <div className="flex justify-center mb-12 sm:mb-20">
           <div
             onClick={() => navigate(hq.route)}
-            className="w-full sm:w-64 cursor-pointer"
+            className="w-full sm:w-72 cursor-pointer"
           >
             <div
-              className={`bg-gradient-to-r ${hq.color} text-white rounded-xl shadow-lg p-5 sm:p-6 text-center hover:scale-105 hover:shadow-2xl transition-all duration-300`}
+              className={`bg-gradient-to-r ${hq.color} text-white rounded-2xl shadow-xl p-6 text-center hover:scale-105 hover:shadow-2xl transition-all duration-300`}
             >
-              <Users className="w-7 h-7 sm:w-9 sm:h-9 mx-auto mb-3" />
-              <h3 className="font-bold text-sm sm:text-base md:text-lg leading-snug">
+              <Users className="w-8 h-8 sm:w-10 sm:h-10 mx-auto mb-3" />
+
+              <h3 className="font-bold text-base sm:text-lg leading-snug">
                 {hq.title[language === "marathi" ? "marathi" : "english"]}
               </h3>
+
+              <p className="text-sm mt-2 text-yellow-100">
+                {hq.fullName[
+                  language === "marathi" ? "marathi" : "english"
+                ]}
+              </p>
             </div>
           </div>
         </div>
 
-        {/* Regional Offices heading */}
-        <h3 className="text-xl sm:text-2xl font-bold text-center mb-6 sm:mb-8 text-gray-800 dark:text-gray-100">
-          {language === "marathi" ? "परिक्षेत्रीय कार्यालये" : "Regional Offices"}
+        {/* ================= REGIONAL OFFICES ================= */}
+        <h3 className="text-xl sm:text-2xl font-bold text-center mb-8 text-gray-800 dark:text-gray-100">
+          {language === "marathi"
+            ? "परिक्षेत्रीय कार्यालये"
+            : "Regional Offices"}
         </h3>
 
-        {/* 4 Range Cards */}
+        {/* Range Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 place-items-center">
           {organizationData.ranges.map((range) => (
             <div
               key={range.id}
               onClick={() => navigate(range.route)}
-              className="cursor-pointer bg-white dark:bg-gray-800 rounded-2xl shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300 border border-gray-100 dark:border-gray-700 w-full sm:w-64 flex flex-col overflow-hidden"
+              className="cursor-pointer bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 border border-gray-100 dark:border-gray-700 w-full sm:w-72 flex flex-col overflow-hidden"
             >
-              {/* Colored header */}
-              <div className={`bg-gradient-to-r ${range.color} p-4 sm:p-5 text-white`}>
-                <Building2 className="w-6 h-6 sm:w-8 sm:h-8 mb-2" />
+              {/* Colored Header */}
+              <div
+                className={`bg-gradient-to-r ${range.color} p-5 text-white`}
+              >
+                <Building2 className="w-7 h-7 sm:w-9 sm:h-9 mb-3" />
+
                 <h4 className="font-bold text-sm sm:text-base leading-snug">
                   {range.title[language === "marathi" ? "marathi" : "english"]}
                 </h4>
               </div>
 
               {/* Description */}
-              <div className="p-4 sm:p-5 flex-1">
-                <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
-                  {range.description[language === "marathi" ? "marathi" : "english"]}
+              <div className="p-5 flex-1">
+                <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+                  {
+                    range.description[
+                      language === "marathi" ? "marathi" : "english"
+                    ]
+                  }
                 </p>
               </div>
             </div>
           ))}
         </div>
+
       </div>
     </div>
   );

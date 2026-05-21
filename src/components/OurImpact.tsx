@@ -140,8 +140,8 @@ const OurImpact = () => {
         </div>
         <p className="text-gray-700 mt-6 text-xl md:text-2xl lg:text-3xl tracking-wide font-bold">
           {lang === "mr"
-            ? "महाराष्ट्र पोलीस मोटार परिवहन विभाग"
-            : "Maharashtra Police Motor Transport Department"}
+            ? "पोलीस मोटार परिवहन विभाग महाराष्ट्र राज्य  "
+            : " Police Motor Transport Department Maharashtra State"}
         </p>
       </div>
 

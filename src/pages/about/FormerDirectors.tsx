@@ -25,7 +25,7 @@ const SeniorOfficers = () => {
 
   const text = {
     title: {
-      marathi: "विभागाचे तत्कालीन अधिकारी",
+      marathi: "पोलीस मोटार परिवहन विभागाचे तत्कालीन अधिकारी",
       english: "Former Officers of the Department",
     },
     tenure: {
@@ -62,25 +62,25 @@ const SeniorOfficers = () => {
     {
       image: officer5,
       name:        { marathi: "श्री. एम. के. राठोड, भापोसे",      english: "Shri. M. K. Rathod, IPS"        },
-      designation: { marathi: "उप महानिरीक्षक",                    english: "D.I.G.P."                       },
+      designation: { marathi: "पोलीस उप महानिरीक्षक",                    english: "D.I.G.P."                       },
       from: "11/06/2002", to: "07/10/2003",
     },
     {
       image: officer4,
       name:        { marathi: "श्री. जी. डी. पोळ, भापोसे",        english: "Shri. G. D. Pol, IPS"           },
-      designation: { marathi: "उप महानिरीक्षक",                    english: "D.I.G.P."                       },
+      designation: { marathi: "पोलीस उप महानिरीक्षक",                    english: "D.I.G.P."                       },
       from: "24/11/2003", to: "21/07/2004",
     },
     {
       image: officer6,
       name:        { marathi: "श्री. एस. पी. गुप्ता, भापोसे",     english: "Shri. S. P. Gupta, IPS"         },
-      designation: { marathi: "उप महानिरीक्षक",                    english: "D.I.G.P."                       },
+      designation: { marathi: "पोलीस उप महानिरीक्षक",                    english: "D.I.G.P."                       },
       from: "12/08/2004", to: "27/09/2005",
     },
     {
       image: officer10,
       name:        { marathi: "श्री. आर. के. सहाय, भापोसे",       english: "Shri. R. K. Sahay, IPS"         },
-      designation: { marathi: "उप महानिरीक्षक",                    english: "D.I.G.P."                       },
+      designation: { marathi: "पोलीस उप महानिरीक्षक",                    english: "D.I.G.P."                       },
       from: "23/01/2006", to: "21/02/2007",
     },
     {
@@ -121,7 +121,7 @@ const SeniorOfficers = () => {
     },
     {
       image: officer9,
-      name:        { marathi: "श्री. क्वेझर खालिद, भापोसे",        english: "Shri. Quaiser Khalid, IPS"      },
+      name:        { marathi: "श्री.कैसर खालिद, भापोसे",        english: "Shri. Quaiser Khalid, IPS"      },
       designation: { marathi: "विशेष पोलीस महानिरीक्षक",           english: "Spl. I.G.P."                    },
       from: "21/04/2023", to: "03/10/2023",
     },

@@ -7,15 +7,27 @@ export default function TrainingGallery() {
   const { language } = useLanguage();
 
   const data = [
+ 
     {
-      id: 71,
-      enTitle: "Training Batch 71",
-      mrTitle: "प्रशिक्षण बॅच ७१",
+      id: 74,
+      enTitle: "Police Driver Training Hall Inauguration",
+      mrTitle: "पोलीस चालक प्रशिक्षण केंद्र येथील व्याख्यान कक्ष्याचे  उद्घाटन",
       images: [
-        "/batch71/IMG_8364.JPG",
-        "/batch71/DSCN0417.JPG",
-        "/batch71/DSCN0331.JPG",
-        "/batch71/DSCN0430.JPG",
+        "/batch71/h1.jpeg",
+        "/batch71/h2.jpeg",
+        "/batch71/h3.jpeg",
+        "/batch71/h4.jpeg",
+      ],
+    },
+    {
+      id: 73,
+      enTitle: "Training Batch 73",
+      mrTitle: "प्रशिक्षण बॅच ७३",
+      images: [
+        "/batch71/img9.jpeg",
+        "/batch71/img10.jpeg",
+        "/batch71/img11.jpeg",
+        "/batch71/img12.jpeg",
       ],
     },
     {
@@ -29,15 +41,15 @@ export default function TrainingGallery() {
         "/batch72/IMG_3923.JPG",
       ],
     },
-    {
-      id: 73,
-      enTitle: "Training Batch 73",
-      mrTitle: "प्रशिक्षण बॅच ७३",
+       {
+      id: 71,
+      enTitle: "Training Batch 71",
+      mrTitle: "प्रशिक्षण बॅच ७१",
       images: [
-        "/batch71/img9.jpeg",
-        "/batch71/img10.jpeg",
-        "/batch71/img11.jpeg",
-        "/batch71/img12.jpeg",
+        "/batch71/IMG_8364.JPG",
+        "/batch71/DSCN0417.JPG",
+        "/batch71/DSCN0331.JPG",
+        "/batch71/DSCN0430.JPG",
       ],
     },
   ];

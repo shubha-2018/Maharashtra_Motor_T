@@ -16,7 +16,7 @@ const officers = [
   {
     id: 0, type: "adgp",
     name: { marathi: "श्री. दीपक शिवानंद पाण्डेय्", english: "Shri. Deepak Shivanand Pandey" },
-    position: { marathi: "अपर पोलीस महासंचालक व संचालक, पोलीस दळणवळण, माहिती तंत्रज्ञान व परिवहन, महाराष्ट्र राज्य, पुणे", english: "Additional Director General of Police & Director, IT and Logistics, Maharashtra State, Pune" },
+    position: { marathi: "अपर पोलीस महासंचालक व संचालक, पोलीस दळणवळण, माहिती तंत्रज्ञान व परिवहन , महाराष्ट्र राज्य, पुणे", english: "Addl. Director General of Police & Director Police Communication Information Technology & Transport , Maharashtra State Pune," },
     badge: { marathi: "भा पो से", english: "IPS" },
     rank: { marathi: "अपर महासंचालक", english: "Addl. Director General" },
     image: id0,
@@ -39,41 +39,41 @@ const officers = [
   {
     id: 3, type: "sp",
     name: { marathi: "श्रीमती गायत्री पवार", english: "Smt. Gayatri Pawar" },
-    position: { marathi: "पोलीस अधीक्षक मुख्यालय पुणे", english: "Superintendent of Police, Headquarters, Pune" },
-    location: { marathi: "मुख्यालय, पुणे", english: "Pune HQ" },
+    position: { marathi: "पोलीस अधीक्षक (मुख्यालय) पुणे", english: "Superintendent of Police, (Headquarters), Pune" },
+    location: { marathi: "मुख्यालय, पुणे", english: " HQ Pune" },
     rank: { marathi: "पोलीस अधीक्षक", english: "Superintendent of Police" },
     image: id8,
   },
   {
     id: 4, type: "sp",
     name: { marathi: "श्री तुषार देशमुख", english: "Shri Tushar Deshmukh" },
-    position: { marathi: "पोलीस अधीक्षक पुणे परिक्षेत्र", english: "Addl. Superintendent of Police, Pune Range" },
-    location: { marathi: "पुणे परिक्षेत्र", english: "Pune Range" },
-    rank: { marathi: "पोलीस अधीक्षक", english: "Addl. SP" },
+    position: { marathi: "पोलीस अधीक्षक पुणे परिक्षेत्र", english: "Superintendent of Police, Pune Range" },
+    location: { marathi: "पुणे ", english: "Pune " },
+    rank: { marathi: "पोलीस अधीक्षक", english: "Superintendent of Police" },
     image: id1,
   },
   {
     id: 5, type: "sp",
     name: { marathi: "रिक्त", english: "Vacant" },
-    position: { marathi: "पोलीस अधीक्षक संभाजीनगर परिक्षेत्र", english: "Addl. SP, Ch. Sambhaji Nagar Range" },
-    location: { marathi: "संभाजी नगर", english: "Sambhaji Nagar" },
-    rank: { marathi: "पोलीस अधीक्षक", english: "Addl. SP" },
+    position: { marathi: "पोलीस अधीक्षक छ.संभाजीनगर परिक्षेत्र", english: " Superintendent of Police,Ch.Sambhaji Nagar Range" },
+    location: { marathi: "छ.संभाजी नगर", english: "ch.Sambhaji Nagar" },
+    rank: { marathi: "पोलीस अधीक्षक", english: "Superintendent of Police" },
     image: null,
   },
   {
     id: 6, type: "sp",
     name: { marathi: "श्री संदीप शिंदे", english: "Shri Sandip Shinde" },
-    position: { marathi: "पोलीस अधीक्षक नागपूर परिक्षेत्र", english: "Addl. SP, Nagpur Range" },
+    position: { marathi: "पोलीस अधीक्षक नागपूर परिक्षेत्र", english: "Superintendent of police, Nagpur Range" },
     location: { marathi: "नागपूर", english: "Nagpur" },
-    rank: { marathi: "पोलीस अधीक्षक", english: "Addl. SP" },
+    rank: { marathi: "पोलीस अधीक्षक", english: "Superintendent of Police" },
     image: id3,
   },
   {
     id: 7, type: "sp",
     name: { marathi: "रिक्त", english: "Vacant" },
-    position: { marathi: "पोलीस अधीक्षक कोकण परिक्षेत्र", english: "Addl. SP, Konkan Range" },
-    location: { marathi: "कोकण", english: "Konkan" },
-    rank: { marathi: "पोलीस अधीक्षक", english: "Addl. SP" },
+    position: { marathi: "पोलीस अधीक्षक कोकण परिक्षेत्र", english: " Superintendent of police, Konkan Range" },
+    location: { marathi: "नवी मुंबई", english: "Navi Mumbai" },
+    rank: { marathi: "पोलीस अधीक्षक", english: "Superintendent of Police" },
     image: null,
   },
 ];
@@ -85,19 +85,23 @@ const injectStyles = () => {
   const style = document.createElement("style");
   style.id = "hierarchy-styles";
   style.textContent = `
-    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Nunito:wght@300;400;500;600&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Nunito:wght@300;400;500;600;700;800&display=swap');
 
     /* ── Page ── */
     .hier-page {
       font-family: 'Nunito', sans-serif;
       min-height: 100vh;
-      background: #060d1f;
-      background-image:
-        radial-gradient(ellipse 90% 55% at 50% -5%, rgba(201,168,76,0.18) 0%, transparent 65%),
-        radial-gradient(ellipse 50% 60% at 90% 100%, rgba(20,50,110,0.5) 0%, transparent 55%),
-        radial-gradient(ellipse 50% 60% at 10% 100%, rgba(20,50,110,0.4) 0%, transparent 55%);
+      background: linear-gradient(135deg, #f0f4ff 0%, #ffffff 25%, #e8f0ff 50%, #ffffff 75%, #f0f4ff 100%);
+      background-size: 400% 400%;
+      animation: gradientShift 15s ease infinite;
       position: relative;
       overflow-x: hidden;
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
 
     /* subtle grid texture */
@@ -106,8 +110,8 @@ const injectStyles = () => {
       position: fixed;
       inset: 0;
       background-image:
-        repeating-linear-gradient(0deg, transparent, transparent 59px, rgba(201,168,76,0.025) 59px, rgba(201,168,76,0.025) 60px),
-        repeating-linear-gradient(90deg, transparent, transparent 59px, rgba(201,168,76,0.025) 59px, rgba(201,168,76,0.025) 60px);
+        repeating-linear-gradient(0deg, transparent, transparent 59px, rgba(59, 130, 246, 0.03) 59px, rgba(59, 130, 246, 0.03) 60px),
+        repeating-linear-gradient(90deg, transparent, transparent 59px, rgba(59, 130, 246, 0.03) 59px, rgba(59, 130, 246, 0.03) 60px);
       pointer-events: none;
       z-index: 0;
     }
@@ -120,27 +124,27 @@ const injectStyles = () => {
       align-items: center;
       gap: 8px;
       padding: 10px 20px;
-      background: rgba(201,168,76,0.1);
-      border: 1px solid rgba(201,168,76,0.35);
-      color: #c9a84c;
+      background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+      border: 1px solid rgba(59, 130, 246, 0.5);
+      color: #ffffff;
       font-size: 12px;
       font-family: 'Nunito', sans-serif;
       font-weight: 600;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      border-radius: 6px;
+      border-radius: 8px;
       cursor: pointer;
       transition: all 0.25s;
       position: fixed;
       top: 22px;
       left: 22px;
       z-index: 50;
-      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
     }
     .hier-back:hover {
-      background: rgba(201,168,76,0.22);
-      border-color: rgba(201,168,76,0.65);
+      background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
       transform: translateX(-2px);
+      box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
     }
 
     /* ── Header ── */
@@ -152,32 +156,60 @@ const injectStyles = () => {
       width: 80px;
       height: 80px;
       border-radius: 50%;
-      background: linear-gradient(145deg, #a07830 0%, #e8c97a 45%, #b09040 100%);
+      background: linear-gradient(145deg, #3b82f6 0%, #60a5fa 45%, #2563eb 100%);
       display: flex;
       align-items: center;
       justify-content: center;
       margin: 0 auto 24px;
       box-shadow:
-        0 0 0 1px rgba(201,168,76,0.4),
-        0 0 0 8px rgba(201,168,76,0.07),
-        0 0 50px rgba(201,168,76,0.25);
+        0 0 0 1px rgba(59, 130, 246, 0.4),
+        0 0 0 8px rgba(59, 130, 246, 0.1),
+        0 0 50px rgba(59, 130, 246, 0.3);
     }
+    
     .hier-title {
       font-family: 'Playfair Display', serif;
-      font-size: 40px;
-      font-weight: 700;
-      color: #f0e0b0;
-      letter-spacing: 0.01em;
+      font-size: 42px;
+      font-weight: 800;
+      color: #ffffff;
+      letter-spacing: 0.02em;
       margin: 0 0 10px;
-      text-shadow: 0 2px 20px rgba(201,168,76,0.3);
+      display: inline-block;
+      padding: 16px 40px;
+      background: linear-gradient(135deg, #2563eb 0%, #3b82f6 50%, #1d4ed8 100%);
+      border-radius: 16px;
+      box-shadow: 
+        0 10px 40px rgba(59, 130, 246, 0.4),
+        0 0 0 3px rgba(59, 130, 246, 0.2),
+        inset 0 2px 20px rgba(255, 255, 255, 0.2);
+      position: relative;
+      overflow: hidden;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     }
+    
+    .hier-title::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+      animation: shimmer 3s infinite;
+    }
+    
+    @keyframes shimmer {
+      0% { left: -100%; }
+      100% { left: 100%; }
+    }
+    
     .hier-subtitle {
       font-size: 13px;
       font-weight: 500;
-      color: rgba(201,168,76,0.7);
+      color: #3b82f6;
       letter-spacing: 0.16em;
       text-transform: uppercase;
-      margin: 0;
+      margin: 20px 0 0 0;
     }
     .hier-divider {
       display: flex;
@@ -189,14 +221,14 @@ const injectStyles = () => {
     .hier-divider-line {
       width: 100px;
       height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(201,168,76,0.6));
+      background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.6));
     }
-    .hier-divider-line.rev { background: linear-gradient(90deg, rgba(201,168,76,0.6), transparent); }
+    .hier-divider-line.rev { background: linear-gradient(90deg, rgba(59, 130, 246, 0.6), transparent); }
     .hier-divider-diamond {
       width: 8px; height: 8px;
-      background: #c9a84c;
+      background: #3b82f6;
       transform: rotate(45deg);
-      box-shadow: 0 0 8px rgba(201,168,76,0.5);
+      box-shadow: 0 0 8px rgba(59, 130, 246, 0.5);
     }
 
     /* ── Senior officer cards ── */
@@ -210,38 +242,38 @@ const injectStyles = () => {
     .hier-senior-card {
       width: 100%;
       max-width: 560px;
-      background: linear-gradient(145deg, rgba(255,255,255,0.07) 0%, rgba(255,255,255,0.025) 100%);
-      border: 1px solid rgba(201,168,76,0.25);
+      background: linear-gradient(145deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.85) 100%);
+      border: 2px solid rgba(59, 130, 246, 0.3);
       border-radius: 16px;
       overflow: hidden;
       position: relative;
       transition: transform 0.3s, box-shadow 0.3s;
       animation: fadeSlideIn 0.55s cubic-bezier(0.22,1,0.36,1) both;
-      backdrop-filter: blur(6px);
+      box-shadow: 0 10px 30px rgba(59, 130, 246, 0.15);
     }
     .hier-senior-card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 28px 70px rgba(0,0,0,0.5), 0 0 0 1px rgba(201,168,76,0.4), 0 0 40px rgba(201,168,76,0.08);
+      box-shadow: 0 20px 50px rgba(59, 130, 246, 0.25), 0 0 0 2px rgba(59, 130, 246, 0.4);
     }
     .hier-senior-card::before {
       content: '';
       position: absolute;
       top: 0; left: 0; right: 0;
       height: 3px;
-      background: linear-gradient(90deg, transparent, #c9a84c 30%, #f0d878 50%, #c9a84c 70%, transparent);
+      background: linear-gradient(90deg, transparent, #3b82f6 30%, #60a5fa 50%, #3b82f6 70%, transparent);
     }
 
     /* ADGP gets special glow */
     .hier-senior-card.adgp-card {
-      border-color: rgba(201,168,76,0.4);
-      background: linear-gradient(145deg, rgba(201,168,76,0.1) 0%, rgba(255,255,255,0.03) 100%);
+      border-color: rgba(59, 130, 246, 0.5);
+      background: linear-gradient(145deg, rgba(219, 234, 254, 0.8) 0%, rgba(255, 255, 255, 0.9) 100%);
     }
     .hier-senior-card.adgp-card::after {
       content: '';
       position: absolute;
       inset: 0;
       border-radius: 16px;
-      box-shadow: inset 0 0 60px rgba(201,168,76,0.05);
+      box-shadow: inset 0 0 60px rgba(59, 130, 246, 0.08);
       pointer-events: none;
     }
 
@@ -257,8 +289,8 @@ const injectStyles = () => {
       flex-shrink: 0;
       border-radius: 50%;
       padding: 3px;
-      background: linear-gradient(145deg, #a07830, #f0d878, #a07830);
-      box-shadow: 0 0 0 3px rgba(201,168,76,0.15), 0 8px 30px rgba(0,0,0,0.4);
+      background: linear-gradient(145deg, #3b82f6, #60a5fa, #2563eb);
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2), 0 8px 30px rgba(59, 130, 246, 0.3);
     }
     .hier-photo-ring.size-adgp { width: 130px; height: 130px; }
     .hier-photo-ring.size-igp  { width: 116px; height: 116px; }
@@ -273,7 +305,7 @@ const injectStyles = () => {
       display: flex;
       align-items: center;
       justify-content: center;
-      background: #111d35;
+      background: #f0f9ff;
     }
 
     .hier-card-info { flex: 1; min-width: 0; }
@@ -283,12 +315,12 @@ const injectStyles = () => {
       align-items: center;
       gap: 5px;
       padding: 4px 12px;
-      background: rgba(201,168,76,0.14);
-      border: 1px solid rgba(201,168,76,0.35);
-      border-radius: 4px;
+      background: rgba(59, 130, 246, 0.15);
+      border: 1px solid rgba(59, 130, 246, 0.35);
+      border-radius: 6px;
       font-size: 10px;
       font-weight: 700;
-      color: #c9a84c;
+      color: #2563eb;
       letter-spacing: 0.12em;
       text-transform: uppercase;
       margin-bottom: 12px;
@@ -298,7 +330,7 @@ const injectStyles = () => {
       font-family: 'Playfair Display', serif;
       font-size: 24px;
       font-weight: 700;
-      color: #f0e0b0;
+      color: #1e3a8a;
       margin: 0 0 10px;
       line-height: 1.2;
     }
@@ -309,15 +341,15 @@ const injectStyles = () => {
     .hier-card-pos {
       font-size: 13px;
       font-weight: 400;
-      color: rgba(210,210,230,0.7);
+      color: #475569;
       line-height: 1.65;
       margin: 0;
     }
 
     /* ── Rank strip ── */
     .hier-rank-strip {
-      background: rgba(201,168,76,0.07);
-      border-top: 1px solid rgba(201,168,76,0.15);
+      background: linear-gradient(135deg, rgba(59, 130, 246, 0.08) 0%, rgba(147, 197, 253, 0.08) 100%);
+      border-top: 1px solid rgba(59, 130, 246, 0.2);
       padding: 10px 32px;
       display: flex;
       align-items: center;
@@ -326,7 +358,7 @@ const injectStyles = () => {
     .hier-rank-strip span {
       font-size: 10px;
       font-weight: 700;
-      color: rgba(201,168,76,0.85);
+      color: #2563eb;
       letter-spacing: 0.12em;
       text-transform: uppercase;
     }
@@ -340,16 +372,16 @@ const injectStyles = () => {
     }
     .hier-connector-line {
       width: 2px;
-      background: linear-gradient(to bottom, rgba(201,168,76,0.6), rgba(201,168,76,0.2));
+      background: linear-gradient(to bottom, rgba(59, 130, 246, 0.6), rgba(59, 130, 246, 0.3));
     }
     .hier-connector-line.tall { height: 32px; }
     .hier-connector-line.short { height: 18px; }
     .hier-connector-dot {
       width: 10px; height: 10px;
       border-radius: 50%;
-      border: 2px solid #c9a84c;
-      background: rgba(201,168,76,0.25);
-      box-shadow: 0 0 8px rgba(201,168,76,0.4);
+      border: 2px solid #3b82f6;
+      background: rgba(59, 130, 246, 0.3);
+      box-shadow: 0 0 8px rgba(59, 130, 246, 0.4);
     }
 
     /* ── Branch ── */
@@ -365,7 +397,7 @@ const injectStyles = () => {
       width: 92%;
       max-width: 1000px;
       height: 2px;
-      background: linear-gradient(90deg, transparent 2%, rgba(201,168,76,0.35) 15%, rgba(201,168,76,0.35) 85%, transparent 98%);
+      background: linear-gradient(90deg, transparent 2%, rgba(59, 130, 246, 0.4) 15%, rgba(59, 130, 246, 0.4) 85%, transparent 98%);
     }
     .hier-branch-line::after {
       content: '';
@@ -374,22 +406,22 @@ const injectStyles = () => {
       transform: translateX(-50%);
       width: 10px; height: 10px;
       border-radius: 50%;
-      background: #c9a84c;
-      box-shadow: 0 0 10px rgba(201,168,76,0.6);
+      background: #3b82f6;
+      box-shadow: 0 0 10px rgba(59, 130, 246, 0.6);
     }
     .hier-tick {
       position: absolute;
       top: 0;
       width: 2px;
       height: 14px;
-      background: rgba(201,168,76,0.4);
+      background: rgba(59, 130, 246, 0.5);
       transform: translateX(-50%);
     }
 
     .hier-branch-label {
       font-size: 11px;
       font-weight: 600;
-      color: rgba(201,168,76,0.65);
+      color: #3b82f6;
       letter-spacing: 0.15em;
       text-transform: uppercase;
       margin: 14px 0 6px;
@@ -408,33 +440,34 @@ const injectStyles = () => {
     }
 
     .hier-sp-card {
-      background: linear-gradient(160deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.02) 100%);
-      border: 1px solid rgba(201,168,76,0.18);
+      background: linear-gradient(160deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.85) 100%);
+      border: 2px solid rgba(59, 130, 246, 0.25);
       border-radius: 14px;
       overflow: hidden;
       position: relative;
       transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
       animation: fadeSlideIn 0.55s cubic-bezier(0.22,1,0.36,1) both;
-      backdrop-filter: blur(6px);
+      box-shadow: 0 8px 25px rgba(59, 130, 246, 0.12);
     }
     .hier-sp-card:hover {
       transform: translateY(-6px);
-      border-color: rgba(201,168,76,0.4);
-      box-shadow: 0 20px 55px rgba(0,0,0,0.35), 0 0 30px rgba(201,168,76,0.07);
+      border-color: rgba(59, 130, 246, 0.5);
+      box-shadow: 0 15px 40px rgba(59, 130, 246, 0.2);
     }
     .hier-sp-card::before {
       content: '';
       position: absolute;
       top: 0; left: 0; right: 0;
       height: 2px;
-      background: linear-gradient(90deg, transparent, rgba(201,168,76,0.6), transparent);
+      background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.6), transparent);
     }
     .hier-sp-card.vacant {
-      border-color: rgba(255,255,255,0.07);
-      opacity: 0.55;
+      border-color: rgba(148, 163, 184, 0.3);
+      opacity: 0.6;
+      background: linear-gradient(160deg, rgba(248, 250, 252, 0.9) 0%, rgba(241, 245, 249, 0.85) 100%);
     }
     .hier-sp-card.vacant::before {
-      background: rgba(255,255,255,0.05);
+      background: rgba(148, 163, 184, 0.2);
     }
 
     /* SP photo — bigger now */
@@ -447,11 +480,11 @@ const injectStyles = () => {
       width: 100px; height: 100px;
       border-radius: 50%;
       padding: 3px;
-      background: linear-gradient(145deg, #a07830, #f0d878, #a07830);
-      box-shadow: 0 0 0 3px rgba(201,168,76,0.12), 0 6px 24px rgba(0,0,0,0.4);
+      background: linear-gradient(145deg, #3b82f6, #60a5fa, #2563eb);
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15), 0 6px 24px rgba(59, 130, 246, 0.25);
     }
     .hier-sp-photo-ring.vacant-ring {
-      background: rgba(255,255,255,0.08);
+      background: rgba(148, 163, 184, 0.3);
       box-shadow: none;
     }
     .hier-sp-photo-ring img {
@@ -462,7 +495,7 @@ const injectStyles = () => {
     .hier-sp-photo-placeholder {
       width: 100%; height: 100%;
       border-radius: 50%;
-      background: #0e1928;
+      background: #f1f5f9;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -476,19 +509,19 @@ const injectStyles = () => {
       font-family: 'Playfair Display', serif;
       font-size: 18px;
       font-weight: 700;
-      color: #e8d8b0;
+      color: #1e3a8a;
       margin: 0 0 8px;
       line-height: 1.25;
     }
     .hier-sp-name.vacant-name {
-      color: rgba(255,255,255,0.28);
+      color: rgba(100, 116, 139, 0.5);
       font-style: italic;
       font-weight: 400;
     }
     .hier-sp-pos {
       font-size: 12px;
       font-weight: 400;
-      color: rgba(190,190,215,0.6);
+      color: #64748b;
       line-height: 1.55;
       margin: 0 0 14px;
     }
@@ -500,13 +533,13 @@ const injectStyles = () => {
       gap: 6px;
       flex-wrap: wrap;
       padding: 8px 14px;
-      background: rgba(201,168,76,0.07);
-      border-top: 1px solid rgba(201,168,76,0.12);
+      background: linear-gradient(135deg, rgba(59, 130, 246, 0.08) 0%, rgba(147, 197, 253, 0.08) 100%);
+      border-top: 1px solid rgba(59, 130, 246, 0.2);
     }
     .hier-sp-footer span {
       font-size: 10px;
       font-weight: 700;
-      color: rgba(201,168,76,0.85);
+      color: #2563eb;
       letter-spacing: 0.08em;
       text-transform: uppercase;
     }
@@ -547,7 +580,7 @@ const SeniorCard = ({ officer, delay = 0 }) => {
             <img src={officer.image} alt={t(officer.name)} />
           ) : (
             <div className="hier-photo-placeholder">
-              <Shield size={32} color="rgba(201,168,76,0.5)" />
+              <Shield size={32} color="rgba(59, 130, 246, 0.5)" />
             </div>
           )}
         </div>
@@ -565,7 +598,7 @@ const SeniorCard = ({ officer, delay = 0 }) => {
       </div>
 
       <div className="hier-rank-strip">
-        <BadgeCheck size={14} color="#c9a84c" />
+        <BadgeCheck size={14} color="#3b82f6" />
         <span>{t(officer.rank)}</span>
       </div>
     </div>
@@ -589,7 +622,7 @@ const SPCard = ({ officer, delay = 0 }) => {
             <img src={officer.image} alt={t(officer.name)} />
           ) : (
             <div className="hier-sp-photo-placeholder">
-              <Shield size={28} color="rgba(201,168,76,0.35)" />
+              <Shield size={28} color="rgba(148, 163, 184, 0.5)" />
             </div>
           )}
         </div>
@@ -603,12 +636,12 @@ const SPCard = ({ officer, delay = 0 }) => {
       </div>
 
       <div className="hier-sp-footer">
-        <BadgeCheck size={11} color="rgba(201,168,76,0.75)" />
+        <BadgeCheck size={11} color="rgba(59, 130, 246, 0.75)" />
         <span>{t(officer.rank)}</span>
         {officer.location && (
           <>
             <span style={{ opacity: 0.35 }}>·</span>
-            <MapPin size={10} color="rgba(201,168,76,0.65)" />
+            <MapPin size={10} color="rgba(59, 130, 246, 0.65)" />
             <span>{t(officer.location)}</span>
           </>
         )}
@@ -643,15 +676,15 @@ const Hierarchy = () => {
         {/* Header */}
         <div className="hier-header">
           <div className="hier-emblem">
-            <Shield size={34} color="#060d1f" />
+            <Shield size={34} color="#ffffff" />
           </div>
           <h1 className="hier-title">
             {isMarathi ? "संघटनात्मक रचना" : "Organizational Structure"}
           </h1>
           <p className="hier-subtitle">
             {isMarathi
-              ? "महाराष्ट्र राज्य पोलीस मोटार परिवहन विभाग"
-              : "Maharashtra State Police · Motor Transport Department"}
+              ? " पोलीस मोटार परिवहन विभाग महाराष्ट्र राज्य"
+              : " Police Motor Transport Department Maharashtra State"}
           </p>
           <div className="hier-divider">
             <div className="hier-divider-line" />
@@ -690,7 +723,7 @@ const Hierarchy = () => {
         <p className="hier-branch-label">
           {isMarathi
             ? "पोलीस अधीक्षक · परिक्षेत्र"
-            : "Addl. Superintendents of Police · Regional Offices"}
+            : "Superintendents of Police · Regional Offices"}
         </p>
 
         {/* SP cards */}

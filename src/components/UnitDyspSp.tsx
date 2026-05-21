@@ -17,12 +17,12 @@ const UnitDyspSp: React.FC = () => {
         marathi: "पोलीस उप-अधीक्षक (प्रशासन)",
         english: "Deputy Superintendent of Police (Administration)",
       },
-      name: { marathi: "श्री. उदयसिंह शिंगाडे", english: "VacantUdaysing Shingade" },
+      name: { marathi: "श्री. उदयसिंह शिंगाडे", english: "Udaysing Shingade" },
       contact: "9552565063",
     },
     {
       sr: 2,
-      unit: { marathi: "पोलीस चालक प्रशिक्षण केंद्र", english: "Police Driver Training School Pune" },
+      unit: { marathi: "पोलीस चालक प्रशिक्षण केंद्र", english: "Police Driver Training School , Pune" },
       designation: {
         marathi: "पोलीस उप-अधीक्षक",
         english: "Deputy Superintendent of Police",
@@ -63,7 +63,7 @@ const UnitDyspSp: React.FC = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">
             {t({
               marathi: "सहाय्यक पोलीस आयुक्त व पोलीस उप-अधीक्षक",
-              english: "UNIT ACP & DYSP",
+              english: "UNIT'S ",
             })}
           </h2>
           <div className="w-24 h-1 bg-blue-600 dark:bg-blue-400 mx-auto"></div>

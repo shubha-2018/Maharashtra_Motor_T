@@ -7,12 +7,12 @@ import React, { useState, useRef, useEffect } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Link } from "react-router-dom";
-import GIMG_6 from "@/assets/photo-Gallery-mt/PoliceCar2.jpg";
+import GIMG_6 from "@/assets/photo-Gallery-mt/truck.jpeg"; 
 import GIMG_5 from "@/assets/photo-Gallery-mt/nauka.jpg";
-import GIMG_4 from "@/assets/photo-Gallery-mt/j1.jpg";
-import GIMG_1 from "@/assets/mt_photos/WorkshopTraining/IMG20260114105412.jpg";
+import GIMG_4 from "@/assets/photo-Gallery-mt/car11.jpg";
+import GIMG_1 from "@/assets/mt_photos/WorkshopTraining/p1.jpeg";
 import GIMG_2 from "@/assets/hero slider/igoff11.jpeg";
-import GIMG_3 from "@/assets/mt_photos/WhatsApp Image 2026-05-18 at 4.00.49 PM.jpeg";
+import GIMG_3 from "@/assets/mt_photos/WorkshopTraining/p2.jpeg";
 
 const EventsGallery = () => {
   const { t } = useLanguage();
